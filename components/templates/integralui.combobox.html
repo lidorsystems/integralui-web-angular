@@ -1,0 +1,7 @@
+<div [ngClass]="getControlClass()" #control>
+	<iui-header [controlStyle]="getCurrentHeaderStyle()" [icon]="getComboIcon()" [text]="getComboText()" (mouseDown)="comboClick($event)" [animationType]="'arrow'" #header>
+	</iui-header>
+	<div [ngClass]="getContentClass()" [ngStyle]="{ 'border-width': contentBorder, 'display': contentDisplay, 'height': contentHeight, 'opacity': contentOpacity, 'overflow-y': contentOverflowY, 'width': getDropDownWidth() + 'px' }" tabindex="999" (blur)="dropDownBlurEvent($event)" #dropdown> 
+		<ng-content></ng-content>
+	</div> 
+</div>

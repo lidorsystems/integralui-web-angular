@@ -1,0 +1,21 @@
+/*
+  filename: integralui.data.service.js
+  version : 0.5.0 BETA
+  Copyright © 2016 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
+var __decorate=this&&this.__decorate||function(c,a,b,d){var e=arguments.length,f=3>e?a:null===d?d=Object.getOwnPropertyDescriptor(a,b):d,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)f=Reflect.decorate(c,a,b,d);else for(var h=c.length-1;0<=h;h--)if(g=c[h])f=(3>e?g(f):3<e?g(a,b,f):g(a,b))||f;return 3<e&&f&&Object.defineProperty(a,b,f),f},__metadata=this&&this.__metadata||function(c,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(c,
+a)},core_1=require("@angular/core"),IntegralUIDataService=function(){function c(){this.data=[];this.updateDataFields()}c.prototype.init=function(a,b){this.data=a;this.updateDataFields(b)};c.prototype.updateDataFields=function(a){this.dataFields=a?{content:a.content?a.content:"content",icon:a.icon?a.icon:"icon",id:a.id?a.id:"id",pid:a.pid?a.pid:"pid",objects:a.objects?a.objects:"items",statusIcon:a.statusIcon?a.statusIcon:"statusIcon",subobjects:a.subobjects?a.subobjects:"subitems",text:a.text?a.text:
+"text"}:{content:"content",icon:"icon",id:"id",pid:"pid",objects:"items",statusIcon:"statusIcon",subobjects:"subitems",text:"text"}};c.prototype.clear=function(a){this.getList(a).length=0};c.prototype.insertAt=function(a,b,d){this.insert(a,b,d,null,!1)};c.prototype.insert=function(a,b,d,e,c){a&&(a[this.dataFields.pid]=d?d[this.dataFields.id]:"",d=this.getList(d))&&(0>b||null===b||void 0===b?d.push(a):(b=Math.max(Math.min(b,d.length),0),d.splice(b,0,a)),a[this.dataFields.id]||(a[this.dataFields.id]=
+this.getUniqueId()))};c.prototype.insertByRef=function(a,b,d){if(a&&b){var e=this.getParent(b),c=this.getList(e).indexOf(b);d&&(c+=1);this.insert(a,c,e,b,d);return c}};c.prototype.removeAt=function(a,b,d){var e,c=null;a&&(d=this.getParent(a),e=this.getList(d),b=e.indexOf(a));if(null===b||void 0===b)return{obj:c,result:!1};e=this.getList(d);return 0<=b&&b<e.length?(c=e[b],c[this.dataFields.pid]="",e.splice(b,1),{obj:c,result:!0}):{obj:c,result:!1}};c.prototype.clone=function(a,b){var d={id:this.getUniqueId(),
+icon:a[this.dataFields.icon],text:a[this.dataFields.text]};b&&(d[this.dataFields.pid]=b);if(a[this.dataFields.objects]&&0<a[this.dataFields.objects].length){d[this.dataFields.objects]||(d[this.dataFields.objects]=[]);for(var c=0;c<a[this.dataFields.objects].length;c++)d[this.dataFields.objects].push(this.clone(a[this.dataFields.objects][c],d[this.dataFields.id]))}return d};c.prototype.findParent=function(a,b){var c=null;if(a&&b)for(var e=0;!c&&e<b.length;)c=b[e][this.dataFields.id]&&a[this.dataFields.pid]&&
+b[e][this.dataFields.id].toString()===a[this.dataFields.pid].toString()?b[e]:this.findParent(a,b[e][this.dataFields.objects]),e++;return c};c.prototype.getList=function(a){return a?(a[this.dataFields.objects]||(a[this.dataFields.objects]=[]),a[this.dataFields.objects]):this.data};c.prototype.getParent=function(a){return a?this.findParent(a,this.data):null};c.prototype.getUniqueId=function(a){function b(){return(65536*(1+Math.random())|0).toString(16).substring(1)}a=a||"-";return b()+b()+a+b()+a+b()+
+a+b()+a+b()+b()+b()};return c=__decorate([core_1.Injectable(),__metadata("design:paramtypes",[])],c)}();exports.IntegralUIDataService=IntegralUIDataService;

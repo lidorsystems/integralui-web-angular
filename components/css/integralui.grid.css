@@ -1,0 +1,54 @@
+.iui-grid
+{
+	border-radius: 3px;
+	padding: 0px;
+	cursor: default;
+	overflow: auto;
+	position: relative;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.iui-grid div /*Compatibility with Bootstrap */
+{
+	-webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: content-box;    /* Firefox, other Gecko */
+	box-sizing: content-box; 
+}
+.iui-grid-header
+{
+	background: white;
+	border: thin solid blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.iui-grid-body
+{
+	border: thin solid red;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+.iui-grid-footer
+{
+	border: thin solid green;
+}
+.iui-column
+{
+
+}
+
+.iui-row-test
+{
+	color: red;
+}
+.iui-cell-content
+{
+	width: 100px;
+}

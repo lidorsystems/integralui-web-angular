@@ -1,0 +1,14 @@
+<li [ngClass]="getControlClass()" (click)="onClick($event)" (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp($event)" (mouseenter)="onMouseEnter($event)" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave($event)" (contextmenu)="onContextMenu($event)" [ngStyle]="{ 'display': getItemDisplay() }">
+	<div *ngIf="getDataType()=='item'">
+		<div #content>
+			<span *ngIf="icon" class="iui-item-icon" [ngClass]="icon" [style.display]="getIconStatus()"></span>
+		    <span *ngIf="text" class="iui-item-label">{{text}}</span>
+		</div>
+	    <!-- <ul *ngIf="isBlockVisible()" #block class="iui-menuitem-block" [ngStyle]="{'top': blockPos.top, 'left': blockPos.left, 'height': blockElemHeight }">
+	    <ul #block class="iui-menuitem-block" [ngStyle]="{ 'display': blockDisplay, 'top': blockPos.top, 'left': blockPos.left, 'width': blockElemWidth, 'height': blockElemHeight, 'overflow': blockOverflow, 'opacity2': blockOpacity }"> -->
+	    <ul #block class="iui-menuitem-block" [ngStyle]="{ 'display': blockDisplay, 'top': blockPos.top + 'px', 'left': blockPos.left + 'px', 'height': blockElemHeight, 'overflow': blockOverflow, 'opacity': blockOpacity }">
+		    <ng-content></ng-content>
+		</ul>
+	</div>
+	<hr *ngIf="getDataType()=='separator'" />
+</li>
