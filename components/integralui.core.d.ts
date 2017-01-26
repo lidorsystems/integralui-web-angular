@@ -1,5 +1,11 @@
-import { ElementRef, EventEmitter } from '@angular/core';
+import { ElementRef, EventEmitter, TemplateRef } from '@angular/core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+export declare class IntegralUITemplate {
+    settings: any;
+    template: TemplateRef<any>;
+    constructor();
+    getTemplate(): TemplateRef<any>;
+}
 export declare enum IntegralUIAnchorStyle {
     None = 0,
     Top = 1,
@@ -13,6 +19,10 @@ export declare enum IntegralUIObjectState {
     selected = 2,
     focused = 4,
     disabled = 8,
+}
+export declare enum IntegralUIOrientation {
+    Horizontal = 0,
+    Vertical = 1,
 }
 export declare enum IntegralUISelectionMode {
     None = 0,
@@ -51,7 +61,22 @@ export declare class IntegralUIBaseComponent {
     protected processStateChanged(): void;
     protected updateControlClass(): void;
     protected getControlClass(): any[];
-    private getDefaultStyle();
+    protected getDefaultStyle(): {
+        general: {
+            disabled: any;
+            focused: any;
+            hovered: any;
+            normal: any;
+            selected: any;
+        };
+    };
+    protected getDefaultGeneralStyle(): {
+        disabled: any;
+        focused: any;
+        hovered: any;
+        normal: any;
+        selected: any;
+    };
     protected getGeneralStyle(value: any): any;
     protected updateStyle(value: any): void;
 }
