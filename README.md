@@ -24,6 +24,10 @@ Here is a brief overview of what is included:
 
 [SlideBar](http://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx) - Animates slides composed of custom content
 
+[SplitContainer](http://www.lidorsystems.com/support/articles/angular/splitcontainer/splitcontainer-component.aspx) - Consists of two resizable panels separated by a splitter with tabs and command buttons
+
+[Splitter](http://www.lidorsystems.com/support/articles/angular/splitter/splitter-component.aspx) - Allows you to resize two block elements during run-time
+
 [TabStrip](http://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx) - Consists of multiple scrollable panels that share the same space 
 
 [TreeList](http://www.lidorsystems.com/support/articles/angular/treelist/treelist-component.aspx) - Allows you to navigate through tree hierarchy showing only one list at a time
@@ -97,7 +101,7 @@ If you are using SystemJS, make sure you have the following settings in systemjs
 
 ## Release Notes
 
-This is Trial version of the product, currently in BETA v0.5.0. All features are fully functional, except that each component displays a pop-up trial window.
+This is Trial version of the product, currently in BETA v0.7.239. All features are fully functional, except that each component displays a pop-up trial window.
 
 ## License Information
 
