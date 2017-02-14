@@ -70,10 +70,10 @@ Install the repository by running
 npm install https://github.com/lidorsystems/integralui-web.git
 ```
 
-After installation, copy/paste these files from node_modules/integralui-web folder:
-- components/css/*.* to your application root folder under /css subfolder
-- directives/css/*.* to your application root folder under /css subfolder
-- resources/*.* to your application root folder under /resources subfolder
+After installation, copy/paste all files from:
+- node_modules/integralui-web/components/css/ to your app root folder under /css subfolder
+- node_modules/integralui-web/directives/css/ to your app root folder under /css subfolder
+- node_modules/integralui-web/resources/ to your app root folder under /resources subfolder
 
 
 Next, open your application module and add a reference to IntegralUI module
