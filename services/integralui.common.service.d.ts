@@ -6,6 +6,7 @@ export declare class IntegralUICommonService {
         bottom: number;
         left: number;
     };
+    checkHit(x: number, y: number, bounds: any): boolean;
     getBodyElem(elem: any): any;
     getBorderWidth(elem: any): {
         top: number;

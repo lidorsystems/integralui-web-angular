@@ -3,7 +3,7 @@ import { IntegralUIBaseComponent, IntegralUISelectionMode } from './integralui.c
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
-export declare class IntegralUIList extends IntegralUIBaseComponent {
+export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
@@ -70,11 +70,7 @@ export declare class IntegralUIList extends IntegralUIBaseComponent {
     protected drop(e: any, data: any): void;
     protected processDataDrop(e: any, item: any, data: any): void;
     protected callAfterSelectEvent(item: any): void;
-    cloneItem(item: any): {
-        id: string;
-        icon: any;
-        text: any;
-    };
+    cloneItem(item: any): any;
     protected getItemCurrentIndex(item: any): number;
     getItemFromComponent(cmp: any): any;
     invokeMethod(key: string, data: any): boolean;

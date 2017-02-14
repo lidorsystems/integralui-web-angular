@@ -1,7 +1,7 @@
 /*
   filename: integralui.dragdrop.service.js
-  version : 0.5.0 BETA
-  Copyright © 2016 Lidor Systems. All rights reserved.
+  version : 0.7.5 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    

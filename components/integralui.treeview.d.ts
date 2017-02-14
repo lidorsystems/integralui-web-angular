@@ -3,9 +3,9 @@ import { IntegralUIBaseService } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
-import { IntegralUIList } from './integralui.list';
+import { IntegralUIBaseList } from './integralui.base.list';
 import { IntegralUITreeItem } from './integralui.treeitem';
-export declare class IntegralUITreeView extends IntegralUIList {
+export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;

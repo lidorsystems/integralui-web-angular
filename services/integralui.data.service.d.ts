@@ -1,24 +1,25 @@
 export declare class IntegralUIDataService {
     private data;
-    private dataFields;
     constructor();
-    init(list: Array<any>, fields?: any): void;
-    private updateDataFields(value?);
-    clear(parent?: any): void;
-    insertAt(obj: any, index: number, parent: any): void;
-    insert(obj: any, index?: number, parent?: any, refObject?: any, flag?: boolean): void;
-    insertByRef(obj: any, refObject: any, flag?: boolean): number;
-    removeAt(obj: any, index?: number, parent?: any): {
+    init(list: Array<any>): void;
+    private getDataFields(value?);
+    updateDataFields(value?: any, key?: string): void;
+    clear(parent?: any, key?: string): void;
+    insertAt(obj: any, index?: number, parent?: any, key?: any): void;
+    insert(obj: any, index?: number, parent?: any, refObject?: any, flag?: boolean, key?: any): void;
+    insertByRef(obj: any, refObject: any, flag?: boolean, key?: any): number;
+    removeAt(obj: any, index?: number, parent?: any, key?: any): {
         obj: any;
         result: boolean;
     };
-    clone(obj: any, pid?: any): {
-        id: string;
-        icon: any;
-        text: any;
-    };
-    findParent(obj: any, list: any): any;
-    getList(obj?: any): any;
-    getParent(obj: any): any;
+    clone(obj: any, pid?: any, key?: any): any;
+    findObjectById(id: any, key?: any): any;
+    findObjectByText(text: string, key?: any): any;
+    private searchObj(value, list, fields, type?);
+    findParent(obj: any, list: any, fields: any): any;
+    getData(key?: any): any;
+    getKey(key?: any): any;
+    getList(obj?: any, key?: any): any;
+    getParent(obj: any, key?: any): any;
     getUniqueId(separator?: string): string;
 }

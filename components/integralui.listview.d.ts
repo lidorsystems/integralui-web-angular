@@ -3,9 +3,9 @@ import { IntegralUIBaseService } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
-import { IntegralUIList } from './integralui.list';
+import { IntegralUIBaseList } from './integralui.base.list';
 import { IntegralUIListItem } from './integralui.listitem';
-export declare class IntegralUIListView extends IntegralUIList {
+export declare class IntegralUIListView extends IntegralUIBaseList {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
@@ -31,11 +31,7 @@ export declare class IntegralUIListView extends IntegralUIList {
     removeItemAt(index: number): boolean;
     private updateCurrentList();
     private addItemToCurrentList(item);
-    cloneItem(item: any): {
-        id: string;
-        icon: any;
-        text: any;
-    };
+    cloneItem(item: any): any;
     getItem(item: IntegralUIListItem): any;
     getItemFromComponent(cmp: any): any;
     getItemIndex(item: IntegralUIListItem): number;
