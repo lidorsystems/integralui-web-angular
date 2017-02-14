@@ -1,5 +1,8 @@
+v0.7.519
+- Fixed the problem with CSS relative paths in Angular CLI
+
 v0.7.5
-- Fixed the problem with Angular CLI, with eror stating that InetgralUIModule is not recognized
+- Fixed the problem with Angular CLI, with error stating that InetgralUIModule is not recognized
 - During drag drop when child item is moved and placed as a root item, when there are no child items, the layout is correctly updated and all root items are aligned
 
 

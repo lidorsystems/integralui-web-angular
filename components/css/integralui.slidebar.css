@@ -33,7 +33,7 @@
 }
 .iui-slidebar-navigator-button
 {
-	background: url(../resources/icons.png) no-repeat -144px 0;
+	background: url(../../resources/icons.png) no-repeat -144px 0;
 	display: inline-block;
 	height:16px;
 	margin: 0 2px;
@@ -42,7 +42,7 @@
 }
 .iui-slidebar-navigator-button-selected
 {
-	background: url(../resources/icons.png) no-repeat -160px 0;
+	background: url(../../resources/icons.png) no-repeat -160px 0;
 }
 .iui-slidebar-navigator-button-disabled
 {
@@ -67,7 +67,7 @@
 }
 .iui-slidebar-arrow-left span
 {
-	background: url(../resources/icons-x24.png) no-repeat -48px -168px;
+	background: url(../../resources/icons-x24.png) no-repeat -48px -168px;
 	opacity: 0.5;
 }
 .iui-slidebar-arrow-left:hover span
@@ -80,7 +80,7 @@
 }
 .iui-slidebar-arrow-right span
 {
-	background: url(../resources/icons-x24.png) no-repeat -72px -168px;
+	background: url(../../resources/icons-x24.png) no-repeat -72px -168px;
 	opacity: 0.5;
 }
 .iui-slidebar-arrow-right:hover span
