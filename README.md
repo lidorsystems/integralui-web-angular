@@ -74,7 +74,7 @@ After installation, in angular-cli.json under styles section add this code line:
 
 ```bash
 "../node_modules/integralui-web/integralui.module.css"
-
+```
 
 Next, open your application module and add a reference to IntegralUI module
 
