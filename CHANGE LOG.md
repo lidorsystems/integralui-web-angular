@@ -1,6 +1,6 @@
 v0.7.5
 - Fixed the problem with Angular CLI, with eror stating that InetgralUIModule is not recognized
-- During drag drop when child items is moved and placed as a root item, when there are no child items, the layout is correctly updated and all root items are aligned
+- During drag drop when child item is moved and placed as a root item, when there are no child items, the layout is correctly updated and all root items are aligned
 
 
 v0.7.239
