@@ -289,34 +289,3 @@
     padding: 0;
     height: 1px;
 }
-.iui-menu-load
-{
-	background: transparent;
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	position: absolute;
-	top: 0;
-	right: 2px;
-	vertical-align: middle;
-}
-.iui-menu-load-rtl
-{
-	background: transparent;
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	position: absolute;
-	top: 0;
-	left: 2px;
-	vertical-align: middle;
-}
-.iui-menu-load-icon
-{
-	background: url(../../resources/load-rect-white.gif) no-repeat 0 0;
-}
-.iui-submenu-load-icon
-{
-	background: url(../../resources/load-rect.gif) no-repeat 0 0;
-	float: right;
-}
