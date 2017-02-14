@@ -1,7 +1,7 @@
 .iui-frame
 {
 	background: transparent;
-	background: url(node_modules/integralui-web/resources/edge.png) no-repeat 0 0;
+	background: url(../resources/edge.png) no-repeat 0 0;
 	border: 0;
 	cursor: nw-resize;
 	position: absolute;
