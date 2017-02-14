@@ -23,7 +23,7 @@
 }
 .iui-treeitem-expand-box
 {
-    background: url(node_modules/integralui-web/resources/expandbox-icons.png) no-repeat 0 -48px;
+    background: url(../resources/expandbox-icons.png) no-repeat 0 -48px;
     display: inline-block;
     float: left;
     overflow: hidden;

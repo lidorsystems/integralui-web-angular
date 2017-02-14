@@ -28,7 +28,7 @@
 }
 .iui-dragwin-icon
 {
-    background-image: url(node_modules/integralui-web/resources/drag-drop.png);
+    background-image: url(../resources/drag-drop.png);
     background-repeat: no-repeat;
 	display: inline-block;
 	padding: 0;
@@ -98,7 +98,7 @@
 }
 .iui-filtering
 {
-    background-image: url(node_modules/integralui-web/resources/icons.png);
+    background-image: url(../resources/icons.png);
     background-position: -96px -80px;
     background-repeat: no-repeat;
 	margin: 0;
@@ -118,7 +118,7 @@
 }
 .iui-sort-ascending
 {
-    background-image: url(node_modules/integralui-web/resources/icons.png);
+    background-image: url(../resources/icons.png);
     background-position: -48px -80px;
     background-repeat: no-repeat;
 	margin: 0;
@@ -138,7 +138,7 @@
 }
 .iui-sort-descending
 {
-    background-image: url(node_modules/integralui-web/resources/icons.png);
+    background-image: url(../resources/icons.png);
     background-position: -32px -80px;
     background-repeat: no-repeat;
 	margin: 0;
@@ -195,7 +195,7 @@
 }
 .iui-dropdown-mark > span
 {
-    background-image: url(node_modules/integralui-web/resources/dropdown.png);
+    background-image: url(../resources/dropdown.png);
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -204,7 +204,7 @@
 }
 .iui-edit-mark
 {
-    background: url(node_modules/integralui-web/resources/icons.png) no-repeat;
+    background: url(../resources/icons.png) no-repeat;
     display: inline-block;
     margin: 0;
     overflow: hidden;
@@ -240,14 +240,14 @@
 }
 .iui-load-window-icon
 {
-	background: url(node_modules/integralui-web/resources/loading.gif) no-repeat 0 0;
+	background: url(../resources/loading.gif) no-repeat 0 0;
 	display: block;
 	width: 40px;
 	height: 40px;
 }
 .iui-load-circular
 {
-	background:url(node_modules/integralui-web/resources/circular.png) no-repeat 0 0;
+	background:url(../resources/circular.png) no-repeat 0 0;
 	position: absolute;
 	width: 48px;
 	height: 48px;

@@ -313,10 +313,10 @@
 }
 .iui-menu-load-icon
 {
-	background: url(node_modules/integralui-web/resources/load-rect-white.gif) no-repeat 0 0;
+	background: url(../resources/load-rect-white.gif) no-repeat 0 0;
 }
 .iui-submenu-load-icon
 {
-	background: url(node_modules/integralui-web/resources/load-rect.gif) no-repeat 0 0;
+	background: url(../resources/load-rect.gif) no-repeat 0 0;
 	float: right;
 }

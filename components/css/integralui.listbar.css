@@ -33,7 +33,7 @@
 }
 .iui-listbar-button-up-icon
 {
-    background: url(node_modules/integralui-web/resources/expandbox-icons.png) no-repeat 0 0;
+    background: url(../resources/expandbox-icons.png) no-repeat 0 0;
     display: inline-block;
     margin: 2px 45%;
     opacity: 0.5;
@@ -61,7 +61,7 @@
 }
 .iui-listbar-button-down-icon
 {
-    background: url(node_modules/integralui-web/resources/expandbox-icons.png) no-repeat 0 0;
+    background: url(../resources/expandbox-icons.png) no-repeat 0 0;
     display: inline-block;
     margin: 2px 45%;
     opacity: 0.5;

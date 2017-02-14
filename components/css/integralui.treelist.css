@@ -33,7 +33,7 @@
 }
 .expand-icons
 {
-    background: url(node_modules/integralui-web/resources/expandbox-icons.png) no-repeat 0 0;
+    background: url(../resources/expandbox-icons.png) no-repeat 0 0;
     display: inline-block;
     overflow: hidden;
     padding: 0;
