@@ -1,8 +1,0 @@
-<div [ngClass]="getControlClass()" #control>
-	<iui-header [controlStyle]="getCurrentHeaderStyle()" [icon]="icon" [text]="text" (mouseDown)="onHeaderClick($event)" [animationType]="headerAnimation" (expandClicked)="onHeaderExpand()" #header>
-		<ng-content select="[header]"></ng-content>
-	</iui-header>
-	<div [ngClass]="getContentClass()" [ngStyle]="{ 'display': contentDisplay, 'height': contentHeight, 'opacity': contentOpacity }" #content>
-		<ng-content></ng-content>
-	</div>
-</div>
