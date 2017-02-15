@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "0.7.519",
+  "version": "0.7.524",
   "description": "IntegralUI Web - Advanced User Interface Components for Angular 2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,10 +22,7 @@
   "files": [
     "*.pdf",
     "CHANGE_LOG.md",
-    "integralui.module.css",
-    "integralui.module.js",
-    "integralui.module.d.ts",
-    "integralui.module.js.map",
+    "integralui.module.*",
     "components/*.d.ts",
     "components/*.js",
     "components/*.js.map",
