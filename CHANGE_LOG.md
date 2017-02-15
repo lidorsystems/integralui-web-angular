@@ -1,4 +1,4 @@
-v0.7.519
+v0.7.524
 - Fixed the problem with Angular CLI, the error stating that IntegralUIModule is not recognized no longer appears
 
 v0.7.519
