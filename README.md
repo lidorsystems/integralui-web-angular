@@ -70,6 +70,8 @@ Install the repository by running
 npm install https://github.com/lidorsystems/integralui-web.git
 ```
 
+### Angular CLI
+
 After installation, in angular-cli.json under styles section add this code line:
 
 ```bash
@@ -89,6 +91,17 @@ import { IntegralUIModule } from 'integralui-web/integralui.module';
 export class AppModule { }
 ```
 
+### Angular QuickStart App
+
+Add following lines to the app.components.ts file:
+
+```bash
+    styleUrls: ['../node_modules/integralui-web/integralui.module.css'],
+    encapsulation: ViewEncapsulation.None
+```
+
+Also copy/paste the content of node_modules/integralui-web/resources/ folder to your project src/resources folder.
+
 If you are using SystemJS, make sure you have the following settings in systemjs.config.js file
 
 ```bash
@@ -101,16 +114,6 @@ If you are using SystemJS, make sure you have the following settings in systemjs
       }
     }
 ```
-
-If you are using Angular QuickStart App, add following lines to the app.components.ts file:
-
-```bash
-    styleUrls: ['../node_modules/integralui-web/integralui.module.css'],
-    encapsulation: ViewEncapsulation.None
-```
-
-Also copy/paste the content of node_modules/integralui-web/resources/ folder to your project src/resources folder.
-
 
 <b>Note</b>   In order to use a specific component or directive in your application, follow the guidelines from corresponding article. From above links, you can find a separate article available for each component or directive.
 
