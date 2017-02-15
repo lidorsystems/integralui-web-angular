@@ -119,7 +119,7 @@ If you are using SystemJS, make sure you have the following settings in systemjs
 
 ## Release Notes
 
-This is Trial version of the product, currently in BETA v0.7.239. All features are fully functional, except that each component displays a pop-up trial window.
+This is Trial version of the product, currently in BETA v0.7.524. All features are fully functional, except that each component displays a pop-up trial window.
 
 ## License Information
 
