@@ -1,3 +1,17 @@
+/*
+  filename: integralui.combobox.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(e,b){function a(){this.constructor=e}for(var d in b)b.hasOwnProperty(d)&&(e[d]=b[d]);e.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(e,b,a,d){var c=arguments.length,f=3>c?b:null===d?d=Object.getOwnPropertyDescriptor(b,a):d,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)f=Reflect.decorate(e,b,a,d);else for(var h=e.length-1;0<=h;h--)if(g=e[h])f=(3>c?g(f):3<c?g(b,a,f):
 g(b,a))||f;return 3<c&&f&&Object.defineProperty(b,a,f),f},__metadata=this&&this.__metadata||function(e,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUIComboBox=function(e){function b(a,b){e.call(this,a);this.commonService=a;this.cmpResolver=b;this.eventList=[];this.expandState="none";
 this.initStatus=!0;this.supressCallback=this.isSelected=this.isExpanded=!1;this.contentBorder="0px";this.contentHeight="0";this.contentDisplay="block";this.contentOpacity=1;this.contentOverflowY="hidden";this.maxBlockHeight=0;this.itemSizeList=[];this.itemContentClassName=this.itemGeneralClassName=this.headerExpandBoxClassName=this.headerClassName=this.contentClassName="";this.contentClass=[];this.trialRef=null;this.click=new core_1.EventEmitter;this.dropDownClosed=new core_1.EventEmitter;this.dropDownClosing=

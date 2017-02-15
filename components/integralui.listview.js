@@ -1,3 +1,17 @@
+/*
+  filename: integralui.listview.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(e,b){function a(){this.constructor=e}for(var c in b)b.hasOwnProperty(c)&&(e[c]=b[c]);e.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(e,b,a,c){var g=arguments.length,f=3>g?b:null===c?c=Object.getOwnPropertyDescriptor(b,a):c,d;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)f=Reflect.decorate(e,b,a,c);else for(var h=e.length-1;0<=h;h--)if(d=e[h])f=(3>g?d(f):3<g?d(b,a,f):
 d(b,a))||f;return 3<g&&f&&Object.defineProperty(b,a,f),f},__metadata=this&&this.__metadata||function(e,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_dragdrop_service_1=require("../services/integralui.dragdrop.service"),
 integralui_base_list_1=require("./integralui.base.list"),integralui_listitem_1=require("./integralui.listitem"),IntegralUIListView=function(e){function b(a,b,g,f,d,h,k){e.call(this,a,b,g,f,d);this.dataService=a;this.dragDropService=b;this.elemRef=g;this.elemRenderer=f;this.commonService=d;this.cmpResolver=h;this.baseService=k;this.currentScrollMode="horizontal";this.overflowSettings={horizontal:"auto",vertical:"auto"};this.trialRef=null;this.itemList=[]}__extends(b,e);Object.defineProperty(b.prototype,

@@ -1,3 +1,17 @@
+/*
+  filename: integralui.listgroup.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(d,b){function a(){this.constructor=d}for(var e in b)b.hasOwnProperty(e)&&(d[e]=b[e]);d.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(d,b,a,e){var c=arguments.length,f=3>c?b:null===e?e=Object.getOwnPropertyDescriptor(b,a):e,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)f=Reflect.decorate(d,b,a,e);else for(var h=d.length-1;0<=h;h--)if(g=d[h])f=(3>c?g(f):3<c?g(b,a,f):
 g(b,a))||f;return 3<c&&f&&Object.defineProperty(b,a,f),f},__metadata=this&&this.__metadata||function(d,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(d,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_groupbox_1=require("./integralui.groupbox"),IntegralUIListGroup=
 function(d){function b(a,b,c,f){d.call(this,b,c);this.dataService=a;this.commonService=b;this.cmpResolver=c;this.baseService=f;this.numItems=0;this.itemEventList=[];this.itemClassName=this.headerExpandBoxClassName=""}__extends(b,d);b.prototype.ngOnInit=function(){this.parentCtrl=this.baseService.getComponent();this.dataService.init([{data:this.items}]);this.generalClassName="iui-listgroup";this.headerClassName=this.generalClassName+"-header";this.headerExpandBoxClassName=this.headerClassName+"-expand-box";

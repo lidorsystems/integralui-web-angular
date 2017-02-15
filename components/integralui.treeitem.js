@@ -1,3 +1,17 @@
+/*
+  filename: integralui.treeitem.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(e,b){function a(){this.constructor=e}for(var f in b)b.hasOwnProperty(f)&&(e[f]=b[f]);e.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(e,b,a,f){var c=arguments.length,d=3>c?b:null===f?f=Object.getOwnPropertyDescriptor(b,a):f,h;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)d=Reflect.decorate(e,b,a,f);else for(var g=e.length-1;0<=g;g--)if(h=e[g])d=(3>c?h(d):3<c?h(b,a,d):
 h(b,a))||d;return 3<c&&d&&Object.defineProperty(b,a,d),d},__metadata=this&&this.__metadata||function(e,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_listitem_1=require("./integralui.listitem"),IntegralUITreeItem=
 function(e){function b(a,b,c,d){e.call(this,a,c,d);this.elemRef=a;this.dataService=b;this.commonService=c;this.baseService=d;this.contentAnimation={display:"none",left:0,width:0,height:0};this.numItems=0;this.templateData=[];this.expandState="none";this.blockElemHeight="0";this.eventList=[];this.parentItem=null;this.blockClass=[];this.expandBoxClass=[]}__extends(b,e);Object.defineProperty(b.prototype,"expanded",{get:function(){return this.isExpanded},set:function(a){this.isExpanded!=a&&(this.expandState=

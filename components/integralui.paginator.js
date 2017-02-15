@@ -1,3 +1,17 @@
+/*
+  filename: integralui.paginator.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __decorate=this&&this.__decorate||function(a,b,d,e){var f=arguments.length,c=3>f?b:null===e?e=Object.getOwnPropertyDescriptor(b,d):e,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)c=Reflect.decorate(a,b,d,e);else for(var h=a.length-1;0<=h;h--)if(g=a[h])c=(3>f?g(c):3<f?g(b,d,c):g(b,d))||c;return 3<f&&c&&Object.defineProperty(b,d,c),c},__metadata=this&&this.__metadata||function(a,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(a,
 b)},core_1=require("@angular/core"),IntegralUIPaginator=function(){function a(){this.minPageNumber=this.maxPageNumber=this.currentPageNumber=0;this.numPages="0";this.inputWidth=30;this.prevValue=0;this.pageChanged=new core_1.EventEmitter;this.updateCurrentPage=function(){0==this.currentPageNumber?this.currentPageNumber=0<this.maxPageNumber?1:this.currentPageNumber:(this.currentPageNumber<this.minPageNumber&&(this.currentPageNumber=this.minPageNumber),this.currentPageNumber>this.maxPageNumber&&(this.currentPageNumber=
 this.maxPageNumber));this.currentPageNumber!=this.prevValue&&this.pageChanged.emit({value:this.currentPageNumber});this.prevValue=this.currentPageNumber}}Object.defineProperty(a.prototype,"maxPages",{get:function(){return this.maxPageNumber},set:function(a){this.maxPageNumber!=a&&(this.maxPageNumber=a,0<a&&(this.minPageNumber=1));this.updateCurrentPage()},enumerable:!0,configurable:!0});Object.defineProperty(a.prototype,"currentPage",{get:function(){return this.currentPageNumber},set:function(a){this.prevValue=

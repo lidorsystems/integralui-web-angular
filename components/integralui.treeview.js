@@ -1,3 +1,17 @@
+/*
+  filename: integralui.treeview.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(d,b){function a(){this.constructor=d}for(var c in b)b.hasOwnProperty(c)&&(d[c]=b[c]);d.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(d,b,a,c){var f=arguments.length,e=3>f?b:null===c?c=Object.getOwnPropertyDescriptor(b,a):c,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(d,b,a,c);else for(var h=d.length-1;0<=h;h--)if(g=d[h])e=(3>f?g(e):3<f?g(b,a,e):
 g(b,a))||e;return 3<f&&e&&Object.defineProperty(b,a,e),e},__metadata=this&&this.__metadata||function(d,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(d,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_dragdrop_service_1=require("../services/integralui.dragdrop.service"),
 integralui_base_list_1=require("./integralui.base.list"),integralui_treeitem_1=require("./integralui.treeitem"),IntegralUITreeView=function(d){function b(a,c,b,e,g,h,k){d.call(this,a,c,b,e,g);this.dataService=a;this.dragDropService=c;this.elemRef=b;this.elemRenderer=e;this.commonService=g;this.cmpResolver=h;this.baseService=k;this.isThereChildItems=!1;this.blockSize={width:0,height:0};this.trialRef=null;this.afterCollapse=new core_1.EventEmitter;this.afterExpand=new core_1.EventEmitter;this.beforeCollapse=

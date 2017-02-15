@@ -1,3 +1,17 @@
+/*
+  filename: integralui.range.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __decorate=this&&this.__decorate||function(c,a,d,b){var f=arguments.length,e=3>f?a:null===b?b=Object.getOwnPropertyDescriptor(a,d):b,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(c,a,d,b);else for(var h=c.length-1;0<=h;h--)if(g=c[h])e=(3>f?g(e):3<f?g(a,d,e):g(a,d))||e;return 3<f&&e&&Object.defineProperty(a,d,e),e},__metadata=this&&this.__metadata||function(c,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(c,
 a)},core_1=require("@angular/core"),integralui_core_1=require("../components/integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUIRange=function(){function c(a,d,b){this.elemRef=a;this.elemRenderer=d;this.commonService=b;this.defaultSettings={anchor:integralui_core_1.IntegralUIAnchorStyle.Top|integralui_core_1.IntegralUIAnchorStyle.Left,factor:1,height:0,maxHeight:9999999,maxWidth:9999999,minHeight:0,minWidth:0,ref:"parent",width:0};this.resizeInterval=
 null;this.originalElemSize={width:0,height:0};this.sizeChanged=new core_1.EventEmitter}c.prototype.ngAfterViewInit=function(){var a=this;a.defaultSettings.width=parseInt(a.elemRef.nativeElement.width,10);var d={anchor:integralui_core_1.IntegralUIAnchorStyle.Top|integralui_core_1.IntegralUIAnchorStyle.Left,factor:1,height:0,maxHeight:9999999,maxWidth:9999999,minHeight:0,minWidth:0,ref:"parent",width:0};a.settings&&(d.anchor=a.commonService.isFieldAvailable(a.settings.anchor,a.defaultSettings.anchor),

@@ -1,3 +1,17 @@
+/*
+  filename: integralui.groupbox.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(e,a){function b(){this.constructor=e}for(var c in a)a.hasOwnProperty(c)&&(e[c]=a[c]);e.prototype=null===a?Object.create(a):(b.prototype=a.prototype,new b)},__decorate=this&&this.__decorate||function(e,a,b,c){var d=arguments.length,f=3>d?a:null===c?c=Object.getOwnPropertyDescriptor(a,b):c,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)f=Reflect.decorate(e,a,b,c);else for(var h=e.length-1;0<=h;h--)if(g=e[h])f=(3>d?g(f):3<d?g(a,b,f):
 g(a,b))||f;return 3<d&&f&&Object.defineProperty(a,b,f),f},__metadata=this&&this.__metadata||function(e,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,a)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUIGroupBox=function(e){function a(b,a,d){e.call(this,b);this.commonService=b;this.cmpResolver=a;this.baseService=d;this.expandState="none";
 this.supressCallback=this.isSelected=this.isExpanded=!1;this.contentHeight="0";this.contentDisplay="block";this.contentOpacity=1;this.maxBlockHeight=0;this.parentCtrl=null;this.headerExpandBoxClassName=this.headerClassName=this.contentClassName="";this.contentClass=[];this.headerBlockClass=[];this.afterCollapse=new core_1.EventEmitter;this.afterExpand=new core_1.EventEmitter;this.beforeCollapse=new core_1.EventEmitter;this.beforeExpand=new core_1.EventEmitter;this.selectedChanged=new core_1.EventEmitter;

@@ -1,3 +1,17 @@
+/*
+  filename: integralui.data.service.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __decorate=this&&this.__decorate||function(d,a,b,c){var e=arguments.length,f=3>e?a:null===c?c=Object.getOwnPropertyDescriptor(a,b):c,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)f=Reflect.decorate(d,a,b,c);else for(var h=d.length-1;0<=h;h--)if(g=d[h])f=(3>e?g(f):3<e?g(a,b,f):g(a,b))||f;return 3<e&&f&&Object.defineProperty(a,b,f),f},__metadata=this&&this.__metadata||function(d,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(d,
 a)},core_1=require("@angular/core"),IntegralUIDataService=function(){function d(){this.data=[]}d.prototype.init=function(a){for(var b=0;b<a.length;b++){var c={data:a[b].data,fields:this.getDataFields(a[b].fields),key:a[b].key};this.data.push(c)}};d.prototype.getDataFields=function(a){return a?{content:a.content?a.content:"content",icon:a.icon?a.icon:"icon",id:a.id?a.id:"id",pid:a.pid?a.pid:"pid",objects:a.objects?a.objects:"items",statusIcon:a.statusIcon?a.statusIcon:"statusIcon",subobjects:a.subobjects?
 a.subobjects:"subitems",text:a.text?a.text:"text"}:{content:"content",icon:"icon",id:"id",pid:"pid",objects:"items",statusIcon:"statusIcon",subobjects:"subitems",text:"text"}};d.prototype.updateDataFields=function(a,b){var c=this.getData(b);c&&(c.fields=this.getDataFields(a))};d.prototype.clear=function(a,b){this.getList(a,b).length=0};d.prototype.insertAt=function(a,b,c,e){this.insert(a,b,c,null,!1,e)};d.prototype.insert=function(a,b,c,e,f,d){a&&(e=this.getData(d))&&(e=e.fields,a[e.pid]=c?c[e.id]:

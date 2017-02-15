@@ -1,3 +1,17 @@
+/*
+  filename: integralui.tooltip.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(d,b){function a(){this.constructor=d}for(var c in b)b.hasOwnProperty(c)&&(d[c]=b[c]);d.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(d,b,a,c){var f=arguments.length,e=3>f?b:null===c?c=Object.getOwnPropertyDescriptor(b,a):c,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(d,b,a,c);else for(var h=d.length-1;0<=h;h--)if(g=d[h])e=(3>f?g(e):3<f?g(b,a,e):
 g(b,a))||e;return 3<f&&e&&Object.defineProperty(b,a,e),e},__metadata=this&&this.__metadata||function(d,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(d,b)},core_1=require("@angular/core"),integralui_core_1=require("../components/integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUITooltipComponent=function(d){function b(a,b){d.call(this,b);this.elemRef=a;this.commonService=b;this.popupTimer=this.showTimer=
 null;this.mousePos={x:0,y:0};this.tooltipDisplay="none";this.tooltipPos={top:0,left:0};this.tooltipSize={width:0,height:0};this.closed=new core_1.EventEmitter;this.updateOptions()}__extends(b,d);Object.defineProperty(b.prototype,"options",{get:function(){return this.tooltipOptions},set:function(a){this.updateOptions(a)},enumerable:!0,configurable:!0});b.prototype.updateOptions=function(a){this.tooltipOptions=a?{autoPopDelay:this.commonService.isFieldAvailable(a.autoPopDelay,5E3),enabled:this.commonService.isFieldAvailable(a.enabled,

@@ -1,3 +1,17 @@
+/*
+  filename: integralui.menuitem.js
+  version : 0.7.524 BETA
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(e,b){function a(){this.constructor=e}for(var f in b)b.hasOwnProperty(f)&&(e[f]=b[f]);e.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(e,b,a,f){var d=arguments.length,c=3>d?b:null===f?f=Object.getOwnPropertyDescriptor(b,a):f,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)c=Reflect.decorate(e,b,a,f);else for(var h=e.length-1;0<=h;h--)if(g=e[h])c=(3>d?g(c):3<d?g(b,a,c):
 g(b,a))||c;return 3<d&&c&&Object.defineProperty(b,a,c),c},__metadata=this&&this.__metadata||function(e,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),IntegralUIMenuItem=function(e){function b(a,b,d,c){e.call(this,b,d);this.dataService=
 a;this.elemRef=b;this.commonService=d;this.baseService=c;this.contentAnimation={display:"none",left:0,width:0,height:0};this.eventList=[];this.expandState="none";this.isItemHovered=!1;this.blockPos={top:0,left:0};this.popupOrder=999;this.blockDisplay="none";this.blockElemHeight=this.blockElemWidth="0";this.blockOverflow="hidden";this.blockOpacity=0;this.parentItem=this.parentCtrl=this.pauseTimer=null;this.pause=300}__extends(b,e);Object.defineProperty(b.prototype,"expanded",{get:function(){return this.isExpanded},
