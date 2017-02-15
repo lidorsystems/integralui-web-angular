@@ -83,6 +83,8 @@ import { IntegralUIModule } from 'integralui-web/integralui.module';
 export class AppModule { }
 ```
 
+<b>Note</b>   In order to use a specific component or directive in your application, follow the guidelines from corresponding article. From above links, you can find a separate article available for each component or directive.
+
 ### Angular CLI
 
 After installation, in angular-cli.json under styles section add this code line:
@@ -114,9 +116,6 @@ If you are using SystemJS, make sure you have the following settings in systemjs
       }
     }
 ```
-
-<b>Note</b>   In order to use a specific component or directive in your application, follow the guidelines from corresponding article. From above links, you can find a separate article available for each component or directive.
-
 
 ## Release Notes
 
