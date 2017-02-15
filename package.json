@@ -21,6 +21,7 @@
   "homepage": "https://github.com/lidorsystems/integralui-web",
   "files": [
     "*.pdf",
+    "CHANGE_LOG.md",
     "integralui.module.css",
     "integralui.module.js",
     "integralui.module.d.ts",
