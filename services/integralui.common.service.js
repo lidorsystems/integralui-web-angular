@@ -1,17 +1,3 @@
-/*
-  filename: integralui.common.service.js
-  version : 0.7.5 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __decorate=this&&this.__decorate||function(b,a,c,e){var f=arguments.length,d=3>f?a:null===e?e=Object.getOwnPropertyDescriptor(a,c):e,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)d=Reflect.decorate(b,a,c,e);else for(var h=b.length-1;0<=h;h--)if(g=b[h])d=(3>f?g(d):3<f?g(a,c,d):g(a,c))||d;return 3<f&&d&&Object.defineProperty(a,c,d),d},__metadata=this&&this.__metadata||function(b,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(b,
 a)},core_1=require("@angular/core"),IntegralUICommonService=function(){function b(){}b.prototype.calcMargin=function(a){return a?{top:getComputedStyle(a)["margin-top"]?parseInt(getComputedStyle(a)["margin-top"],10):getComputedStyle(a).marginTop?parseInt(getComputedStyle(a).marginTop,10):0,right:getComputedStyle(a)["margin-right"]?parseInt(getComputedStyle(a)["margin-right"],10):getComputedStyle(a).marginRight?parseInt(getComputedStyle(a).marginRight,10):0,bottom:getComputedStyle(a)["margin-bottom"]?
 parseInt(getComputedStyle(a)["margin-bottom"],10):getComputedStyle(a).marginBottom?parseInt(getComputedStyle(a).marginBottom,10):0,left:getComputedStyle(a)["margin-left"]?parseInt(getComputedStyle(a)["margin-left"],10):getComputedStyle(a).marginLeft?parseInt(getComputedStyle(a).marginLeft,10):0}:{top:0,right:0,bottom:0,left:0}};b.prototype.checkHit=function(a,c,b){return a>=b.left&&a<=b.right&&c>=b.top&&c<=b.bottom?!0:!1};b.prototype.getBodyElem=function(a){for(var b=null;a;){if(null==a.offsetParent){b=

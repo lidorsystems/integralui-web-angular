@@ -1,17 +1,3 @@
-/*
-  filename: integralui.frame.js
-  version : 0.7.5 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __decorate=this&&this.__decorate||function(a,b,c,e){var f=arguments.length,d=3>f?b:null===e?e=Object.getOwnPropertyDescriptor(b,c):e,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)d=Reflect.decorate(a,b,c,e);else for(var h=a.length-1;0<=h;h--)if(g=a[h])d=(3>f?g(d):3<f?g(b,c,d):g(b,c))||d;return 3<f&&d&&Object.defineProperty(b,c,d),d},__metadata=this&&this.__metadata||function(a,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(a,
 b)},core_1=require("@angular/core"),integralui_core_1=require("../components/integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUIFrame=function(){function a(b,a,e){this.elemRef=b;this.elemRenderer=a;this.commonService=e;this.isActive=!1;this.startPos={x:0,y:0};this.currentPos={x:0,y:0};this.newSizeDistance={dx:0,dy:0};this.parentElem=null;this.sizeChanged=new core_1.EventEmitter}a.prototype.ngAfterViewInit=function(){this.resizerElem=this.elemRenderer.createElement(this.elemRef.nativeElement,
 "div");this.elemRenderer.setElementStyle(this.resizerElem,"background","url(../resources/edge.png) no-repeat 0 0");this.elemRenderer.setElementStyle(this.resizerElem,"width","16px");this.elemRenderer.setElementStyle(this.resizerElem,"height","16px");this.elemRenderer.setElementStyle(this.resizerElem,"position","absolute");this.elemRenderer.setElementStyle(this.resizerElem,"right","0");this.elemRenderer.setElementStyle(this.resizerElem,"bottom","0");this.elemRenderer.setElementStyle(this.resizerElem,

@@ -1,17 +1,3 @@
-/*
-  filename: integralui.base.list.js
-  version : 0.7.5 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __extends=this&&this.__extends||function(f,b){function a(){this.constructor=f}for(var c in b)b.hasOwnProperty(c)&&(f[c]=b[c]);f.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(f,b,a,c){var d=arguments.length,e=3>d?b:null===c?c=Object.getOwnPropertyDescriptor(b,a):c,k;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(f,b,a,c);else for(var g=f.length-1;0<=g;g--)if(k=f[g])e=(3>d?k(e):3<d?k(b,a,e):
 k(b,a))||e;return 3<d&&e&&Object.defineProperty(b,a,e),e},__metadata=this&&this.__metadata||function(f,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(f,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_dragdrop_service_1=require("../services/integralui.dragdrop.service"),
 IntegralUIBaseList=function(f){function b(a,c,b,e,k,g){f.call(this,k);this.dataService=a;this.dragDropService=c;this.elemRef=b;this.elemRenderer=e;this.commonService=k;this.cmpResolver=g;this.currentList=[];this.options={allowDrag:!0,allowDrop:!0,dataFields:null,selectedItem:null};this.cloneElem=this.dragCmp=this.dragCmpRef=this.dropMarkElem=null;this.cloneElemStartPos={x:0,y:0};this.currentSelectionMode=integralui_core_1.IntegralUISelectionMode.One;this.removeIndex=-1;this.currentSelectedItems=[];
