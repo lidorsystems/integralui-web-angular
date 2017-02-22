@@ -1,5 +1,6 @@
 .iui-grid
 {
+    border: thin solid gray;
 	border-radius: 3px;
 	padding: 0px;
 	cursor: default;
