@@ -33,6 +33,7 @@
     "directives/*.js.map",
     "directives/**/*.css",
     "resources/*.png",
+    "resources/*.gif",
     "resources/**/*.png",
     "services/*.d.ts",
     "services/*.js",

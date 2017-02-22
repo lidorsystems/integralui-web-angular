@@ -158,7 +158,7 @@
 }
 .iui-grid-expand-box
 {
-	/*background: url(../resources/empty.png) no-repeat 0 0;*/
+	/*background: url(../../resources/empty.png) no-repeat 0 0;*/
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -167,39 +167,39 @@
 }
 .iui-grid-expand-box-load
 {
-	background: url(../resources/load.gif) no-repeat 0 0;
+	background: url(../../resources/load.gif) no-repeat 0 0;
 }
 .iui-grid-expand-box-open
 {
-	background: url(../resources/expand.png) no-repeat 0 0;
+	background: url(../../resources/expand.png) no-repeat 0 0;
 }
 .iui-grid-expand-box-open-disabled
 {
-	background: url(../resources/expand-disabled.png) no-repeat 0 0;
+	background: url(../../resources/expand-disabled.png) no-repeat 0 0;
 }
 .iui-grid-expand-box-close
 {
-	background: url(../resources/collapse.png) no-repeat 0 0;
+	background: url(../../resources/collapse.png) no-repeat 0 0;
 }
 .iui-grid-expand-box-close-disabled
 {
-	background: url(../resources/collapse-disabled.png) no-repeat 0 0;
+	background: url(../../resources/collapse-disabled.png) no-repeat 0 0;
 }
 .iui-grid-expand-box-open-rtl
 {
-	background: url(../resources/expand-rtl.png) no-repeat 0 0;
+	background: url(../../resources/expand-rtl.png) no-repeat 0 0;
 }
 .iui-grid-expand-box-open-rtl-disabled
 {
-	background: url(../resources/expand-rtl-disabled.png) no-repeat 0 0;
+	background: url(../../resources/expand-rtl-disabled.png) no-repeat 0 0;
 }
 .iui-grid-expand-box-close-rtl
 {
-	background: url(../resources/collapse-rtl.png) no-repeat 0 0;
+	background: url(../../resources/collapse-rtl.png) no-repeat 0 0;
 }
 .iui-grid-expand-box-close-rtl-disabled
 {
-	background: url(../resources/collapse-rtl-disabled.png) no-repeat 0 0;
+	background: url(../../resources/collapse-rtl-disabled.png) no-repeat 0 0;
 }
 .iui-grid-column-reorder-mark
 {
@@ -216,11 +216,11 @@
 }
 .iui-grid-column-reorder-mark-left
 {
-    background-image: url(../resources/move-left.png);
+    background-image: url(../../resources/move-left.png);
 }
 .iui-grid-column-reorder-mark-right
 {
-    background-image: url(../resources/move-right.png);
+    background-image: url(../../resources/move-right.png);
 }
 .iui-grid-column-reorder-tooltip
 {
@@ -303,7 +303,7 @@
 }
 .iui-grid-grouping-panel-item-button
 {
-    background-image: url(../resources/icons.png);
+    background-image: url(../../resources/icons.png);
     background-position: -64px -96px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -377,7 +377,7 @@
 }
 .iui-grid-column-expand-box
 {
-	/*background: url(../resources/empty.png) no-repeat 0 0;*/
+	/*background: url(../../resources/empty.png) no-repeat 0 0;*/
 	display: inline-block;
 	height: 16px;
 	left: 47.5%;
@@ -388,11 +388,11 @@
 }
 .iui-grid-column-expand-box-open
 {
-	background: url(../resources/expandbox/plus.png) no-repeat 0 0;
+	background: url(../../resources/expandbox/plus.png) no-repeat 0 0;
 }
 .iui-grid-column-expand-box-close
 {
-	background: url(../resources/expandbox/minus.png) no-repeat 0 0;
+	background: url(../../resources/expandbox/minus.png) no-repeat 0 0;
 }
 .iui-grid-column-expand-line-left
 {
