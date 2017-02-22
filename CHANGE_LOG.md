@@ -1,3 +1,7 @@
+v0.9.0
+- Added two new components: Grid and TreeGrid
+- Expand/Collapse events in TreeView are now fired
+
 v0.7.524
 - Fixed the problem with Angular CLI, the error stating that IntegralUIModule is not recognized no longer appears
 

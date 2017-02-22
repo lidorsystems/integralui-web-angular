@@ -1,17 +1,3 @@
-/*
-  filename: integralui.treelist.js
-  version : 0.7.524 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __extends=this&&this.__extends||function(e,a){function f(){this.constructor=e}for(var b in a)a.hasOwnProperty(b)&&(e[b]=a[b]);e.prototype=null===a?Object.create(a):(f.prototype=a.prototype,new f)},__decorate=this&&this.__decorate||function(e,a,f,b){var c=arguments.length,d=3>c?a:null===b?b=Object.getOwnPropertyDescriptor(a,f):b,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)d=Reflect.decorate(e,a,f,b);else for(var k=e.length-1;0<=k;k--)if(g=e[k])d=(3>c?g(d):3<c?g(a,f,d):
 g(a,f))||d;return 3<c&&d&&Object.defineProperty(a,f,d),d},__metadata=this&&this.__metadata||function(e,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,a)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),IntegralUITreeListItem=function(e){function a(a,b,c){e.call(this,a,b);
 this.elemRef=a;this.commonService=b;this.baseService=c;this.templateData=[];this.parentCtrl=null}__extends(a,e);a.prototype.ngOnInit=function(){this.templateData.push(this.data);this.parentCtrl=this.baseService.getComponent();this.generalClassName="iui-treelistitem";this.contentClassName=this.generalClassName+"-content";this.initStyle()};__decorate([core_1.Input(),__metadata("design:type",Object)],a.prototype,"templateRef",void 0);return a=__decorate([core_1.Component({selector:"iui-treelistitem",

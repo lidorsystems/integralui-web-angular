@@ -1,17 +1,3 @@
-/*
-  filename: integralui.listbar.js
-  version : 0.7.524 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __extends=this&&this.__extends||function(g,b){function a(){this.constructor=g}for(var c in b)b.hasOwnProperty(c)&&(g[c]=b[c]);g.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(g,b,a,c){var e=arguments.length,d=3>e?b:null===c?c=Object.getOwnPropertyDescriptor(b,a):c,f;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)d=Reflect.decorate(g,b,a,c);else for(var h=g.length-1;0<=h;h--)if(f=g[h])d=(3>e?f(d):3<e?f(b,a,d):
 f(b,a))||d;return 3<e&&d&&Object.defineProperty(b,a,d),d},__metadata=this&&this.__metadata||function(g,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(g,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_listgroup_1=require("./integralui.listgroup"),IntegralUIListBar=
 function(g){function b(a,b,e,d,f){g.call(this,e);this.elemRef=a;this.dataService=b;this.commonService=e;this.cmpResolver=d;this.baseService=f;this.blockMarginTop=this.numGroups=0;this.scrollPos={x:0,y:0};this.maxScrollPos={x:0,y:0};this.buttonWidth=0;this.groupEventList=[];this.initScrollPos=0;this.isScrollVisible=this.isScrollActive=!1;this.scrollCount=0;this.scrollTimer=null;this.stopScrolling=!1;this.currentSelection=null;this.currentSelectedIndex=-1;this.prevComponent=this.selectedComponent=null;

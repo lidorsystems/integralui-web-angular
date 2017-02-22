@@ -10,6 +10,8 @@ Here is a brief overview of what is included:
 
 [ComboBox](http://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx) - Advanced version of standard ComboBox element
 
+[Grid](http://www.lidorsystems.com/support/articles/angular/grid/grid-component.aspx) - Displays tabular data sets
+
 [GroupBox](http://www.lidorsystems.com/support/articles/angular/groupbox/groupbox-component.aspx) - An expandable container with header and content
 
 [ListBar](http://www.lidorsystems.com/support/articles/angular/listbar/listbar-component.aspx) - Displays a list of expandable groups with items
@@ -29,6 +31,8 @@ Here is a brief overview of what is included:
 [Splitter](http://www.lidorsystems.com/support/articles/angular/splitter/splitter-component.aspx) - Allows you to resize two block elements during run-time
 
 [TabStrip](http://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx) - Consists of multiple scrollable panels that share the same space 
+
+[TreeGrid](http://www.lidorsystems.com/support/articles/angular/treegrid/treegrid-component.aspx) - Displays hierarchical data structures in multiple columns
 
 [TreeList](http://www.lidorsystems.com/support/articles/angular/treelist/treelist-component.aspx) - Allows you to navigate through tree hierarchy showing only one list at a time
 
@@ -119,7 +123,7 @@ If you are using SystemJS, make sure you have the following settings in systemjs
 
 ## Release Notes
 
-This is Trial version of the product, currently in BETA v0.7.524. All features are fully functional, except that each component displays a pop-up trial window.
+This is Trial version of the product, currently in BETA v0.9.0. All features are fully functional, except that each component displays a pop-up trial window.
 
 ## License Information
 

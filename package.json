@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "0.7.524",
+  "version": "0.9.0",
   "description": "IntegralUI Web - Advanced User Interface Components for Angular 2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +33,7 @@
     "directives/*.js.map",
     "directives/**/*.css",
     "resources/*.png",
+    "resources/**/*.png",
     "services/*.d.ts",
     "services/*.js",
     "services/*.js.map"

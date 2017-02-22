@@ -1,17 +1,3 @@
-/*
-  filename: integralui.core.js
-  version : 0.7.524 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __extends=this&&this.__extends||function(a,b){function d(){this.constructor=a}for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c]);a.prototype=null===b?Object.create(b):(d.prototype=b.prototype,new d)},__decorate=this&&this.__decorate||function(a,b,d,c){var f=arguments.length,e=3>f?b:null===c?c=Object.getOwnPropertyDescriptor(b,d):c,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(a,b,d,c);else for(var h=a.length-1;0<=h;h--)if(g=a[h])e=(3>f?g(e):3<f?g(b,d,e):
 g(b,d))||e;return 3<f&&e&&Object.defineProperty(b,d,e),e},__metadata=this&&this.__metadata||function(a,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(a,b)},core_1=require("@angular/core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUITemplate=function(){function a(){}a.prototype.getTemplate=function(){return this.template};__decorate([core_1.Input("iuiTemplate"),__metadata("design:type",Object)],a.prototype,"settings",
 void 0);__decorate([core_1.ContentChild(core_1.TemplateRef),__metadata("design:type",core_1.TemplateRef)],a.prototype,"template",void 0);return a=__decorate([core_1.Directive({selector:"[iuiTemplate]"}),__metadata("design:paramtypes",[])],a)}();exports.IntegralUITemplate=IntegralUITemplate;(function(a){a[a.None=0]="None";a[a.Top=1]="Top";a[a.Right=2]="Right";a[a.Bottom=4]="Bottom";a[a.Left=8]="Left"})(exports.IntegralUIAnchorStyle||(exports.IntegralUIAnchorStyle={}));var IntegralUIAnchorStyle=exports.IntegralUIAnchorStyle;

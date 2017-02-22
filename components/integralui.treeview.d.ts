@@ -43,6 +43,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected isParentOf(targetItem: any, item: any): boolean;
     isThereChildren(): boolean;
     private isThereVisibleChildren(item);
+    invokeEvent(key: string, item: any): boolean;
     invokeMethod(key: string, data: any): boolean;
     private changeExpanded(cmp);
     protected getContentSize(): {

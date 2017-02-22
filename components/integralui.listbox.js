@@ -1,17 +1,3 @@
-/*
-  filename: integralui.listbox.js
-  version : 0.7.524 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __extends=this&&this.__extends||function(d,a){function b(){this.constructor=d}for(var c in a)a.hasOwnProperty(c)&&(d[c]=a[c]);d.prototype=null===a?Object.create(a):(b.prototype=a.prototype,new b)},__decorate=this&&this.__decorate||function(d,a,b,c){var f=arguments.length,e=3>f?a:null===c?c=Object.getOwnPropertyDescriptor(a,b):c,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(d,a,b,c);else for(var h=d.length-1;0<=h;h--)if(g=d[h])e=(3>f?g(e):3<f?g(a,b,e):
 g(a,b))||e;return 3<f&&e&&Object.defineProperty(a,b,e),e},__metadata=this&&this.__metadata||function(d,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(d,a)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_dragdrop_service_1=require("../services/integralui.dragdrop.service"),
 integralui_base_list_1=require("./integralui.base.list"),integralui_listitem_1=require("./integralui.listitem"),IntegralUIListBox=function(d){function a(b,a,f,e,g,h,k){d.call(this,b,a,f,e,g);this.dataService=b;this.dragDropService=a;this.elemRef=f;this.elemRenderer=e;this.commonService=g;this.cmpResolver=h;this.baseService=k;this.trialRef=null;this.itemList=[]}__extends(a,d);a.prototype.ngOnInit=function(){this.baseService.setComponent(this);this.dataService.init([{data:this.items}]);this.updateCurrentList();

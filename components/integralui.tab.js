@@ -1,17 +1,3 @@
-/*
-  filename: integralui.tab.js
-  version : 0.7.524 BETA
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
-
-  This file is part of the "IntegralUI Web" Library. 
-                                                                   
-  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
-  A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
-                                                            
-  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
-  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
-*/
 var __extends=this&&this.__extends||function(c,b){function a(){this.constructor=c}for(var d in b)b.hasOwnProperty(d)&&(c[d]=b[d]);c.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(c,b,a,d){var f=arguments.length,e=3>f?b:null===d?d=Object.getOwnPropertyDescriptor(b,a):d,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(c,b,a,d);else for(var h=c.length-1;0<=h;h--)if(g=c[h])e=(3>f?g(e):3<f?g(b,a,e):
 g(b,a))||e;return 3<f&&e&&Object.defineProperty(b,a,e),e},__metadata=this&&this.__metadata||function(c,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(c,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUITab=function(c){function b(a,b,f){c.call(this,b);this.elemRef=a;this.commonService=b;this.baseService=f;this.parentCtrl=null;this.contentClass=
 [];this.isSelected=!1;this.elemOrder=this.elemHeight=this.elemWidth=this.leftPos=this.topPos=0;this.elemBorderColor="gray";this.selectedChanged=new core_1.EventEmitter}__extends(b,c);Object.defineProperty(b.prototype,"selected",{get:function(){return this.isSelected},set:function(a){this.isSelected!=a&&(this.state=a?this.state|integralui_core_1.IntegralUIObjectState.selected:this.state&~integralui_core_1.IntegralUIObjectState.selected,this.elemOrder=(this.isSelected=a)?2:0)},enumerable:!0,configurable:!0});
