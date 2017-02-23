@@ -1,3 +1,7 @@
+v0.9.012
+- Following methods are now available in TreeView: collapse, expand, scrollPos and toggle
+- Fixed the issue with addItem method when parent argument is ised
+
 v0.9.0
 - Added two new components: Grid and TreeGrid
 - Expand/Collapse events in TreeView are now fired
