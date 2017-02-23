@@ -35,6 +35,9 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     private updateCurrentList();
     private addChildItems(parentItem, pid, flag, parent?);
     private addItemToCurrentList(item, pid, flag, parent);
+    collapse(item?: any): void;
+    expand(item?: any): void;
+    toggle(item?: any, value?: boolean): void;
     getItemFromComponent(cmp: any): any;
     getItemIndex(item: IntegralUITreeItem): number;
     protected getParent(item: any): any;
@@ -53,5 +56,8 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     refresh(): void;
     getComponentFromItem(item: any): any;
     updateLayout(): void;
+    private currentScrollPos;
+    private maxScrollPos;
+    scrollPos(value?: any): any;
     protected clearComponentSelection(): void;
 }
