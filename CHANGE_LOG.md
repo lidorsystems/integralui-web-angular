@@ -1,5 +1,5 @@
 v0.9.012
-- Following methods are now available in TreeView: collapse, expand, scrollPos and toggle
+- Following methods are now available in TreeView: collapse, expand, findItemById, findItemByText, scrollPos and toggle
 - Fixed the issue with addItem method when parent argument is ised
 
 v0.9.0

@@ -59,5 +59,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     private currentScrollPos;
     private maxScrollPos;
     scrollPos(value?: any): any;
+    findItemById(id: any): any;
+    findItemByText(text: string): any;
     protected clearComponentSelection(): void;
 }
