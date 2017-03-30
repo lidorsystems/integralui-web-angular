@@ -34,7 +34,7 @@
     "resources/*.gif",
     "resources/**/*.png",
     "services/*.d.ts",
-    "services/*.js",
+    "services/*.js"
   ],
   "devDependencies": {
     "@angular/common": "~2.0.1",
