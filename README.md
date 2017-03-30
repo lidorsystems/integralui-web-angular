@@ -94,7 +94,7 @@ export class AppModule { }
 After installation, in angular-cli.json under styles section add this code line:
 
 ```bash
-"../node_modules/integralui-web/integralui.module.css"
+"../node_modules/integralui-web/css/integralui.module.css"
 ```
 
 ### Angular QuickStart App
@@ -102,7 +102,7 @@ After installation, in angular-cli.json under styles section add this code line:
 Add following lines to the app.components.ts file:
 
 ```bash
-    styleUrls: ['../node_modules/integralui-web/integralui.module.css'],
+    styleUrls: ['../node_modules/integralui-web/css/integralui.module.css'],
     encapsulation: ViewEncapsulation.None
 ```
 
