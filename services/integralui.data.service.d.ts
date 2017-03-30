@@ -12,11 +12,11 @@ export declare class IntegralUIDataService {
         obj: any;
         result: boolean;
     };
-    clone(obj: any, pid?: any, key?: any): any;
+    clone(obj: any, key?: any): any;
     findObjectById(id: any, key?: any): any;
     findObjectByText(text: string, key?: any): any;
     private searchObj(value, list, fields, type?);
-    findParent(obj: any, list: any, fields: any): any;
+    findParent(obj: any, list: Array<any>, fields: any): any;
     getData(key?: any): any;
     getKey(key?: any): any;
     getList(obj?: any, key?: any): any;

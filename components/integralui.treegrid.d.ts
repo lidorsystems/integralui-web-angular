@@ -1,4 +1,4 @@
-import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer } from '@angular/core';
+import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseService, IntegralUITemplate } from './integralui.core';
 import { IntegralUIBaseGrid } from './integralui.base.grid';
 import { IntegralUICommonService } from '../services/integralui.common.service';
@@ -34,6 +34,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     protected avgRowHeight: number;
     private blockMarginTop;
     private blockSize;
+    private columnPadding;
     protected visibleRange: number;
     protected isHeaderVisible: boolean;
     protected isFooterVisible: boolean;
@@ -45,13 +46,10 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     bodyElem: ElementRef;
     verScrollCmp: IntegralUIScrollBar;
     horScrollCmp: IntegralUIScrollBar;
+    contentRef: ViewContainerRef;
     private templateList;
     protected gridCursor: string;
     protected isScrollActive: boolean;
-    protected maxScrollPos: {
-        x: number;
-        y: number;
-    };
     protected prevScrollPos: {
         x: number;
         y: number;
@@ -60,7 +58,11 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
         width: number;
         height: number;
     };
-    protected scrollPos: {
+    protected currentScrollPos: {
+        x: number;
+        y: number;
+    };
+    protected scrollLargeChange: {
         x: number;
         y: number;
     };
@@ -74,6 +76,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     protected generalClassName: string;
     protected gridLinesClassName: string;
     protected rowClassName: string;
+    private trialRef;
     expandColumnIndex: number;
     showHeader: boolean;
     showFooter: boolean;
@@ -81,12 +84,12 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     afterExpand: EventEmitter<any>;
     beforeCollapse: EventEmitter<any>;
     beforeExpand: EventEmitter<any>;
-    scrollPosChanged: EventEmitter<any>;
     constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected initStyle(): void;
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
+    ngOnDestroy(): void;
     private updateScrollColumnList();
     private updateScrollRowList();
     private addColumnToCurrentList(column);
@@ -95,6 +98,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     private addChildRows(parentRow, indent, pid, flag);
     private addRowToCurrentList(row, indent, pid, flag);
     getFullList(): any[];
+    loadData(data: Array<any>, parent?: any, fields?: any, flat?: boolean): void;
     protected rowDragStart(e: any, obj: any): void;
     protected rowDragOver(e: any, obj: any, index: number): void;
     protected rowDragDrop(e: any, obj: any): void;
@@ -103,7 +107,6 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     collapse(row?: any): void;
     expandBoxClicked(e: any, row: any): void;
     expand(row?: any): void;
-    private isRowLoading(row);
     toggle(row?: any, value?: boolean): void;
     protected getColumnCurrentIndex(column: any): number;
     protected getColumnRealIndex(j: number): any;
@@ -147,7 +150,6 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     protected updateRange(): void;
     protected updateCurrentLayout(): void;
     private updateBlockSize();
-    private columnPadding;
     updateLayout(): void;
     private updateVisibleRange();
     private updateScrollSize();
@@ -156,6 +158,10 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     onWindowMouseUp(e: any): void;
     private updateCellWidth(column);
     getRowParent(row: any): any;
+    beginLoad(row?: any): void;
+    endLoad(row?: any): void;
+    private isRowLoading(row);
+    private changeHorizontalScrollPos(value);
     private changeVerticalScrollPos(value);
     private gridMouseWheel(e);
     isVerScrollVisible(): boolean;
@@ -203,7 +209,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
         vertical: any;
         both: any;
     };
-    protected getDefaultStyle(): {
+    protected getDefaultGridStyle(): {
         general: {
             disabled: any;
             focused: any;

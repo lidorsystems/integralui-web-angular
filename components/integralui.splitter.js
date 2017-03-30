@@ -1,3 +1,17 @@
+/*
+  filename: integralui.splitter.js
+  version : 1.0.0
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(e,b){function a(){this.constructor=e}for(var d in b)b.hasOwnProperty(d)&&(e[d]=b[d]);e.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(e,b,a,d){var c=arguments.length,f=3>c?b:null===d?d=Object.getOwnPropertyDescriptor(b,a):d,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)f=Reflect.decorate(e,b,a,d);else for(var h=e.length-1;0<=h;h--)if(g=e[h])f=(3>c?g(f):3<c?g(b,a,f):
 g(b,a))||f;return 3<c&&f&&Object.defineProperty(b,a,f),f},__metadata=this&&this.__metadata||function(e,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUISplitter=function(e){function b(a,b,c){e.call(this,c);this.elemRef=a;this.elemRenderer=b;this.commonService=c;this.clientSize={width:0,
 height:0};this.currentSplitterDistance=0;this.maxPos={x:0,y:0};this.panel1Size={width:0,height:0};this.panel2Size={width:0,height:0};this.splitterSize={width:0,height:0};this.splitterHandleSize={width:0,height:0};this.handleClass=[];this.orientation=integralui_core_1.IntegralUIOrientation.Vertical;this.orientationChanged=new core_1.EventEmitter;this.splitterMoved=new core_1.EventEmitter;this.splitterMoving=new core_1.EventEmitter;this.splitterStartPos={x:0,y:0};this.isSplitterActive=!1}__extends(b,

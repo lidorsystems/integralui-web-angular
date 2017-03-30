@@ -67,8 +67,8 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     private callEventAdd(type, slide, index?, refSlide?, flag?);
     private callEventRemove(slide);
     private getButtonClass(button);
-    private getSlideCurrentIndex(slide);
-    private getSlideDataIndex(slide);
+    private getSlideCurrentIndex(cmp);
+    private getSlideDataIndex(cmp);
     private getSlideData(index);
     private isIndexInRange(index);
     private ctrlMouseEnter(e);
@@ -81,6 +81,6 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     private getSpeedFactor();
     private startAnimation();
     private stopAnimation();
-    private selectSlide(slide);
+    private selectSlide(cmp);
     private selectSlideByIndex(index);
 }

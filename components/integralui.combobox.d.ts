@@ -37,8 +37,8 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     private trialRef;
     dropDownHeight: number;
     integralHeight: boolean;
-    items: any[];
-    maxDropDownItems: any;
+    items: Array<any>;
+    maxDropDownItems: number;
     dropDownWidth: number;
     expanded: boolean;
     selectedIndex: number;
@@ -64,7 +64,7 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     openDropDown(): void;
     getComboIcon(): any;
     getComboText(): any;
-    protected isIndexInRange(index: any): boolean;
+    protected isIndexInRange(index: number): boolean;
     getDropDownWidth(): number;
     private calcBlockHeight();
     getDropDownHeight(): number;

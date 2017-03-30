@@ -70,5 +70,5 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     private selectComponent(cmp);
     private selectComponentByIndex(index);
     selectTab(tab: any): void;
-    getTabHeaderClass(tab: IntegralUITab): any;
+    getTabHeaderClass(cmp: IntegralUITab): any;
 }

@@ -22,7 +22,7 @@ export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
-    protected getItemFromComponent(cmp: any): any;
+    protected getItemFromComponent(cmp: IntegralUIMenuItem): any;
     invokeMethod(name: string, value: any): void;
     updateLayout(): void;
 }

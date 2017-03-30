@@ -14,9 +14,10 @@ export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     private scrollSize;
     private thumbSize;
     private thumbPos;
-    private largeChange;
     private smallChange;
+    private largeChangeValue;
     height: number;
+    largeChange: number;
     max: number;
     min: number;
     orientation: IntegralUIOrientation;
@@ -29,6 +30,7 @@ export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     ngOnInit(): void;
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
+    ngOnDestroy(): void;
     private isVertical();
     getSize(): {
         width: any;
@@ -42,5 +44,10 @@ export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     thumbMouseDown(e: any): void;
     onWindowMouseMove(e: any): void;
     onWindowMouseUp(e: any): void;
+    private scrollInterval;
+    private scrollTimeout;
+    private changeScrollPos(e);
+    private processLargeChange(e);
+    private clearScrolling();
     getScrollBarStyle(): any;
 }

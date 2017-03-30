@@ -1,13 +1,13 @@
 /*
   filename: integralui.tooltip.js
-  version : 0.7.524 BETA
+  version : 1.0.0
   Copyright © 2016-2017 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
   The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
   A copy of the License should have been installed in the product's root installation directory or it can be found at
-  http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf.
+  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
                                                             
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
@@ -23,6 +23,6 @@ break;case "right":this.ctrlClass.push("iui-tooltip-marker-left");break;case "be
 inputs:["controlStyle","data","state"],encapsulation:core_1.ViewEncapsulation.None}),__metadata("design:paramtypes",[core_1.ElementRef,integralui_common_service_1.IntegralUICommonService])],b)}(integralui_core_1.IntegralUIBaseComponent);exports.IntegralUITooltipComponent=IntegralUITooltipComponent;
 var IntegralUITooltip=function(){function d(b,a,c){this.elemRef=b;this.cmpResolver=a;this.commonService=c;this.eventList=[];this.cmpRef=null}d.prototype.closeTooltip=function(){this.cmpRef&&(this.eventList&&this.eventList.forEach(function(b){return b.unsubscribe()}),this.cmpRef.destroy())};d.prototype.size=function(){return{width:this.elemRef.nativeElement.offsetWidth,height:this.elemRef.nativeElement.offsetHeight}};d.prototype.onMouseEnter=function(b){var a=this;if(a.settings.appRef){a.closeTooltip();
 var c=a.cmpResolver.resolveComponentFactory(IntegralUITooltipComponent);c&&(a.cmpRef=a.settings.appRef.createComponent(c),a.cmpRef&&(c=null,a.cmpRef._component?c=a.cmpRef._component:a.cmpRef._hostElement&&(c=a.cmpRef._hostElement.component),c&&(c.options=a.settings,c.updateMousePos(a.commonService.getMousePos(b)),b=this.elemRef.nativeElement.getBoundingClientRect(),c.open(b,a.size()),a.eventList.push(c.closed.subscribe(function(b){a.closeTooltip()})))))}};d.prototype.onMouseLeave=function(b){this.closeTooltip()};
-d.prototype.onMouseMove=function(b){this.cmpRef&&this.cmpRef._hostElement&&this.cmpRef._hostElement.component.updateMousePos(this.commonService.getMousePos(b))};__decorate([core_1.Input("iuiTooltip"),__metadata("design:type",Object)],d.prototype,"settings",void 0);__decorate([core_1.HostListener("mouseenter",["$event"]),__metadata("design:type",Function),__metadata("design:paramtypes",[Object]),__metadata("design:returntype",void 0)],d.prototype,"onMouseEnter",null);__decorate([core_1.HostListener("mouseleave",
-["$event"]),__metadata("design:type",Function),__metadata("design:paramtypes",[Object]),__metadata("design:returntype",void 0)],d.prototype,"onMouseLeave",null);__decorate([core_1.HostListener("mousemove",["$event"]),__metadata("design:type",Function),__metadata("design:paramtypes",[Object]),__metadata("design:returntype",void 0)],d.prototype,"onMouseMove",null);return d=__decorate([core_1.Directive({selector:"[iuiTooltip]"}),__metadata("design:paramtypes",[core_1.ElementRef,core_1.ComponentFactoryResolver,
-integralui_common_service_1.IntegralUICommonService])],d)}();exports.IntegralUITooltip=IntegralUITooltip;
+d.prototype.onMouseMove=function(b){if(this.cmpRef)if(this.cmpRef._component){var a=this.cmpRef._component;a.updateMousePos(this.commonService.getMousePos(b))}else this.cmpRef&&this.cmpRef._hostElement&&(a=this.cmpRef._hostElement.component,a.updateMousePos(this.commonService.getMousePos(b)))};__decorate([core_1.Input("iuiTooltip"),__metadata("design:type",Object)],d.prototype,"settings",void 0);__decorate([core_1.HostListener("mouseenter",["$event"]),__metadata("design:type",Function),__metadata("design:paramtypes",
+[Object]),__metadata("design:returntype",void 0)],d.prototype,"onMouseEnter",null);__decorate([core_1.HostListener("mouseleave",["$event"]),__metadata("design:type",Function),__metadata("design:paramtypes",[Object]),__metadata("design:returntype",void 0)],d.prototype,"onMouseLeave",null);__decorate([core_1.HostListener("mousemove",["$event"]),__metadata("design:type",Function),__metadata("design:paramtypes",[Object]),__metadata("design:returntype",void 0)],d.prototype,"onMouseMove",null);return d=
+__decorate([core_1.Directive({selector:"[iuiTooltip]"}),__metadata("design:paramtypes",[core_1.ElementRef,core_1.ComponentFactoryResolver,integralui_common_service_1.IntegralUICommonService])],d)}();exports.IntegralUITooltip=IntegralUITooltip;

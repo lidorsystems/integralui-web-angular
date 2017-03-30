@@ -31,7 +31,7 @@ export declare class IntegralUIContextMenuComponent extends IntegralUIBaseCompon
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
     onBlur(e: any): void;
-    protected getItemFromComponent(cmp: any): any;
+    protected getItemFromComponent(cmp: IntegralUIMenuItem): any;
     invokeMethod(name: string, value: any): void;
     open(): void;
 }

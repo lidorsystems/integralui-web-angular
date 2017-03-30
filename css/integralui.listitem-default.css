@@ -1,0 +1,62 @@
+.iui-listitem
+{
+    border: thin solid transparent;
+    color: black;
+    list-style-type: none;
+}
+.iui-item-drag
+{
+	height: 0;
+	pointer-events: none;
+}
+.iui-item-drag-above, .iui-item-drag-below
+{
+	border: thin dotted #cecece;
+	height: 38px;
+}
+.iui-item-drag-open
+{
+	animation-name: drag-open;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.35s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+
+}
+@keyframes drag-open
+{
+	0% { max-height: 0; border-width: 0; opacity: 0; }
+	50% { max-height: 0; border-width: 0; opacity: 0; }
+	100% { max-height: 38px; border-width: 1; opacity: 1; }
+}
+.iui-item-drag-close
+{
+	animation-name: drag-close;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.35s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+
+}
+@keyframes drag-close
+{
+	0% { max-height: 38px; border-width: 1; opacity: 1; }
+	50% { max-height: 38px; border-width: 1; opacity: 1; }
+	100% { max-height: 0; border-width: 0; opacity: 0; }
+}
+.iui-listitem-hovered
+{
+	background-color: #f5f5f5;
+	border: thin solid #efefef;
+}
+.iui-listitem-selected
+{
+	background-color: #e5e5e5;
+	border: thin solid #dedede;
+}

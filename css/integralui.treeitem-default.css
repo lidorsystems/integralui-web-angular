@@ -1,0 +1,107 @@
+.iui-treeitem
+{
+	list-style-type: none;
+}
+.iui-treeitem-content
+{
+	border: thin solid transparent;
+    display: block;
+	margin: 0;
+	padding: 3px;
+    position: relative;
+	white-space: nowrap;
+}
+.iui-treeitem-content-hovered
+{
+    background-color: #f5f5f5;
+    border: thin solid #efefef;
+}
+.iui-treeitem-content-selected
+{
+    background-color: #e5e5e5;
+    border: thin solid #dedede;
+}
+.iui-treeitem-expand-box
+{
+    background: url(../resources/expandbox-icons.png) no-repeat 0 -48px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    margin: 1px 5px 0 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.iui-treeitem-expand-box-open
+{
+    background-position: 0 -16px;
+}
+.iui-treeitem-expand-box-open-animate
+{
+    background-position: 0 0;
+ 
+    animation-name: expand-box-open;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes expand-box-open
+{
+    0% { 
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg);
+    }
+    100% { 
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
+    }
+}
+.iui-treeitem-expand-box-close
+{
+    background-position: 0 0;
+}
+.iui-treeitem-expand-box-close-animate
+{
+    background-position: 0 0;
+
+    animation-name: expand-box-close;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes expand-box-close
+{
+    0% { 
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
+    }
+    100% { 
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+        transform: rotate(0deg);
+    }
+}
+.iui-treeitem-block
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+    overflow: hidden;
+}
+.iui-treeitem-expand-box-load
+{
+    background: url(../resources/load.gif) no-repeat 0 0;
+}
+

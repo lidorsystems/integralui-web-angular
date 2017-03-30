@@ -35,7 +35,7 @@ export declare class IntegralUICommonService {
         x: number;
         y: number;
     };
-    getUniqueId(separator?: any): string;
+    getUniqueId(separator?: string): string;
     isEqual(first: any, second: any): boolean;
     isFieldAvailable(field: any, value: any): any;
     isString(value: any): boolean;

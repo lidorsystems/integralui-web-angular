@@ -30,7 +30,11 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     private cloneElemStartPos;
     protected hoverColumn: any;
     protected hoverRow: any;
-    protected scrollPos: {
+    protected currentScrollPos: {
+        x: number;
+        y: number;
+    };
+    protected maxScrollPos: {
         x: number;
         y: number;
     };
@@ -44,6 +48,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     columns: Array<any>;
     rows: Array<any>;
     gridLines: IntegralUIGridLines;
+    rowHeight: number;
     allowDrag: boolean;
     allowDrop: boolean;
     dataFields: any;
@@ -67,7 +72,10 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     rowRemoving: EventEmitter<any>;
     rowRemoved: EventEmitter<any>;
     rowsCleared: EventEmitter<any>;
+    loadComplete: EventEmitter<any>;
+    scrollPosChanged: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
+    updateComplete: EventEmitter<any>;
     constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver);
     ngOnInit(): void;
     addColumn(column: any): void;
@@ -93,23 +101,26 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected updateColumnFields(fields?: any): void;
     protected updateRowFields(fields?: any): void;
     protected updateCellFields(fields?: any): void;
+    protected processLoadData(data: Array<any>, parent?: any, fields?: any, flat?: boolean): void;
     private addDropMark(pos);
-    protected callDragDropEvent(e: any, data: any, flag?: any): boolean;
+    protected removeDropMark(): void;
+    protected callDragDropEvent(e: any, data: any, flag?: boolean): boolean;
     private checkEmptySpace(e);
     private ctrlDragDrop(e);
     protected ctrlDragLeave(e: any): void;
     private ctrlDragOver(e);
-    private dropMark(flag?);
+    private dropMark(e, flag?);
     private updateDragComponent(value);
     protected isDragAllowed(row: any): boolean;
-    protected isDropAllowed(sourceData: any, targetRow: any, dropPos: any): any;
+    protected isDropAllowed(sourceData: any, targetRow: any, dropPos: number): any;
     protected processDragStart(e: any, row: any): void;
-    protected processDragOver(e: any, row?: any, rowBounds?: any, flag?: any): void;
+    protected processDragOver(e: any, row?: any, rowBounds?: any, flag?: boolean): void;
     protected processDragDrop(e: any, row?: any): void;
     protected drop(e: any, data: any): void;
     protected processDataDrop(e: any, row: any, data: any): void;
     protected callAfterSelectEvent(obj: any): void;
     cloneRow(row: any): any;
+    getList(key?: string): any;
     protected getObjFromRow(row: any): any;
     protected getRowCurrentIndex(row: any): number;
     getRowFromComponent(cmp: any): any;
@@ -137,6 +148,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     private appendCloneElem();
     private closeCloneElem();
     private updatePaging(value?);
+    scrollPos(value?: any): any;
     findRowById(id: any): any;
     findRowByText(text: string): any;
     protected processColumnSelection(e: any, column: any, value?: any): any;

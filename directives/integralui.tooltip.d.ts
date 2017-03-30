@@ -18,10 +18,7 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
     private removeTimers();
     open(elemPageRect: any, elemSize: any): void;
     show(elemPageRect: any, elemSize: any): void;
-    size(): {
-        width: any;
-        height: any;
-    };
+    size(): any;
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
 }

@@ -1,13 +1,43 @@
+/*
+  filename: integralui.module.ts
+  version : 1.0.0
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { IntegralUICoreModule } from './integralui.core.module';
+import { IntegralUICommonModule } from './integralui.common.module';
+
+import { IntegralUIAccordionModule } from './integralui.accordion.module';
+import { IntegralUIGridModule } from './integralui.grid.module';
+import { IntegralUIListBarModule } from './integralui.listbar.module';
+import { IntegralUIListBoxModule } from './integralui.listbox.module';
+import { IntegralUIListViewModule } from './integralui.listview.module';
+import { IntegralUIMenuModule } from './integralui.menu.module';
+import { IntegralUISlideBarModule } from './integralui.slidebar.module';
+import { IntegralUISplitContainerModule } from './integralui.splitcontainer.module';
+import { IntegralUITabStripModule } from './integralui.tabstrip.module';
+import { IntegralUITreeGridModule } from './integralui.treegrid.module';
+import { IntegralUITreeListModule } from './integralui.treelist.module';
+import { IntegralUITreeViewModule } from './integralui.treeview.module';
+
+
 import { IntegralUIAccordion } from './components/integralui.accordion';
-import { IntegralUIAnchorStyle, IntegralUIDragWindow, IntegralUIFocus, IntegralUIHeaderItem, IntegralUIItem, IntegralUIObjectState, IntegralUISelectionMode, IntegralUITComponent, IntegralUITemplate, IntegralUIVisibility } from './components/integralui.core';
-import { IntegralUIBaseGrid, IntegralUIGridLines } from './components/integralui.base.grid';
-import { IntegralUIBaseList } from './components/integralui.base.list';
+import { IntegralUIFocus, IntegralUIItem, IntegralUITemplate } from './components/integralui.core';
 import { IntegralUIComboBox } from './components/integralui.combobox';
-import { IntegralUIContextMenu, IntegralUIContextMenuComponent } from './directives/integralui.contextmenu';
+import { IntegralUIContextMenu } from './directives/integralui.contextmenu';
 import { IntegralUIFrame } from './directives/integralui.frame';
 import { IntegralUIGrid } from './components/integralui.grid';
 import { IntegralUIGroupBox } from './components/integralui.groupbox';
@@ -26,91 +56,63 @@ import { IntegralUISplitContainer, IntegralUISplitContainerTags } from './compon
 import { IntegralUISplitter } from './components/integralui.splitter';
 import { IntegralUITab } from './components/integralui.tab';
 import { IntegralUITabStrip } from './components/integralui.tabstrip';
-import { IntegralUITooltip, IntegralUITooltipComponent } from './directives/integralui.tooltip';
+import { IntegralUITooltip } from './directives/integralui.tooltip';
 import { IntegralUITreeGrid } from './components/integralui.treegrid';
 import { IntegralUITreeItem } from './components/integralui.treeitem';
-import { IntegralUITreeList, IntegralUITreeListItem } from './components/integralui.treelist';
+import { IntegralUITreeList } from './components/integralui.treelist';
 import { IntegralUITreeView } from './components/integralui.treeview';
 
-import { IntegralUICommonService } from './services/integralui.common.service';
-import { IntegralUIDragDropService } from './services/integralui.dragdrop.service';
 
 @NgModule({
-  	imports: [ CommonModule, FormsModule ],
-  	declarations: [ 
-  		IntegralUIAccordion,
-      IntegralUIBaseGrid,
-      IntegralUIBaseList, 
-      IntegralUIComboBox,
-      IntegralUIContextMenu,
-      IntegralUIContextMenuComponent, 
-      IntegralUIDragWindow,
-      IntegralUIFocus,
-      IntegralUIFrame,
-      IntegralUIGrid,
-  		IntegralUIGroupBox, 
-  		IntegralUIHeaderItem, 
-  		IntegralUIItem, 
-      IntegralUIListBar, 
-      IntegralUIListBox, 
-  		IntegralUIListGroup, 
-      IntegralUIListItem, 
-      IntegralUIListView,
-      IntegralUIMenu,
-      IntegralUIMenuItem, 
-  		IntegralUIPaginator, 
-      IntegralUIRange,
-      IntegralUIScrollBar,
-  		IntegralUISlideBar, 
-  		IntegralUISlide, 
-      IntegralUISplitContainer, IntegralUISplitContainerTags,
-      IntegralUISplitter,
-      IntegralUITab, 
-      IntegralUITabStrip, 
-      IntegralUITComponent,
-      IntegralUITemplate,
-  		IntegralUITooltip, 
-  		IntegralUITooltipComponent, 
-      IntegralUITreeGrid,
-      IntegralUITreeItem, 
-      IntegralUITreeList,
-      IntegralUITreeListItem,
-      IntegralUITreeView
-  	],
+  	imports: [ 
+        CommonModule, 
+        FormsModule,
+        IntegralUICoreModule,
+        IntegralUICommonModule,
+        IntegralUIAccordionModule,
+        IntegralUIGridModule,
+        IntegralUIListBarModule,
+        IntegralUIListBoxModule,
+        IntegralUIListViewModule,
+        IntegralUIMenuModule,
+        IntegralUISlideBarModule,
+        IntegralUISplitContainerModule,
+        IntegralUITabStripModule,
+        IntegralUITreeGridModule,
+        IntegralUITreeListModule,
+        IntegralUITreeViewModule
+    ],
   	exports: [ 
-  		IntegralUIAccordion,
-      IntegralUIComboBox,
-      IntegralUIContextMenu,
-      IntegralUIFocus, 
-      IntegralUIFrame,
-      IntegralUIGrid,
-  		IntegralUIGroupBox, 
-  		IntegralUIHeaderItem, 
-  		IntegralUIItem, 
-      IntegralUIListBar, 
-      IntegralUIListBox, 
-      IntegralUIListGroup, 
-      IntegralUIListItem, 
-      IntegralUIListView, 
-      IntegralUIMenu,
-      IntegralUIMenuItem,
-  		IntegralUIPaginator, 
-      IntegralUIRange,
-      //IntegralUIScrollBar,
-  		IntegralUISlideBar, 
-  		IntegralUISlide, 
-      IntegralUISplitContainer, IntegralUISplitContainerTags,
-      IntegralUISplitter,
-      IntegralUITab, 
-      IntegralUITabStrip, 
-      IntegralUITemplate,
-  		IntegralUITooltip,
-      IntegralUITreeGrid,
-      IntegralUITreeItem, 
-      IntegralUITreeList,
-      IntegralUITreeView
-  	],
-    entryComponents: [ IntegralUIContextMenuComponent, IntegralUIDragWindow, IntegralUITComponent, IntegralUITooltipComponent ],
-    providers: [ IntegralUICommonService, IntegralUIDragDropService ]
+  		  IntegralUIAccordion,
+        IntegralUIComboBox,
+        IntegralUIContextMenu,
+        IntegralUIFocus, 
+        IntegralUIFrame,
+        IntegralUIGrid,
+  		  IntegralUIGroupBox, 
+        IntegralUIItem, 
+        IntegralUIListBar, 
+        IntegralUIListBox, 
+        IntegralUIListGroup, 
+        IntegralUIListItem, 
+        IntegralUIListView, 
+        IntegralUIMenu,
+        IntegralUIMenuItem,
+  		  IntegralUIPaginator, 
+        IntegralUIRange,
+  		  IntegralUISlideBar, 
+  		  IntegralUISlide, 
+        IntegralUISplitContainer,
+        IntegralUISplitContainerTags,
+        IntegralUISplitter,
+        IntegralUITab, 
+        IntegralUITabStrip, 
+        IntegralUITemplate,
+  		  IntegralUITooltip,
+        IntegralUITreeGrid,
+        IntegralUITreeItem, 
+        IntegralUITreeList,
+        IntegralUITreeView
+  	]
 })
 export class IntegralUIModule { }

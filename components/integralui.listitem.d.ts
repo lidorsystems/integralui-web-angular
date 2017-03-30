@@ -11,8 +11,9 @@ export declare class IntegralUIListItem extends IntegralUIItem {
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected itemDragStart(e: any): void;
-    protected itemDragOver(e: any, flag?: any): void;
+    protected itemDragOver(e: any, flag?: boolean): void;
     protected itemDragDrop(e: any): void;
+    private allowSelection;
     protected onMouseDown(e: any): void;
     protected onMouseUp(e: any): void;
     selectItem(): void;

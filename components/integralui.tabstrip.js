@@ -1,3 +1,17 @@
+/*
+  filename: integralui.tabstrip.js
+  version : 1.0.0
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(e,b){function a(){this.constructor=e}for(var f in b)b.hasOwnProperty(f)&&(e[f]=b[f]);e.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(e,b,a,f){var c=arguments.length,d=3>c?b:null===f?f=Object.getOwnPropertyDescriptor(b,a):f,h;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)d=Reflect.decorate(e,b,a,f);else for(var l=e.length-1;0<=l;l--)if(h=e[l])d=(3>c?h(d):3<c?h(b,a,d):
 h(b,a))||d;return 3<c&&d&&Object.defineProperty(b,a,d),d},__metadata=this&&this.__metadata||function(e,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(e,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),integralui_tab_1=require("./integralui.tab"),IntegralUITabStrip=function(e){function b(a,
 b,c,d,h,l){e.call(this,d);this.dataService=a;this.elemRef=b;this.elemRenderer=c;this.commonService=d;this.cmpResolver=h;this.baseService=l;this.eventList=[];this.numTabs=0;this.currentTabPlacement=integralui_core_1.IntegralUITabStripPlacement.Top;this.blockPos={top:"0",right:"auto",bottom:"auto",left:"0"};this.tabSize={width:0,height:0};this.currentSelection=null;this.currentSelectedIndex=-1;this.prevComponent=this.selectedComponent=null;this.removeIndex=-1;this.trialRef=null;this.tabSpacing=0;this.afterSelect=

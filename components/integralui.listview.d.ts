@@ -31,17 +31,16 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     removeItemAt(index: number): boolean;
     private updateCurrentList();
     private addItemToCurrentList(item);
-    cloneItem(item: any): any;
-    getItem(item: IntegralUIListItem): any;
-    getItemFromComponent(cmp: any): any;
-    getItemIndex(item: IntegralUIListItem): number;
+    getItem(cmp: IntegralUIListItem): any;
+    getItemFromComponent(cmp: IntegralUIListItem): any;
+    getItemIndex(cmp: IntegralUIListItem): number;
     protected getContentSize(): {
         width: any;
         height: any;
     };
     updateLayout(): void;
     clearSelection(): void;
-    selectItem(item: any): void;
-    private updateSelectedItemFromElem(item);
+    selectItem(cmp: IntegralUIListItem): void;
+    private updateSelectedItemFromElem(cmp);
     private updateSelectedItem(item);
 }

@@ -28,7 +28,7 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     removeItemAt(index: number): boolean;
     private updateCurrentList();
     private addItemToCurrentList(item);
-    getItemFromComponent(cmp: any): any;
+    getItemFromComponent(cmp: IntegralUIListItem): any;
     protected getContentSize(): {
         width: any;
         height: any;

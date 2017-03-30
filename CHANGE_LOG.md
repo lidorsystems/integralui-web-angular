@@ -1,3 +1,6 @@
+v1.0.0
+- First official version of the product
+
 v0.9.012
 - Following methods are now available in TreeView: collapse, expand, findItemById, findItemByText, scrollPos and toggle
 - Fixed the issue with addItem method when parent argument is ised
@@ -20,4 +23,4 @@ v0.7.239
 Added two new components: SplitContainer and Splitter
 
 v0.5.0 
-Initial Release
+- Initial Release

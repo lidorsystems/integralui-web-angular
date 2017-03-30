@@ -13,6 +13,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected commonService: IntegralUICommonService;
     protected cmpResolver: ComponentFactoryResolver;
     protected baseService: IntegralUIBaseService;
+    private fullList;
     protected isThereChildItems: boolean;
     private blockSize;
     contentList: QueryList<IntegralUITreeItem>;
@@ -20,6 +21,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     contentElem: ElementRef;
     itemTemplate: any;
     private trialRef;
+    dataFields: any;
     afterCollapse: EventEmitter<any>;
     afterExpand: EventEmitter<any>;
     beforeCollapse: EventEmitter<any>;
@@ -30,16 +32,21 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
     ngAfterContentChecked(): void;
+    ngAfterViewChecked(): void;
     protected updateOptions(value?: any): void;
     protected updateDataFields(fields?: any): void;
+    getDataFields(): any;
     private updateCurrentList();
     private addChildItems(parentItem, pid, flag, parent?);
     private addItemToCurrentList(item, pid, flag, parent);
+    loadData(data: Array<any>, parent?: any, fields?: any, flat?: boolean): void;
+    protected updateItem(item: any): void;
     collapse(item?: any): void;
     expand(item?: any): void;
     toggle(item?: any, value?: boolean): void;
-    getItemFromComponent(cmp: any): any;
-    getItemIndex(item: IntegralUITreeItem): number;
+    getFullList(): any[];
+    getItemFromComponent(cmp: IntegralUITreeItem): any;
+    getItemIndex(cmp: IntegralUITreeItem): number;
     protected getParent(item: any): any;
     protected isChildOf(targetItem: any, item: any): boolean;
     isItemExpanded(item: any): boolean;
@@ -56,10 +63,8 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     refresh(): void;
     getComponentFromItem(item: any): any;
     updateLayout(): void;
-    private currentScrollPos;
-    private maxScrollPos;
-    scrollPos(value?: any): any;
-    findItemById(id: any): any;
-    findItemByText(text: string): any;
+    beginLoad(item?: any): void;
+    endLoad(item?: any): void;
+    private isItemLoading(item);
     protected clearComponentSelection(): void;
 }

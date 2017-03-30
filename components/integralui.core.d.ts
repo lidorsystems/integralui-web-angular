@@ -53,8 +53,8 @@ export declare class IntegralUIBaseComponent {
     controlStyle: any;
     data: any;
     state: IntegralUIObjectState;
-    styleChanged: EventEmitter<{}>;
-    stateChanged: EventEmitter<{}>;
+    styleChanged: EventEmitter<any>;
+    stateChanged: EventEmitter<any>;
     constructor(commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected initStyle(): void;
@@ -110,12 +110,12 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
     protected contentClass: Array<any>;
     icon: string;
     text: string;
-    click: EventEmitter<{}>;
-    mouseDown: EventEmitter<{}>;
-    mouseUp: EventEmitter<{}>;
-    mouseEnter: EventEmitter<{}>;
-    mouseMove: EventEmitter<{}>;
-    mouseLeave: EventEmitter<{}>;
+    click: EventEmitter<any>;
+    mouseDown: EventEmitter<any>;
+    mouseUp: EventEmitter<any>;
+    mouseEnter: EventEmitter<any>;
+    mouseMove: EventEmitter<any>;
+    mouseLeave: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected initStyle(): void;
@@ -130,10 +130,7 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
     protected onMouseEnter(e: any): void;
     protected onMouseMove(e: any): void;
     protected onMouseLeave(e: any): void;
-    getContentSize(): {
-        width: number;
-        height: number;
-    };
+    getContentSize(): any;
     protected getIconStatus(): string;
     getMargin(): {
         top: number;
@@ -141,16 +138,8 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
         bottom: number;
         left: number;
     };
-    getPageRect(): {
-        top: number;
-        right: number;
-        bottom: number;
-        left: number;
-    };
-    getSize(): {
-        width: number;
-        height: number;
-    };
+    getPageRect(): any;
+    getSize(): any;
     private resetPos();
     updateLayout(ref: any, pos: any): void;
     updatePos(pos: any): void;
@@ -174,7 +163,7 @@ export declare class IntegralUIHeaderItem extends IntegralUIItem {
     protected expandArrowTopRightClass: Array<any>;
     animationType: string;
     animationState: string;
-    expandClicked: EventEmitter<{}>;
+    expandClicked: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected initStyle(): void;

@@ -1,3 +1,17 @@
+/*
+  filename: integralui.slidebar.js
+  version : 1.0.0
+  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
 var __extends=this&&this.__extends||function(c,b){function a(){this.constructor=c}for(var e in b)b.hasOwnProperty(e)&&(c[e]=b[e]);c.prototype=null===b?Object.create(b):(a.prototype=b.prototype,new a)},__decorate=this&&this.__decorate||function(c,b,a,e){var f=arguments.length,d=3>f?b:null===e?e=Object.getOwnPropertyDescriptor(b,a):e,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)d=Reflect.decorate(c,b,a,e);else for(var h=c.length-1;0<=h;h--)if(g=c[h])d=(3>f?g(d):3<f?g(b,a,d):
 g(b,a))||d;return 3<f&&d&&Object.defineProperty(b,a,d),d},__metadata=this&&this.__metadata||function(c,b){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(c,b)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),integralui_data_service_1=require("../services/integralui.data.service"),IntegralUISlide=function(){function c(b){this.elemRef=b}c.prototype.size=
 function(){return{width:Math.floor(this.elemRef.nativeElement.firstElementChild.offsetWidth),height:Math.floor(this.elemRef.nativeElement.firstElementChild.offsetHeight)}};c.prototype.cloneElem=function(){return this.elemRef.nativeElement.firstElementChild.cloneNode(!0)};return c=__decorate([core_1.Component({selector:"iui-slide",template:'<li class="iui-slide" data-element="slide">\n    \t\t<ng-content></ng-content>\n\t\t</li>\n\t'}),__metadata("design:paramtypes",[core_1.ElementRef])],c)}();

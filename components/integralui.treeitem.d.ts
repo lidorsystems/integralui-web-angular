@@ -34,13 +34,15 @@ export declare class IntegralUITreeItem extends IntegralUIListItem {
     ngAfterViewInit(): void;
     ngAfterContentChecked(): void;
     protected itemDragDrop(e: any): void;
+    isBlockExpanded(): boolean;
     collapse(flag?: boolean): void;
     expand(flag?: boolean): void;
     toggle(value?: boolean, flag?: boolean): void;
     onExpandBoxMouseDown(e: any): void;
     toggleContent(): void;
     getComponentFromItem(item: any): any;
-    getItemFromComponent(cmp: any): any;
+    getItemFromComponent(cmp: IntegralUITreeItem): any;
+    protected isThereVisibleChildren(): boolean;
     clearComponentSelection(): void;
     selectItem(): void;
     refresh(): void;

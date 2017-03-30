@@ -1,7 +1,7 @@
 {
   "name": "integralui-web",
   "version": "0.9.0",
-  "description": "IntegralUI Web - Advanced User Interface Components for Angular 2",
+  "description": "IntegralUI Web - Advanced UI Components for Angular 2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,8 +21,9 @@
   "homepage": "https://github.com/lidorsystems/integralui-web",
   "files": [
     "*.pdf",
+    "*.js",
+    "*.ts",
     "CHANGE_LOG.md",
-    "integralui.module.*",
     "components/*.d.ts",
     "components/*.js",
     "components/*.js.map",

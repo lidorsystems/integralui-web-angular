@@ -79,10 +79,10 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     scrollUpReleased(): void;
     scrollDownPressed(): void;
     scrollDownReleased(): void;
-    startScroll(flag: any): void;
+    startScroll(flag: boolean): void;
     stopScroll(): void;
-    scrollTimerElapsed(flag: any): void;
-    processScroll(flag: any): void;
+    scrollTimerElapsed(flag: boolean): void;
+    processScroll(flag: boolean): void;
     listMouseWheel(e: any): void;
     setScrollPos(value: any): void;
     private clearSelection(cmp);

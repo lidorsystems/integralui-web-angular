@@ -31,7 +31,7 @@ export declare class IntegralUIListGroup extends IntegralUIGroupBox {
     private getItemCurrentIndex(cmp);
     private getItemDataIndex(cmp);
     private attachItemEvents();
-    private updateSelectedItemFromComponent(item);
+    private updateSelectedItemFromComponent(cmp);
     clearSelection(cmp?: IntegralUIItem): void;
     protected getItemGeneralStyle(value: any): any;
     protected getItemStyle(value: any): {
