@@ -1,6 +1,6 @@
-# IntegralUI Web for Angular 2
+# IntegralUI Web for Angular 4
 
-IntegralUI Web is a library built on top of Angular 2 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
+IntegralUI Web is a library built on top of Angular 4 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
 Here is a brief overview of what is included:
 
