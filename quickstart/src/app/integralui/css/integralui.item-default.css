@@ -1,0 +1,15 @@
+.iui-item
+{
+	border: thin solid transparent;
+}
+/* Disabled State */
+.iui-item-disabled
+{
+	color: gray;
+}
+.iui-item-label
+{
+	border: thin solid transparent;
+	display: inline-block;
+	padding: 2px;
+}

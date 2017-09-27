@@ -1,0 +1,37 @@
+.iui-splitter
+{
+	background: #e5e5e5;
+	border: thin solid transparent;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	cursor: default;
+	overflow: hidden;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+.iui-splitter-handle
+{
+    background-image: url(../resources/handle.png);
+    background-repeat: repeat;
+	display: block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+.iui-splitter-handle-horizontal
+{
+	width: 22px;
+	height: 5px;
+}
+.iui-splitter-handle-vertical
+{
+	width: 5px;
+	height: 22px;
+}
+

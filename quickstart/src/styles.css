@@ -1,0 +1,135 @@
+@import 'app/integralui/css/integralui.module.css';
+
+html, body
+{
+    background-color: #f5f5f5;
+    color: #565656;
+    font-family: Arial, Calibri, Helvetica, Tahoma, sans-serif;
+	font-weight: lighter;
+    margin: 0px;
+    padding: 0px;
+
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+h1, h2, h3
+{
+    margin: 0;
+	padding:0;
+}
+.header
+{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.header-block
+{
+    font-size: 1.2em;
+    margin: 0 auto;
+    width: 800px;
+}
+.head-separator
+{
+    background-color: #c60d0d;
+    border: none;
+    margin: 0;
+    height: 3px;
+}
+.header-content
+{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 7px 20px 7px 0;
+    width: 600px;
+}
+.component-list
+{
+	margin: 50px auto 100px auto;
+	width: 900px;
+}
+.home
+{
+    padding: 30px 0;
+    width: 900px;
+    text-align: right;
+}
+.feature-content
+{
+	margin: 0 auto;
+	width: 800px;
+}
+.feature-title
+{
+    font-size: 1.4em;
+	margin: 10px auto;
+	padding: 15px 0 25px 0;
+	width: 800px;
+}
+.feature-help
+{
+    margin-top: 20px;
+}
+.feature-help p
+{
+    text-align:justify;
+}
+.feature-help span.initial-space
+{
+    display: inline-block;
+    width: 20px
+}
+.feature-points li
+{
+    margin: 5px 0;
+}
+.control-panel
+{
+    float: left;
+    margin-left: 20px;
+    width: 200px;
+}
+.control-panel table
+{
+    text-align:right;
+}
+.control-panel table td.align-left
+{
+    text-align:left;
+}
+.event-block
+{
+    background: white;
+    border: thin solid gray;
+    width: 350px;
+    height: 400px;
+}
+.event-log
+{
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    height: 370px;
+    overflow: auto;
+}
+.event-log li
+{
+    padding-left: 15px;
+}
+.event-name
+{
+    color: #aa0000;
+}
+.event-value
+{
+    color: #0000aa;
+}
+.sidebar li:focus {
+    outline: none !important;
+}

@@ -1,0 +1,19 @@
+.iui-accordion
+{
+	background: white;
+	position: relative;
+}
+.iui-accordion-group-header
+{
+	border: thin solid blue;
+	padding: 5px;
+}
+.iui-accordion-group-content
+{
+	border: thin solid green;
+	padding: 5px;
+	position: relative;
+	height: 150px;
+	text-align: center;
+	vertical-align: middle;
+}

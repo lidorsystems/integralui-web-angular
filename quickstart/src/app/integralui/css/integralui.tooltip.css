@@ -1,0 +1,115 @@
+.iui-tooltip
+{
+	animation: tooltip-open 1.0s 0s 1 forwards;
+	background: -webkit-linear-gradient(#fefefe, #e5e5e5);
+	background:    -moz-linear-gradient(#fefefe, #e5e5e5);
+	background:     -ms-linear-gradient(#fefefe, #e5e5e5);
+	background:      -o-linear-gradient(#fefefe, #e5e5e5);
+    background :         linear-gradient(#fefefe, #e5e5e5);
+
+    background-color: #e5e5e5;
+	border: thin solid #888888;
+    color: #323232;
+	cursor: default;
+	padding: 5px;
+	position: absolute;
+	top: -999999px;
+	z-index: 999;
+	
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+@keyframes tooltip-open
+{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+.iui-tooltip div /*Compatibility with Bootstrap */
+{
+	-webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: content-box;    /* Firefox, other Gecko */
+	box-sizing: content-box; 
+}
+.iui-tooltip-marker-top::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent #1e4691 transparent;
+	position: absolute;
+	top: -9px;
+	left: 49%;
+	width: 0;
+	height: 0;
+}
+.iui-tooltip-marker-top::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent #fefefe transparent;
+	position: absolute;
+	top: -8px;
+	left: 49%;
+	width: 0;
+	height: 0;
+}
+.iui-tooltip-marker-bottom::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: #1e4691 transparent transparent transparent;
+	position: absolute;
+	bottom: -9px;
+	left: 49%;
+	width: 0;
+	height: 0;
+}
+.iui-tooltip-marker-bottom::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: #fefefe transparent transparent transparent;
+	position: absolute;
+	bottom: -8px;
+	left: 49%;
+	width: 0;
+	height: 0;
+}
+.iui-tooltip-marker-left::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent #1e4691 transparent transparent;
+	position: absolute;
+	top: 12px;
+	left: -9px;
+}
+.iui-tooltip-marker-left::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent #fefefe transparent transparent;
+	position: absolute;
+	top: 12px;
+	left: -8px;
+}
+.iui-tooltip-marker-right::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent transparent #1e4691;
+	position: absolute;
+	top: 12px;
+	right: -9px;
+}
+.iui-tooltip-marker-right::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent transparent #fefefe;
+	position: absolute;
+	top: 12px;
+	right: -8px;
+}

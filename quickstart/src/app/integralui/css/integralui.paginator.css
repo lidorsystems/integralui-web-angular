@@ -1,0 +1,71 @@
+.iui-paginator
+{
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 3px;
+	white-space: nowrap;
+	
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+
+	padding: 3px 3px 0px 3px;
+	margin: 1px 0;
+}
+.iui-paginator-button
+{
+	background-color: #dedede;
+    background-image: url(../resources/icons-x24.png);
+    background-repeat: no-repeat;
+	display: inline-block;
+	border: thin solid #bebebe;
+	border-radius: 3px;
+	height: 24px;
+	margin: 2px;
+    overflow: hidden;
+	padding: 0;
+	width: 24px;
+}
+.iui-paginator-button:hover
+{
+	background-color: #cecece;
+}
+.iui-paginator-first
+{
+    background-position: -96px -120px;
+}
+.iui-paginator-prev
+{
+    background-position: -120px -120px;
+}
+.iui-paginator-next
+{
+    background-position: -144px -120px;
+}
+.iui-paginator-last
+{
+    background-position: -168px -120px;
+}
+.iui-paginator-input
+{
+	display: inline-block;
+	border: thin solid #bebebe;
+	border-radius: 3px;
+	height: 24px;
+	margin: 2px;
+	padding: 0 5px;
+	width: 40px;
+	vertical-align: top;
+}
+.iui-paginator-label
+{
+	display: inline-block;
+	height: 24px;
+	margin: 2px 5px;
+	padding: 2px 0;
+	vertical-align: top;
+}
+
