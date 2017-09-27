@@ -41,11 +41,11 @@
     "bin/resources/checkbox/*.*",
     "bin/resources/expandbox/*.*",
     "bin/services/*.*",
-    "quickstart/*.*"
-    "quickstart/e2e/*.*"
-    "quickstart/src/*.*"
-    "quickstart/src/app/*.*"
-    "quickstart/src/app/integralui/*.*"
+    "quickstart/*.*",
+    "quickstart/e2e/*.*",
+    "quickstart/src/*.*",
+    "quickstart/src/app/*.*",
+    "quickstart/src/app/integralui/*.*",
     "quickstart/src/app/integralui/components/*.*",
     "quickstart/src/app/integralui/css/*.*",
     "quickstart/src/app/integralui/directives/*.*",
