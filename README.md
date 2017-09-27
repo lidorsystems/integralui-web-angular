@@ -111,7 +111,7 @@ After installation, in angular-cli.json under styles section add this code line:
 Add following lines to the app.components.ts file:
 
 ```bash
-    styleUrls: ['../node_modules/integralui-web/css/integralui.module.css'],
+    styleUrls: ['../node_modules/integralui-web/bin/css/integralui.module.css'],
     encapsulation: ViewEncapsulation.None
 ```
 
