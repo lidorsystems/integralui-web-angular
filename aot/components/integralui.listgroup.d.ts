@@ -1,0 +1,41 @@
+import { ComponentFactoryResolver, ElementRef, QueryList, ViewContainerRef } from '@angular/core';
+import { IntegralUIBaseService, IntegralUIHeaderItem, IntegralUIItem } from './integralui.core';
+import { IntegralUICommonService } from '../services/integralui.common.service';
+import { IntegralUIDataService } from '../services/integralui.data.service';
+import { IntegralUIGroupBox } from './integralui.groupbox';
+export declare class IntegralUIListGroup extends IntegralUIGroupBox {
+    protected dataService: IntegralUIDataService;
+    protected commonService: IntegralUICommonService;
+    protected cmpResolver: ComponentFactoryResolver;
+    protected baseService: IntegralUIBaseService;
+    private numItems;
+    controlElem: ElementRef;
+    contentRef: ViewContainerRef;
+    contentElem: ElementRef;
+    header: IntegralUIHeaderItem;
+    contentList: QueryList<IntegralUIItem>;
+    private itemList;
+    private itemEventList;
+    protected headerExpandBoxClassName: string;
+    protected itemClassName: string;
+    items: Array<any>;
+    constructor(dataService: IntegralUIDataService, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    ngOnInit(): void;
+    ngAfterContentInit(): void;
+    ngOnDestroy(): void;
+    ngAfterContentChecked(): void;
+    onHeaderClick(e: any): void;
+    onHeaderExpand(): void;
+    protected toggleContent(): void;
+    private getComponentData(cmp);
+    private getItemCurrentIndex(cmp);
+    private getItemDataIndex(cmp);
+    private attachItemEvents();
+    private updateSelectedItemFromComponent(cmp);
+    clearSelection(cmp?: IntegralUIItem): void;
+    protected getItemGeneralStyle(value: any): any;
+    protected getItemStyle(value: any): {
+        general: any;
+    };
+    protected updateStyle(value: any): void;
+}

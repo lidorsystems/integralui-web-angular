@@ -1,0 +1,32 @@
+.iui-dropdown
+{
+	animation: dropdown-open 0.5s 0s 1 forwards;
+
+    background-color: #fafafa;
+	border: thin solid #ababab;
+    color: #323232;
+	cursor: default;
+	position: absolute;
+	top: -999999px;
+	z-index: 999;
+	
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.iui-dropdown:focus {
+    outline: none !important;
+}
+@keyframes dropdown-open
+{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+.iui-dropdown div /*Compatibility with Bootstrap */
+{
+	-webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: content-box;    /* Firefox, other Gecko */
+	box-sizing: content-box; 
+}

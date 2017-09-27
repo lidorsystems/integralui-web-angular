@@ -1,0 +1,268 @@
+.iui-dragwin
+{
+	background: -webkit-linear-gradient(white, #F1EFEC);
+	background:    -moz-linear-gradient(white, #F1EFEC);
+	background:     -ms-linear-gradient(white, #F1EFEC);
+	background:      -o-linear-gradient(white, #F1EFEC);
+    background :         linear-gradient(white, #F1EFEC);
+
+    background-color: #F1EFEC;
+	border: thin solid black;
+	border-radius: 3px;
+	margin:0;
+	padding: 2px;
+	position: absolute;
+	box-shadow: 0 0 3px #888888;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 200px;
+	z-index: 9999999;
+}
+.iui-dragwin-title
+{
+	border-left: thin solid #c5c5c5;
+	padding: 3px 3px 3px 5px;
+	margin: 0 2px 0 0;
+	vertical-align: middle;
+}
+.iui-dragwin-icon
+{
+    background-image: url(../resources/drag-drop.png);
+    background-repeat: no-repeat;
+	display: inline-block;
+	padding: 0;
+	margin: 2px 0 3px 2px;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+.iui-dragwin-move-left
+{
+	background-position: 0 0;
+}
+.iui-dragwin-move-up
+{
+	background-position: -16px 0;
+}
+.iui-dragwin-move-in
+{
+	background-position: -32px 0;
+}
+.iui-dragwin-move-right
+{
+	background-position: -48px 0;
+}
+.iui-dragwin-move-down
+{
+	background-position: -64px 0;
+}
+.iui-dragwin-move-end
+{
+	background-position: -80px 0;
+}
+.iui-dragwin-move-left-copy
+{
+	background-position: 0 -16px;
+}
+.iui-dragwin-move-up-copy
+{
+	background-position: -16px -16px;
+}
+.iui-dragwin-move-in-copy
+{
+	background-position: -32px -16px;
+}
+.iui-dragwin-move-right-copy
+{
+	background-position: -48px -16px;
+}
+.iui-dragwin-move-down-copy
+{
+	background-position: -64px -16px;
+}
+.iui-dragwin-move-end-copy
+{
+	background-position: -80px -16px;
+}
+
+.iui-filter-window
+{
+	background: #efefef;
+	border: thin solid gray;
+	box-shadow: 1px 1px 2px #888888;
+	padding: 0;
+	position: absolute;
+	top: -9999px;
+	z-index: 999;
+}
+.iui-filtering
+{
+    background-image: url(../resources/icons.png);
+    background-position: -96px -80px;
+    background-repeat: no-repeat;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+}
+.iui-filtering-hovered
+{
+    background-position: -112px -80px;
+}
+.iui-filtering-selected
+{
+    background-position: -112px -80px;
+}
+.iui-sort-ascending
+{
+    background-image: url(../resources/icons.png);
+    background-position: -48px -80px;
+    background-repeat: no-repeat;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+}
+.iui-sort-ascending-hovered
+{
+    background-position: -80px -80px;
+}
+.iui-sort-ascending-selected
+{
+    background-position: -80px -80px;
+}
+.iui-sort-descending
+{
+    background-image: url(../resources/icons.png);
+    background-position: -32px -80px;
+    background-repeat: no-repeat;
+	margin: 0;
+	position: absolute;
+	right: 2px;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+}
+.iui-sort-descending-hovered
+{
+    background-position: -64px -80px;
+}
+.iui-sort-descending-selected
+{
+    background-position: -64px -80px;
+}
+.iui-label-editor
+{
+	/*border-color: transparent;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.iui-label-editor-test textarea:focus, .iui-label-editor input:focus
+{
+    outline: 0;
+}
+.iui-incell-editor
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 1;
+}
+.iui-dropdown-editor
+{
+	background: #efefef;
+	border: thin solid gray;
+	box-shadow: 1px 1px 2px #888888;
+	padding: 0;
+	position: absolute;
+	top: -9999px;
+	z-index: 999;
+}
+.iui-dropdown-mark
+{
+	background: white;
+	position: absolute;
+	top: 0;
+	border: thin solid transparent;
+	height: 16px;
+}
+.iui-dropdown-mark > span
+{
+    background-image: url(../resources/dropdown.png);
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 1px 2px 0 3px;
+	vertical-align: middle;
+}
+.iui-edit-mark
+{
+    background: url(../resources/icons.png) no-repeat;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+	position: absolute;
+    padding: 0;
+	top: 0;
+    width: 16px;
+    height: 16px;
+}
+.iui-edit-mark-incell
+{
+    background-position: -128px -81px;
+}
+.iui-edit-mark-dropdown
+{
+    background-position: -144px -81px;
+}
+.iui-item-content
+{
+	overflow: hidden;
+	position: relative;
+}
+.iui-load-window
+{
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	opacity: 1;
+	z-index: 9999999;
+}
+.iui-load-window-icon
+{
+	background: url(../resources/loading.gif) no-repeat 0 0;
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+.iui-load-circular
+{
+	background:url(../resources/circular.png) no-repeat 0 0;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+}
+.iui-load-block
+{
+	background: #e5e5e5;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 999;
+}
+.iui-load-block-progress
+{
+	background: #0080c0;
+	width: 0;
+	height: 5px;
+}

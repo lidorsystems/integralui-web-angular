@@ -1,0 +1,83 @@
+.iui-listbar
+{
+	border: thin solid #cecece;
+	cursor: default;
+    overflow: hidden;
+	padding: 0;
+	position: relative;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    border-color: #ababab;
+}
+.iui-listbar-content
+{
+    position: relative;
+    z-index: 0;
+}
+.iui-listbar-button-up
+{
+    background: #e5e5e5;
+    border: thin solid #d5d5d5;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.iui-listbar-button-up-icon
+{
+    background: url(../resources/expandbox-icons.png) no-repeat 0 0;
+    display: inline-block;
+    margin: 2px 45%;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+.iui-listbar-button-up:hover .iui-listbar-button-up-icon
+{
+    opacity: 1;
+}
+.iui-listbar-button-down
+{
+    background: #e5e5e5;
+    border: thin solid #d5d5d5;
+    bottom: 0;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.iui-listbar-button-down-icon
+{
+    background: url(../resources/expandbox-icons.png) no-repeat 0 0;
+    display: inline-block;
+    margin: 2px 45%;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+.iui-listbar-button-down:hover .iui-listbar-button-down-icon
+{
+    opacity: 1;
+}
+.iui-listbar-button-up:hover, .iui-listbar-button-down:hover
+{
+    background: #efefef;
+    border-color: #dfdfdf;
+}

@@ -57,6 +57,8 @@ Here is a brief overview of what is included:
 
 <b>DragDrop</b> - Provides a way to use drag drop operations between custom components or elements.
 
+<b>Filter</b> - Includes a set of related functions for filter operations
+
 
 All components are inheritable, you can further extend functionalities of specific component by simple create a subclass of component main class. To get access to a specific component, the best way is to import the IntegralUIModule in your application.
 
@@ -64,7 +66,13 @@ All components are inheritable, you can further extend functionalities of specif
 
 IntegralUI Web requires only the following library:
 
-Angular - v2.0 and above
+Angular - v4.0 and above
+
+
+## DEMO
+
+[Online QuickStart App](http://www.lidorsystems.com/products/web/studio/samples/angular/) - An online demo of each component included
+
 
 ## Installation
 
@@ -77,7 +85,7 @@ npm install https://github.com/lidorsystems/integralui-web.git
 Open your application module and add a reference to IntegralUI module
 
 ```bash
-import { IntegralUIModule } from 'integralui-web/integralui.module';
+import { IntegralUIModule } from 'integralui-web/bin/integralui.module';
 
 @NgModule({
   imports:      [ IntegralUIModule ],
@@ -86,6 +94,7 @@ import { IntegralUIModule } from 'integralui-web/integralui.module';
 })
 export class AppModule { }
 ```
+<b>Note</b>   When building with AOT, add a reference to IntegralUI module from <strong>integralui-web/aot</strong> folder instead. The component files in this case are built using the NGC compiler instead of TSC compiler and they are compatible with AOT specifications from Angular.
 
 <b>Note</b>   In order to use a specific component or directive in your application, follow the guidelines from corresponding article. From above links, you can find a separate article available for each component or directive.
 
@@ -94,7 +103,7 @@ export class AppModule { }
 After installation, in angular-cli.json under styles section add this code line:
 
 ```bash
-"../node_modules/integralui-web/css/integralui.module.css"
+"../node_modules/integralui-web/bin/css/integralui.module.css"
 ```
 
 ### Angular QuickStart App
@@ -106,7 +115,7 @@ Add following lines to the app.components.ts file:
     encapsulation: ViewEncapsulation.None
 ```
 
-Also copy/paste the content of node_modules/integralui-web/resources/ folder to your project src/resources folder.
+Also copy/paste the content of node_modules/integralui-web/bin/resources/ folder to your project src/resources folder.
 
 If you are using SystemJS, make sure you have the following settings in systemjs.config.js file
 
@@ -120,6 +129,24 @@ If you are using SystemJS, make sure you have the following settings in systemjs
       }
     }
 ```
+
+## QuickStart App
+
+There is a demo application with source code that contains samples for each component included in the [IntegralUI Web](http://www.lidorsystems.com/products/web/studio/) product package. It can help you to get started quickly with learning about the components and write tests immediatelly.
+
+In order to start this application, you only need to install the Angular 4 libraries. Open the nodejs command prompt, go to application directory and type:
+
+```bash
+    npm install
+```
+After installation completes, start the application by typing:
+
+```bash
+    npm start
+```
+
+The application will start displaying the main window with links to all components included. Each component window contains a demo and description about the component functionality. You can checkout the sample source code (located under integralui-web/quickstart/src/app/samples subfolder) for more information on the sample and component used.
+
 
 ## Release Notes
 

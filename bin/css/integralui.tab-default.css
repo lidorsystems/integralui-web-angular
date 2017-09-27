@@ -1,0 +1,97 @@
+.iui-tab-header
+{
+	background-color: #e5e5e5;
+	border: thin solid #bcbcbc;
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 5px;
+	position: absolute;
+	z-index: 0;
+	top: 1px;
+}
+.iui-tab-header-hovered
+{
+	background-color: #f5f5f5;
+}
+.iui-tab-header-selected
+{
+	background-color: white;
+}
+.iui-tab-selected-top
+{
+	border-bottom-color: white;
+}
+.iui-tab-selected-right
+{
+	border-left-color: white;
+}
+.iui-tab-selected-bottom
+{
+	border-top-color: white;
+}
+.iui-tab-selected-left
+{
+	border-right-color: white;
+}
+
+/*
+.iui-tab-header::before {
+	content: '';
+	position: absolute;
+	border: thin solid blue;
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 0;
+	z-index: -1;
+	background: #dddddd;
+	transform: perspective(5px) rotateX(2deg);
+	transform-origin: bottom left;
+	border-radius: 5px 7px 0 0;
+}
+
+.iui-tab-header.tab::before {
+	border-radius: 10px 10px 0 0;
+}
+
+.iui-tab-header3::before {
+	content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: .5em; left: 0;
+	z-index: -1;
+	border-bottom: none;
+	border-radius: 10px 10px 0 0;
+	background: #ddd;
+	box-shadow: 0 2px hsla(0,0%,100%,.5) inset;
+	transform: perspective(5px) rotateX(2deg);
+	transform-origin: bottom;
+}*/
+
+.iui-tab-content
+{
+	background: white;
+	border: thin solid #bcbcbc;
+	padding: 5px;
+	position: absolute;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.iui-tab-content-selected > div
+{
+	/*animation: tab-content-selected 1s 0s 1 forwards;*/
+	animation-name: tab-content-selected;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes tab-content-selected
+{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}

@@ -1,0 +1,48 @@
+import { ComponentFactoryResolver, ElementRef, QueryList, Renderer, ViewContainerRef } from '@angular/core';
+import { IntegralUIBaseService } from './integralui.core';
+import { IntegralUICommonService } from '../services/integralui.common.service';
+import { IntegralUIDataService } from '../services/integralui.data.service';
+import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
+import { IntegralUIFilterService } from '../services/integralui.filter.service';
+import { IntegralUIBaseList } from './integralui.base.list';
+import { IntegralUIListItem } from './integralui.listitem';
+export declare class IntegralUIListBox extends IntegralUIBaseList {
+    protected dataService: IntegralUIDataService;
+    protected dragDropService: IntegralUIDragDropService;
+    protected elemRef: ElementRef;
+    protected elemRenderer: Renderer;
+    protected commonService: IntegralUICommonService;
+    protected filterService: IntegralUIFilterService;
+    protected cmpResolver: ComponentFactoryResolver;
+    protected baseService: IntegralUIBaseService;
+    contentList: QueryList<IntegralUIListItem>;
+    contentRef: ViewContainerRef;
+    contentElem: ElementRef;
+    itemElems: QueryList<ElementRef>;
+    itemTemplate: any;
+    private trialRef;
+    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    ngOnInit(): void;
+    protected updateData(): void;
+    ngAfterViewInit(): void;
+    ngAfterContentInit(): void;
+    ngOnDestroy(): void;
+    addItem(item: any): void;
+    clearItems(): void;
+    insertItemAt(item: any, index: number): void;
+    removeItemAt(index: number): boolean;
+    protected updateCurrentList(): void;
+    private addItemToCurrentList(item);
+    protected updateScrollItemList(): void;
+    getItemFromComponent(cmp: IntegralUIListItem): any;
+    protected updateItemList(): void;
+    protected updateBlockSize(): void;
+    protected getContentSize(): {
+        width: any;
+        height: any;
+    };
+    protected getItemElemList(): ElementRef[];
+    updateLayout(): void;
+    private resetRefresh();
+    refresh(obj?: any): void;
+}

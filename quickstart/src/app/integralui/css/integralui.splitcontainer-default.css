@@ -1,0 +1,120 @@
+.iui-splitcontainer
+{
+	border: thin solid transparent;
+	position: relative;
+	cursor: default;
+	overflow: hidden;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+.iui-splitcontainer-splitter
+{
+	background: #efefef;
+	border: thin solid gray;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	overflow: visible;
+	z-index: 3;
+}
+.iui-splitcontainer-splitter-horizontal
+{
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+.iui-splitcontainer-splitter-vertical
+{
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+.iui-splitcontainer-handle
+{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	overflow: hidden;
+}
+.iui-splitcontainer-handle span
+{
+    background-image: url(../resources/handle.png);
+    background-repeat: repeat;
+	display: block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+.iui-splitcontainer-handle-horizontal span
+{
+	width: 50px;
+	height: 9px;
+}
+.iui-splitcontainer-handle-vertical span
+{
+	width: 9px;
+	height: 50px;
+}
+.iui-splitcontainer-swap-button
+{
+	border: thin solid transparent;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 2px;
+	position: absolute;
+	opacity: 0.75;
+}
+.iui-splitcontainer-swap-button:hover
+{
+	background: #fefefe;
+	border-color: #808080;
+	opacity: 1;
+}
+.iui-splitcontainer-swap-button span
+{
+    background-image: url(../resources/icons.png);
+    background-repeat: no-repeat;
+    background-position: -16px -112px;
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+.iui-splitcontainer-swap-button-vertical span
+{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+.iui-splitcontainer-tab
+{
+	border: thin solid gray;
+	margin: 0;
+	position: absolute;
+	padding: 0;
+}
+.iui-splitcontainer-tab > div
+{
+	padding: 3px 7px 3px 3px;
+	position: absolute;
+	white-space: nowrap;
+}
+.iui-splitcontainer-tab-vertical > div
+{
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+.iui-splitcontainer-tab-selected
+{
+	background: white;
+}
+.iui-splitcontainer-panel
+{
+	background: white;
+	border: thin solid gray;
+	overflow: hidden;
+	position: absolute;
+}

@@ -1,0 +1,43 @@
+.iui-frame
+{
+	background: transparent;
+	background: url(../resources/edge.png) no-repeat 0 0;
+	border: 0;
+	cursor: nw-resize;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 16px;
+	height: 16px;
+	
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+.iui-frame2::after
+{
+	content: "";
+	border: 8px solid red;
+	border-color: transparent red red transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.iui-frame-hover
+{
+	display: block;
+}
+.iui-frame-none
+{
+	display: none;
+}
+.test
+{
+	border: thin solid green;
+	width: 100px;
+	height: 100px;
+}
