@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -107,10 +107,10 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             </iui-treelist>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeList</strong> is a native Angular 2 component that displays one list of items from a tree hierarchy. By changing the currently selected item, the TreeList will display only the child items that belong to the selIn following sections of this article, you will find information about general features that are included in the TreeList component.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeList</strong> is a native Angular component that displays one list of items from a tree hierarchy. By changing the currently selected item, the TreeList will display only the child items that belong to the selIn following sections of this article, you will find information about general features that are included in the TreeList component.</p>
                 <p><span class="initial-space"></span>In above demo there are different categories. By selecting a category, currently displayed list will slide to the left and a new list will show with sub-categories. The category name will appear in component header, from where you can move back to the previous selection.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treelist/treelist-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treelist/treelist-component.aspx">Overview of IntegralUI TreeList for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treelist/treelist-component.aspx">Overview of IntegralUI TreeList for Angular</a></p>
             </div>
         </div>
     `,

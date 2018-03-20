@@ -1,0 +1,48 @@
+import { ElementRef, EventEmitter } from '@angular/core';
+import { IntegralUIBaseValueComponent, IntegralUIOrientation } from './integralui.core';
+import { IntegralUICommonService } from '../services/integralui.common.service';
+export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
+    protected elemRef: ElementRef;
+    protected commonService: IntegralUICommonService;
+    protected ctrlMaxValue: number;
+    protected ctrlMinValue: number;
+    protected currentOrientation: IntegralUIOrientation;
+    protected contentSize: any;
+    protected handleSize: {
+        width: number;
+        height: number;
+    };
+    protected sliderSize: any;
+    sliderPos: number;
+    handleElem: ElementRef;
+    protected sliderClass: Array<any>;
+    protected sliderClassName: string;
+    value: number;
+    orientation: IntegralUIOrientation;
+    min: number;
+    max: number;
+    orientationChanged: EventEmitter<any>;
+    constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    protected initStyle(): void;
+    ngAfterContentChecked(): void;
+    getContentWidth(): any;
+    getSliderWidth(): any;
+    processValueChange(): void;
+    updateLayout(): void;
+    protected isSliderChangeActive: boolean;
+    ctrlMouseDown(e: any): void;
+    ctrlMouseMove(e: any): void;
+    ctrlMouseUp(e: any): void;
+    ctrlMouseWheel(e: any): void;
+    onWindowMouseMove(e: any): void;
+    onWindowMouseUp(e: any): void;
+    getSliderBackStyle(): any;
+    getSliderValueStyle(): any;
+    protected updateContentClass(): void;
+    getSliderValueClass(): any[];
+    protected updateSliderClass(): void;
+    protected getSliderStyle(value: any): any;
+    protected updateStyle(value: any): void;
+}

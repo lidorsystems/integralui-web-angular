@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -151,12 +151,12 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             </div>
             <br style="clear:both;"/>
             <div class="feature-help">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Grid</strong> is a native Angular 2 component that displays tabular data sets. You can load data on demand during run-time from local or remote data sources. Each grid cell can have custom HTML content or other Angular components.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Grid</strong> is a native Angular component that displays tabular data sets. You can load data on demand during run-time from local or remote data sources. Each grid cell can have custom HTML content or other Angular components.</p>
                 <p><span class="initial-space"></span>In above demo, there are cells with different content: checkbox, icon with image and dropdown list. In addition, the footer displays the total volume in bold. Using the dropdown you can choose a different country from the list, and using the checkbox in column header you can check or uncheck all rows.</p>
                 <p><span class="initial-space"></span>To start a drag and drop operation, left-click on a row and move the mouse cursor, so that you can reorder rows during run-time. In this example, there are no restrictions set, and you can drag and drop a row and placed it as a child of another row. However, if you want you can set conditions and provide custom drag drop operations on your own.</p>
                 <p><span class="initial-space"></span>To select multiple rows, hold SHIFT or CTRL key and click on specific row.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>grid/grid-overview.ts</i>) file, or read the following article:</p> 
-                <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/grid/grid-component.aspx">Overview of IntegralUI Grid for Angular 2</a></p>
+                <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/grid/grid-component.aspx">Overview of IntegralUI Grid for Angular</a></p>
             </div>
         </div>
     `,

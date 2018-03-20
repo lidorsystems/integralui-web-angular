@@ -1,0 +1,35 @@
+.iui-rating
+{
+	background: white;
+	border: thin solid #cecece;
+	border-radius: 3px;
+    color: black;
+	cursor: default;
+    height: 16px;
+	margin: 0;
+	overflow: hidden;
+	padding: 1px;
+	position: relative;
+}
+.iui-rating-content
+{
+    background-image: url(../resources/rating/star-empty.png);
+    background-repeat: repeat-x;
+    height: 16px;
+}
+.iui-rating-value
+{
+    background-image: url(../resources/rating/star-full.png);
+    background-repeat: repeat-x;
+    height: 16px;
+}
+
+
+/* Disabled State */
+.iui-rating-disabled div
+{
+	opacity: 0.4;
+	pointer-events: none;
+}
+
+

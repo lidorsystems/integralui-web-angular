@@ -1,0 +1,94 @@
+.iui-dropdown-button
+{
+	background: #e5e5e5;
+    border: thin solid #cecece;
+    border-radius: 3px;
+    color: black;
+	cursor: default;
+	display: inline-block;
+	margin: 2px 0;
+	overflow: hidden;
+	padding: 3px;
+	position: relative;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.iui-dropdown-button:hover
+{
+	background: #efefef;
+}
+
+.iui-dropdown-button-btn
+{
+	padding: 0;
+}
+.iui-dropdown-button-btn-right
+{
+    border-left: thin solid #cecece;
+	float: right;
+	margin: 1px 0 1px 10px;
+}
+.iui-dropdown-button-btn-left
+{
+    border-right: thin solid #cecece;
+	float: left;
+	margin: 1px 10px 1px 0;
+}
+.iui-dropdown-button-btn span
+{
+    background-image: url(../resources/icons.png);
+    background-repeat: no-repeat;
+	background-position: -48px -16px;
+	display: block;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+.iui-dropdown-button-btn-right span
+{
+	margin: 0 0 0 3px;
+}
+
+.iui-dropdown-button-btn-left span
+{
+	margin: 0 3px 0 0;
+}
+.iui-dropdown-button-open-above span
+{
+	background-position: -32px -16px;
+}
+.iui-dropdown-button-open-left span
+{
+	background-position: -16px -16px;
+}
+.iui-dropdown-button-open-right span
+{
+	background-position: 0 -16px;
+}
+
+.iui-dropdown-button-list, .iui-dropdown-button-list .iui-menuitem-block
+{
+    background: #f5f5f5;
+    border: thin solid #cecece;
+    padding: 0;
+}
+.iui-dropdown-button-list .iui-menuitem-root, .iui-dropdown-button-list .iui-menuitem
+{
+	margin: 0;
+	padding: 1px 0;
+}
+
+/* Disabled State */
+.iui-dropdown-button-disabled
+{
+	opacity: 0.75;
+	pointer-events: none;
+}
+
+

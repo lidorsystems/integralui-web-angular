@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -83,18 +83,22 @@ export class GridSample {
             { text: "Context Menu", link: './context-menu' },
             { text: "Different Cell Templates", link: './cell-templates' },
             { text: "Drag Drop to TreeGrid", link: './drag-drop-treegrid' },
+            { text: "Dynamic Grouping", link: './grouping' },
             { text: "Events", link: './events' },
             { text: "Excel Editor", link: './excel-editor' },
+            { text: "Export to CSV or JSON", link: './export' },
             { text: "Fast Load", link: './fast-load' },
             { text: "Filter", link: './filter' },
             { text: "Multi Select", link: './multi-select' },
             { text: "Overview", link: './overview' },
+            { text: "Pagination", link: './pagination' },
+            { text: "Show/Hide Header | Footer", link: './show-hide-header-footer' },
             { text: "Sorting", link: './sorting' },
             { text: "Tooltip", link: './tooltip' },
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[11];
+        this.selectedItem = this.sideList[13];
     }   
 
     ngAfterContentChecked(){

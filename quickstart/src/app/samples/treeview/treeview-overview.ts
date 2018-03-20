@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -149,17 +149,18 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeView</strong> is a native Angular 2 component that displays tree hierarchy of items that can be reordered using advanced drag drop operations. You can load data on demand during run-time from local or remote data sources, and add custom HTML content in each tree item.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeView</strong> is a native Angular component that displays tree hierarchy of items that can be reordered using advanced drag drop operations. You can load data on demand during run-time from local or remote data sources, and add custom HTML content in each tree item.</p>
                 <p><span class="initial-space"></span>Above demonstration shows a simple tree hierarchy, each item has an icon and an editable label. When item is hovered, a command button will appear on right side, which when clicked will open a text editor, where you can change the item label.</p>
                 <p><span class="initial-space"></span>You can reorder items by click and drag over specific item. A dragging window will appear, stating the target item and position at which item can be dropped. During drag drop operations, you can also create a copy of an item by holding the SHIFT key. The dragging window will change its icon, showing a + sign next to the position marker.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treeview/treeview-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treeview/treeview-component.aspx">Overview of IntegralUI TreeView for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treeview/treeview-component.aspx">Overview of IntegralUI TreeView for Angular</a></p>
             </div>
         </div>
     `,
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewOverviewSample {
+
     @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
 
     public items: Array<any>;

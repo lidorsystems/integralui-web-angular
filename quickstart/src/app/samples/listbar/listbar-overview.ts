@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -58,10 +58,10 @@ enableProdMode();
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ListBar</strong> is a native Angular 2 component that displays a list of expandable groups, in vertical layout. Each group contains a list of items created using custom HTML elements or Angular 2 components. When the current view cannot display all groups in whole, scroll buttons will appear on each side that will allow you to navigate among groups.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ListBar</strong> is a native Angular component that displays a list of expandable groups, in vertical layout. Each group contains a list of items created using custom HTML elements or Angular components. When the current view cannot display all groups in whole, scroll buttons will appear on each side that will allow you to navigate among groups.</p>
                 <p><span class="initial-space"></span>Above demonstration shows several groups with different number of items. Each group can expand/collapse, but only one group can become selected. Whenever more groups are expanded and they overflow the current view, a set of scroll buttons will appear on top and bottom side. By pressing these buttons, you can scroll the current view and navigate among presented groups.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>listbar/listbar-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listbar/listbar-component.aspx">Overview of IntegralUI ListBar for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listbar/listbar-component.aspx">Overview of IntegralUI ListBar for Angular</a></p>
             </div>
         </div>
     `,

@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -226,7 +226,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:800px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ListView</strong> is a native Angular 2 component that displays list of items either in horizontal or vertical layout. Items can be reordered using advanced drag drop operations. You can load data on demand during run-time from local or remote data sources, and add custom HTML content in each item.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ListView</strong> is a native Angular component that displays list of items either in horizontal or vertical layout. Items can be reordered using advanced drag drop operations. You can load data on demand during run-time from local or remote data sources, and add custom HTML content in each item.</p>
                 <p><span class="initial-space"></span>Above demonstration shows two different views:</p>
                     <ul class="feature-points">
                         <li>Horizontal layout where items are arranged from top to bottom with horizontal scrolling</li>
@@ -236,7 +236,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                 <p><span class="initial-space"></span>In addition, item content is arranged differently: horizontal layout shows item content in single line, while vertical layout shows item content in a box.</p>
                 <p><span class="initial-space"></span>You can reorder items by click and drag over specific item. A dragging window will appear, stating the target item and position at which item can be dropped. During drag drop operations, you can also create a copy of an item by holding the SHIFT key. The dragging window will change its icon, showing a + sign next to position marker.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>listview/listview-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listview/listview-component.aspx">Overview of IntegralUI ListView for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listview/listview-component.aspx">Overview of IntegralUI ListView for Angular</a></p>
             </div>
         </div>
     `,

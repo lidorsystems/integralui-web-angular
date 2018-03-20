@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -170,7 +170,6 @@ export class GridMultiSelectSample {
     }
 
     onComboSelectionChanged(e: any){
-        // Whenever an option is selected, update the selection mode of the ListBox
         switch (e.index){
           case 0:
             this.selMode = IntegralUISelectionMode.None;

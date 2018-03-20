@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -25,12 +25,12 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
                 overflow: visible !important;
                 margin: 0;
                 width: 300px;
-                height: 525px;
+                height: 600px;
             }
             .list-item
             {
                 display: inline-block;
-                padding: 3px 7px;
+                padding: 0 7px;
                 overflow: hidden;
                 width: 250px;
                 white-space: nowrap;
@@ -159,7 +159,47 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
             {
                 background-position: -216px -24px;
             }
-        </style>
+            .checkbox
+            {
+                background-position: -240px -24px;
+            }
+            .button
+            {
+                background-position: 0 -48px;
+            }
+            .dialog
+            {
+                background-position: -24px -48px;
+            }
+            .dropdownbutton
+            {
+                background-position: -48px -48px;
+            }
+            .numeric-updown
+            {
+                background-position: -72px -48px;
+            }
+            .progressbar
+            {
+                background-position: -96px -48px;
+            }
+            .radiobutton
+            {
+                background-position: -120px -48px;
+            }
+            .rating
+            {
+                background-position: -144px -48px;
+            }
+            .slider
+            {
+                background-position: -168px -48px;
+            }
+            .listscroller
+            {
+                background-position: -192px -48px;
+            }
+]        </style>
         <div class="component-list">
             <h2 class="feature-title" style="color2:#c60d0d;font-size:1.6em;margin:0 0 20px 200px;padding-left:7px;">Components by Category</h2>
             <iui-listview [items]="items" [appRef]="applicationRef" [controlStyle]="ctrlStyle" [scrollMode]="scrollType" #listview>
@@ -209,8 +249,14 @@ export class StartComponent {
             { text: "TreeGrid", icon: 'treegrid', link: '/treegrid' },
             { tag: 'separator' },
             { text: "EDITORS", tag: 'category' },
+            { text: "Button", icon: 'button', link: '/button' },
+            { text: "CheckBox", icon: 'checkbox', link: '/checkbox' },
             { text: "ComboBox", icon: 'combobox', link: '/combobox' },
-            { tag: 'separator', size: 150 },
+            { text: "NumericUpDown", icon: 'numeric-updown', link: '/numeric-updown' },
+            { text: "ProgressBar", icon: 'progressbar', link: '/progressbar' },
+            { text: "Radio Button", icon: 'radiobutton', link: '/radiobutton' },
+            { text: "Rating", icon: 'rating', link: '/rating' },
+            { text: "Slider", icon: 'slider', link: '/slider' },
             { text: "LAYOUT", tag: 'category' },
             { text: "Accordion", icon: 'accordion', link: '/accordion' },
             { text: "GroupBox", icon: 'groupbox', link: '/groupbox' },
@@ -218,17 +264,20 @@ export class StartComponent {
             { text: "Splitter", icon: 'splitter', link: '/splitter' },
             { text: "TabStrip", icon: 'tabstrip', link: '/tabstrip' },
             { tag: 'separator' },
-            { text: "PRESENTATION", tag: 'category' },
-            { text: "SlideBar", icon: 'slidebar', link: '/slidebar' },
-            { tag: 'separator', size: 100 },
             { text: "NAVIGATION", tag: 'category' },
             { text: "ListBar", icon: 'listbar', link: '/listbar' },
+            { text: "ListScroller", icon: 'listscroller', link: '/listscroller' },
             { text: "Menu", icon: 'menu', link: '/menu' },
             { text: "TreeList", icon: 'treelist', link: '/treelist' },
             { text: "TreeView", icon: 'treeview', link: '/treeview' },
-            { tag: 'separator' },
+            { tag: 'separator', size: 50 },
+            { text: "PRESENTATION", tag: 'category' },
+            { text: "SlideBar", icon: 'slidebar', link: '/slidebar' },
+            { tag: 'separator', size: 0 },
             { text: "UTILITY", tag: 'category' },
             { text: "Context Menu", icon: 'contextmenu', link: '/contextmenu' },
+            { text: "Dialog", icon: 'dialog', link: '/dialog' },
+            { text: "DropDown Button", icon: 'dropdownbutton', link: '/dropdownbutton' },
             { text: "Paginator", icon: 'paginator', link: '/paginator' },
             { text: "Range", icon: 'range', link: '/range' },
             { text: "Frame", icon: 'frame', link: '/frame' },

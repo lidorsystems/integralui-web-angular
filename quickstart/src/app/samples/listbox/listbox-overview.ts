@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -67,10 +67,6 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
                 height: 24px;
                 vertical-align: middle;
             }
-            .action
-            {
-                background-position: 0 0;
-            }
             .adventure
             {
                 background-position: -24px 0;
@@ -128,10 +124,10 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ListBox</strong> is a native Angular 2 component that represents a list of custom HTML elements that you can reorder dynamically during run-time using drag drop operations.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ListBox</strong> is a native Angular component that represents a list of custom HTML elements that you can reorder dynamically during run-time using drag drop operations.</p>
                 <p><span class="initial-space"></span>This example displays a list of movies represented by some general info about each movie: genre, title, rating and year when it is released. By click and hold of the left mouse button, you can drag and drop each item from the list over other items.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>listbox/listbox-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listbox/listbox-component.aspx">Overview of IntegralUI ListBox for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listbox/listbox-component.aspx">Overview of IntegralUI ListBox for Angular</a></p>
             </div>
         </div>
     `,

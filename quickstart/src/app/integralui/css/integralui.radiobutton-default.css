@@ -1,0 +1,62 @@
+.iui-radio-button
+{
+    color: black;
+	cursor: default;
+	display: inline-block;
+	margin: 2px 0;
+	overflow: hidden;
+	padding: 3px;
+	position: relative;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Button */
+.iui-radio-button-btn
+{
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+.iui-radio-button-btn span
+{
+    background-image: url(../resources/radiobutton/radio-unchecked.png);
+    background-repeat: no-repeat;
+	display: block;
+	padding: 0;
+	margin: 0 0 0 3px;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+.iui-radio-button-btn-checked span
+{
+    background-image: url(../resources/radiobutton/radio-checked.png);
+}
+.iui-radio-button-btn-unchecked span
+{
+    background-image: url(../resources/radiobutton/radio-unchecked.png);
+}
+
+/* Content */
+.iui-radio-button-content
+{
+	display: inline-block;
+}
+
+/* Disabled State */
+.iui-radio-button-disabled
+{
+	opacity: 0.75;
+	pointer-events: none;
+}
+.iui-radio-button-btn-disabled
+{
+	opacity: 0.75;
+}
+

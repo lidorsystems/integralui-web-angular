@@ -1,0 +1,22 @@
+/*
+  filename: integralui.dialog.js
+  version : 1.0.0
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
+var __extends=this&&this.__extends||function(c,a){function b(){this.constructor=c}for(var d in a)a.hasOwnProperty(d)&&(c[d]=a[d]);c.prototype=null===a?Object.create(a):(b.prototype=a.prototype,new b)},__decorate=this&&this.__decorate||function(c,a,b,d){var f=arguments.length,e=3>f?a:null===d?d=Object.getOwnPropertyDescriptor(a,b):d,g;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)e=Reflect.decorate(c,a,b,d);else for(var h=c.length-1;0<=h;h--)if(g=c[h])e=(3>f?g(e):3<f?g(a,b,e):
+g(a,b))||e;return 3<f&&e&&Object.defineProperty(a,b,e),e},__metadata=this&&this.__metadata||function(c,a){if("object"===typeof Reflect&&"function"===typeof Reflect.metadata)return Reflect.metadata(c,a)},core_1=require("@angular/core"),integralui_core_1=require("./integralui.core"),integralui_common_service_1=require("../services/integralui.common.service"),IntegralUIDialog=function(c){function a(a){var b=c.call(this,a)||this;b.commonService=a;b.isEnabled=!0;b.isVisible=!1;b.closed=new core_1.EventEmitter;
+b.closing=new core_1.EventEmitter;b.opened=new core_1.EventEmitter;b.opening=new core_1.EventEmitter;return b}__extends(a,c);Object.defineProperty(a.prototype,"visible",{get:function(){return this.isVisible},set:function(a){this.isVisible!=a&&(a?this.open():this.close())},enumerable:!0,configurable:!0});a.prototype.ngOnInit=function(){this.generalClassName="iui-dialog";this.initStyle()};a.prototype.updateLayout=function(){};a.prototype.open=function(){if(!this.isVisible){var a={cancel:!1};this.opening.emit(a);
+a.cancel||(this.isVisible=!0,this.opened.emit(null))}};a.prototype.close=function(){if(this.isVisible){var a={cancel:!1};this.closing.emit(a);a.cancel||(this.isVisible=!1,this.closed.emit(null))}};return a}(integralui_core_1.IntegralUIBaseComponent);__decorate([core_1.ViewChild("inputLabel",{read:core_1.ElementRef}),__metadata("design:type",core_1.ElementRef)],IntegralUIDialog.prototype,"inputLabelElem",void 0);
+__decorate([core_1.Input(),__metadata("design:type",Boolean)],IntegralUIDialog.prototype,"closeButton",void 0);__decorate([core_1.Input(),__metadata("design:type",Boolean),__metadata("design:paramtypes",[Boolean])],IntegralUIDialog.prototype,"visible",null);__decorate([core_1.Output(),__metadata("design:type",core_1.EventEmitter)],IntegralUIDialog.prototype,"closed",void 0);__decorate([core_1.Output(),__metadata("design:type",core_1.EventEmitter)],IntegralUIDialog.prototype,"closing",void 0);
+__decorate([core_1.Output(),__metadata("design:type",core_1.EventEmitter)],IntegralUIDialog.prototype,"opened",void 0);__decorate([core_1.Output(),__metadata("design:type",core_1.EventEmitter)],IntegralUIDialog.prototype,"opening",void 0);
+IntegralUIDialog=__decorate([core_1.Component({selector:"iui-dialog",template:'\n  \t\t<div *ngIf="visible" [ngClass]="getControlClass()" class="iui-dialog-animation">\n  \t\t\t<ng-content></ng-content>\n  \t\t\t<div class="iui-dialog-buttons">\n  \t\t\t\t<span *ngIf="closeButton" class="iui-dialog-icon iui-dialog-button-close" (click)="close()"></span>\n  \t\t\t</div>\n\t\t</div>\n\t\t<p *ngIf="visible" class="iui-dialog-overlay iui-overlay-animation" (click)="close()"></p>\n\t',inputs:["controlStyle",
+"data","enabled","name","state"],encapsulation:core_1.ViewEncapsulation.None}),__metadata("design:paramtypes",[integralui_common_service_1.IntegralUICommonService])],IntegralUIDialog);exports.IntegralUIDialog=IntegralUIDialog;

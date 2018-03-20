@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -29,11 +29,25 @@ import { AccordionEventsSample } from './samples/accordion/accordion-events';
 import { AccordionOverviewSample } from './samples/accordion/accordion-overview';
 import { AccordionTooltipSample } from './samples/accordion/accordion-tooltip';
 
+import { ButtonSample } from './samples/button/button-main';
+import { ButtonOverviewSample } from './samples/button/button-overview';
+
+import { CheckBoxSample } from './samples/checkbox/checkbox-main';
+import { CheckBoxOverviewSample } from './samples/checkbox/checkbox-overview';
+
 import { ComboBoxSample } from './samples/combobox/combobox-main';
 import { ComboBoxOverviewSample } from './samples/combobox/combobox-overview';
 
 import { ContextMenuSample } from './samples/contextmenu/contextmenu-main';
+import { ContextMenuMultiLevelSample } from './samples/contextmenu/contextmenu-multi-level';
 import { ContextMenuOverviewSample } from './samples/contextmenu/contextmenu-overview';
+import { ContextMenuTemplateSample } from './samples/contextmenu/contextmenu-templates';
+
+import { DialogSample } from './samples/dialog/dialog-main';
+import { DialogOverviewSample } from './samples/dialog/dialog-overview';
+
+import { DropDownButtonSample } from './samples/dropdownbutton/dropdownbutton-main';
+import { DropDownButtonOverviewSample } from './samples/dropdownbutton/dropdownbutton-overview';
 
 import { FrameSample } from './samples/frame/frame-main';
 import { FrameOverviewSample } from './samples/frame/frame-overview';
@@ -48,10 +62,14 @@ import { GridContextMenuSample } from './samples/grid/grid-context-menu';
 import { GridDragDropTreeGridSample } from './samples/grid/grid-drag-drop-treegrid';
 import { GridEventsSample } from './samples/grid/grid-events';
 import { GridExcelEditorSample } from './samples/grid/grid-excel-editor';
+import { GridExportSample } from './samples/grid/grid-export';
 import { GridFastLoadSample } from './samples/grid/grid-fast-load';
 import { GridFilterSample } from './samples/grid/grid-filter';
+import { GridGroupingSample } from './samples/grid/grid-grouping';
 import { GridMultiSelectSample } from './samples/grid/grid-multi-select';
 import { GridOverviewSample } from './samples/grid/grid-overview';
+import { GridPaginationSample } from './samples/grid/grid-pagination';
+import { GridShowHideHeaderFooterSample } from './samples/grid/grid-show-hide-header-footer';
 import { GridSortingSample } from './samples/grid/grid-sorting';
 import { GridTooltipSample } from './samples/grid/grid-tooltip';
 
@@ -70,6 +88,9 @@ import { ListBoxFastLoadSample } from './samples/listbox/listbox-fast-load';
 import { ListBoxKeyboardSample } from './samples/listbox/listbox-keyboard';
 import { ListBoxOverviewSample } from './samples/listbox/listbox-overview';
 
+import { ListScrollerSample } from './samples/listscroller/listscroller-main';
+import { ListScrollerOverviewSample } from './samples/listscroller/listscroller-overview';
+
 import { ListViewSample } from './samples/listview/listview-main';
 import { ListViewFastLoadSample } from './samples/listview/listview-fast-load';
 import { ListViewKeyboardSample } from './samples/listview/listview-keyboard';
@@ -77,6 +98,10 @@ import { ListViewOverviewSample } from './samples/listview/listview-overview';
 
 import { MenuSample } from './samples/menu/menu-main';
 import { MenuOverviewSample } from './samples/menu/menu-overview';
+import { MenuTemplateSample } from './samples/menu/menu-templates';
+
+import { NumericUpDownSample } from './samples/numeric-updown/numeric-updown-main';
+import { NumericUpDownOverviewSample } from './samples/numeric-updown/numeric-updown-overview';
 
 import { SplitContainerSample } from './samples/splitcontainer/splitcontainer-main';
 import { SplitContainerOverviewSample } from './samples/splitcontainer/splitcontainer-overview';
@@ -87,11 +112,23 @@ import { SplitterOverviewSample } from './samples/splitter/splitter-overview';
 import { PaginatorSample } from './samples/paginator/paginator-main';
 import { PaginatorOverviewSample } from './samples/paginator/paginator-overview';
 
+import { ProgressBarSample } from './samples/progressbar/progressbar-main';
+import { ProgressBarOverviewSample } from './samples/progressbar/progressbar-overview';
+
+import { RadioButtonSample } from './samples/radiobutton/radiobutton-main';
+import { RadioButtonOverviewSample } from './samples/radiobutton/radiobutton-overview';
+
 import { RangeSample } from './samples/range/range-main';
 import { RangeOverviewSample } from './samples/range/range-overview';
 
+import { RatingSample } from './samples/rating/rating-main';
+import { RatingOverviewSample } from './samples/rating/rating-overview';
+
 import { SlideBarSample } from './samples/slidebar/slidebar-main';
 import { SlideBarOverviewSample } from './samples/slidebar/slidebar-overview';
+
+import { SliderSample } from './samples/slider/slider-main';
+import { SliderOverviewSample } from './samples/slider/slider-overview';
 
 import { TabStripSample } from './samples/tabstrip/tabstrip-main';
 import { TabStripOverviewSample } from './samples/tabstrip/tabstrip-overview';
@@ -109,10 +146,13 @@ import { TreeGridContextMenuSample } from './samples/treegrid/treegrid-context-m
 import { TreeGridDragDropSample } from './samples/treegrid/treegrid-drag-drop';
 import { TreeGridEventsSample } from './samples/treegrid/treegrid-events';
 import { TreeGridExcelEditorSample } from './samples/treegrid/treegrid-excel-editor';
+import { TreeGridExportSample } from './samples/treegrid/treegrid-export';
 import { TreeGridFastLoadSample } from './samples/treegrid/treegrid-fast-load';
 import { TreeGridFilterSample } from './samples/treegrid/treegrid-filter';
 import { TreeGridMultiSelectSample } from './samples/treegrid/treegrid-multi-select';
 import { TreeGridOverviewSample } from './samples/treegrid/treegrid-overview';
+import { TreeGridPaginationSample } from './samples/treegrid/treegrid-pagination';
+import { TreeGridShowHideHeaderFooterSample } from './samples/treegrid/treegrid-show-hide-header-footer';
 import { TreeGridSortingSample } from './samples/treegrid/treegrid-sorting';
 import { TreeGridTooltipSample } from './samples/treegrid/treegrid-tooltip';
 
@@ -156,6 +196,20 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'tooltip', component: AccordionTooltipSample }
             ]
           },
+          { 
+            path: 'button', component: ButtonSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: ButtonOverviewSample }
+            ]
+          },
+          { 
+            path: 'checkbox', component: CheckBoxSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: CheckBoxOverviewSample }
+            ]
+          },
 	        { 
             path: 'combobox', component: ComboBoxSample,
             children: [
@@ -167,7 +221,23 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             path: 'contextmenu', component: ContextMenuSample,
             children: [
               { path: '', redirectTo: 'overview', pathMatch: 'full' },
-              { path: 'overview', component: ContextMenuOverviewSample }
+              { path: 'multi-level', component: ContextMenuMultiLevelSample },
+              { path: 'overview', component: ContextMenuOverviewSample },
+              { path: 'templates', component: ContextMenuTemplateSample }
+            ]
+          },
+          { 
+            path: 'dialog', component: DialogSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: DialogOverviewSample }
+            ]
+          },
+          { 
+            path: 'dropdownbutton', component: DropDownButtonSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: DropDownButtonOverviewSample }
             ]
           },
 	        { 
@@ -190,10 +260,14 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'drag-drop-treegrid', component: GridDragDropTreeGridSample },
               { path: 'events', component: GridEventsSample },
               { path: 'excel-editor', component: GridExcelEditorSample },
+              { path: 'export', component: GridExportSample },
               { path: 'fast-load', component: GridFastLoadSample },
               { path: 'filter', component: GridFilterSample },
+              { path: 'grouping', component: GridGroupingSample },
               { path: 'multi-select', component: GridMultiSelectSample },
               { path: 'overview', component: GridOverviewSample },
+              { path: 'pagination', component: GridPaginationSample },
+              { path: 'show-hide-header-footer', component: GridShowHideHeaderFooterSample },
               { path: 'sorting', component: GridSortingSample },
               { path: 'tooltip', component: GridTooltipSample }
             ]
@@ -226,6 +300,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'overview', component: ListBoxOverviewSample }
             ]
           },
+          { 
+            path: 'listscroller', component: ListScrollerSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: ListScrollerOverviewSample }
+            ]
+          },
 	        { 
             path: 'listview', component: ListViewSample,
             children: [
@@ -239,7 +320,15 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             path: 'menu', component: MenuSample,
             children: [
               { path: '', redirectTo: 'overview', pathMatch: 'full' },
-              { path: 'overview', component: MenuOverviewSample }
+              { path: 'overview', component: MenuOverviewSample },
+              { path: 'templates', component: MenuTemplateSample }
+            ]
+          },
+          { 
+            path: 'numeric-updown', component: NumericUpDownSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: NumericUpDownOverviewSample }
             ]
           },
 	        { 
@@ -263,6 +352,20 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'overview', component: PaginatorOverviewSample }
             ]
           },
+          { 
+            path: 'progressbar', component: ProgressBarSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: ProgressBarOverviewSample }
+            ]
+          },
+          { 
+            path: 'radiobutton', component: RadioButtonSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: RadioButtonOverviewSample }
+            ]
+          },
 	        { 
             path: 'range', component: RangeSample,
             children: [
@@ -270,11 +373,25 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'overview', component: RangeOverviewSample }
             ]
           },
+          { 
+            path: 'rating', component: RatingSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: RatingOverviewSample }
+            ]
+          },
 	        { 
             path: 'slidebar', component: SlideBarSample,
             children: [
               { path: '', redirectTo: 'overview', pathMatch: 'full' },
               { path: 'overview', component: SlideBarOverviewSample }
+            ]
+          },
+          { 
+            path: 'slider', component: SliderSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: SliderOverviewSample }
             ]
           },
 	        { 
@@ -304,10 +421,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'drag-drop', component: TreeGridDragDropSample },
               { path: 'events', component: TreeGridEventsSample },
               { path: 'excel-editor', component: TreeGridExcelEditorSample },
+              { path: 'export', component: TreeGridExportSample },
               { path: 'fast-load', component: TreeGridFastLoadSample },
               { path: 'filter', component: TreeGridFilterSample },
               { path: 'multi-select', component: TreeGridMultiSelectSample },
               { path: 'overview', component: TreeGridOverviewSample },
+              { path: 'pagination', component: TreeGridPaginationSample },
+              { path: 'show-hide-header-footer', component: TreeGridShowHideHeaderFooterSample },
               { path: 'sorting', component: TreeGridSortingSample },
               { path: 'tooltip', component: TreeGridTooltipSample }
             ]
@@ -354,10 +474,20 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         AccordionEventsSample,
         AccordionOverviewSample,
         AccordionTooltipSample,
+        ButtonSample,
+        ButtonOverviewSample,
+        CheckBoxSample,
+        CheckBoxOverviewSample,
         ComboBoxSample,
         ComboBoxOverviewSample,
         ContextMenuSample,
+        ContextMenuMultiLevelSample,
         ContextMenuOverviewSample,
+        ContextMenuTemplateSample,
+        DialogSample,
+        DialogOverviewSample,
+        DropDownButtonSample,
+        DropDownButtonOverviewSample,
         FrameSample,
         FrameOverviewSample,
         GridSample,
@@ -370,10 +500,14 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         GridDragDropTreeGridSample,
         GridEventsSample,
         GridExcelEditorSample,
+        GridExportSample,
         GridFastLoadSample,
         GridFilterSample,
+        GridGroupingSample,
         GridMultiSelectSample,
         GridOverviewSample,
+        GridPaginationSample,
+        GridShowHideHeaderFooterSample,
         GridSortingSample,
         GridTooltipSample,
         GroupBoxSample,
@@ -388,22 +522,35 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         ListBoxFastLoadSample,
         ListBoxKeyboardSample,
         ListBoxOverviewSample,
+        ListScrollerSample,
+        ListScrollerOverviewSample,
         ListViewSample,
         ListViewFastLoadSample,
         ListViewKeyboardSample,
         ListViewOverviewSample,
         MenuSample,
         MenuOverviewSample,
+        MenuTemplateSample,
+        NumericUpDownSample,
+        NumericUpDownOverviewSample,
+        PaginatorSample,
+        PaginatorOverviewSample,
+        ProgressBarSample,
+        ProgressBarOverviewSample,
+        RadioButtonSample,
+        RadioButtonOverviewSample,
+        RangeSample,
+        RangeOverviewSample,
+        RatingSample,
+        RatingOverviewSample,
+        SlideBarSample,
+        SlideBarOverviewSample,
+        SliderSample,
+        SliderOverviewSample,
         SplitContainerSample,
         SplitContainerOverviewSample,
         SplitterSample,
         SplitterOverviewSample,
-        PaginatorSample,
-        PaginatorOverviewSample,
-        RangeSample,
-        RangeOverviewSample,
-        SlideBarSample,
-        SlideBarOverviewSample,
         TabStripSample,
         TabStripOverviewSample,
         TooltipSample,
@@ -418,10 +565,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         TreeGridDragDropSample,
         TreeGridEventsSample,
         TreeGridExcelEditorSample,
+        TreeGridExportSample,
         TreeGridFastLoadSample,
         TreeGridFilterSample,
         TreeGridMultiSelectSample,
         TreeGridOverviewSample,
+        TreeGridPaginationSample,
+        TreeGridShowHideHeaderFooterSample,
         TreeGridSortingSample,
         TreeGridTooltipSample,
         TreeListSample,

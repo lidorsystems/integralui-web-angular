@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -65,10 +65,10 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="margin-top:50px;width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ComboBox</strong> is a native Angular 2 component that replaces the standard &lt;select&gt; HTML element. It has advanced features like options to set the maximum number of visible items in dropdown window, the width and height of dropdown window and choosing item that is currently selected in the combo box.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ComboBox</strong> is a native Angular component that replaces the standard &lt;select&gt; HTML element. It has advanced features like options to set the maximum number of visible items in dropdown window, the width and height of dropdown window and choosing item that is currently selected in the combo box.</p>
                 <p><span class="initial-space"></span>The demonstration above shows only the basic features available in ComboBox component. There are several items present in the combo box. Opening or closing of dropdown list is animated.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>combobox/combobox-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx">Overview of IntegralUI ComboBox for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx">Overview of IntegralUI ComboBox for Angular</a></p>
             </div>
         </div>
     `,

@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -70,12 +70,12 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             </div>
             <br style="clear:both;"/>
             <div class="feature-help">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeGrid</strong> is a native Angular 2 component that displays hierarchical data structures in multiple columns. You can load data on demand during run-time from local or remote data sources, and add custom HTML content or other Angular components in each treegrid cell.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeGrid</strong> is a native Angular component that displays hierarchical data structures in multiple columns. You can load data on demand during run-time from local or remote data sources, and add custom HTML content or other Angular components in each treegrid cell.</p>
                 <p><span class="initial-space"></span>In above demo, the treegrid has columns with different content: checkbox, text and image. When you click on header with check box, all rows become checked or unchecked. In addition, a click on parent row changes the check box value to its child rows. In this example, check boxes can have 2 values: checked or unchecked, but you can change this easily by providing three values.</p>
                 <p><span class="initial-space"></span>Some columns have their content aligned to center, while others have their alignment set to left. You may also notice that expand icon is shown in second column. This is customizable, you can set which column has the expand box in your code.</p>
                 <p><span class="initial-space"></span>To select multiple rows, hold SHIFT or CTRL key and click on specific row.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treegrid/treegrid-overview.ts</i>) file, or read the following article:</p> 
-                <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treegrid/treegrid-component.aspx">Overview of IntegralUI TreeGrid for Angular 2</a></p>
+                <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treegrid/treegrid-component.aspx">Overview of IntegralUI TreeGrid for Angular</a></p>
             </div>
         </div>
     `,
@@ -368,22 +368,25 @@ export class TreeGridOverviewSample {
 
     treegridDragOver(e: any){
         if (e.targetRow){
+            // When multi selection is active dragRow field is an array of all selected rows, otherwise it is a single object
+            let dragRow = e.dragRow && Array.isArray(e.dragRow) ? e.dragRow[0] : e.dragRow;
+
             switch (e.dropPos){
                 case 0:
                     e.cancel = true;
                     break;
 
                 case 1:
-                    if (!e.dragRow.pid && e.targetRow.pid)
+                    if (!dragRow.pid && e.targetRow.pid)
                         e.cancel = true;
-                    else if (e.dragRow.pid && !e.targetRow.pid)
+                    else if (dragRow.pid && !e.targetRow.pid)
                         e.cancel = true;
                     break;
 
                 case 2:
-                    if (!e.dragRow.pid && e.targetRow.pid)
+                    if (!dragRow.pid && e.targetRow.pid)
                         e.cancel = true;
-                    else if (e.dragRow.pid && !e.targetRow.pid)
+                    else if (dragRow.pid && !e.targetRow.pid)
                         e.cancel = true;
                     break;
             }

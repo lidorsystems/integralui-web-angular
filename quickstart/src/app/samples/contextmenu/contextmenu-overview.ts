@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -59,15 +59,15 @@ import { IntegralUIContextMenu } from '../../integralui/directives/integralui.co
         </style>
         <h2 class="feature-title">ContextMenu / Overview</h2>
         <div class="feature-content">
-            <div #application class="cmnu-ovw-block" [iuiContextMenu]="menuSettings" (itemClick)="menuItemClick($event)" [ngStyle]="{ 'font-weight': fontWeight, 'font-style': fontStyle, 'font-size': fontSize + 'em', 'text-decoration': textDecoration }">
+            <div #application class="cmnu-ovw-block" [iuiContextMenu]="menuSettings" (menuClick)="menuItemClick($event)" [ngStyle]="{ 'font-weight': fontWeight, 'font-style': fontStyle, 'font-size': fontSize + 'em', 'text-decoration': textDecoration }">
                 <span>Right click to open the context menu</span>
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:800px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ContextMenu</strong> is a native Angular 2 component that allows you to attach a custom context menu to any HTML element or Angular 2 component. Whenever element is right-clicked, a context menu will popup showing data provided on your side.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ContextMenu</strong> is a native Angular component that allows you to attach a custom context menu to any HTML element or Angular component. Whenever element is right-clicked, a context menu will popup showing data provided on your side.</p>
                 <p><span class="initial-space"></span>In this example, whenever the block is right-clicked, a context menu will appear with options from where you can change the font style of the block content. These options are divided in two groups using a separator. Options in the first group have a checkbox, while in the second have a radio button. Depending on which option is active, the font style of the block content changes accordingly.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>contextmenu/contextmenu-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/contextmenu/contextmenu-component.aspx">Overview of IntegralUI ContextMenu for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/contextmenu/contextmenu-component.aspx">Overview of IntegralUI ContextMenu for Angular</a></p>
             </div>
         </div>
     `,

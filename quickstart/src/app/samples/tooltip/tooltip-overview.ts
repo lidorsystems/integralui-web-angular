@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -83,10 +83,10 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:800px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Tooltip</strong> is a native Angular 2 component that can be attached to any component or HTML element. It provides functionality that allows you to add a tooltip that will be displayed at specified position, with initial delay and will remain visible by specified amount of time.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Tooltip</strong> is a native Angular component that can be attached to any component or HTML element. It provides functionality that allows you to add a tooltip that will be displayed at specified position, with initial delay and will remain visible by specified amount of time.</p>
                 <p><span class="initial-space"></span>In this example, there is a control panel where you can set different properties of Tooltip component. You can choose the initial delay before tooltip is shown, how long it will remain visible, position at which will appear and whether it is enabled or not.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>tooltip/tooltip-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/tooltip/tooltip-component.aspx">Overview of IntegralUI Tooltip for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/tooltip/tooltip-component.aspx">Overview of IntegralUI Tooltip for Angular</a></p>
             </div>
         </div>
     `,

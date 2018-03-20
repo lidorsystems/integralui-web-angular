@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -72,11 +72,11 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> SplitContainer</strong> is a native Angular 2 component that consists of two resizable panels separated by a splitter with tabs and command buttons. It allows you to place different content in two panels and change their size during run-time.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> SplitContainer</strong> is a native Angular component that consists of two resizable panels separated by a splitter with tabs and command buttons. It allows you to place different content in two panels and change their size during run-time.</p>
                 <p><span class="initial-space"></span>The demonstration above shows a SplitContainer component, with option to change its orientation to horizontal or vertical. Each panel is represented by a tab with icon and title, also there is a swap button that when clicked will swap panels on demand. By left click and hold the splitter handle, you can change the size of panels.</p>
                 <p><span class="initial-space"></span>You may also notice that the top/left panel has condition set to prevent its height/width go below 100px. This is done by handling the <span style="color:#c60d0d">splitterMoving</span> event in your code and set the condition there.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>splitcontainer/splitcontainer-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/splitcontainer/splitcontainer-component.aspx">Overview of IntegralUI SplitContainer for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/splitcontainer/splitcontainer-component.aspx">Overview of IntegralUI SplitContainer for Angular</a></p>
             </div>
         </div>
     `,

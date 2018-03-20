@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -43,10 +43,10 @@ import { Component, ViewContainerRef, ViewChild } from '@angular/core';
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> SlideBar</strong> is a native Angular 2 component that allows you to animate slides created using images or custom content.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> SlideBar</strong> is a native Angular component that allows you to animate slides created using images or custom content.</p>
                 <p><span class="initial-space"></span>The demonstration above shows only the basic features available in SlideBar component. There are few slides each showing a title. Slide changes are automatic and animated from right to left. Whenever a slide is selected, an animation runs showing the slide content in current view of the SlideBar component. Using navigation buttons, you can quickly switch to specific slide.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>slidebar/slidebar-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx">Overview of IntegralUI SlideBar for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx">Overview of IntegralUI SlideBar for Angular</a></p>
             </div>
         </div>
   `

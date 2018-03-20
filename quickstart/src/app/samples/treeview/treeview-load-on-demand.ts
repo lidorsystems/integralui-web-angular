@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -43,7 +43,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             <div class="feature-help" style="width:700px">
                 <p><span class="initial-space"></span>In above demo, when you click on expanding icon, a new random data is created and then inserted into the expanding item as its children. This process is accompanied with loading animation represented by custom loading icon that replaces the expanding icon for specified item. You can expand multiple items at once and new data will be added accordingly.</p>
                 <p><span class="initial-space"></span>You can load new data from a remote JSON file or a database into a specified item. Because this sample is offline, this functionality is disabled. Check out the source code for more information about this (<i>treeview/treeview-load-on-demand.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treeview/treeview-load-on-demand.aspx">Load Data on Demand in TreeView for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treeview/treeview-load-on-demand.aspx">Load Data on Demand in TreeView for Angular</a></p>
             </div>
         </div>
     `,

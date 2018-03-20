@@ -1,0 +1,27 @@
+.iui-progressbar
+{
+	background: white;
+	border: thin solid #cecece;
+	border-radius: 3px;
+    color: black;
+	cursor: default;
+	margin: 0;
+	overflow: hidden;
+	padding: 2px;
+	position: relative;
+}
+.iui-progressbar-content
+{
+	background: blue;
+	border-radius: 3px;
+}
+
+
+/* Disabled State */
+.iui-progressbar-disabled div
+{
+	opacity: 0.25;
+	pointer-events: none;
+}
+
+

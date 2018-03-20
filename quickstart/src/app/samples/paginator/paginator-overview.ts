@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -60,10 +60,10 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Paginator</strong> is a native Angular 2 component that allows you to add pagination to your application. You can divide your content in multiple pages, by using Paginator you can select a page number and corresponding content will appear in current view.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Paginator</strong> is a native Angular component that allows you to add pagination to your application. You can divide your content in multiple pages, by using Paginator you can select a page number and corresponding content will appear in current view.</p>
                 <p><span class="initial-space"></span>The demonstration above shows five pages showing single text line. By using buttons from Paginator you can navigate between pages, or you can set a number in the input box to go directly to specified page.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>paginator/paginator-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/paginator/paginator-component.aspx">Overview of IntegralUI Paginator for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/paginator/paginator-component.aspx">Overview of IntegralUI Paginator for Angular</a></p>
             </div>
         </div>
     `,

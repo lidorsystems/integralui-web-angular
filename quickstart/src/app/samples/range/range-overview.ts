@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -76,10 +76,10 @@ import { IntegralUIVisibility, IntegralUIAnchorStyle } from '../../integralui/co
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Range</strong> is a native Angular 2 component that allows you to set minimum and maximum width and height of HTML element or other Angular components. In addition, element size can change whenever its parent, page or window is resized. This allows you to resize automatically elements during run-time, which are related to other elements or the document in whole.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Range</strong> is a native Angular component that allows you to set minimum and maximum width and height of HTML element or other Angular components. In addition, element size can change whenever its parent, page or window is resized. This allows you to resize automatically elements during run-time, which are related to other elements or the document in whole.</p>
                 <p><span class="initial-space"></span>In above demo we have a small form with some labels and input elements. The form has a frame directive attached, which allows to change its size by simply clicking and dragging the resize marker, placed on the bottom-right of the form. Whenever the form is resized, the input elements will extend or decrease its size, while still keeping the whole structure in order.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>range/range-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/range/range-component.aspx">Overview of IntegralUI Range for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/range/range-component.aspx">Overview of IntegralUI Range for Angular</a></p>
             </div>
         </div>
     `

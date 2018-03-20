@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -65,10 +65,10 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
                 </iui-accordion>
                 <br style="clear:both;"/>
                 <div class="feature-help" style="width:600px;">
-                    <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Accordion</strong> is a native Angular 2 component that represents a list of expandable panels arranged vertically.</p>
+                    <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Accordion</strong> is a native Angular component that represents a list of expandable panels arranged vertically.</p>
                     <p><span class="initial-space"></span>The demonstration above shows only the basic features available in Accordion component. There are few <a routerLink="/groupbox">group boxes</a> each with a header and a content panel.</p>
                     <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>accordion/accordion-overview.ts</i>) file, or read the following article:</p> 
-                    <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx">Overview of IntegralUI Accordion for Angular 2</a></p>
+                    <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx">Overview of IntegralUI Accordion for Angular</a></p>
                 </div>
             </div>
         </div>

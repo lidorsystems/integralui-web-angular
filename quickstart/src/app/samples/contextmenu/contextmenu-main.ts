@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -77,11 +77,13 @@ export class ContextMenuSample {
 
     constructor(){
         this.sideList = [
+            { text: "Multi Level", link: './multi-level' },
             { text: "Overview", link: './overview' },
+            { text: "Templates", link: './templates' },
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[0];
+        this.selectedItem = this.sideList[1];
     }   
 
     ngAfterContentChecked(){

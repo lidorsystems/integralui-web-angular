@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -17,28 +17,13 @@ enableProdMode();
 
 @Component({
     selector: 'quick-start',
-    template: `
-        <style>
-        </style>
-        <div #application>
-            <div class="header">
-                <div class="header-block">
-                    <div class="header-content">
-                        <h1><span style="color:#c60d0d">IntegralUI</span> Web <span style="font-size:0.75em;font-weight:normal;font-style:italic;margin:0 5px">for Angular</span></h1>
-                    </div>
-                </div>
-                <hr class="head-separator" />
-            </div>
-            <router-outlet></router-outlet>
-        </div>
-  `
+  	templateUrl: './app.component.html',
+  	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
     @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
 
-    constructor(){
-    }
+    constructor(){}
 
-    ngAfterViewInit(){
-    }
+    ngAfterViewInit(){}
 }

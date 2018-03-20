@@ -1,6 +1,6 @@
-# IntegralUI Web for Angular 4
+# IntegralUI Web for Angular 5
 
-IntegralUI Web is a library built on top of Angular 4 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
+IntegralUI Web is a library built on top of Angular 5 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
 Here is a brief overview of what is included:
 
@@ -8,7 +8,15 @@ Here is a brief overview of what is included:
 
 [Accordion](http://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx) - Displays a list of expandable groups in vertical layout
 
+[Button](http://www.lidorsystems.com/products/web/studio/samples/angular/#/button/overview/) - Represents a button
+
+[CheckBox](http://www.lidorsystems.com/products/web/studio/samples/angular/#/checkbox/overview/) - Represents a check box
+
 [ComboBox](http://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx) - Advanced version of standard ComboBox element
+
+[Dialog](http://www.lidorsystems.com/products/web/studio/samples/angular/#/dialog/overview/) - Displays a modal window
+
+[DropDownButton](http://www.lidorsystems.com/products/web/studio/samples/angular/#/dropdownbutton/overview/) - Represents a button with option to show a dropdown list
 
 [Grid](http://www.lidorsystems.com/support/articles/angular/grid/grid-component.aspx) - Displays tabular data sets
 
@@ -18,13 +26,25 @@ Here is a brief overview of what is included:
 
 [ListBox](http://www.lidorsystems.com/support/articles/angular/listbox/listbox-component.aspx) - Displays a collection of items with content in custom layouts
 
+[ListScroller](http://www.lidorsystems.com/products/web/studio/samples/angular/#/listscroller/overview/) - Displays a scrollable item list in horizontal or vertical layout
+
 [ListView](http://www.lidorsystems.com/support/articles/angular/listview/listview-component.aspx) - Displays a collection of items using several different views
 
 [Menu](http://www.lidorsystems.com/support/articles/angular/menu/menu-component.aspx) - Allows you to create static or dynamic menus
 
+[NumericUpDown](http://www.lidorsystems.com/products/web/studio/samples/angular/#/numeric-updown/overview/) - Displays a numeric value and allows changes within a range of defined minimum and maximum values
+
 [Paginator](http://www.lidorsystems.com/support/articles/angular/paginator/paginator-component.aspx) - Allows you to divide the content in multiple views in single page
 
+[ProgressBar](http://www.lidorsystems.com/products/web/studio/samples/angular/#/progressbar/overview/) - Visualize the progression of an operation
+
+[RadioButton](http://www.lidorsystems.com/products/web/studio/samples/angular/#/radiobutton/overview/) - Represents a radio button
+
+[Rating](http://www.lidorsystems.com/products/web/studio/samples/angular/#/rating/overview/) - Visualizes ratings
+
 [SlideBar](http://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx) - Animates slides composed of custom content
+
+[Slider](http://www.lidorsystems.com/products/web/studio/samples/angular/#/slider/overview/) - Allows changes to a numeric value within a range of defined minimum and maximum values
 
 [SplitContainer](http://www.lidorsystems.com/support/articles/angular/splitcontainer/splitcontainer-component.aspx) - Consists of two resizable panels separated by a splitter with tabs and command buttons
 
@@ -43,9 +63,13 @@ Here is a brief overview of what is included:
 
 [ContextMenu](http://www.lidorsystems.com/support/articles/angular/contextmenu/contextmenu-component.aspx) - Represents a shortcut menu
 
+<b>DropDown</b> - Represents a dropdown window
+
 [Frame](http://www.lidorsystems.com/support/articles/angular/frame/frame-component.aspx) - Places a grip handle that allows you to resize a container during run-time
 
 [Range](http://www.lidorsystems.com/support/articles/angular/range/range-component.aspx) - Allows you to set limits in which an element can resize during run-time
+
+<b>Resize</b> - Detects changes to the element size and fires notifications when it happens
 
 [Tooltip](http://www.lidorsystems.com/support/articles/angular/tooltip/tooltip-component.aspx) - Adds a tooltip to an element
 
@@ -94,7 +118,6 @@ import { IntegralUIModule } from 'integralui-web/bin/integralui.module';
 })
 export class AppModule { }
 ```
-<b>Note</b>   When building with AOT, add a reference to IntegralUI module from <strong>integralui-web/aot</strong> folder instead. The component files in this case are built using the NGC compiler instead of TSC compiler and they are compatible with AOT specifications from Angular.
 
 <b>Note</b>   In order to use a specific component or directive in your application, follow the guidelines from corresponding article. From above links, you can find a separate article available for each component or directive.
 
@@ -104,6 +127,12 @@ After installation, in angular-cli.json under styles section add this code line:
 
 ```bash
 "../node_modules/integralui-web/bin/css/integralui.module.css"
+```
+
+To include resources that are used by IntegralUI components in your project during build, add the following code under <b>assets</b> section:
+
+```bash
+"~ ... /integralui/resources"
 ```
 
 ### Angular QuickStart App
@@ -142,7 +171,7 @@ In order to start this application, you only need to install the Angular 4 libra
 After installation completes, start the application by typing:
 
 ```bash
-    npm start
+    ng serve --open
 ```
 
 The application will start displaying the main window with links to all components included. Each component window contains a demo and description about the component functionality. You can checkout the sample source code (located under integralui-web/quickstart/src/app/samples subfolder) for more information on the sample and component used.

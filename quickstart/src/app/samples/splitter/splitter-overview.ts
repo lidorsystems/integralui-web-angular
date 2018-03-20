@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -74,10 +74,10 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:600px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Splitter</strong> is a native Angular 2 component that allows you to resize two different blocks or elements during run-time.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Splitter</strong> is a native Angular component that allows you to resize two different blocks or elements during run-time.</p>
                 <p><span class="initial-space"></span>The demonstration above shows two Splitter components, the first one is horizontal and second one is vertical. By click and hold of the left mouse button you can move the splitter and the panels will resize based on moving direction. The splitter cannot move past the end of each panel.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>splitter/splitter-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/splitter/splitter-component.aspx">Overview of IntegralUI Splitter for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/splitter/splitter-component.aspx">Overview of IntegralUI Splitter for Angular</a></p>
             </div>
         </div>
     `,

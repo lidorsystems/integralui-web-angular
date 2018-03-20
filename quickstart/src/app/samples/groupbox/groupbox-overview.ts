@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -65,11 +65,11 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
             </iui-groupbox>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> GroupBox</strong> is a native Angular 2 component that represents a collapsible panel. It consists of a header and content panel. Header displays the group title and in content panel you can place any custom HTML elements or other Angular components.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> GroupBox</strong> is a native Angular component that represents a collapsible panel. It consists of a header and content panel. Header displays the group title and in content panel you can place any custom HTML elements or other Angular components.</p>
                 <p><span class="initial-space"></span>The demonstration above is simple, there is a group box with icon and title and content panel that by default is hidden. Whenever the group header is clicked, the content panel will expand and become visible. In this example, the content panel contains labels, input elements and a button.</p>
                 <p><span class="initial-space"></span>This component is also used as part of <a routerLink="/accordion">Accordion component</a></p> 
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>groupbox/groupbox-overview.ts</i> file), or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/groupbox/groupbox-component.aspx">Overview of IntegralUI GroupBox for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/groupbox/groupbox-component.aspx">Overview of IntegralUI GroupBox for Angular</a></p>
             </div>
         </div>
     `,

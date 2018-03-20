@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -73,10 +73,10 @@ import { IntegralUIVisibility } from '../../integralui/components/integralui.cor
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:800px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Frame</strong> is a native Angular 2 component that can be attached to any component or HTML element. It provides functionality that allows you to resize elements during run-time. The element to which this directive is attached, will display a frame and a marker on bottom-right corner that when clicked and dragged will resize the element.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Frame</strong> is a native Angular component that can be attached to any component or HTML element. It provides functionality that allows you to resize elements during run-time. The element to which this directive is attached, will display a frame and a marker on bottom-right corner that when clicked and dragged will resize the element.</p>
                 <p><span class="initial-space"></span>In above demo we have three paragraphs with some text in it. Each paragraph has the IntegralUI Frame directive attached, which by default is hidden. Whenever the mouse cursor is moved over the paragraph space, the frame will appear. If you click and drag the edge of the frame, you can resize the paragraph. This allows you to change the element width and height on demand, during run-time.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>frame/frame-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/frame/frame-component.aspx">Overview of IntegralUI Frame for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/frame/frame-component.aspx">Overview of IntegralUI Frame for Angular</a></p>
             </div>
         </div>
     `

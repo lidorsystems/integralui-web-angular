@@ -1,3 +1,37 @@
+v18.1.0
+- Angular 5 compatible
+- 10 new components: Button, CheckBox, Dialog, DropDownButton, ListScroller, Numeric, ProgressBar, RadioButton, Rating, Slider
+- Column reordering, allows columns to be reordered during run-time
+- dragEnter and dragLeave events for most components
+- Pagination is now available for Grid and TreeGrid components
+- Touch events support for basic functionalities: scrolling, selection, expand/collapse etc.
+- Option to set a style for column, row and cell objects on individual level from code
+- Export to JSON for List components: ListBox, ListView and TreeView
+- New samples that demonstrates: pagination, functionality of all new components, and more
+
+v17.4.0
+- Grouping for Grid component, allows dynamic arrangement of data in different groups
+- Groups can have custom templates
+- Export to JSON, Excel CSV file formats
+- Move rows in direction: left, right, top, bottom, up, down and change their level
+- Column resize options: allow resize on left, right or both sides
+- Option to set minimum and maximum width to each column in Grid and TreeGrid
+- Grid and TreeGrid has option to set columns to occupy the whole space, no horizontal scroll
+- Menu virtualization
+- Multi level Context Menu
+- Menu templates, option to add custom HTML elements of Angular components in each menu item
+- Option to persists the expand/collapse state of groups
+- Group events: groupAdding, groupAdded, groupRemoving, groupRemoved, groupsCleared, groupOrderChanged
+- getTopItem for TreeView and getTopRow for Grid and TreeGrid, returns the first visible item or row in the current view
+- getList method now can return the current list of all visible items or rows, without children of collapsed items or rows
+- Option to change the scrollbar visibility on demand, separately for horizontal and vertical scroll
+- expandColumnID a property that sets the column which cells has the expand box
+- Option to auto-adjust the position of the Context Menu when close to right or bottom window border
+- Cancel option is added in menuOpening event
+- canSelect field for columns, rows and items to prevent their selection
+- enabled property for all components: appearance and functionality
+- New samples that demonstrates: dynamic grouping, export to CSV or JSON, menu templates, multi-level context menu, and more
+
 v17.3.0
 - Version number changes to correspond with official product release 	
 - Filter service - provides a set of related functions for custom filter operations

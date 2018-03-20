@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -74,10 +74,10 @@ import { IntegralUITabStripPlacement } from '../../integralui/components/integra
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TabStrip</strong> is a native Angular 2 component that allows you to create tabbed content using tabs placed in different orientations.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TabStrip</strong> is a native Angular component that allows you to create tabbed content using tabs placed in different orientations.</p>
                 <p><span class="initial-space"></span>The demo above shows few tabs each with a header and a content panel. You can choose where tabs are placed: top, right, bottom or left side</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>tabstrip/tabstrip-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx">Overview of IntegralUI TabStrip for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx">Overview of IntegralUI TabStrip for Angular</a></p>
             </div>
         </div>
     `,

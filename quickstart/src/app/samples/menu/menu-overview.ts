@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2017 Lidor Systems. All rights reserved.
+  Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -19,13 +19,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
         <style>
             .menu-style
             {
-                background: #ededed !important;
                 width: 700px;
-            }
-            .menu-style .iui-menuitem-block
-            {
-                background: #e5e5e5 !important;
-                border: solid thin #d5d5d5 !important;
             }
             .menu-style .iui-menuitem-root
             {
@@ -87,21 +81,14 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
         <h2 class="feature-title">Menu / Overview</h2>
         <div class="feature-content">
             <div #application style="margin-bottom:100px;">
-                <iui-menu [appRef]="applicationRef" [controlStyle]="ctrlStyle" [items]="items" (itemClick)="menuItemClick($event)">
-                    <iui-menuitem *ngFor="let item of items" [icon]="item.icon" [text]="item.text" [data]="item" [items]="item.items">
-                        <iui-menuitem *ngFor="let childItem of item.items" [icon]="childItem.icon" [text]="childItem.text" [data]="childItem" [items]="childItem.items">
-                            <iui-menuitem *ngFor="let childItem2 of childItem.items" [icon]="childItem2.icon" [text]="childItem2.text" [data]="childItem2">
-                            </iui-menuitem> 
-                        </iui-menuitem> 
-                    </iui-menuitem> 
-                </iui-menu>
+                <iui-menu [appRef]="applicationRef" [controlStyle]="ctrlStyle" [items]="items" (menuClick)="menuItemClick($event)"></iui-menu>
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
-                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Menu</strong> is a native Angular 2 component that allows you to create static and dynamic menus. You can populate the menu directly in your HTML or using a custom data source, either locally or remotely.</p>
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Menu</strong> is a native Angular component that allows you to create static and dynamic menus. You can populate the menu directly in your HTML or using a custom data source, either locally or remotely.</p>
                 <p><span class="initial-space"></span>In this example, we have a menu with four root menu items. Each menu has an icon, label and expand mark if there are child items. Whenever mouse cursor hovers over a menu item, an animation will start showing a window with child items. By clicking on menu item, a message box will appear, stating the menu item that was clicked.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>menu/menu-overview.ts</i>) file, or read the following article:</p> 
-                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/menu/menu-component.aspx">Overview of IntegralUI Menu for Angular 2</a></p>
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/menu/menu-component.aspx">Overview of IntegralUI Menu for Angular</a></p>
             </div>
         </div>
     `,
