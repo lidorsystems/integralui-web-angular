@@ -90,7 +90,7 @@ All components are inheritable, you can further extend functionalities of specif
 
 IntegralUI Web requires only the following library:
 
-Angular - v4.0 and above
+Angular - v5.0 and above
 
 
 ## DEMO
@@ -163,7 +163,7 @@ If you are using SystemJS, make sure you have the following settings in systemjs
 
 There is a demo application with source code that contains samples for each component included in the [IntegralUI Web](http://www.lidorsystems.com/products/web/studio/) product package. It can help you to get started quickly with learning about the components and write tests immediatelly.
 
-In order to start this application, you only need to install the Angular 4 libraries. Open the nodejs command prompt, go to application directory and type:
+In order to start this application, you only need to install the Angular 5 libraries. Open the nodejs command prompt, go to application directory and type:
 
 ```bash
     npm install
