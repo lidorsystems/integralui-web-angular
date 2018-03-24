@@ -2,9 +2,9 @@
 
 IntegralUI Web is a library built on top of Angular 5 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
-Here is a brief overview of what is included:
-
 ![IntegralUI Web 18.1 - 30+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
+
+Here is a brief overview of what is included:
 
 ## Components
 
