@@ -134,7 +134,7 @@ After installation, in angular-cli.json under styles section add this code line:
 To include resources that are used by IntegralUI components in your project during build, add the following code under <b>assets</b> section:
 
 ```bash
-"~ ... /integralui/resources"
+"~ ... /integralui-web/bin/integralui/resources"
 ```
 
 ### Angular QuickStart App
