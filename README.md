@@ -111,7 +111,7 @@ npm install https://github.com/lidorsystems/integralui-web.git
 Open your application module and add a reference to IntegralUI module
 
 ```bash
-import { IntegralUIModule } from 'integralui-web/bin/integralui.module';
+import { IntegralUIModule } from 'integralui-web/bin/integralui/integralui.module';
 
 @NgModule({
   imports:      [ IntegralUIModule ],
@@ -128,7 +128,7 @@ export class AppModule { }
 After installation, in angular-cli.json under styles section add this code line:
 
 ```bash
-"../node_modules/integralui-web/bin/css/integralui.module.css"
+"../node_modules/integralui-web/bin/integralui/css/integralui.module.css"
 ```
 
 To include resources that are used by IntegralUI components in your project during build, add the following code under <b>assets</b> section:
@@ -142,11 +142,11 @@ To include resources that are used by IntegralUI components in your project duri
 Add following lines to the app.components.ts file:
 
 ```bash
-    styleUrls: ['../node_modules/integralui-web/bin/css/integralui.module.css'],
+    styleUrls: ['../node_modules/integralui-web/bin/integralui/css/integralui.module.css'],
     encapsulation: ViewEncapsulation.None
 ```
 
-Also copy/paste the content of node_modules/integralui-web/bin/resources/ folder to your project src/resources folder.
+Also copy/paste the content of node_modules/integralui-web/bin/integralui/resources/ folder to your project src/resources folder.
 
 If you are using SystemJS, make sure you have the following settings in systemjs.config.js file
 
