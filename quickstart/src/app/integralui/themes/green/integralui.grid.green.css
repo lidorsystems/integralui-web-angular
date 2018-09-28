@@ -1,0 +1,32 @@
+.iui-grid
+{
+	background-color: white;
+	border: thin solid #dadada;
+    color: black;
+}
+.iui-grid-column-header, .iui-grid-column-footer
+{
+	background-color: #f0f0f0;
+	border-color: #d5d5d5;
+}
+.iui-grid-column-header-hovered
+{
+	background-color: #74b031;
+	border-color: #65992b;
+}
+.iui-grid-column-header-selected
+{
+	background-color: #3e5e1a;
+	border: thin solid #253810;
+	color: white;
+}
+.iui-grid-row-hovered
+{
+	background-color: #82ff82;
+}
+.iui-grid-row-selected
+{
+	background-color: #00c400;
+	color: white;
+}
+

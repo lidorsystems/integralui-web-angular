@@ -40,7 +40,9 @@ export declare class IntegralUICommonService {
     getUniqueId(separator?: string): string;
     isEqual(first: any, second: any): boolean;
     isFieldAvailable(field: any, value: any): any;
+    isIndexInRange(index: number, list: Array<any>): boolean;
     isObject(value: any): boolean;
     isString(value: any): boolean;
+    moveObject(from: number, to: number, list: Array<any>): void;
     pointToView(pos: any): any;
 }

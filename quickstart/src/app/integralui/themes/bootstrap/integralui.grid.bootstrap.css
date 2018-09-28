@@ -1,0 +1,113 @@
+.iui-grid
+{
+	background-color: white;
+	border: thin solid #dddddd;
+    color: #000000;
+}
+.iui-grid-column-header, .iui-grid-column-footer
+{
+	background-color: #eaeaea;
+	border-color: #d4d4d4 !important;
+	font-weight: bold;
+}
+.iui-grid-column-footer
+{
+	font-weight: normal;
+}
+.iui-grid-column-header-hovered
+{
+	background-color: #eaeaea !important;
+	border-color: #d4d4d4 !important;
+    color: #000000;
+}
+.iui-grid-column-header-selected
+{
+	background-color: #c8c8c8 !important;
+	border-color: #b4b4b4 !important;
+    color: #000000;
+}
+.iui-grid-column-header-cell-selected
+{
+	background-color: transparent;
+}
+.iui-grid-row-hovered
+{
+	background-color: #eaeaea;
+	color: #333333;
+}
+.iui-grid-row-selected
+{
+	background-color: #c9dde1;
+	color: #333333;
+}
+.iui-grid-row-cell:first-child
+{
+	border-left: thin solid #d4d4d4;
+}
+.iui-grid-row-cell:last-child
+{
+	border-right: thin solid #d4d4d4;
+}
+.iui-grid-lines-horizontal
+{
+	border-bottom: thin solid #d4d4d4;
+}
+.iui-grid-lines-vertical
+{
+	border-right: thin solid #d4d4d4;
+}
+.iui-grid-lines-both
+{
+	border-right: thin solid #d4d4d4;
+	border-bottom: thin solid #d4d4d4;
+}
+.iui-grid-expand-box-open
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -32px 0;
+	opacity: 1;
+}
+.iui-grid-expand-box-close
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -32px -16px;
+}
+
+
+/* Grouping */
+.iui-grid-grouping-panel
+{
+	background-color: #ffffff;
+	border-bottom: thin solid #d9d9d9;
+}
+.iui-grid-grouping-panel-item
+{
+	background-color: #e6e6e6;
+	border: thin solid #adadad;
+}
+.iui-grid-grouping-panel-toolbar-button-add
+{
+	background: #e6e6e6;
+    border: thin solid #adadad;
+}
+.iui-grid-grouping-marker::before
+{
+	border: 6px solid #adadad;
+	border-color: transparent transparent transparent #adadad;
+}
+.iui-grid-grouping-marker::after
+{
+	border: 6px solid #adadad;
+	border-color: transparent transparent transparent #e6e6e6;
+}
+.iui-grid-grouping-panel-dropdown-list li:hover
+{
+    background: #e5e5e5;
+}
+
+.iui-grid .iui-sort-ascending
+{
+    background-position: -48px -80px;
+}
+.iui-grid .iui-sort-descending
+{
+    background-position: -32px -80px;
+}

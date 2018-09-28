@@ -75,4 +75,5 @@ export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     onItemMouseDown(e: any, item: any): void;
     onHeaderMouseDown(e: any): void;
     protected getItemState(item: any): IntegralUIObjectState;
+    getControlStyle(): any;
 }

@@ -1,0 +1,30 @@
+.iui-dropdown-button
+{
+	background-color: #f5f5f5;
+	border: thin solid #dddddd;
+	color: #333333;
+}
+.iui-dropdown-button-btn-right, .iui-dropdown-button-btn-left
+{
+	border-color: #dddddd;
+}
+
+.iui-dropdown-button:hover
+{
+	background-color: #e6e6e6;
+	border: thin solid #adadad;
+}
+.iui-dropdown-button:hover .iui-dropdown-button-btn-right, .iui-dropdown-button:hover .iui-dropdown-button-btn-left
+{
+	border-color: #adadad;
+}
+.iui-dropdown-button-list, .iui-dropdown-button-list .iui-menuitem-block
+{
+	background-color: #ffffff;
+	border: solid thin #d5d5d5;
+    color: #333333;
+}
+.iui-dropdown-button-list .iui-menuitem-root, .iui-dropdown-button-list .iui-menuitem
+{
+	padding: 2px;
+}

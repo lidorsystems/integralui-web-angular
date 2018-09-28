@@ -70,9 +70,11 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     private calcBlockHeight();
     getDropDownHeight(): number;
     protected toggleContent(): void;
+    processMouseWheel(e: any, flag?: boolean): void;
     protected clearSelection(cmp?: IntegralUIItem): void;
     private updateSelectedIndex(index);
     private updateSelection(index);
+    getControlStyle(): any;
     protected updateContentClass(): void;
     getContentClass(): any[];
     protected getContentStyle(value: any): any;

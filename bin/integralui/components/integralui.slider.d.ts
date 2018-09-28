@@ -38,6 +38,7 @@ export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     ctrlMouseWheel(e: any): void;
     onWindowMouseMove(e: any): void;
     onWindowMouseUp(e: any): void;
+    getControlStyle(): any;
     getSliderBackStyle(): any;
     getSliderValueStyle(): any;
     protected updateContentClass(): void;

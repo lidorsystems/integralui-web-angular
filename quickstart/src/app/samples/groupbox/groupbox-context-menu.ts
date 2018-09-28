@@ -29,7 +29,6 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
             .grbox-group-content
             {
                 padding: 50px 0;
-                border: thin solid #bbbbbb;
                 border-top-color: transparent;
                 text-align: center;
             }

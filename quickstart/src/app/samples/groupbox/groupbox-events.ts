@@ -31,7 +31,6 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
             .grbox-evt-group-content
             {
                 padding: 100px 0;
-                border: thin solid #bbbbbb;
                 border-top-color: transparent;
                 text-align: center;
             }

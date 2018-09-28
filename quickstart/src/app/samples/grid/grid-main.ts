@@ -80,6 +80,7 @@ export class GridSample {
             { text: "Add/Remove", link: './add-remove' },
             { text: "Add Row Dynamically", link: './add-row-dynamically' },
             { text: "Cell with DropDown", link: './cell-dropdown' },
+            { text: "Column with DropDown", link: './column-dropdown' },
             { text: "Context Menu", link: './context-menu' },
             { text: "Different Cell Templates", link: './cell-templates' },
             { text: "Drag Drop to TreeGrid", link: './drag-drop-treegrid' },
@@ -98,7 +99,7 @@ export class GridSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[13];
+        this.selectedItem = this.sideList[14];
     }   
 
     ngAfterContentChecked(){

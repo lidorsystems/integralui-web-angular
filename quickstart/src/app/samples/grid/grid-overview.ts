@@ -106,7 +106,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
         <h2 class="feature-title">Grid / Overview</h2>
         <div class="feature-content">
             <div #application>
-                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true"  #grid>
+                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true" #grid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         <span *ngIf="column.id==9" class="grid-ovw-cell-checkbox" [ngStyle]="{ 'background-image': getCheckValue(column) }" (mousedown)="columnCheckClicked(column)"></span>
                         {{column.headerText}}

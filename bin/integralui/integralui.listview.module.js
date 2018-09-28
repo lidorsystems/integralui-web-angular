@@ -1,6 +1,6 @@
 /*
   filename: integralui.listview.module.js
-  version : 2.0.0
+  version : 2.2.0
   Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

@@ -189,6 +189,19 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                 border-color: #808080 !important;
                 color: white;
             }
+            .lview-ovw-rating-ctrl
+            {
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+                display: inline-block;
+                margin: auto;
+                vertical-align: middle;
+            }
+            .lview-ovw-rating-ctrl-stars-content
+            {
+                background-image: url(app/integralui/resources/rating/star-empty-white.png);
+            }
         </style>
         <h2 class="feature-title">ListView / Overview</h2>
         <div class="feature-content">
@@ -218,7 +231,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                                     <span class="lview-ovw-icons {{item.icon}}"></span>
                                 </div><br />
                                 <span class="lview-ovw-title-large">{{item.text}}</span><br />
-                                <img class="lview-ovw-star-inline" src="{{getRating(item.rating)}}" />
+                                <iui-rating [controlStyle]="lviewOverviewRatingStyleStars" [(ngModel)]="item.rating" [max]="5" [division]="2"></iui-rating>
                             </div>
                         </iui-listitem>
                     </div>
@@ -231,9 +244,8 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                     <ul class="feature-points">
                         <li>Horizontal layout where items are arranged from top to bottom with horizontal scrolling</li>
                         <li>Vertical layout where items are arranged from left to right with vertical scrolling</li>
-                    </ul>
-                
-                <p><span class="initial-space"></span>In addition, item content is arranged differently: horizontal layout shows item content in single line, while vertical layout shows item content in a box.</p>
+                    </ul>           
+                <p><span class="initial-space"></span>In addition, item content is arranged differently: horizontal layout shows item content in single line, while vertical layout shows item content in a box. Rating is displayed using the <a routerLink="/rating">IntegralUI Rating</a> component.</p>
                 <p><span class="initial-space"></span>You can reorder items by click and drag over specific item. A dragging window will appear, stating the target item and position at which item can be dropped. During drag drop operations, you can also create a copy of an item by holding the SHIFT key. The dragging window will change its icon, showing a + sign next to position marker.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>listview/listview-overview.ts</i>) file, or read the following article:</p> 
                 <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listview/listview-component.aspx">Overview of IntegralUI ListView for Angular</a></p>
@@ -268,6 +280,11 @@ export class ListViewOverviewSample {
             selected: 'lview-ovw-item-selected'
         }
     } 
+
+    public lviewOverviewRatingStyleStars: any = {
+        general: { normal: 'lview-ovw-rating-ctrl' },
+        content: { normal: 'lview-ovw-rating-ctrl-stars-content'}
+    }
 
     constructor(){
         this.items = [
@@ -310,16 +327,11 @@ export class ListViewOverviewSample {
     }
 
     getRating(value: any){
-        if (this.scrollType == IntegralUIScrollMode.Horizontal)
-            return "app/integralui/resources/star.png";
-        else {
-            let stars = Math.floor(value / 2);
-            return "app/integralui/resources/stars-small-" + stars + ".png";
-        }
+        return "app/integralui/resources/star.png";
     }
 
     getRatingValue(value: any){
-        return Math.floor(value);
+        return Math.floor((value + 1) / 2);
     }
 
     itemSelectionChanged(e: any){

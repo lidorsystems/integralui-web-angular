@@ -1,0 +1,25 @@
+.iui-contextmenu
+{
+	background-color: white;
+    color: #484848;
+    padding: 0;
+}
+.iui-contextmenu .iui-menuitem-block
+{
+	background-color: #ffffff;
+	border: solid thin #c8c8c8;
+	border-radius: 0;
+	padding: 0;
+}
+.iui-contextmenu .iui-menuitem-root
+{
+	background-color: #ffffff;
+	border: solid thin #ffffff;
+	padding: 5px;
+}
+.iui-contextmenu .iui-menuitem-root-hovered, .iui-contextmenu .iui-menuitem-root-selected
+{
+	background-color: #e6f2fb !important;
+	border: solid thin #e6f2fb !important;
+	color: #242424;
+}

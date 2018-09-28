@@ -19,6 +19,10 @@
 {
 	background-color: white;
 }
+.iui-tab-header-dragged
+{
+	border-color: #bcbcbc !important;
+}
 .iui-tab-selected-top
 {
 	border-bottom-color: white;
@@ -95,6 +99,7 @@
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 }
+
 
 /* Disabled State */
 .iui-tab-disabled div

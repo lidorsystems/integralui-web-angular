@@ -1,0 +1,44 @@
+
+/* DisplayMode - LeftRight */
+.iui-listscroller-leftright-buttons
+{
+	background: #808080;
+	border: thin solid #606060;
+}
+.iui-listscroller-leftright-buttons:hover
+{
+	background: #969696;
+	border: thin solid #606060;
+}
+
+/* DisplayMode - UpDown */
+.iui-listscroller-updown-buttons
+{
+	background: #808080;
+	border: thin solid #606060;
+}
+.iui-listscroller-updown-buttons:hover
+{
+	background: #969696;
+	border: thin solid #606060;
+}
+
+
+.iui-listscroller-leftright-decrease
+{
+	background-position: -128px -112px;
+}
+.iui-listscroller-leftright-increase
+{
+	background-position: -144px -112px;
+}
+
+.iui-listscroller-updown-decrease
+{
+	background-position: -160px -112px;
+}
+.iui-listscroller-updown-increase
+{
+	background-position: -176px -112px;
+}
+

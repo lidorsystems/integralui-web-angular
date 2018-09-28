@@ -25,7 +25,7 @@ export declare class IntegralUIListGroup extends IntegralUIGroupBox {
     ngOnDestroy(): void;
     ngAfterContentChecked(): void;
     onHeaderClick(e: any): void;
-    onHeaderExpand(): void;
+    onHeaderExpand(e: any): void;
     protected toggleContent(): void;
     private getComponentData(cmp);
     private getItemCurrentIndex(cmp);
@@ -33,6 +33,7 @@ export declare class IntegralUIListGroup extends IntegralUIGroupBox {
     private attachItemEvents();
     private updateSelectedItemFromComponent(cmp);
     clearSelection(cmp?: IntegralUIItem): void;
+    getControlStyle(): any;
     protected getItemGeneralStyle(value: any): any;
     protected getItemStyle(value: any): {
         general: any;

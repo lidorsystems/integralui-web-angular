@@ -19,7 +19,6 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
         <style>
             .iui-treelist
             {
-                color: #323232 !important;
                 width: 300px !important;
                 height: 350px !important;
             }

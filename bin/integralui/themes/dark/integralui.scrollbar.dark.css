@@ -1,0 +1,24 @@
+.iui-scrollbar-vertical
+{
+	background-color: #303030;
+	border-left: thin solid #242424;
+}
+.iui-scroll-button-thumb-vertical, .iui-scroll-button-thumb-horizontal
+{
+	background-color: #646464;
+	border: thin solid #484848;
+}
+.iui-scroll-button-thumb-vertical:hover, .iui-scroll-button-thumb-horizontal:hover
+{
+	background-color: #aaaaaa;
+	border-color: #808080;
+}
+.iui-scrollbar-horizontal
+{
+	background-color: #303030;
+	border-top: thin solid #242424;
+}
+.iui-scrollbar-corner
+{
+	background-color: #303030;
+}

@@ -41,7 +41,6 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
             .grpbox-cuh-group-content
             {
                 padding: 50px 0;
-                border: thin solid #bbbbbb;
                 padding: 10px;
                 border-top-color: transparent;
             }

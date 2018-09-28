@@ -1,0 +1,63 @@
+.iui-numeric-inbound-btn
+{
+	background: #f41800;
+	border: thin solid #d91500;
+}
+.iui-numeric-inbound-btn:hover
+{
+	background: #ff5340;
+	border: thin solid #d91500;
+}
+
+/* DisplayMode - LeftRight */
+.iui-numeric-leftright-buttons
+{
+	background: #f41800;
+	border: thin solid #d91500;
+}
+.iui-numeric-leftright-buttons:hover
+{
+	background: #ff5340;
+	border: thin solid #d91500;
+}
+
+/* DisplayMode - UpDown */
+.iui-numeric-updown-buttons
+{
+	background: #f41800;
+	border: thin solid #d91500;
+}
+.iui-numeric-updown-buttons:hover
+{
+	background: #ff5340;
+	border: thin solid #d91500;
+}
+
+.iui-numeric-inbound-button-up
+{
+	background-position: -176px -115px;
+}
+.iui-numeric-inbound-button-down
+{
+	background-position: -160px -115px;
+}
+
+.iui-numeric-leftright-decrease
+{
+	background-position: -128px -112px;
+}
+.iui-numeric-leftright-increase
+{
+	background-position: -144px -112px;
+}
+
+
+.iui-numeric-updown-decrease
+{
+	background-position: -160px -112px;
+}
+.iui-numeric-updown-increase
+{
+	background-position: -176px -112px;
+}
+

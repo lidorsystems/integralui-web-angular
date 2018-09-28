@@ -1,6 +1,6 @@
 /*
   filename: integralui.radiogroup.js
-  version : 1.0.0
+  version : 1.1.0
   Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

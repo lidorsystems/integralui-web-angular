@@ -1,3 +1,60 @@
+v18.3.0
+- SplitContainer now have buttons in splitter space to quickly change orientation to vertical or horizontal layout
+- TabStrip scrolling options: None, InBound and OutBound
+- Option to reorder columns from code in Grid and TreeGrid, using moveColumn method
+- Option to reorder items from code in ListBox, ListView and TreeView using moveItem method
+- Menu opening with or no animation
+- Click, Right Click and Double Click events for all List and Grid components (item, cell, row, column)
+- Whenever component enabled state changes, the enabledChanged event is now fired
+- Option to show or hide navigation buttons in SlideBar component
+- Option to show or hide command buttons in SplitContainer component
+- There are five scrolling speed levels to choose from, when using mouse wheel
+- Option to show or hide the expand box in TreeView, Grid and TreeGrid components
+- New dragStart and dragEnd events for all Grid and List components
+- Drag Drop with scrolling in TabStrip
+- New and updated samples
+
+- In SplitContainer, the position of splitter handle in horizontal layout is now correctly set when orientation changes
+- Expand/Collapse now works with double click in TreeView items in non-virtual mode
+- Fixed the issue when using Left/Right keys during keyboard navigation in ListView
+- Changing the scroll mode in ListView component, now resets the scroll position
+- Cursor icon over scrollbars now remains as the default one
+- Mapping of data fields in TreeView when not in virtual mode is now correctly set for all item fields
+- ListBar now correctly sets a group as selected when header is clicked
+- The clone object during drag drop is now correctly attached with the drag drop data
+- Fixed the issue that caused interference between dragging a grid row and selecting a new Rating value inside grid cells
+- Fixed the issue in Rating when displaying large values within small component size
+- Themes are updated to reflect component changes
+- Other minor bug fixes
+
+v18.2.0
+- New themes: Office 360, Windows 10, Bootstrap, Blue, Red, Green, Dark
+- Each group in Grid component can have a different appearance
+- Create groups that display summary, average values or any result using custom aggregation functions
+- Reorder tabs in TabStrip component with smooth drag and drop
+- Option to set component size on demand from code
+- Hover events for column, row, cell and items are now available
+- Option to hide expand box in Grid and TreeGrid components
+- Option to apply inline styles on demand to items in ListBox, ListView and TreeView
+- Each item in Menu and ContextMenu can have custom inline style, separatelly from other items
+- New samples
+
+- Rating component when included in Grid cells no longer causes flickering
+- Changes to the controlStyle property of DropDown Button are now applied correctly
+- The text outside ComboBox header is now hidden
+- MouseWheel operation in ComboBox no longer bubbles up in parent elements
+- Frame directlive now correctly resizes the attached element when element has a border
+- Fixed the issue that caused columnClick event to fire when column resize finishes
+- Fixed the issue that allowed groups in Grid component to become dragged
+- Fixed the issue that caused drop mark to remain visible in TreeView component, after item is dropped
+- Hovering is now disabled when row or item is dragged
+- Fixed the issue that caused incorrect functionalty of loadData method when flat parameter is not provided
+- Opening of context menu no longer causes window to scroll
+- The Splitter size is now correctly calculated and updated when attached panels or parent elements resize
+- decreaseValue and increaseValue methods in ListScroller are changed to to prevItem, nextItem
+- When TreeView is in virtual mode, the item width is now correctly set
+- Other minor bug fixes
+
 v18.1.0
 - Angular 5 compatible
 - 10 new components: Button, CheckBox, Dialog, DropDownButton, ListScroller, Numeric, ProgressBar, RadioButton, Rating, Slider

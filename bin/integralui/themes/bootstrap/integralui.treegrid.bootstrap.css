@@ -1,0 +1,82 @@
+.iui-treegrid
+{
+	background-color: white;
+	border: thin solid #dddddd;
+    color: #000000;
+}
+.iui-treegrid-column-header, .iui-treegrid-column-footer
+{
+	background-color: #eaeaea;
+	border-color: #d4d4d4 !important;
+	font-weight: bold;
+}
+.iui-treegrid-column-footer
+{
+	font-weight: normal;
+}
+.iui-treegrid-column-header-hovered
+{
+	background-color: #eaeaea !important;
+	border-color: #d4d4d4 !important;
+    color: #000000;
+}
+.iui-treegrid-column-header-selected
+{
+	background-color: #c8c8c8 !important;
+	border-color: #b4b4b4 !important;
+    color: #000000;
+}
+.iui-treegrid-column-header-cell-selected
+{
+	background-color: transparent;
+}
+.iui-treegrid-row-hovered
+{
+	background-color: #eaeaea;
+	color: #333333;
+}
+.iui-treegrid-row-selected
+{
+	background-color: #c9dde1;
+	color: #333333;
+}
+.iui-treegrid-row-cell:first-child
+{
+	border-left: thin solid #d4d4d4;
+}
+.iui-treegrid-row-cell:last-child
+{
+	border-right: thin solid #d4d4d4;
+}
+.iui-treegrid-lines-horizontal
+{
+	border-bottom: thin solid #d4d4d4;
+}
+.iui-treegrid-lines-vertical
+{
+	border-right: thin solid #d4d4d4;
+}
+.iui-treegrid-lines-both
+{
+	border-right: thin solid #d4d4d4;
+	border-bottom: thin solid #d4d4d4;
+}
+.iui-treegrid-expand-box-open
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -32px 0;
+	opacity: 1;
+}
+.iui-treegrid-expand-box-close
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -32px -16px;
+}
+
+
+.iui-treegrid .iui-sort-ascending
+{
+    background-position: -48px -80px;
+}
+.iui-treegrid .iui-sort-descending
+{
+    background-position: -32px -80px;
+}

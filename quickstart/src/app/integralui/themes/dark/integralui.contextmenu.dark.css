@@ -1,0 +1,22 @@
+.iui-contextmenu
+{
+    background-color: #363636;
+	border: solid thin #121212;
+	color: #c5c5c5;
+}
+.iui-contextmenu .iui-menuitem-block
+{
+	background: #363636;
+	border: solid thin #121212;
+}
+.iui-contextmenu .iui-menuitem-root
+{
+	border-color: transparent;
+	color: #c5c5c5;
+}
+.iui-contextmenu .iui-menuitem-root-hovered, .iui-contextmenu .iui-menuitem-root-selected
+{
+    background-color: #646464 !important;
+    border-color: #323232 !important;
+    color: white;
+}

@@ -1,0 +1,43 @@
+/* DisplayMode - LeftRight */
+.iui-listscroller-leftright-buttons
+{
+	background: #f41800;
+	border: thin solid #d91500;
+}
+.iui-listscroller-leftright-buttons:hover
+{
+	background: #ff5340;
+	border: thin solid #d91500;
+}
+
+/* DisplayMode - UpDown */
+.iui-listscroller-updown-buttons
+{
+	background: #f41800;
+	border: thin solid #d91500;
+}
+.iui-listscroller-updown-buttons:hover
+{
+	background: #ff5340;
+	border: thin solid #d91500;
+}
+
+.iui-listscroller-leftright-decrease
+{
+	background-position: -128px -112px;
+}
+.iui-listscroller-leftright-increase
+{
+	background-position: -144px -112px;
+}
+
+
+.iui-listscroller-updown-decrease
+{
+	background-position: -160px -112px;
+}
+.iui-listscroller-updown-increase
+{
+	background-position: -176px -112px;
+}
+

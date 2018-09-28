@@ -1,0 +1,27 @@
+.iui-contextmenu
+{
+	background-color: #f2f2f2;
+	border: solid thin #a0a0a0;
+    color: #484848;
+    padding: 0;
+}
+.iui-contextmenu .iui-menuitem-block
+{
+	background-color: #f2f2f2;
+	border: solid thin #a0a0a0;
+	border-radius: 0;
+	padding: 0;
+}
+.iui-contextmenu .iui-menuitem-root
+{
+	background: #ffffff;
+	border-color: transparent;
+	color: #000000;
+	padding: 5px;
+}
+.iui-contextmenu .iui-menuitem-root-hovered, .iui-contextmenu .iui-menuitem-root-selected
+{
+	background-color: #f5f5f5 !important;
+	border: solid thin #f5f5f5 !important;
+	color: #000000;
+}

@@ -1,0 +1,11 @@
+.iui-listitem-hovered
+{
+	background-color: #ffe5e5;
+	border: 2px solid #ffe5e5;
+}
+.iui-listitem-selected
+{
+	background-color: #ff7d7d;
+	border: 2px solid #ff7d7d;
+	color: white;
+}

@@ -5,7 +5,7 @@
     background: white;
 	border: thin solid #cecece;
     cursor: default;
-	overflow: auto;
+	overflow: hidden;
 	padding: 1px;
     position: relative;
 
@@ -16,6 +16,11 @@
     -ms-user-select: none;
     user-select: none;
 }
+.iui-treeview-item-empty-content
+{
+    background: #f5f5f5;
+    margin: 0;
+}
 
 /* Disabled State */
 .iui-treeview-disabled div, .iui-treeview-disabled ul
@@ -23,4 +28,3 @@
     opacity: 0.75;
     pointer-events: none;
 }
-

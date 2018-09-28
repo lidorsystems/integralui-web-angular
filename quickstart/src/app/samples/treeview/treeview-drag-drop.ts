@@ -95,7 +95,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
         <h2 class="feature-title">TreeView / Drag Drop</h2>
         <div class="feature-content">
             <div #application>
-                <iui-treeview [name]="'TreeView 1'" [appRef]="applicationRef" [items]="data" [controlStyle]="treeStyle" [allowDrag]="allowDrag" [allowDrop]="allowDrop" [autoExpand]="true" #treeview>
+                <iui-treeview [name]="'TreeView 1'" [appRef]="applicationRef" [items]="data" [controlStyle]="treeStyle" [allowDrag]="allowDrag" [allowDrop]="allowDrop" [autoExpand]="false" #treeview>
                     <ng-template let-item>
                         <span [ngClass]="getItemIcon(item)"></span>
                         <span class="trw-dd-item-label">{{item.text}}</span>
@@ -264,7 +264,7 @@ export class TreeViewDragDropSample {
             { id: 8, text: "Watches", icon: "trw-dd-icons-medium clock" }
         ];  
 
-        this.data2 = [];            
+        this.data2 = []; 
     }
 
     getItemIcon(item: any){

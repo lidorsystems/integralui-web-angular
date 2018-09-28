@@ -5,6 +5,7 @@ export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
     protected commonService: IntegralUICommonService;
     protected ctrlMaxValue: number;
+    protected currentDivision: number;
     protected currentStepSize: number;
     protected currentIncrement: IntegralUIIncrementMode;
     protected isRatingChangeActive: boolean;
@@ -12,6 +13,7 @@ export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     protected ratingSize: any;
     protected ratingClass: Array<any>;
     protected ratingClassName: string;
+    division: number;
     value: number;
     increment: IntegralUIIncrementMode;
     max: number;
@@ -30,6 +32,7 @@ export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     ctrlMouseUp(e: any): void;
     ctrlMouseWheel(e: any): void;
     onWindowMouseUp(e: any): void;
+    getControlStyle(): any;
     getRatingValueClass(): any[];
     protected updateRatingClass(): void;
     protected getRatingStyle(value: any): any;

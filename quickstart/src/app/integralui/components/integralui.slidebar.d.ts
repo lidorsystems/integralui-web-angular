@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseComponent } from './integralui.core';
+import { IntegralUISpeedMode, IntegralUIBaseComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 export declare class IntegralUISlide {
@@ -13,6 +13,7 @@ export declare class IntegralUISlide {
 }
 export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
+    protected elemRef: ElementRef;
     protected commonService: IntegralUICommonService;
     protected cmpResolver: ComponentFactoryResolver;
     controlRef: ViewContainerRef;
@@ -40,7 +41,8 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     private trialRef;
     allowAnimation: boolean;
     animationPause: number;
-    animationSpeed: string;
+    animationSpeed: IntegralUISpeedMode;
+    navigationButtons: boolean;
     slides: Array<any>;
     selectedIndex: number;
     selectedSlide: any;
@@ -50,7 +52,7 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     slideChanged: EventEmitter<any>;
     slideRemoving: EventEmitter<any>;
     slideRemoved: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver);
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver);
     ngOnInit(): void;
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
@@ -83,4 +85,5 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     private stopAnimation();
     private selectSlide(cmp);
     selectSlideByIndex(index: number): void;
+    getControlStyle(): any;
 }

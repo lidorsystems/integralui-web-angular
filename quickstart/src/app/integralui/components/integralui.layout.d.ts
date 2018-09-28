@@ -1,0 +1,33 @@
+import { ElementRef } from '@angular/core';
+import { IntegralUIBaseComponent } from './integralui.core';
+import { IntegralUICommonService } from '../services/integralui.common.service';
+import { IntegralUIDataService } from '../services/integralui.data.service';
+export declare class IntegralUILayout extends IntegralUIBaseComponent {
+    protected dataService: IntegralUIDataService;
+    protected elemRef: ElementRef;
+    protected commonService: IntegralUICommonService;
+    private ctrlData;
+    currentList: Array<any>;
+    private dataPanels;
+    private fullList;
+    protected options: any;
+    protected updateTimer: any;
+    panelTemplate: any;
+    autoUpdate: boolean;
+    data: any;
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService);
+    ngOnInit(): void;
+    protected updateData(): void;
+    ngAfterContentChecked(): void;
+    protected updateOptions(value?: any): void;
+    protected updateDataFields(fields?: any): void;
+    protected updateCurrentList(): void;
+    private addChildPanels(parent, pid, flag?);
+    private addPanelToCurrentList(panel, pid, flag?);
+    protected isPanelAllowed(panel: any): boolean;
+    protected resetLayout(): void;
+    updateLayout(): void;
+    private updatePanelLayout(panel, bounds);
+    private getCurrentPanelObj(id);
+    getControlStyle(): any;
+}

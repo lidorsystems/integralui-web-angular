@@ -1,0 +1,26 @@
+/* DisplayMode - LeftRight */
+.iui-listscroller-leftright-buttons
+{
+	background-color: #f5f5f5;
+	border: thin solid #dddddd;
+}
+.iui-listscroller-leftright-buttons:hover
+{
+	background-color: #e6e6e6;
+	border: thin solid #adadad;
+}
+
+/* DisplayMode - UpDown */
+.iui-listscroller-updown-buttons
+{
+	background-color: #f5f5f5;
+	border: thin solid #dddddd;
+}
+.iui-listscroller-updown-buttons:hover
+{
+	background-color: #e6e6e6;
+	border: thin solid #adadad;
+}
+
+
+

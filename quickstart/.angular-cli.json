@@ -22,6 +22,7 @@
       "prefix": "app",
       "styles": [
         "app/integralui/css/integralui.module.css",
+        "app/integralui/themes/integralui.themes.blue.css",
         "styles.css"
       ],
       "scripts": [],

@@ -38,7 +38,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
         <h2 class="feature-title">Grid / Fast Load</h2>
         <div class="feature-content">
             <div #application>
-                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true"  #grid>
+                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true" #grid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         {{column.title}}
                     </ng-template>
@@ -70,6 +70,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
     encapsulation: ViewEncapsulation.None
 })
 export class GridFastLoadSample {
+
     @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
     @ViewChild('grid') grid: IntegralUIGrid;
 
@@ -120,7 +121,7 @@ export class GridFastLoadSample {
             };
             
             for (let j = 1; j <= this.columns.length; j++)
-                row.cells.push({ text: "Item" + i + j });
+                row.cells.push({ cid: j, text: "Item" + i + j });
 
             this.rows.push(row);
         }

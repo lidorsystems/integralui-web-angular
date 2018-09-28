@@ -1,0 +1,23 @@
+.iui-treelist
+{
+	background-color: white;
+	border-color: #dddddd;
+    color: #333333;
+}
+.iui-treelist-header
+{
+	background-color: #275d8c;
+	border-color: #204d74;
+	color: white;
+}
+.iui-treelistitem-hovered
+{
+	background-color: #e6e6e6;
+	color: #333333;
+}
+.iui-treelistitem-selected
+{
+	background-color: #d4d4d4;
+	color: #333333;
+}
+

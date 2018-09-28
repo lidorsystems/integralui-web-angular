@@ -18,6 +18,7 @@ export declare class IntegralUICheckBox extends IntegralUIBaseValueComponent {
     protected updateCheckValue(val: any): void;
     processValueChange(): void;
     checkMouseDown(e: any): void;
+    getControlStyle(): any;
     protected updateButtonClass(): void;
     getButtonClass(): any[];
     protected getButtonStyle(value: any): any;

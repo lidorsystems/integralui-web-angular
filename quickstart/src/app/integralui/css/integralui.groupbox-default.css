@@ -43,8 +43,8 @@
 }
 .iui-groupbox-content
 {
-	/*border: thin solid #bbbbbb;
-	padding: 3px;*/
+	background-color: #ffffff;
+    border: thin solid #bbbbbb;
 	margin: 0;
 }
 /* Disabled State */

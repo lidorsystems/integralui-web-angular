@@ -59,7 +59,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
                     <label><input type="radio" [checked]="scrollType == 'horizontal'" (click)="scrollType = 'horizontal'" />Horizontal</label>
                     <label><input type="radio" [checked]="scrollType == 'vertical'"  (click)="scrollType = 'vertical'" />Vertical</label>
                 </div>
-                <iui-splitcontainer [controlStyle]="ctrlStyle" [orientation]="getOrientation()" [splitterDistance]="180" [panel1]="panel1Data" [panel2]="panel2Data" (panelsSwapped)="onSwap()" (splitterMoving)="onSplitterMoving($event)">
+                <iui-splitcontainer [controlStyle]="ctrlStyle" [orientation]="getOrientation()" [splitterDistance]="180" [panel1]="panel1Data" [panel2]="panel2Data" (panelsSwapped)="onSwap()" (splitterMoving)="onSplitterMoving($event)" [showButtons]="true">
                     <iui-panel1>
                         <span *ngIf="swap" class="spltc-ovw-panel-content">{{panel1Data.content}}</span>
                         <span *ngIf="!swap" class="spltc-ovw-panel-content">{{panel2Data.content}}</span>

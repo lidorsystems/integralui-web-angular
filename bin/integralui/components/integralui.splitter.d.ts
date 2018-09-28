@@ -64,7 +64,7 @@ export declare class IntegralUISplitter extends IntegralUIBaseComponent {
     onWindowMouseMove(e: any): void;
     onWindowMouseUp(e: any): void;
     onResize(e: any): void;
-    getSplitterStyle(): any;
+    getControlStyle(): any;
     getSplitterHandleStyle(): {
         'margin-top': string;
         'margin-left': string;

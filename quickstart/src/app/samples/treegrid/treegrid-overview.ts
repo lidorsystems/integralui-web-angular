@@ -19,20 +19,20 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
     selector: '',
     template: `
         <style>
-            .treegrid-ovw-normal
+            .trg-ovw-normal
             {
                 width: 800px;
                 height: 400px;
             }
-            .treegrid-ovw-normal .iui-treegrid-row-cell
+            .trg-ovw-normal .iui-trg-row-cell
             {
                 padding: 2px 0 !important;
             }
-            .treegrid-ovw-normal .iui-treegrid-row-selected
+            .trg-ovw-normal .iui-trg-row-selected
             {
                 color: green;
             }
-            .cell-checkbox
+            .trg-ovw-cell-checkbox
             {
                 background: url('') no-repeat 0 0;
                 display: inline-block;
@@ -42,15 +42,26 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
                 height: 16px;
                 vertical-align: middle;
             }
-            .cell-rating
+            .trg-ovw-cell-rating
             {
                 margin: 0 15px;
                 vertical-align: middle;
             }
-            .cell-text
+            .trg-ovw-cell-text
             {
                 text-align: center;
                 vertical-align: middle;
+            }
+            .trg-ovw-rating
+            {
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+                margin: auto;
+            }
+            .trg-ovw-rating-stars-content
+            {
+                background-image: url(app/integralui/resources/rating/star-empty-white.png);
             }
         </style>
         <h2 class="feature-title">TreeGrid / Overview</h2>
@@ -62,9 +73,17 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
                         <span>{{column.headerText}}</span>
                     </ng-template>
                     <ng-template let-cell [iuiTemplate]="{ type: 'cell' }">
-                        <span *ngIf="cell.cid==1" class="cell-checkbox" [ngStyle]="{ 'background-image': getCheckValue(cell) }" (mousedown)="checkBoxClicked(cell)"></span>
-                        <img *ngIf="cell.cid==4" class="cell-rating" src="{{getCellRating(cell)}}" />
-                        <span class="cell-text">{{cell.text}}</span>
+                        <span [ngSwitch]="cell.cid">
+                            <span *ngSwitchCase="1">
+                                <span class="trg-ovw-cell-checkbox" [ngStyle]="{ 'background-image': getCheckValue(cell) }" (mousedown)="checkBoxClicked(cell)"></span>
+                            </span>
+                            <span *ngSwitchCase="4"> <!-- RATING -->
+                                <iui-rating [controlStyle]="trgOverviewRatingStyleStars" [(ngModel)]="cell.value" [max]="5"></iui-rating>
+                            </span>
+                            <span *ngSwitchDefault>
+                                <span class="trg-ovw-cell-text">{{cell.text}}</span>
+                            </span>
+                        </span>
                     </ng-template>
                 </iui-treegrid>
             </div>
@@ -73,9 +92,10 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeGrid</strong> is a native Angular component that displays hierarchical data structures in multiple columns. You can load data on demand during run-time from local or remote data sources, and add custom HTML content or other Angular components in each treegrid cell.</p>
                 <p><span class="initial-space"></span>In above demo, the treegrid has columns with different content: checkbox, text and image. When you click on header with check box, all rows become checked or unchecked. In addition, a click on parent row changes the check box value to its child rows. In this example, check boxes can have 2 values: checked or unchecked, but you can change this easily by providing three values.</p>
                 <p><span class="initial-space"></span>Some columns have their content aligned to center, while others have their alignment set to left. You may also notice that expand icon is shown in second column. This is customizable, you can set which column has the expand box in your code.</p>
+                <p><span class="initial-space"></span>The Ratings column in this example uses an image. Instead of an image, you can use the <a routerLink="/rating">Rating component</a> that allows user interaction and changes to the rating value on the fly. An example that shows a TreeGrid where cells have a rating component, is available here: <a routerLink="/treegrid/cell-rating">TreeGrid Cells with Rating Component</a>.</p>
                 <p><span class="initial-space"></span>To select multiple rows, hold SHIFT or CTRL key and click on specific row.</p>
-                <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treegrid/treegrid-overview.ts</i>) file, or read the following article:</p> 
-                <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treegrid/treegrid-component.aspx">Overview of IntegralUI TreeGrid for Angular</a></p>
+                <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treegrid/trg-overview.ts</i>) file, or read the following article:</p> 
+                <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treegrid/trg-component.aspx">Overview of IntegralUI TreeGrid for Angular</a></p>
             </div>
         </div>
     `,
@@ -95,8 +115,13 @@ export class TreeGridOverviewSample {
 
     public gridStyle: any = {
         general: {
-            normal: 'treegrid-ovw-normal'
+            normal: 'trg-ovw-normal'
         }
+    }
+
+    public trgOverviewRatingStyleStars: any = {
+        general: { normal: 'trg-ovw-rating' },
+        content: { normal: 'trg-ovw-rating-stars-content'}
     }
 
     constructor(){
@@ -377,21 +402,25 @@ export class TreeGridOverviewSample {
                     break;
 
                 case 1:
-                    if (!dragRow.pid && e.targetRow.pid)
-                        e.cancel = true;
-                    else if (dragRow.pid && !e.targetRow.pid)
-                        e.cancel = true;
+                    if (dragRow){
+                        if (!dragRow.pid && e.targetRow.pid)
+                            e.cancel = true;
+                        else if (dragRow.pid && !e.targetRow.pid)
+                            e.cancel = true;
+                    }
                     break;
 
                 case 2:
-                    if (!dragRow.pid && e.targetRow.pid)
-                        e.cancel = true;
-                    else if (dragRow.pid && !e.targetRow.pid)
-                        e.cancel = true;
+                    if (dragRow){
+                        if (!dragRow.pid && e.targetRow.pid)
+                            e.cancel = true;
+                        else if (dragRow.pid && !e.targetRow.pid)
+                            e.cancel = true;
+                    }
                     break;
             }
         }
-        else if (e.dragRow.pid)
+        else if (e.dragRow && e.dragRow.pid)
             e.cancel = true;
     }
 }

@@ -1,0 +1,115 @@
+.iui-grid
+{
+	background-color: #323232;
+	border: thin solid #121212;
+	color: #b5b5b5;
+}
+.iui-grid table
+{
+	color: #b5b5b5;
+}
+.iui-grid-block
+{
+	background: #323232;
+}
+.iui-grid-column-header, .iui-grid-column-footer
+{
+	background-color: #242424;
+	border-color: #121212;
+}
+.iui-grid-column-header-hovered
+{
+	background-color: #858585;
+	border-color: #959595;
+	color: white;
+}
+.iui-grid-column-header-selected
+{
+	background-color: #040404;
+	border: thin solid #000000;
+	color: white;
+}
+.iui-grid-row-hovered
+{
+	background-color: #808080;
+	color: black;
+}
+.iui-grid-row-selected
+{
+	background-color: #646464;
+	color: white;
+}
+.iui-grid-row-cell:first-child
+{
+	border-left: thin solid #242424;
+}
+.iui-grid-row-cell:last-child
+{
+	border-right: thin solid #242424;
+}
+.iui-grid-lines-horizontal
+{
+	border-bottom: thin solid #242424;
+}
+.iui-grid-lines-vertical
+{
+	border-right: thin solid #242424;
+}
+.iui-grid-lines-both
+{
+	border-right: thin solid #242424;
+	border-bottom: thin solid #242424;
+}
+
+.iui-grid-expand-box-open
+{
+	background: url(../../resources/expand-white.png) no-repeat 0 0;
+}
+.iui-grid-expand-box-close
+{
+	background: url(../../resources/collapse-white.png) no-repeat 0 0;
+}
+
+/* Grouping */
+.iui-grid-grouping-panel
+{
+	background-color: #323232;
+	border: thin solid #121212;
+	color: black;
+}
+.iui-grid-grouping-panel-item
+{
+	background-color: #808080;
+	border: thin solid #808080;
+}
+.iui-grid-grouping-panel-toolbar-button-add
+{
+	background: #808080;
+    border: thin solid #808080;
+}
+.iui-grid-grouping-marker::before
+{
+	border: 6px solid #808080;
+	border-color: transparent transparent transparent #808080;
+}
+.iui-grid-grouping-marker::after
+{
+	border: 6px solid #808080;
+	border-color: transparent transparent transparent #808080;
+}
+.iui-grid-grouping-panel-dropdown-list
+{
+	background-color: #323232;
+	border: thin solid #121212;
+	color: #b5b5b5;
+}
+.iui-grid-grouping-panel-dropdown-list li
+{
+	background-color: #808080;
+	color: black;
+}
+.iui-grid-grouping-panel-dropdown-list li:hover
+{
+	background-color: #646464;
+	color: white;
+}

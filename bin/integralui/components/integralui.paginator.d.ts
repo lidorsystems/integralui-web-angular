@@ -11,6 +11,7 @@ export declare class IntegralUIPaginator {
     currentPage: number;
     enabled: boolean;
     maxPages: number;
+    enabledChanged: EventEmitter<any>;
     pageChanged: EventEmitter<any>;
     ngAfterViewInit(): void;
     firstPage(): void;

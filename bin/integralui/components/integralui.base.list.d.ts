@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, Renderer } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIOrientation, IntegralUISelectionMode, IntegralUISortOrder } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIOrientation, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -23,17 +23,15 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     private cloneElem;
     private cloneElemStartPos;
     protected isCtrlDragEntered: boolean;
+    protected isDragActive: boolean;
     protected filterParams: any;
+    ctrlCursor: string;
     protected hoverItem: any;
     protected currentFocusItem: any;
     protected isKeyboardActive: boolean;
     protected allowUpdate: boolean;
     protected avgItemHeight: number;
     blockSize: {
-        width: number;
-        height: number;
-    };
-    protected clientRect: {
         width: number;
         height: number;
     };
@@ -88,6 +86,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     allowFocus: boolean;
     focusedItem: any;
     items: Array<any>;
+    mouseWheelSpeed: IntegralUISpeedMode;
     showScroll: any;
     selectedItem: any;
     selectionMode: IntegralUISelectionMode;
@@ -98,14 +97,20 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     beforeSelect: EventEmitter<any>;
     change: EventEmitter<any>;
     clear: EventEmitter<any>;
+    dragEnd: EventEmitter<any>;
     dragEnter: EventEmitter<any>;
     dragDrop: EventEmitter<any>;
     dragLeave: EventEmitter<any>;
     dragOver: EventEmitter<any>;
+    dragStart: EventEmitter<any>;
     itemAdding: EventEmitter<any>;
     itemAdded: EventEmitter<any>;
+    itemClick: EventEmitter<any>;
+    itemDblClick: EventEmitter<any>;
+    itemHover: EventEmitter<any>;
     itemRemoving: EventEmitter<any>;
     itemRemoved: EventEmitter<any>;
+    itemRightClick: EventEmitter<any>;
     keyDown: EventEmitter<any>;
     keyPress: EventEmitter<any>;
     keyUp: EventEmitter<any>;
@@ -127,6 +132,10 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected callEventRemove(item: any, index?: number, parent?: any): boolean;
     protected processItemAdd(item?: any, parent?: any): void;
     protected processItemRemoval(item?: any, parent?: any): void;
+    itemClickEvent(e: any, obj: any): void;
+    itemDblClickEvent(e: any, obj: any): void;
+    itemRightClickEvent(e: any, obj: any): void;
+    getDataFields(): any;
     protected updateCurrentList(): void;
     protected updateData(): void;
     protected updateOptions(value?: any): void;
@@ -139,6 +148,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected removeDropMark(): void;
     protected callDragDropEvent(e: any, data: any, flag?: boolean): boolean;
     private checkEmptySpace(e);
+    ctrlDragEnd(e: any): void;
     ctrlDragEnter(e: any): void;
     ctrlDragDrop(e: any): void;
     ctrlDragLeave(e: any): void;
@@ -158,6 +168,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     itemDragStart(e: any, obj: any): void;
     itemDragOver(e: any, obj: any, index: number, flag?: boolean): void;
     itemDragDrop(e: any, obj: any): void;
+    itemDragEnd(e: any, obj: any): void;
     exportToJSON(fields?: any, spacing?: any): string;
     filter(params?: any): void;
     cloneItem(item: any): any;
@@ -181,6 +192,11 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected isItemSelected(item: any): boolean;
     protected isParentOf(targetItem: any, item: any): boolean;
     protected updateItemList(): void;
+    protected getLastItemIndex(): number;
+    getPrevItem(item: any): any;
+    getNextItem(item: any): any;
+    moveItem(item: any, direction: IntegralUIMoveDirection, targetItem?: any, position?: number): void;
+    protected moveItemAt(item: any, targetItem: any, direction: IntegralUIMoveDirection, position?: number): void;
     itemMouseEnter(e: any, obj: any): void;
     itemMouseLeave(e: any, obj: any): void;
     itemGotFocus(item: any): void;
@@ -209,9 +225,10 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     };
     refresh(): void;
     protected updateBlockSize(): void;
-    protected resetLayout(): void;
+    protected resetLayoutTimer(): void;
     suspendLayout(): void;
     resumeLayout(): void;
+    protected updateCurrentLayout(): void;
     updateLayout(): void;
     protected updateScrollSize(): void;
     protected updateVisibleRange(): void;
@@ -221,8 +238,6 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     onCtrlMouseLeave(e: any): void;
     itemMouseDown(e: any, obj: any): void;
     itemMouseUp(e: any, obj: any): void;
-    itemClickEvent(e: any, obj: any): void;
-    itemDblClickEvent(e: any, obj: any): void;
     onScroll(e: any): void;
     scrollPos(value?: any): any;
     protected changeHorizontalScrollPos(value: number): void;
@@ -253,6 +268,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected applySorting(list: Array<any>): void;
     protected isSortingAllowed(): boolean;
     sort(order: IntegralUISortOrder, comparer?: any): void;
+    protected getItemInlineStyle(itemObj: any): any;
     protected updateItemStyle(obj: any): void;
     protected getItemStyle(value: any): {
         general: any;

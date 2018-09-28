@@ -1,0 +1,40 @@
+.iui-tabstrip
+{
+	background: #646464;
+}
+.iui-tabstrip-scroll-inbound, .iui-tabstrip-scroll-outbound
+{
+	background: #646464;
+}
+.iui-tabstrip-scroll-button
+{
+	background: #363636;
+	border: thin solid #121212;
+	opacity: 1;
+}
+.iui-tabstrip-scroll-button:hover
+{
+	background: #565656;
+	border: thin solid #323232;
+}
+.iui-tabstrip-scroll-button-selected
+{
+	background: #484848;
+	border: thin solid #242424;
+}
+.iui-tabstrip-scroll-button-left span
+{
+    background-position: -120px -216px;
+}
+.iui-tabstrip-scroll-button-right span
+{
+    background-position: -144px -216px;
+}
+.iui-tabstrip-scroll-button-up span
+{
+    background-position: -168px -216px;
+}
+.iui-tabstrip-scroll-button-down span
+{
+    background-position: -192px -216px;
+}

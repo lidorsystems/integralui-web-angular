@@ -12,7 +12,7 @@
 */
 
 import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { IntegralUITabStripPlacement } from '../../integralui/components/integralui.core';
+import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../integralui/components/integralui.core';
 
 @Component({
     selector: '',
@@ -20,7 +20,7 @@ import { IntegralUITabStripPlacement } from '../../integralui/components/integra
         <style>
             .tbs-ovw-normal
             {
-                width: 400px;
+                width: 375px;
                 height: 250px;
             }
             .tbs-ovw-tab-content
@@ -59,23 +59,36 @@ import { IntegralUITabStripPlacement } from '../../integralui/components/integra
         <h2 class="feature-title">TabStrip / Overview</h2>
         <div class="feature-content">
             <div style="float:left;width:400px;" #application>
-                <iui-tabstrip [controlStyle]="ctrlStyle" [tabs]="data" [tabSpacing]="2" [tabStripPlacement]="tabPlacement">
-                   <iui-tab *ngFor="let tab of data" text="{{tab.text}}" icon="{{tab.icon}}">
+                <iui-tabstrip [controlStyle]="ctrlStyle" [tabs]="data" [tabSpacing]="2" [tabStripPlacement]="tabPlacement" [allowDrag]="true" [scrollMode]="tabScrollMode">
+                   <iui-tab *ngFor="let tab of data" text="{{tab.text}}" icon="{{tab.icon}}" [allowDrag]="true">
                         <div class="tbs-ovw-tab-content">{{tab.body}}</div>
                     </iui-tab>
                 </iui-tabstrip>
             </div>
             <div class="control-panel" style="float:left;margin-left:30px;width:300px">
-                <label><strong>Tab Placement:</strong> </label><br /><br />
+                <label><strong>Tab Placement:</strong> </label><br />
                 <label><input type="radio" [checked]="checkTabPlacement()" (click)="setTabPlacement()" />Top</label><br/>
                 <label><input type="radio" [checked]="checkTabPlacement(1)" (click)="setTabPlacement(1)" />Right</label><br/>
                 <label><input type="radio" [checked]="checkTabPlacement(2)" (click)="setTabPlacement(2)" />Bottom</label><br/>
                 <label><input type="radio" [checked]="checkTabPlacement(3)" (click)="setTabPlacement(3)" />Left</label>
+                <br /><br />
+                <label><strong>Scroll Mode:</strong> </label><br />
+                <label><input type="radio" [checked]="checkScrollMode()" (click)="setScrollMode()" />None</label><br/>
+                <label><input type="radio" [checked]="checkScrollMode(1)" (click)="setScrollMode(1)" />InBound</label><br/>
+                <label><input type="radio" [checked]="checkScrollMode(2)" (click)="setScrollMode(2)" />OutBound</label>
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TabStrip</strong> is a native Angular component that allows you to create tabbed content using tabs placed in different orientations.</p>
                 <p><span class="initial-space"></span>The demo above shows few tabs each with a header and a content panel. You can choose where tabs are placed: top, right, bottom or left side</p>
+                <p><span class="initial-space"></span>You can also choose whether scrolling is enabled or not. There are three modes:</p>
+                <ul>
+                    <li><span style="color:#0064aa">None</span> - scrolling disabled, scroll buttons will not appear</li>
+                    <li><span style="color:#0064aa">InBound</span> - scrolling enabled, scroll buttons appear next to each other</li>
+                    <li><span style="color:#0064aa">OutBound</span> - scrolling enabled, scroll buttons appear on left/right or up/down side</li>
+                </ul>
+                <p><span class="initial-space"></span>When you have many tabs that cannot appear in the TabStrip space all at the same time, it is best to enable scrolling. By default, scrolling is disabled.</p>
+                <p><span class="initial-space"></span>To reorder tabs, you can use drag drop. Just select a tab and drag it over other tabs. An empty space will appear showing the target position.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>tabstrip/tabstrip-overview.ts</i>) file, or read the following article:</p> 
                 <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx">Overview of IntegralUI TabStrip for Angular</a></p>
             </div>
@@ -89,6 +102,7 @@ export class TabStripOverviewSample {
     public data: Array<any>;
 
     public tabPlacement: IntegralUITabStripPlacement = IntegralUITabStripPlacement.Top;
+    public tabScrollMode: IntegralUITabScrollMode = IntegralUITabScrollMode.InBound;
 
     public ctrlStyle: any = {
         general: {
@@ -105,12 +119,12 @@ export class TabStripOverviewSample {
             },
             { 
                 icon: 'tab-icon album',
-                text: 'Music',
+                text: 'Music 2',
                 body: 'Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat.'
             },
             { 
                 icon: 'tab-icon star-empty',
-                text: 'Favorites',
+                text: 'Favorites ABC',
                 body: 'Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst.'
             }
         ];
@@ -147,6 +161,34 @@ export class TabStripOverviewSample {
 
             default:
                 this.tabPlacement = IntegralUITabStripPlacement.Top;
+                break;
+        }
+    }
+
+    checkScrollMode(key?: number): boolean {
+        switch (key){
+            case 1:
+                return this.tabScrollMode == IntegralUITabScrollMode.InBound ? true : false;
+
+            case 2:
+                return this.tabScrollMode == IntegralUITabScrollMode.OutBound ? true : false;
+        }
+
+        return this.tabScrollMode == IntegralUITabScrollMode.None ? true : false;
+    }
+
+    setScrollMode(key?: number){
+        switch (key){
+            case 1:
+                this.tabScrollMode = IntegralUITabScrollMode.InBound;
+                break;
+
+            case 2:
+                this.tabScrollMode = IntegralUITabScrollMode.OutBound;
+                break;
+
+            default:
+                this.tabScrollMode = IntegralUITabScrollMode.None;
                 break;
         }
     }

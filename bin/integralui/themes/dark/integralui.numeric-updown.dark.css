@@ -1,0 +1,70 @@
+.iui-numeric-inbound-btn
+{
+	background: #808080;
+	border: thin solid #606060;
+}
+.iui-numeric-inbound-btn:hover
+{
+	background: #969696;
+	border: thin solid #606060;
+}
+
+/* DisplayMode - LeftRight */
+.iui-numeric-leftright-buttons
+{
+	background: #808080;
+	border: thin solid #606060;
+}
+.iui-numeric-leftright-buttons:hover
+{
+	background: #969696;
+	border: thin solid #606060;
+}
+
+/* DisplayMode - UpDown */
+.iui-numeric-updown-buttons
+{
+	background: #808080;
+	border: thin solid #606060;
+}
+.iui-numeric-updown-buttons:hover
+{
+	background: #969696;
+	border: thin solid #606060;
+}
+
+.iui-numeric-inbound-button-up
+{
+	background-position: -176px -115px;
+}
+.iui-numeric-inbound-button-down
+{
+	background-position: -160px -115px;
+}
+
+.iui-numeric-leftright-decrease
+{
+	background-position: -128px -112px;
+}
+.iui-numeric-leftright-increase
+{
+	background-position: -144px -112px;
+}
+
+
+.iui-numeric-updown-decrease
+{
+	background-position: -160px -112px;
+}
+.iui-numeric-updown-increase
+{
+	background-position: -176px -112px;
+}
+
+.iui-numeric-inbound-value, .iui-numeric-leftright-value, .iui-numeric-updown-value
+{
+	background: #646464;
+	border: thin solid #363636;
+	color: white;
+}
+

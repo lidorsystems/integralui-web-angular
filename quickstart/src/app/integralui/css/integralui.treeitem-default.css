@@ -2,6 +2,12 @@
 {
 	list-style-type: none;
 }
+.iui-treeitem-empty
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 .iui-treeitem-content
 {
 	border: 2px solid transparent;
@@ -118,4 +124,3 @@
     opacity: 0.75;
     pointer-events: none;
 }
-

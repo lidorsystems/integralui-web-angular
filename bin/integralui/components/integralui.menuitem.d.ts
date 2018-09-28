@@ -35,6 +35,7 @@ export declare class IntegralUIMenuItem extends IntegralUIItem {
     level: number;
     orientation: string;
     pause: number;
+    showAnimation: boolean;
     templateRef: any;
     expanded: boolean;
     constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);
@@ -58,6 +59,7 @@ export declare class IntegralUIMenuItem extends IntegralUIItem {
     onChildItemMouseDown(e: any): void;
     private removePauseTimer();
     private toggleContent();
+    getControlStyle(): any;
     getItemDisplay(): string;
     protected updateControlClass(): void;
     protected getExpandBoxSpaceClass(): string;

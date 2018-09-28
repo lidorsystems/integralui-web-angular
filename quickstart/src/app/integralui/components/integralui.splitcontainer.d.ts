@@ -11,10 +11,12 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     panel1Data: any;
     panel2Data: any;
     private blockPos;
+    private cmdButtonsAllowed;
+    private maxPos;
     private swap;
     private tabSize;
-    private maxPos;
     protected currentOrientation: IntegralUIOrientation;
+    buttonBlockElem: ElementRef;
     handleElem: ElementRef;
     panel1Elem: ElementRef;
     panel2Elem: ElementRef;
@@ -23,7 +25,6 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     tab1ContentElem: ElementRef;
     tab2ContentElem: ElementRef;
     protected ctrlRect: any;
-    private clientRect;
     protected currentSplitterDistance: number;
     protected panel1Size: {
         width: number;
@@ -38,6 +39,10 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
         height: number;
     };
     protected splitterBlockSize: {
+        width: number;
+        height: number;
+    };
+    protected splitterButtonBlockSize: {
         width: number;
         height: number;
     };
@@ -65,6 +70,8 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
         width: number;
         height: number;
     };
+    protected buttonClass: Array<any>;
+    protected buttonClassName: string;
     protected handleClass: Array<any>;
     protected handleClassName: string;
     protected panelClass: Array<any>;
@@ -79,6 +86,7 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     orientation: IntegralUIOrientation;
     panel1: any;
     panel2: any;
+    showButtons: boolean;
     splitterDistance: number;
     orientationChanged: EventEmitter<any>;
     panelsSwapped: EventEmitter<any>;
@@ -90,6 +98,7 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
+    ngAfterContentChecked(): void;
     swapButtonClicked(): void;
     updateLayout(): void;
     private splitterStartPos;
@@ -97,6 +106,8 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     ctrlMouseMove(e: any): void;
     splitterMouseDown(e: any): void;
     onWindowMouseUp(e: any): void;
+    changeOrientation(vertical: boolean): void;
+    getControlStyle(): any;
     getInlinePanel1Style(): {
         top: string;
         left: string;
@@ -152,6 +163,14 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
         top: string;
         left: string;
     };
+    getInlineButtonBlockStyle(): {
+        top: string;
+        right: string;
+        bottom: string;
+        left: string;
+    };
+    protected updateButtonClass(): void;
+    getButtonClass(): any[];
     protected updateSplitterClass(): void;
     getSplitterClass(): any[];
     protected updateHandleClass(): void;

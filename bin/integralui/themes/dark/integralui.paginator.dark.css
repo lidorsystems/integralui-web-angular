@@ -1,0 +1,34 @@
+.iui-paginator
+{
+	background-color: #363636;
+}
+.iui-paginator-button
+{
+	background-color: #dedede;
+    background-image: url(../../resources/icons-x24.png);
+	border: thin solid #bebebe;
+}
+.iui-paginator-button:hover
+{
+	background-color: #cecece;
+}
+.iui-paginator-first
+{
+    background-position: -96px -120px;
+}
+.iui-paginator-prev
+{
+    background-position: -120px -120px;
+}
+.iui-paginator-next
+{
+    background-position: -144px -120px;
+}
+.iui-paginator-last
+{
+    background-position: -168px -120px;
+}
+.iui-paginator-input
+{
+	border: thin solid #bebebe;
+}

@@ -85,6 +85,16 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             <div class="feature-help" style="width:800px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Tooltip</strong> is a native Angular component that can be attached to any component or HTML element. It provides functionality that allows you to add a tooltip that will be displayed at specified position, with initial delay and will remain visible by specified amount of time.</p>
                 <p><span class="initial-space"></span>In this example, there is a control panel where you can set different properties of Tooltip component. You can choose the initial delay before tooltip is shown, how long it will remain visible, position at which will appear and whether it is enabled or not.</p>
+                <p><span class="initial-space"></span>The following properties are supported:</p>
+                <ul class="feature-points">
+                    <li><span style="color:#c60d0d">appRef</span> - holds a reference to application view</li>
+                    <li><span style="color:#c60d0d">autoPopDelay</span> - specifies the time in milliseconds for Tooltip to remain visible</li>
+                    <li><span style="color:#c60d0d">enabled</span> - determines whether the Tooltip is enabled or disabled</li>
+                    <li><span style="color:#c60d0d">initialDelay</span> - specifies the time in milliseconds prior Tooltip is shown</li>
+                    <li><span style="color:#c60d0d">position</span> - determines where the Tooltip will appear: above, below, left or right side of the target element or at mouse position</li>
+                    <li><span style="color:#c60d0d">showMarker</span> - when true, an arrow marker will be displayed for the Tooltip window</li>
+                    <li><span style="color:#c60d0d">title</span> - specifies the content of the Tooltip</li>
+                </ul>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>tooltip/tooltip-overview.ts</i>) file, or read the following article:</p> 
                 <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/tooltip/tooltip-component.aspx">Overview of IntegralUI Tooltip for Angular</a></p>
             </div>

@@ -39,6 +39,7 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
+    ngAfterContentChecked(): void;
     addItem(item: any): void;
     clearItems(): void;
     insertItemAt(item: any, index: number): void;
@@ -51,6 +52,7 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     getItemFromComponent(cmp: IntegralUIListItem): any;
     getItemIndex(cmp: IntegralUIListItem): number;
     protected updateItemList(): void;
+    invokeEvent(key: string, item: any): boolean;
     processDownArrowKey(item: any, e?: any): any;
     processEndKey(item: any, e?: any): any;
     processHomeKey(item: any, e?: any): any;
@@ -84,6 +86,8 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     selectItem(cmp: IntegralUIListItem): void;
     private updateSelectedItemFromElem(cmp);
     private updateSelectedItem(item);
+    getControlStyle(): any;
+    protected getItemInlineStyle(itemObj: any): any;
     private resetRefresh();
     refresh(obj?: any): void;
 }

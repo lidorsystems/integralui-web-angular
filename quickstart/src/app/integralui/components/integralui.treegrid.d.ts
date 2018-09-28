@@ -1,6 +1,6 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseService, IntegralUITemplate } from './integralui.core';
-import { IntegralUIBaseGrid, IntegralUIDirection } from './integralui.base.grid';
+import { IntegralUIBaseService, IntegralUIMoveDirection, IntegralUITemplate } from './integralui.core';
+import { IntegralUIBaseGrid } from './integralui.base.grid';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -42,7 +42,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     contentRef: ViewContainerRef;
     paginatorElem: ElementRef;
     private templateList;
-    gridCursor: string;
+    ctrlCursor: string;
     protected cellClassName: string;
     protected cellBorderClassName: string;
     protected columnClassName: string;
@@ -83,6 +83,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     private addChildRows(parentRow, indent, pid, flag);
     private addRowToCurrentList(row, indent, pid, flag);
     getFullList(): Array<any>;
+    updateFullList(): any[];
     loadData(data: Array<any>, parent?: any, fields?: any, flat?: boolean): void;
     expandOnDelay(row: any): void;
     rowDragStart(e: any, obj: any): void;
@@ -94,7 +95,6 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     expand(row?: any): void;
     toggle(row?: any, value?: boolean): void;
     findColumnById(id: any): any;
-    protected getColumnRealIndex(j: number): any;
     protected getCellIndexById(list: Array<any>, colIndex: number, id: any): number;
     private getColumnFromCell(cell, index);
     protected getCellAlignment(column: any): string;
@@ -114,9 +114,9 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     processLeftArrowKey(cell: any): any;
     processRightArrowKey(cell: any): any;
     protected updateRange(): void;
-    protected updateCurrentLayout(): void;
+    protected updateCurrentLayout(full?: boolean): void;
     private updateBlockSize();
-    private resetLayout();
+    private resetLayoutTimer();
     protected updateExpandingColumn(): void;
     updateLayout(): void;
     private updateVisibleRange();
@@ -128,8 +128,8 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     getRowParent(row: any): any;
     getPrevRow(row: any): any;
     getNextRow(row: any): any;
-    moveRow(row: any, direction: IntegralUIDirection, targetRow?: any, position?: number): void;
-    protected moveRowAt(row: any, targetRow: any, direction: IntegralUIDirection, position?: number): void;
+    moveRow(row: any, direction: IntegralUIMoveDirection, targetRow?: any, position?: number): void;
+    protected moveRowAt(row: any, targetRow: any, direction: IntegralUIMoveDirection, position?: number): void;
     beginLoad(row?: any): void;
     endLoad(row?: any): void;
     private isRowLoading(row);
@@ -137,8 +137,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     scrollTo(row: any): void;
     rowMouseDown(e: any, obj: any): void;
     rowMouseUp(e: any, obj: any): void;
-    rowClickEvent(e: any, obj: any): void;
-    rowDblClickEvent(e: any, obj: any): void;
+    getControlStyle(): any;
     protected updateColumnStyle(obj: any): void;
     protected updateRowStyle(obj: any): void;
     protected getColumnStyle(value: any): {

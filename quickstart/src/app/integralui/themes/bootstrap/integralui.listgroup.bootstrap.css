@@ -1,0 +1,32 @@
+@import 'integralui.groupbox.bootstrap.css';
+
+/* Header Normal State */
+.iui-listgroup-header
+{
+	background-color: #f5f5f5;
+	border: solid thin #dddddd;
+	color: #333333;
+}
+/* Header Hover State */
+.iui-listgroup-header-hovered
+{
+	background-color: #e6e6e6;
+	border: solid thin #adadad;
+}
+/* Header Selected State */
+.iui-listgroup-header-selected
+{
+	background-color: #275d8c;
+	border-color: #204d74;
+	color: white;
+}
+.iui-listgroup-content
+{
+	background-color: #ffffff;
+	border: solid thin #dddddd;
+}
+
+.iui-listgroup-header-selected .iui-listgroup-header-expand-box
+{
+	background: #ffffff !important;
+}

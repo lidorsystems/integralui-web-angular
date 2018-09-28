@@ -1,0 +1,148 @@
+.iui-menu
+{
+    background-color: #242424;
+    color: white;
+}
+.iui-menu-block
+{
+    background-color: #242424;
+	border-color: #181818;
+}
+.iui-menuitem-block
+{
+    background-color: #363636;
+	border: solid thin #121212;
+	color: #c5c5c5;
+}
+.iui-menuitem-root, .iui-menuitem-root-vertical
+{
+	background: none;
+	border: solid thin #242424;
+    color: #c5c5c5;
+}
+.iui-menuitem-root-hovered, .iui-menuitem-root-selected
+{
+	background-color: #363636 !important;
+	border: solid thin #121212 !important;
+	color: white;
+}
+.iui-menuitem-root-hovered a
+{
+	color: black;
+}
+.iui-menuitem
+{
+    background-color: #363636;
+    border-color: transparent;
+    color: #c5c5c5;
+}
+.iui-menuitem-hovered
+{
+    background-color: #646464 !important;
+    border-color: #323232 !important;
+    color: white;
+}
+.iui-menuitem-selected
+{
+    background-color: #646464 !important;
+    border-color: #323232 !important;
+    color: white;
+}
+.iui-menuitem-selected a
+{
+	color: white;
+}
+.iui-menu li > ul
+{
+    background-color: #242424;
+	border: thin solid #121212;
+}
+.iui-menu-expand-box
+{
+	width: 16px;
+	height: 16px;
+	background: url(../../resources/icons.png) no-repeat 0 0;
+}
+.iui-menuitem-normal
+{
+    background-color: transparent;
+    border-color: transparent;
+    color: #d5d5d5;
+}
+.iui-menuitem-root-separator, .iui-menuitem-separator
+{
+    background-color: #363636;
+}
+.iui-menuitem-root-separator > hr, .iui-menuitem-separator > hr
+{
+    background-color: #121212;
+}
+.iui-menu-marker-expand-down::before
+{
+	border: 4px solid #808080;
+	border-color: #808080 transparent transparent transparent;
+}
+.iui-menu-marker-expand-down-rtl::before
+{
+	border: 4px solid #808080;
+	border-color: #808080 transparent transparent transparent;
+}
+.iui-menu-marker-expand-right::before
+{
+	border: 4px solid #000000;
+	border-color: transparent transparent transparent #000000;
+}
+.iui-menu-marker-expand-left::before
+{
+	border: 4px solid #000000;
+	border-color: transparent #000000 transparent transparent;
+}
+.iui-menu-marker-top::before
+{
+	border: 4px solid #484848;
+	border-color: transparent transparent #000000 transparent;
+}
+.iui-menu-marker-top::after
+{
+	border: 4px solid #484848;
+	border-color: transparent transparent #242424 transparent;
+}
+.iui-menu-marker-top-rtl::before
+{
+	border: 4px solid #484848;
+	border-color: transparent transparent #000000 transparent;
+}
+.iui-menu-marker-top-rtl::after
+{
+	border: 4px solid #484848;
+	border-color: transparent transparent #242424 transparent;
+}
+.iui-menu-marker-left::before
+{
+	border: 4px solid #484848;
+	border-color: transparent #000000 transparent transparent;
+}
+.iui-menu-marker-left::after
+{
+	border: 4px solid #484848;
+	border-color: transparent #242424 transparent transparent;
+}
+.iui-menu-marker-right::before
+{
+	border: 4px solid #484848;
+	border-color: transparent transparent transparent #000000;
+}
+.iui-menu-marker-right::after
+{
+	border: 4px solid #484848;
+	border-color: transparent transparent transparent #242424;
+}
+.iui-menu-disabled > ul
+{
+	background: #808080;
+}
+.iui-menuitem-root-disabled, .iui-menuitem-disabled
+{
+	border: solid thin transparent;
+	color: #cecece;
+}

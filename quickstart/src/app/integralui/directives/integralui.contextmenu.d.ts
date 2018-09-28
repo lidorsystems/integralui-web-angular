@@ -27,12 +27,12 @@ export declare class IntegralUIContextMenuComponent extends IntegralUIBaseCompon
     direction: IntegralUIDirection;
     inverse: boolean;
     items: Array<any>;
+    itemTemplate: any;
     mode: string;
     position: {
         x: number;
         y: number;
     };
-    itemTemplate: any;
     itemClick: EventEmitter<any>;
     menuOpened: EventEmitter<any>;
     menuClosed: EventEmitter<any>;
@@ -45,7 +45,7 @@ export declare class IntegralUIContextMenuComponent extends IntegralUIBaseCompon
     onRightClick(e: any): void;
     protected getItemFromComponent(cmp: IntegralUIMenuItem): any;
     invokeMethod(name: string, value: any): void;
-    size(): {
+    getSize(): {
         width: any;
         height: any;
     };
@@ -57,6 +57,7 @@ export declare class IntegralUIContextMenu {
     private viewContainer;
     protected cmpResolver: ComponentFactoryResolver;
     private isMenuActive;
+    private winScrollPos;
     private eventList;
     templates: QueryList<IntegralUITemplate>;
     private cmpRef;
@@ -72,7 +73,7 @@ export declare class IntegralUIContextMenu {
     constructor(elemRef: ElementRef, viewContainer: ViewContainerRef, cmpResolver: ComponentFactoryResolver);
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
-    size(): {
+    getSize(): {
         width: any;
         height: any;
     };

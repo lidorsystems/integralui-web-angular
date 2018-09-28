@@ -17,4 +17,5 @@ export declare class IntegralUIDialog extends IntegralUIBaseComponent {
     protected updateLayout(): void;
     open(): void;
     close(): void;
+    getControlStyle(): any;
 }

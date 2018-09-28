@@ -95,10 +95,22 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
 
             /* Rating Cell */
-            .grid-grp-cell-rating
+            .grid-grp-cell-rating-image
             {
                 margin: 5px 0 0 0;
                 vertical-align: middle;
+            }
+
+            .grid-grp-cell-rating
+            {
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+                margin: auto;
+            }
+            .grid-grp-cell-rating-content
+            {
+                background-image: url(app/integralui/resources/rating/star-empty-white.png);
             }
 
             /* Label Cell */
@@ -107,7 +119,8 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
                 display: inline-block;
                 margin-top: 5px;
             }
-        </style>
+
+       </style>
         <h2 class="feature-title">Grid / Dynamic Grouping</h2>
         <div class="feature-content grid-grp-app">
             <div #application style="width:800px">
@@ -129,7 +142,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
                                             <span>{{cell.text}}</span>
                                         </span>
                                         <span *ngSwitchCase="5"> <!-- RATING -->
-                                            <img class="grid-grp-cell-rating" src="{{getCellRating(cell)}}" />
+                                            <img class="grid-grp-cell-rating-image" src="{{getCellRating(cell)}}" />
                                         </span>
                                         <span *ngSwitchDefault>
                                             <span class="grid-grp-cell-label">{{cell.text}}</span>
@@ -147,7 +160,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
                                 <span class="grid-grp-icons {{cell.icon}}"></span>
                             </span>
                             <span *ngSwitchCase="5"> <!-- RATING -->
-                                <img class="grid-grp-cell-rating" src="{{getCellRating(cell)}}" />
+                                <iui-rating [controlStyle]="gridOverviewRatingStyleStars" [(ngModel)]="cell.value" [max]="5" [division]="2" (valueChanged)="onRatingValueChanged($event, cell)"></iui-rating>
                             </span>
                             <span *ngSwitchDefault>
                                 <span class="grid-grp-cell-label">{{cell.text}}</span>
@@ -167,6 +180,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
                 <p><span class="initial-space"></span>Once a group is created, the corresponding column is removed from the view. And vice versa, once group is removed, the column will re-appear in the view. This is customizable and handled in sample code by <span style="color:#c60d0d">groupAdded</span> and <span style="color:#c60d0d">groupRemoved</span> events.</p>
                 <p><span class="initial-space"></span>When you have more than one group present, you can reorder them by click and drag over the group title. The grid data will auto-update based on current group order. This allows you to dynamically change the Grid data.</p>
                 <p><span class="initial-space"></span>Depending on data in each column, a different template for group data is used. This is customizable in HTML, depending on group.valueID field, which corresponds to the column id value. In combination with group.value, you can create different templates for each group separatelly.</p>
+                <p><span class="initial-space"></span>Rating is displayed using the <a routerLink="/rating">IntegralUI Rating</a> component. By changing a rating value in rows, grouping will also change, based on new values.</p>
                 <p><span class="initial-space"></span>Some columns like 'Title' and 'Released' are excluded from grouping functionality. This is determined in sample code by <span style="color:#c60d0d">allowGrouping</span> field of column object, which for these columns is set to <span style="color:#0000ff">false</span>.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>grid/grid-grouping.ts</i>) file.</p> 
             </div>
@@ -199,13 +213,18 @@ export class GridGroupingSample {
         }
     }
 
+    public gridOverviewRatingStyleStars: any = {
+        general: { normal: 'grid-grp-cell-rating' },
+        content: { normal: 'grid-grp-cell-rating-content'}
+    }
+
     constructor(){
         this.columns = [
-            { id: 2, headerText: "Title", allowDrag: false, allowDrop: false, allowGrouping: false, width: 350 },
+            { id: 2, headerText: "Title", allowDrag: false, allowDrop: false, allowGrouping: false, width: 300 },
             { id: 1, groupText: "True/False", contentAlignment: 'center', width: 30, fixedWidth: true },
             { id: 3, headerText: "Year", headerAlignment: "center", contentAlignment: "center", width: 70 },
             { id: 4, headerText: "Genre", headerAlignment: "center", contentAlignment: "center", width: 50, visible: false },
-            { id: 5, headerText: "Ratings", headerAlignment: "center", contentAlignment: "center", width: 120, fixedWidth: true },
+            { id: 5, headerText: "Ratings", headerAlignment: "center", contentAlignment: "center", width: 170, fixedWidth: true },
             { id: 6, headerText: "Released", allowGrouping: false, headerAlignment: "center", contentAlignment: "center", width: 130 }
         ];
 
@@ -361,7 +380,7 @@ export class GridGroupingSample {
 
                 let cellRating = this.grid.getCellByColumnId(this.rows[i].cells, 5);
                 if (cellRating)
-                    cellRating.text = this.getRatingValue(cellRating.value);
+                    cellRating.text = this.getRatingValue(cellRating.value).toString();
             }
     }
 
@@ -407,18 +426,25 @@ export class GridGroupingSample {
     // Ratings Cell ----------------------------------------------------------------------
 
     private getRatingValue(value: number){
-        return Math.floor(value / 2).toString();
+        // This forumula is based on each cell rating has 10 values, while group cell has 5 values
+        // This allows rows to be grouped correctly in this particular sample
+        // Rating 1-2 goes to group with one star, 3-4 to group with two stars, etc.
+        return Math.floor((value + 1) / 2);
     }
 
     private getCellRating(cell: any): string {
         let retValue: string = 'app/integralui/resources/stars-small.png';
 
         if (cell.value){
-            let rating = this.getRatingValue(cell.value);
-            retValue = 'app/integralui/resources/stars-small-' + rating + '.png';
+            let rating = this.getRatingValue(cell.value).toString();
+            retValue = rating == '0' ? 'app/integralui/resources/stars-small.png' : 'app/integralui/resources/stars-small-' + rating + '.png';
         }
 
         return retValue;
+    }
+
+    onRatingValueChanged(e: any, cell: any){
+        cell.text = this.getRatingValue(cell.value).toString();
     }
 
     // Grouping Events -------------------------------------------------------------------

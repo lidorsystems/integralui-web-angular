@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseService, IntegralUIItemDisplayMode } from './integralui.core';
+import { IntegralUIBaseService, IntegralUIItemDisplayMode, IntegralUIMoveDirection } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -21,6 +21,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     private expandTimeout;
     private expandItem;
     protected currentItemDisplay: IntegralUIItemDisplayMode;
+    private isExpandBoxVisible;
     contentList: QueryList<IntegralUITreeItem>;
     contentRef: ViewContainerRef;
     contentElem: ElementRef;
@@ -36,6 +37,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     dataFields: any;
     indent: number;
     itemDisplay: IntegralUIItemDisplayMode;
+    showExpandBox: boolean;
     afterCollapse: EventEmitter<any>;
     afterExpand: EventEmitter<any>;
     beforeCollapse: EventEmitter<any>;
@@ -53,9 +55,9 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     private updateIsThereChildItems();
     protected processItemAdd(item?: any, parent?: any): void;
     protected processItemRemoval(item?: any, parent?: any): void;
+    itemDblClickEvent(e: any, obj: any): void;
     protected updateOptions(value?: any): void;
     protected updateDataFields(fields?: any): void;
-    getDataFields(): any;
     protected updateCurrentList(): void;
     private addChildItems(parentItem, indent, pid, flag, parent?);
     private addItemToCurrentList(item, indent, pid, flag, parent);
@@ -76,6 +78,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     getItemFromComponent(cmp: IntegralUITreeItem): any;
     getItemIndex(cmp: IntegralUITreeItem): number;
     getItemLevel(item: any): number;
+    getItemObject(item: any, key: string): any;
     getItemParent(item: any): any;
     getList(key?: string, parent?: any): any;
     protected isChildOf(targetItem: any, item: any): boolean;
@@ -86,8 +89,12 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     invokeEvent(key: string, item: any): boolean;
     invokeMethod(key: string, data: any): boolean;
     private changeExpanded(cmp);
-    processLeftArrowKey(item: any, e?: any): any;
-    processRightArrowKey(item: any, e?: any): any;
+    protected getItemRealIndex(item: any): any;
+    getPrevItem(item: any): any;
+    getNextItem(item: any): any;
+    moveItem(item: any, direction: IntegralUIMoveDirection, targetItem?: any, position?: number): void;
+    processLeftAritemKey(item: any, e?: any): any;
+    processRightAritemKey(item: any, e?: any): any;
     protected getContentSize(): {
         width: any;
         height: any;
@@ -102,10 +109,11 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     beginLoad(item?: any): void;
     endLoad(item?: any): void;
     private isItemLoading(item);
-    itemDblClickEvent(e: any, obj: any): void;
     scrollTo(item: any): void;
     protected clearComponentSelection(): void;
+    getControlStyle(): any;
     getBlockStyle(): any;
+    protected getItemInlineStyle(itemObj: any): any;
     protected updateItemStyle(obj: any): void;
     protected getItemStyle(value: any): {
         general: any;

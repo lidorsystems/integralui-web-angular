@@ -31,6 +31,13 @@ export declare enum IntegralUIAnchorStyle {
     Bottom = 4,
     Left = 8,
 }
+export declare enum IntegralUISpeedMode {
+    VerySlow = 0,
+    Slow = 1,
+    Normal = 2,
+    Fast = 3,
+    VeryFast = 4,
+}
 export declare enum IntegralUICheckState {
     Unchecked = 0,
     Indeterminate = 1,
@@ -42,6 +49,10 @@ export declare enum IntegralUIDirection {
     Right = 2,
     Below = 4,
     Left = 8,
+}
+export declare enum IntegralUIDragDropDisplayMode {
+    Popup = 0,
+    Handle = 1,
 }
 export declare enum IntegralUINumericDisplayMode {
     InBound = 0,
@@ -68,6 +79,17 @@ export declare enum IntegralUIIncrementMode {
     Partial = 1,
     Full = 2,
 }
+export declare enum IntegralUIMoveDirection {
+    After = 0,
+    At = 1,
+    Before = 2,
+    Down = 3,
+    First = 4,
+    Left = 5,
+    Last = 6,
+    Right = 7,
+    Up = 8,
+}
 export declare enum IntegralUIPlacement {
     Top = 0,
     Right = 1,
@@ -89,6 +111,11 @@ export declare enum IntegralUISortOrder {
     Ascending = 1,
     Descending = 2,
 }
+export declare enum IntegralUITabScrollMode {
+    None = 0,
+    InBound = 1,
+    OutBound = 2,
+}
 export declare enum IntegralUITabStripPlacement {
     Top = 0,
     Right = 1,
@@ -107,6 +134,15 @@ export declare class IntegralUIBaseComponent {
     private ctrlState;
     protected isEnabled: boolean;
     protected options: any;
+    protected clientRect: {
+        width: number;
+        height: number;
+    };
+    protected ctrlSize: any;
+    protected prevClientRect: {
+        width: number;
+        height: number;
+    };
     protected generalClassName: string;
     protected defaultStyle: any;
     protected ctrlClass: Array<any>;
@@ -114,7 +150,9 @@ export declare class IntegralUIBaseComponent {
     data: any;
     name: string;
     enabled: boolean;
+    size: any;
     state: IntegralUIObjectState;
+    enabledChanged: EventEmitter<any>;
     styleChanged: EventEmitter<any>;
     stateChanged: EventEmitter<any>;
     constructor(commonService?: IntegralUICommonService);
@@ -174,14 +212,6 @@ export declare class IntegralUIBaseValueComponent extends IntegralUIBaseComponen
     registerOnTouched(fn: () => void): void;
     processValueChange(): void;
     protected currentValue: any;
-    protected clientRect: {
-        width: number;
-        height: number;
-    };
-    protected prevClientRect: {
-        width: number;
-        height: number;
-    };
     protected contentClassName: string;
     protected contentClass: Array<any>;
     autoUpdate: boolean;
@@ -189,6 +219,7 @@ export declare class IntegralUIBaseValueComponent extends IntegralUIBaseComponen
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected initStyle(): void;
+    preventDragStart(e: any): void;
     updateLayout(): void;
     protected updateContentClass(): void;
     getContentClass(): any[];
@@ -219,6 +250,7 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected initStyle(): void;
+    getControlStyle(): any;
     protected updateContentClass(): void;
     getContentClass(): any[];
     protected getContentStyle(value: any): any;
@@ -275,6 +307,7 @@ export declare class IntegralUIHeaderItem extends IntegralUIItem {
     getExpandArrowTopLeftClass(): any[];
     getExpandArrowTopRightClass(): any[];
     expandBoxClicked(e: any): void;
+    getControlStyle(): any;
     protected updateStyle(value: any): void;
 }
 export declare class IntegralUITComponent {

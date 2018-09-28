@@ -1,4 +1,4 @@
-import { ElementRef, QueryList } from '@angular/core';
+import { ElementRef, EventEmitter, QueryList } from '@angular/core';
 import { IntegralUIBaseService } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
@@ -30,11 +30,17 @@ export declare class IntegralUITreeItem extends IntegralUIListItem {
     items: Array<any>;
     templateRef: any;
     expanded: boolean;
+    itemClick: EventEmitter<any>;
+    itemDblClick: EventEmitter<any>;
+    itemRightClick: EventEmitter<any>;
     constructor(elemRef: ElementRef, dataService: IntegralUIDataService, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected initStyle(): void;
     ngAfterViewInit(): void;
     ngAfterContentChecked(): void;
+    onClick(e: any): void;
+    onDblClick(e: any): void;
+    onRightClick(e: any): void;
     itemDragOver(e: any, flag?: boolean): void;
     itemDragDrop(e: any): void;
     isBlockExpanded(): boolean;
@@ -47,10 +53,14 @@ export declare class IntegralUITreeItem extends IntegralUIListItem {
     toggleContent(): void;
     getComponentFromItem(item: any): any;
     getItemFromComponent(cmp: IntegralUITreeItem): any;
+    getItemObject(item: any, key: string): any;
     protected isThereVisibleChildren(): boolean;
     getSize(): any;
+    checkExpandBoxVisibility(): any;
+    onMouseEnter(e: any): void;
     clearComponentSelection(): void;
     selectItem(): void;
+    getControlStyle(): any;
     getItemDisplayMode(): any;
     refresh(): void;
     protected updateBlockClass(): void;

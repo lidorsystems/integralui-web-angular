@@ -1,0 +1,70 @@
+/* Normal State */
+.iui-groupbox-header
+{
+	background-color: #808080;
+	border: thin solid #606060;
+}
+/* Hover State */
+.iui-groupbox-header-hovered
+{
+	background-color: #969696;
+	border: thin solid #606060;
+}
+/* Selected State */
+.iui-groupbox-header-selected
+{
+	background-color: #484848;
+	border-color: #121212;
+	color: white;
+}
+.iui-groupbox-content
+{
+	background-color: #363636;
+	border: solid thin #121212;
+	color: white;
+}
+
+.iui-groupbox-header .iui-groupbox-header-expand-box
+{
+	background: #cecece !important;
+}
+.iui-groupbox-header-selected .iui-groupbox-header-expand-box
+{
+	background: #ffffff !important;
+}
+
+.iui-groupbox-header-marker-down::before
+{
+	border: 7px solid #121212;
+	border-color:  transparent transparent #121212 transparent;
+	left: 3px;
+
+	animation-name: marker3;
+}
+.iui-groupbox-header-marker-down::after
+{
+	content: "";
+	border: 5px solid #363636;
+	border-color:  transparent transparent #363636 transparent;
+	position: absolute;
+	bottom: -1px;
+	left: 5px;
+	width: 0;
+	height: 0;
+	z-index: 2;
+
+	animation-name: marker;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes marker3
+{
+	0% { opacity: 0; }
+	80% { opacity: 0.75; }
+	100% { opacity: 1; }
+}

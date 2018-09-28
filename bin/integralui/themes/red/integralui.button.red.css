@@ -1,0 +1,19 @@
+.iui-button
+{
+	background: #f41800;
+	border: thin solid #d91500;
+	color: white;
+}
+
+.iui-button-hovered
+{
+	background: #ff5340;
+	border: thin solid #d91500;
+}
+
+.iui-button-selected
+{
+	background: #a61000;
+	border-color: #960000;
+	color: white;
+}

@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIBaseService, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIListGroup } from './integralui.listgroup';
@@ -34,6 +34,7 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     private removeIndex;
     private trialRef;
     groups: Array<any>;
+    mouseWheelSpeed: IntegralUISpeedMode;
     selectedIndex: number;
     selectedGroup: any;
     afterCollapse: EventEmitter<any>;
@@ -70,7 +71,7 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     private getGroupData(index);
     private getGroupIndex(group);
     private getComponentData(cmp);
-    invokeEvent(key: string, cmp: IntegralUIListGroup): boolean;
+    invokeEvent(key: string, cmp: IntegralUIListGroup, skip?: boolean): boolean;
     invokeMethod(key: string, cmp: IntegralUIListGroup): boolean;
     private isIndexInRange(index);
     private attachGroupEvents();
@@ -89,4 +90,5 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     private selectComponent(cmp);
     private selectComponentByIndex(index);
     selectGroup(group: any): void;
+    getControlStyle(): any;
 }

@@ -24,8 +24,6 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
             }
             .grbox-ovw-group-content
             {
-                background: white;
-                border: thin solid #dddddd;
                 padding: 10px;
                 border-top-color: transparent;
                 font-family: Calibri, Tahoma, Arial, Helvetica, sans-serif;

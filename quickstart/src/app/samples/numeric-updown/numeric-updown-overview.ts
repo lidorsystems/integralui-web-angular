@@ -18,7 +18,7 @@ import { IntegralUINumericDisplayMode } from '../../integralui/components/integr
     selector: '',
     template: `
         <style>
-           .num-ovw
+            .num-ovw
             {
                 width: 100px;
             }
@@ -64,6 +64,7 @@ import { IntegralUINumericDisplayMode } from '../../integralui/components/integr
                     <li><span style="color:#c60d0d">enabled</span> - Determines whether the component is enabled or disabled</li>
                     <li><span style="color:#c60d0d">min</span> - Specifies the minimum value</li>
                     <li><span style="color:#c60d0d">max</span> - Specifies the maximum value</li>
+                    <li><span style="color:#c60d0d">mouseWheelSpeed</span> - Specifies the scrolling speed of the mouse wheel</li>
                     <li><span style="color:#c60d0d">name</span> - Uniquely identifies the component</li>
                     <li><span style="color:#c60d0d">displayMode</span> - Determines the layout of the component</li>
                     <li><span style="color:#c60d0d">state</span> - Specifies the component state: disabled, hovered, etc.</li>

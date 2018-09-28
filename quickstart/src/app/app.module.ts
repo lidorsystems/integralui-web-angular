@@ -58,6 +58,7 @@ import { GridAddRowDynamicallySample } from './samples/grid/grid-add-row-dynamic
 import { GridCellDropDownSample } from './samples/grid/grid-cell-dropdown';
 import { GridCellDropDownCheckedListSample } from './samples/grid/grid-cell-dropdown-checked-list';
 import { GridCellTemplatesSample } from './samples/grid/grid-cell-templates';
+import { GridColumnDropDownSample } from './samples/grid/grid-column-dropdown';
 import { GridContextMenuSample } from './samples/grid/grid-context-menu';
 import { GridDragDropTreeGridSample } from './samples/grid/grid-drag-drop-treegrid';
 import { GridEventsSample } from './samples/grid/grid-events';
@@ -141,6 +142,7 @@ import { TreeGridAddRemoveSample } from './samples/treegrid/treegrid-add-remove'
 import { TreeGridAddRowDynamicallySample } from './samples/treegrid/treegrid-add-row-dynamically';
 import { TreeGridCellDropDownSample } from './samples/treegrid/treegrid-cell-dropdown';
 import { TreeGridCellDropDownCheckedListSample } from './samples/treegrid/treegrid-cell-dropdown-checked-list';
+import { TreeGridCellRatingSample } from './samples/treegrid/treegrid-cell-rating';
 import { TreeGridCellTemplatesSample } from './samples/treegrid/treegrid-cell-templates';
 import { TreeGridContextMenuSample } from './samples/treegrid/treegrid-context-menu';
 import { TreeGridDragDropSample } from './samples/treegrid/treegrid-drag-drop';
@@ -149,9 +151,11 @@ import { TreeGridExcelEditorSample } from './samples/treegrid/treegrid-excel-edi
 import { TreeGridExportSample } from './samples/treegrid/treegrid-export';
 import { TreeGridFastLoadSample } from './samples/treegrid/treegrid-fast-load';
 import { TreeGridFilterSample } from './samples/treegrid/treegrid-filter';
+import { TreeGridHighlightRowsSample } from './samples/treegrid/treegrid-highlight-rows';
 import { TreeGridMultiSelectSample } from './samples/treegrid/treegrid-multi-select';
 import { TreeGridOverviewSample } from './samples/treegrid/treegrid-overview';
 import { TreeGridPaginationSample } from './samples/treegrid/treegrid-pagination';
+import { TreeGridPaginationOnDemandSample } from './samples/treegrid/treegrid-pagination-on-demand';
 import { TreeGridShowHideHeaderFooterSample } from './samples/treegrid/treegrid-show-hide-header-footer';
 import { TreeGridSortingSample } from './samples/treegrid/treegrid-sorting';
 import { TreeGridTooltipSample } from './samples/treegrid/treegrid-tooltip';
@@ -163,10 +167,12 @@ import { TreeViewSample } from './samples/treeview/treeview-main';
 import { TreeViewAddRemoveSample } from './samples/treeview/treeview-add-remove';
 import { TreeViewAddItemsDynamicallySample } from './samples/treeview/treeview-add-items-dynamically';
 import { TreeViewCheckBoxSample } from './samples/treeview/treeview-checkbox';
+import { TreeViewComboBoxSample } from './samples/treeview/treeview-combobox';
 import { TreeViewContextMenuSample } from './samples/treeview/treeview-context-menu';
 import { TreeViewDragDropSample } from './samples/treeview/treeview-drag-drop';
 import { TreeViewEditingSample } from './samples/treeview/treeview-editing';
 import { TreeViewEventsSample } from './samples/treeview/treeview-events';
+import { TreeViewExpandBoxRightSample } from './samples/treeview/treeview-expandbox-right';
 import { TreeViewFastLoadSample } from './samples/treeview/treeview-fast-load';
 import { TreeViewFilterSample } from './samples/treeview/treeview-filter';
 import { TreeViewKeyboardSample } from './samples/treeview/treeview-keyboard';
@@ -256,6 +262,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'cell-dropdown', component: GridCellDropDownSample },
               { path: 'cell-dropdown-checked-list', component: GridCellDropDownCheckedListSample },
               { path: 'cell-templates', component: GridCellTemplatesSample },
+              { path: 'column-dropdown', component: GridColumnDropDownSample },
               { path: 'context-menu', component: GridContextMenuSample },
               { path: 'drag-drop-treegrid', component: GridDragDropTreeGridSample },
               { path: 'events', component: GridEventsSample },
@@ -416,6 +423,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'add-row-dynamically', component: TreeGridAddRowDynamicallySample },
               { path: 'cell-dropdown', component: TreeGridCellDropDownSample },
               { path: 'cell-dropdown-checked-list', component: TreeGridCellDropDownCheckedListSample },
+              { path: 'cell-rating', component: TreeGridCellRatingSample },
               { path: 'cell-templates', component: TreeGridCellTemplatesSample },
               { path: 'context-menu', component: TreeGridContextMenuSample },
               { path: 'drag-drop', component: TreeGridDragDropSample },
@@ -424,9 +432,11 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'export', component: TreeGridExportSample },
               { path: 'fast-load', component: TreeGridFastLoadSample },
               { path: 'filter', component: TreeGridFilterSample },
+              { path: 'highlight-rows', component: TreeGridHighlightRowsSample },
               { path: 'multi-select', component: TreeGridMultiSelectSample },
               { path: 'overview', component: TreeGridOverviewSample },
               { path: 'pagination', component: TreeGridPaginationSample },
+              { path: 'pagination-on-demand', component: TreeGridPaginationOnDemandSample },
               { path: 'show-hide-header-footer', component: TreeGridShowHideHeaderFooterSample },
               { path: 'sorting', component: TreeGridSortingSample },
               { path: 'tooltip', component: TreeGridTooltipSample }
@@ -446,10 +456,12 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'add-remove', component: TreeViewAddRemoveSample },
               { path: 'add-items-dynamically', component: TreeViewAddItemsDynamicallySample },
               { path: 'checkbox', component: TreeViewCheckBoxSample },
+              { path: 'combobox', component: TreeViewComboBoxSample },
               { path: 'context-menu', component: TreeViewContextMenuSample },
               { path: 'drag-drop', component: TreeViewDragDropSample },
               { path: 'editing', component: TreeViewEditingSample },
               { path: 'events', component: TreeViewEventsSample },
+              { path: 'expandbox-right', component: TreeViewExpandBoxRightSample },
               { path: 'fast-load', component: TreeViewFastLoadSample },
               { path: 'filter', component: TreeViewFilterSample },
               { path: 'keyboard', component: TreeViewKeyboardSample },
@@ -496,6 +508,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         GridCellDropDownSample,
         GridCellDropDownCheckedListSample,
         GridCellTemplatesSample,
+        GridColumnDropDownSample,
         GridContextMenuSample,
         GridDragDropTreeGridSample,
         GridEventsSample,
@@ -560,6 +573,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         TreeGridAddRowDynamicallySample,
         TreeGridCellDropDownSample,
         TreeGridCellDropDownCheckedListSample,
+        TreeGridCellRatingSample,
         TreeGridCellTemplatesSample,
         TreeGridContextMenuSample,
         TreeGridDragDropSample,
@@ -568,9 +582,11 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         TreeGridExportSample,
         TreeGridFastLoadSample,
         TreeGridFilterSample,
+        TreeGridHighlightRowsSample,
         TreeGridMultiSelectSample,
         TreeGridOverviewSample,
         TreeGridPaginationSample,
+        TreeGridPaginationOnDemandSample,
         TreeGridShowHideHeaderFooterSample,
         TreeGridSortingSample,
         TreeGridTooltipSample,
@@ -580,10 +596,12 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         TreeViewAddRemoveSample,
         TreeViewAddItemsDynamicallySample,
         TreeViewCheckBoxSample,
+        TreeViewComboBoxSample,
         TreeViewContextMenuSample,
         TreeViewDragDropSample,
         TreeViewEditingSample,
         TreeViewEventsSample,
+        TreeViewExpandBoxRightSample,
         TreeViewFastLoadSample,
         TreeViewFilterSample,
         TreeViewKeyboardSample,

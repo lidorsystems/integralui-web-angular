@@ -82,9 +82,11 @@ export class TreeViewSample {
             { text: "Context Menu", link: './context-menu' },
             { text: "Drag Drop", link: './drag-drop' },
             { text: "Events", link: './events' },
+            { text: "ExpandBox on Right", link: './expandbox-right' },
             { text: "Fast Load", link: './fast-load' },
             { text: "Filter", link: './filter' },
             { text: "Items with CheckBox", link: './checkbox' },
+            { text: "Items with ComboBox", link: './combobox' },
             { text: "Keyboard Navigation", link: './keyboard' },
             { text: "Label Edit", link: './editing' },
             { text: "Load on Demand", link: './load-on-demand' },
@@ -95,7 +97,7 @@ export class TreeViewSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[12];
+        this.selectedItem = this.sideList[14];
     }   
 
     ngAfterContentChecked(){

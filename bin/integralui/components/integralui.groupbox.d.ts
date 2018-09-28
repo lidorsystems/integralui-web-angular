@@ -38,7 +38,7 @@ export declare class IntegralUIGroupBox extends IntegralUIBaseComponent {
     beforeSelect: EventEmitter<any>;
     selectedChanged: EventEmitter<any>;
     protected callBeforeEvent(value?: boolean): boolean;
-    protected callAfterEvent(value?: boolean): boolean;
+    protected callAfterEvent(value?: boolean, skip?: boolean): boolean;
     constructor(commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     ngAfterContentInit(): void;
@@ -50,6 +50,7 @@ export declare class IntegralUIGroupBox extends IntegralUIBaseComponent {
     protected toggleContent(): void;
     getContentHeight(): number;
     setContentHeight(value: any): void;
+    getControlStyle(): any;
     protected updateContentClass(): void;
     getContentClass(): any[];
     protected getContentStyle(value: any): any;

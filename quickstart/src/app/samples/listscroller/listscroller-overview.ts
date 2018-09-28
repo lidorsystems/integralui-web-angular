@@ -18,38 +18,82 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
     selector: '',
     template: `
         <style>
-            .lscrl-ovw-vertical
-            {
-                height: 200px;
-            }
-
-            /* Control Panel */
             .lscrl-ovw-container
             {
-                float: left;
-                width: 300px;
+                width: 275px;
             }
-            .lscrl-ovw-control-panel
+            .lscrl-ovw-item-normal
             {
-                float: left;
-                margin-left: 150px;
-                padding-left: 20px;
-                width: 250px;
+                opacity: 0.5;
+            }
+            .lscrl-ovw-item-hovered, .lscrl-ovw-item-selected
+            {
+                opacity: 1;
+            }
+
+            .lscrl-ovw-icons
+            {
+                background: url(app/integralui/resources/movie-genres.png) no-repeat 0 0;
+                display: inline-block;
+                padding: 0;
+                margin: 3px 0;
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+            }
+            .adventure
+            {
+                background-position: -24px 0;
+            }
+            .comedy
+            {
+                background-position: -48px 0;
+            }
+            .action
+            {
+                background-position: -72px 0;
+            }
+            .sci-fi
+            {
+                background-position: -120px 0;
+            }
+            .biography
+            {
+                background-position: 0 -24px;
+            }
+            .horror
+            {
+                background-position: -24px -24px;
+            }
+            .drama
+            {
+                background-position: -48px -24px;
+            }
+            .music
+            {
+                background-position: -72px -24px;
+            }
+            .romance
+            {
+                background-position: -96px -24px;
+            }
+            .western
+            {
+                background-position: -120px -24px;
             }
         </style>
         <h2 class="feature-title">ListScroller / Overview</h2>
         <div class="feature-content">
             <div class="lscrl-ovw-container">
-                <iui-listscroller [controlStyle]="ctrlStyle" [items]="items" [itemSize]="{ width: 64, height: 22 }" [scrollMode]="ctrlScrollMode" #listscroll>
+                <label><input type="checkbox" [(ngModel)]="listEnabled" style="margin-bottom:20px">Movies</label>
+                <iui-listscroller [controlStyle]="ctrlStyle" [enabled]="listEnabled" [items]="items" [itemSize]="{ width: 48, height: 36 }" (selectionChanged)="onSelectionChanged($event)" #listscroll>
                     <ng-template let-item>
-                        <span>{{item.text}}</span>
+                        <div align="center">
+                            <div class="lscrl-ovw-icons {{item.icon}}"></div>
+                        </div>
                     </ng-template>
                 </iui-listscroller>
-            </div>
-            <div class="lscrl-ovw-control-panel">
-                <span>Scroll Mode:</span><br/><br/>
-                <label><input type="radio" [checked]="ctrlScrollMode == 0" (click)="scrollModeClicked()" />Horizontal</label>
-                <label><input type="radio" [checked]="ctrlScrollMode == 1"  (click)="scrollModeClicked(true)" />Vertical</label><br/><br/>
+                <div align="center" *ngIf="selectedItem" style="margin-top:10px">{{selectedItem.text}}</div>
             </div>
             <br style="clear:both;"/>
             <div class="feature-help" style="margin-top:50px;width:700px">
@@ -61,6 +105,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                     <li><span style="color:#c60d0d">enabled</span> - Determines whether the component is enabled or disabled</li>
                     <li><span style="color:#c60d0d">items</span> - Gets or sets the collection of items that are assigned to the component</li>
                     <li><span style="color:#c60d0d">itemSize</span> - Specifies the width and height of items</li>
+                    <li><span style="color:#c60d0d">mouseWheelSpeed</span> - Specifies the scrolling speed of the mouse wheel</li>
                     <li><span style="color:#c60d0d">name</span> - Uniquely identifies the component</li>
                     <li><span style="color:#c60d0d">scrollMode</span> - Specifies whether the view is scrolled horizontally or vertically</li>
                     <li><span style="color:#c60d0d">selectedItem</span> - An object that points to the currently selected item</li>
@@ -87,27 +132,37 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
 export class ListScrollerOverviewSample {
 
     public ctrlStyle: any = {
-        general: { normal: 'lscrl-ovw-vertical' }
-    }
-
-    public ctrlScrollMode: IntegralUIScrollMode = IntegralUIScrollMode.Horizontal;
-    public items: Array<any> = [];
-
-    constructor(){
-        for (let i = 1; i <= 10; i++){
-            let item: any = {
-                id: i,
-                text : 'Item ' + i.toString()
-            };
-
-            this.items.push(item);
+        item: {
+            general: { 
+                normal: 'lscrl-ovw-item-normal',
+                hovered: 'lscrl-ovw-item-hovered',
+                selected: 'lscrl-ovw-item-selected'
+            }
         }
     }
 
-    scrollModeClicked(flag?: boolean){
-        if (flag)
-            this.ctrlScrollMode = IntegralUIScrollMode.Vertical;
-        else
-            this.ctrlScrollMode = IntegralUIScrollMode.Horizontal;
+    public items: Array<any> = [];
+
+    public listEnabled: boolean = true;
+    public selectedItem: any = null;
+
+    constructor(){
+        this.items = [
+            { id: 1, icon: "sci-fi", text: "Sci-Fi" },
+            { id: 2, icon: "adventure", text: "Adventure",  },
+            { id: 3, icon: "action", text: "Action " },
+            { id: 4, icon: "drama", text: "Drama" },
+            { id: 5, icon: "music", text: "Music" },
+            { id: 6, icon: "comedy", text: "Comedy"  },
+            { id: 7, icon: "biography", text: "Biography"  },
+            { id: 8, icon: "crime", text: "Crime" },
+            { id: 9, icon: "western", text: "Western"  },
+            { id: 10, icon: "horror", text: "Horror" },
+            { id: 11, icon: "romance", text: "Romance" }
+        ];
+    }
+
+    onSelectionChanged(e: any){
+        this.selectedItem = e.item;
     }
 }

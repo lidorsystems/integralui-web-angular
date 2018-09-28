@@ -1,0 +1,11 @@
+.iui-treeitem-content-hovered
+{
+	background-color: #82ff82;
+	border: 2px solid #82ff82;
+}
+.iui-treeitem-content-selected
+{
+	background-color: #00c400;
+	border: 2px solid #00c400;
+	color: white;
+}

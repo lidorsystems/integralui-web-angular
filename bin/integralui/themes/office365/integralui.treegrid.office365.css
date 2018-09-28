@@ -1,0 +1,76 @@
+.iui-treegrid
+{
+	background-color: white;
+	border: thin solid #dddddd;
+    color: #000000;
+}
+.iui-treegrid-column-header, .iui-treegrid-column-footer
+{
+	background-color: #ffffff;
+	border-color: transparent;
+	border-bottom: thin solid #eaeaea;
+}
+.iui-treegrid-column-header-hovered
+{
+	background-color: #eaeaea !important;
+	border-color: #eaeaea !important;
+    color: #000000;
+}
+.iui-treegrid-column-header-selected
+{
+	background-color: #c8c8c8 !important;
+	border-bottom-color: #767676 !important;
+    color: #000000;
+}
+.iui-treegrid-column-header-cell-selected
+{
+	background-color: transparent;
+}
+.iui-treegrid-row-hovered
+{
+	background-color: #beddf4;
+}
+.iui-treegrid-row-selected
+{
+	background-color: #d7eaf9;
+	color: #000000;
+}
+.iui-treegrid-row-cell:first-child
+{
+	border-left: thin solid transparent;
+}
+.iui-treegrid-row-cell:last-child
+{
+	border-right: thin solid transparent;
+}
+.iui-treegrid-lines-horizontal
+{
+	border-bottom: thin solid transparent;
+}
+.iui-treegrid-lines-vertical
+{
+	border-right: thin solid transparent;
+}
+.iui-treegrid-lines-both
+{
+	border-right: thin solid transparent;
+	border-bottom: thin solid transparent;
+}
+.iui-treegrid-expand-box-open
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	opacity: 0.5;
+}
+.iui-treegrid-expand-box-close
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+}
+
+.iui-treegrid .iui-sort-ascending
+{
+    background-position: -48px -80px;
+}
+.iui-treegrid .iui-sort-descending
+{
+    background-position: -32px -80px;
+}

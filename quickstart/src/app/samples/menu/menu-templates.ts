@@ -24,7 +24,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             .menu-tpl-style .iui-menuitem-root
             {
                 margin-right: 10px !important;
-                width: 40px;
+                width: 55px;
             }
             .menu-tpl-style .iui-menuitem
             {

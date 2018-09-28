@@ -107,6 +107,18 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             {
                 background-position: -120px -24px;
             }
+            .lbox-ovw-rating
+            {
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+                display: inline-block;
+                margin: auto;
+            }
+            .lbox-ovw-rating-stars-content
+            {
+                background-image: url(app/integralui/resources/rating/star-empty-white.png);
+            }
         </style>
         <h2 class="feature-title">ListBox / Overview</h2>
         <div class="feature-content">
@@ -117,7 +129,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
                             <span class="lbox-ovw-icons {{item.icon}}"></span>
                             <span class="lbox-ovw-title">{{item.text}}</span>
                             <span class="lbox-ovw-year">{{item.year}}</span>
-                            <img src="{{getRating(item.rating)}}" />
+                            <iui-rating [controlStyle]="lboxOverviewRatingStyleStars" [value]="getRating(item.rating)" [max]="5"></iui-rating>
                         </div>
                     </iui-listitem>
                 </iui-listbox>
@@ -125,7 +137,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             <br style="clear:both;"/>
             <div class="feature-help" style="width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> ListBox</strong> is a native Angular component that represents a list of custom HTML elements that you can reorder dynamically during run-time using drag drop operations.</p>
-                <p><span class="initial-space"></span>This example displays a list of movies represented by some general info about each movie: genre, title, rating and year when it is released. By click and hold of the left mouse button, you can drag and drop each item from the list over other items.</p>
+                <p><span class="initial-space"></span>This example displays a list of movies represented by some general info about each movie: genre, title, rating and year when it is released. By click and hold of the left mouse button, you can drag and drop each item from the list over other items. Rating is displayed using the <a routerLink="/rating">IntegralUI Rating</a> component.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>listbox/listbox-overview.ts</i>) file, or read the following article:</p> 
                 <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/listbox/listbox-component.aspx">Overview of IntegralUI ListBox for Angular</a></p>
             </div>
@@ -149,12 +161,17 @@ export class ListBoxOverviewSample {
         }
     }
 
+    public lboxOverviewRatingStyleStars: any = {
+        general: { normal: 'lbox-ovw-rating' },
+        content: { normal: 'lbox-ovw-rating-stars-content'}
+    }
+
     public selMode: IntegralUISelectionMode = IntegralUISelectionMode.MultiExtended;
 
     constructor(){
         this.items = [
             { id: 1, icon: "sci-fi", text: "Star Trek", year: "2009", rating: 8.0 },
-            { id: 2, icon: "adventure", text: "Cast Away", year: "2000", rating: 7.7  },
+            { id: 2, icon: "adventure", text: "Cast Away", year: "2000", rating: 7.7, style: { color: 'red' }  },
             { id: 3, icon: "action", text: "Gladiator ", year: "2000", rating: 8.5 },
             { id: 4, icon: "drama", text: "Malèna", year: "2000", rating: 7.5 },
             { id: 5, icon: "music", text: "Moulin Rouge", year: "2001", rating: 7.6 },
@@ -177,7 +194,6 @@ export class ListBoxOverviewSample {
     }   
 
     getRating(value: any){
-        let stars = Math.floor(value / 2);
-        return "app/integralui/resources/stars-small-" + stars + ".png";
+        return Math.floor(value / 2);
     }
 }

@@ -26,10 +26,12 @@ export declare class IntegralUIDropDownButton extends IntegralUIButton {
     private getAdjustmentValue(value?);
     private updateDropDownSettings(value?);
     updateAdjustment(): void;
+    onButtonContextMenu(e: any): void;
     onDropDownItemClick(e: any): void;
     onDropDownOpening(e: any): void;
     onDropDownOpened(e: any): void;
     onDropDownClosed(e: any): void;
+    getControlStyle(): any;
     getDefaultDropDownStyle(): {
         general: {
             normal: string;

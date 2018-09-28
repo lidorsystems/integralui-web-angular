@@ -14,5 +14,6 @@ export declare class IntegralUIProgressBar extends IntegralUIBaseValueComponent 
     ngAfterContentChecked(): void;
     processValueChange(): void;
     updateLayout(): void;
+    getControlStyle(): any;
     getProgressStyle(): any;
 }

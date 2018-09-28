@@ -15,7 +15,8 @@
 	border: thin solid #cecece;
 	padding: 2px 0;
 	white-space: nowrap;
-}.iui-combobox-header-hovered, .iui-combobox-header-selected
+}
+.iui-combobox-header-hovered, .iui-combobox-header-selected
 {
 	background: transparent;
 	border: thin solid #cecece;

@@ -36,7 +36,7 @@ export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent
     private removeTimers();
     open(elemPageRect: any, elemSize: any, appSize?: any): void;
     show(elemPageRect: any, elemSize: any, appSize?: any): void;
-    size(): any;
+    getSize(): any;
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
 }
@@ -47,6 +47,7 @@ export declare class IntegralUIDropDown {
     private eventList;
     private templateData;
     private isDropDownOpen;
+    private winScrollPos;
     templates: QueryList<IntegralUITemplate>;
     private cmpRef;
     private templateList;
@@ -61,7 +62,7 @@ export declare class IntegralUIDropDown {
     closeDropDown(): void;
     close(): void;
     open(mouseEvent?: any): void;
-    size(): {
+    getSize(): {
         width: any;
         height: any;
     };

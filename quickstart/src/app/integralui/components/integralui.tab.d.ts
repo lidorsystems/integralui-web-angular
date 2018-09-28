@@ -17,8 +17,10 @@ export declare class IntegralUITab extends IntegralUIBaseComponent {
     elemHeight: string;
     elemOrder: number;
     elemBorderColor: string;
-    text: string;
+    allowDrag: boolean;
+    allowDrop: boolean;
     icon: string;
+    text: string;
     selected: boolean;
     selectedChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);

@@ -118,6 +118,54 @@
 	overflow: hidden;
 	position: absolute;
 }
+.iui-splitcontainer-button-block
+{
+	cursor: default;
+	display: inline-block;
+	margin: 0;
+	padding: 2px;
+	position: absolute;
+	overflow: hidden;
+}
+.iui-splitcontainer-button
+{
+	border: thin solid #808080;
+	border-radius: 2px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	opacity: 0.75;
+}
+.iui-splitcontainer-button:hover
+{
+	background: #fefefe;
+	opacity: 1;
+}
+.iui-splitcontainer-button-selected
+{
+	background: #ffffff;
+	opacity: 1;
+}
+.iui-splitcontainer-button span
+{
+    background-image: url(../resources/icons.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+}
+
+.iui-splitcontainer-button-vertical span
+{
+    background-position: -208px -112px;
+}
+.iui-splitcontainer-button-horizontal span
+{
+    background-position: -192px -112px;
+}
 
 /* Disabled State */
 .iui-splitcontainer-disabled div
@@ -125,4 +173,3 @@
 	opacity: 0.75;
 	pointer-events: none;
 }
-

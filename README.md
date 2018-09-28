@@ -131,6 +131,13 @@ After installation, in angular-cli.json under styles section add this code line:
 "../node_modules/integralui-web/bin/integralui/css/integralui.module.css"
 ```
 
+To apply a theme, add import statement in your styles.css file (after the integralui.module.css is imported), using the name of corresponding file. For example, to apply a Blue theme, use this code:
+```bash
+@import '~ ... /integralui/themes/integralui.themes.blue.css';
+```
+<b>Note</b>   You can choose a theme from available themes located at '~ ... /integralui/themes' folder.
+
+
 To include resources that are used by IntegralUI components in your project during build, add the following code under <b>assets</b> section:
 
 ```bash

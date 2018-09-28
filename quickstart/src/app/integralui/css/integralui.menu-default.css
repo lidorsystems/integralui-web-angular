@@ -25,7 +25,9 @@
 }
 .iui-menuitem-root
 {
+	background: none;
 	border: thin solid transparent;
+	color: black;
 	display: inline-block;
 	position: relative;
 	list-style-type: none;
@@ -280,6 +282,7 @@
 }
 .iui-menuitem-root-separator, .iui-menuitem-separator
 {
+	background: transparent;
     border: 0;
 	margin: 0;
 	padding: 3px;

@@ -1,0 +1,21 @@
+.iui-splitcontainer-splitter
+{
+	background-color: #646464;
+	border: thin solid #363636;
+}
+.iui-splitcontainer-tab
+{
+	background-color: #363636;
+	border: solid thin #121212;
+	color: white;
+}
+.iui-splitcontainer-tab-selected
+{
+	background: #363636;
+}
+.iui-splitcontainer-panel
+{
+	background: #363636;
+	border: thin solid #121212;
+	color: white;
+}

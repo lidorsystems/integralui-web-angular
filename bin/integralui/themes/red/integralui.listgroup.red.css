@@ -1,0 +1,31 @@
+@import 'integralui.groupbox.red.css';
+
+/* Header Normal State */
+.iui-listgroup-header
+{
+	background-color: #f41800;
+	border: thin solid #d91500;
+	color: white;
+}
+/* Header Hover State */
+.iui-listgroup-header-hovered
+{
+	background-color: #ff5340;
+}
+/* Header Selected State */
+.iui-listgroup-header-selected
+{
+	background-color: #a61000;
+	border-color: #960000;
+	color: white;
+}
+.iui-listgroup-content
+{
+	background-color: #fff0f0;
+	border: solid thin #fb4b54;
+}
+
+.iui-listgroup-header .iui-listgroup-header-expand-box
+{
+	background: #ffffff !important;
+}

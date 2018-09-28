@@ -1,0 +1,42 @@
+.iui-tab-header
+{
+	background-color: #808080;
+	border: solid thin #606060;
+	border-bottom-color: #363636;
+	color: white;
+}
+.iui-tab-header-hovered
+{
+	background-color: #969696;
+	border: solid thin #606060;
+	color: black;
+}
+.iui-tab-header-selected
+{
+	background-color: #363636;
+	border: solid thin #121212;
+	color: white;
+}
+.iui-tab-content
+{
+	background: #363636;
+	border-color: #121212;
+	color: white;
+}
+.iui-tab-selected-top
+{
+	border-bottom-color: #363636;
+}
+.iui-tab-selected-right
+{
+	border-left-color: #363636;
+}
+.iui-tab-selected-bottom
+{
+	border-top-color: #363636;
+}
+.iui-tab-selected-left
+{
+	border-right-color: #363636;
+}
+

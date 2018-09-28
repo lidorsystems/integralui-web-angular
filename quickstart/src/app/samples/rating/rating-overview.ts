@@ -52,6 +52,7 @@ import { IntegralUIIncrementMode } from '../../integralui/components/integralui.
                 <ul class="feature-points">
                     <li><span style="color:#c60d0d">controlStyle</span> - Specifies an object that contains all style settings for the component</li>
                     <li><span style="color:#c60d0d">data</span> - Specifies an object that holds data related to the component</li>
+                    <li><span style="color:#c60d0d">division</span> - Specifies a number by which rating values are divided, used to display large values within small component size</li>
                     <li><span style="color:#c60d0d">enabled</span> - Determines whether the component is enabled or disabled</li>
                     <li><span style="color:#c60d0d">increment</span> - Determines how the rating value changes: Free, Partial or Full</li>
                     <li><span style="color:#c60d0d">max</span> - Specifies the maximum value</li>

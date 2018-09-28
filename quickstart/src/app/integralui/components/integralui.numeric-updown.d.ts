@@ -1,5 +1,5 @@
 import { ElementRef, EventEmitter } from '@angular/core';
-import { IntegralUIBaseValueComponent, IntegralUINumericDisplayMode } from './integralui.core';
+import { IntegralUIBaseValueComponent, IntegralUINumericDisplayMode, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
@@ -24,8 +24,9 @@ export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponen
     topBottomButtonsChildElem: ElementRef;
     accelerator: number;
     displayMode: IntegralUINumericDisplayMode;
-    min: number;
     max: number;
+    min: number;
+    mouseWheelSpeed: IntegralUISpeedMode;
     step: number;
     value: number;
     displayModeChanged: EventEmitter<any>;
@@ -45,4 +46,5 @@ export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponen
     ctrlMouseWheel(e: any): void;
     onMouseDown(e: any, flag?: boolean): void;
     onMouseUp(e: any): void;
+    getControlStyle(): any;
 }

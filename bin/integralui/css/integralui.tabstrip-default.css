@@ -4,6 +4,7 @@
 	position: relative;
 	color: black;
 	cursor: default;
+	overflow: hidden;
 	
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -21,6 +22,77 @@
 	padding: 0;
 	white-space: nowrap;
 }
+.iui-tabstrip-scroll-inbound, .iui-tabstrip-scroll-outbound
+{
+	background: #ffffff;
+	cursor: default;
+	display: inline-block;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	z-index: 3;
+}
+.iui-tabstrip-scroll-button
+{
+	border: thin solid #808080;
+	border-radius: 2px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	opacity: 0.6;
+}
+.iui-tabstrip-scroll-button:hover
+{
+	background: #fefefe;
+	opacity: 1;
+}
+.iui-tabstrip-scroll-button-selected
+{
+	background: #ffffff;
+	opacity: 1;
+}
+.iui-tabstrip-scroll-button span
+{
+    background-image: url(../resources/icons-x24.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+}
+.iui-tabstrip-scroll-button-left, .iui-tabstrip-scroll-button-right
+{
+	margin-top: 2px;
+}
+.iui-tabstrip-scroll-button-left span
+{
+    background-position: -120px -192px;
+}
+.iui-tabstrip-scroll-button-right span
+{
+    background-position: -144px -192px;
+}
+.iui-tabstrip-scroll-button-up
+{
+	margin: 2px 0;
+}
+.iui-tabstrip-scroll-button-up, .iui-tabstrip-scroll-button-down
+{
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+.iui-tabstrip-scroll-button-up span
+{
+    background-position: -168px -192px;
+}
+.iui-tabstrip-scroll-button-down span
+{
+    background-position: -192px -192px;
+}
 
 /* Disabled State */
 .iui-tabstrip-disabled div
@@ -28,4 +100,3 @@
 	opacity: 0.75;
 	pointer-events: none;
 }
-

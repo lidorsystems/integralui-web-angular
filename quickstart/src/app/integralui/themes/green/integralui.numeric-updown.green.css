@@ -1,0 +1,35 @@
+.iui-numeric-inbound-btn
+{
+	background: #00bf00;
+	border: solid thin #4ba346;
+}
+.iui-numeric-inbound-btn:hover
+{
+	background: #00d100;
+	border: thin solid #4ba346;
+}
+
+/* DisplayMode - LeftRight */
+.iui-numeric-leftright-buttons
+{
+	background: #00bf00;
+	border: solid thin #4ba346;
+}
+.iui-numeric-leftright-buttons:hover
+{
+	background: #00d100;
+	border: thin solid #4ba346;
+}
+
+/* DisplayMode - UpDown */
+.iui-numeric-updown-buttons
+{
+	background: #00bf00;
+	border: solid thin #4ba346;
+}
+.iui-numeric-updown-buttons:hover
+{
+	background: #00d100;
+	border: thin solid #4ba346;
+}
+

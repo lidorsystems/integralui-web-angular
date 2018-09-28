@@ -1,0 +1,118 @@
+.iui-grid
+{
+	border: thin solid #d9d9d9;
+    color: #000000;
+}
+.iui-grid-column-header, .iui-grid-column-footer
+{
+	background-color: #ffffff;
+	border-color: transparent;
+	border-right: thin solid #e6e6e6 !important;
+	color: #49678f;
+}
+.iui-grid-column-header
+{
+	border-bottom: thin solid #e6e6e6 !important;
+}
+.iui-grid-column-footer
+{
+	border-top: thin solid #e6e6e6 !important;
+	color: #323232;
+}
+.iui-grid-column-header-hovered
+{
+	background-color: #d9ebf9;
+	border-color: #d9ebf9;
+    color: #49678f;
+}
+.iui-grid-column-header-selected
+{
+	background-color: #bcdcf4;
+	border-right-color: #bcdcf4;
+    color: #3d5576;
+}
+.iui-grid-column-header-cell-selected
+{
+	background-color: transparent;
+}
+.iui-grid-row-hovered
+{
+	background-color: #e5f3fe;
+}
+.iui-grid-row-selected
+{
+	background-color: #cce8ff;
+	border-color: #99d1ff;
+	color: #000000;
+}
+.iui-grid-row-cell:first-child
+{
+	border-left: thin solid transparent;
+}
+.iui-grid-row-cell:last-child
+{
+	border-right: thin solid transparent;
+}
+.iui-grid-lines-horizontal
+{
+	border-bottom: thin solid transparent;
+}
+.iui-grid-lines-vertical
+{
+	border-right: thin solid transparent;
+}
+.iui-grid-lines-both
+{
+	border-right: thin solid transparent;
+	border-bottom: thin solid transparent;
+}
+.iui-grid-expand-box-open
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	opacity: 0.5;
+}
+.iui-grid-expand-box-close
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+}
+
+
+/* Grouping */
+.iui-grid-grouping-panel
+{
+	background-color: #ffffff;
+	border-bottom: thin solid #d9d9d9;
+}
+.iui-grid-grouping-panel-item
+{
+	background-color: #e2e2e2;
+	border: thin solid #e2e2e2;
+}
+.iui-grid-grouping-panel-toolbar-button-add
+{
+	background: #e2e2e2;
+    border: thin solid #e2e2e2;
+}
+.iui-grid-grouping-marker::before
+{
+	border: 6px solid #e2e2e2;
+	border-color: transparent transparent transparent #e2e2e2;
+}
+.iui-grid-grouping-marker::after
+{
+	border: 6px solid #e2e2e2;
+	border-color: transparent transparent transparent #e2e2e2;
+}
+.iui-grid-grouping-panel-dropdown-list li:hover
+{
+    background: #e5e5e5;
+}
+
+.iui-grid .iui-sort-ascending
+{
+    background-position: -48px -80px;
+}
+.iui-grid .iui-sort-descending
+{
+    background-position: -32px -80px;
+}

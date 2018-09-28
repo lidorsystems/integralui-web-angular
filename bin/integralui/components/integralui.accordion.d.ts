@@ -1,10 +1,11 @@
-import { ComponentFactoryResolver, EventEmitter, QueryList, ViewContainerRef } from '@angular/core';
+import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIGroupBox } from './integralui.groupbox';
 export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
+    protected elemRef: ElementRef;
     protected commonService: IntegralUICommonService;
     protected cmpResolver: ComponentFactoryResolver;
     protected baseService: IntegralUIBaseService;
@@ -34,7 +35,7 @@ export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     groupRemoving: EventEmitter<any>;
     groupRemoved: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
@@ -61,7 +62,7 @@ export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     private getGroupIndex(group);
     private getComponentData(cmp);
     private getComponentFromGroup(group);
-    invokeEvent(key: string, cmp: IntegralUIGroupBox): boolean;
+    invokeEvent(key: string, cmp: IntegralUIGroupBox, skip?: boolean): boolean;
     invokeMethod(key: string, cmp: IntegralUIGroupBox): boolean;
     private isIndexInRange(index);
     updateLayout(): void;
@@ -70,5 +71,6 @@ export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     private selectComponent(cmp);
     private selectComponentByIndex(index);
     selectGroup(group: any): void;
+    getControlStyle(): any;
     refresh(): void;
 }

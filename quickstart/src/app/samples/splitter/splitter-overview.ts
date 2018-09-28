@@ -57,7 +57,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
         </style>
         <h2 class="feature-title">Splitter / Overview</h2>
         <div class="feature-content">
-            <div style="width:600px">
+            <div style="width:600px;height:400px;">
                 <div class="spt-ovw-panel-split" #panel1>
                     <span class="spt-ovw-panel-content">{{content1.body}}</span>
                 </div>
@@ -66,7 +66,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
                     <div class="spt-ovw-panel-split spt-ovw-panel-inline" #panel2>
                         <span class="spt-ovw-panel-content">{{content2.body}}</span>
                     </div>
-                    <iui-splitter [panel1]="panel2Elem" [panel2]="panel3Elem" [splitterDistance]="200" style="height:100%;"></iui-splitter>
+                    <iui-splitter [panel1]="panel2Elem" [panel2]="panel3Elem" [splitterDistance]="200"></iui-splitter>
                     <div class="spt-ovw-panel-split spt-ovw-panel-inline" #panel3>
                         <span class="spt-ovw-panel-content">{{content3.body}}</span>
                     </div>

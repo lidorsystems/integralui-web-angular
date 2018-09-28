@@ -1,0 +1,34 @@
+@import 'integralui.groupbox.office365.css';
+
+/* Header Normal State */
+.iui-listgroup-header
+{
+	background-color: #ebf2f7;
+	border: solid thin #a5c7fe;
+	color: #484848;
+}
+/* Header Hover State */
+.iui-listgroup-header-hovered
+{
+	background-color: #dde4e9;
+	border-color: #dde4e9;
+}
+/* Header Selected State */
+.iui-listgroup-header-selected
+{
+	background-color: #2e7fc2;
+	border-color: #2e7fc2;
+	color: #efefef;
+}
+.iui-listgroup-content
+{
+	background-color: #ffffff;
+	border: solid thin #a5c7fe;
+
+	border-top-color: transparent;
+}
+
+.iui-listgroup-header-selected .iui-listgroup-header-expand-box
+{
+	background: #ffffff !important;
+}

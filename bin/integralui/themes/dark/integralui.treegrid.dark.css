@@ -1,0 +1,71 @@
+.iui-treegrid
+{
+	background-color: #323232;
+	border: thin solid #121212;
+	color: #b5b5b5;
+}
+.iui-treegrid table
+{
+	color: #b5b5b5;
+}
+.iui-treegrid-block
+{
+	background: #323232;
+}
+.iui-treegrid-column-header, .iui-treegrid-column-footer
+{
+	background-color: #242424;
+	border-color: #121212;
+}
+.iui-treegrid-column-header-hovered
+{
+	background-color: #858585;
+	border-color: #959595;
+	color: white;
+}
+.iui-treegrid-column-header-selected
+{
+	background-color: #040404;
+	border: thin solid #000000;
+	color: white;
+}
+.iui-treegrid-row-hovered
+{
+	background-color: #808080;
+	color: black;
+}
+.iui-treegrid-row-selected
+{
+	background-color: #646464;
+	color: white;
+}
+.iui-treegrid-row-cell:first-child
+{
+	border-left: thin solid #242424;
+}
+.iui-treegrid-row-cell:last-child
+{
+	border-right: thin solid #242424;
+}
+.iui-treegrid-lines-horizontal
+{
+	border-bottom: thin solid #242424;
+}
+.iui-treegrid-lines-vertical
+{
+	border-right: thin solid #242424;
+}
+.iui-treegrid-lines-both
+{
+	border-right: thin solid #242424;
+	border-bottom: thin solid #242424;
+}
+
+.iui-treegrid-expand-box-open
+{
+	background: url(../../resources/expand-white.png) no-repeat 0 0;
+}
+.iui-treegrid-expand-box-close
+{
+	background: url(../../resources/collapse-white.png) no-repeat 0 0;
+}

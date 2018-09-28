@@ -21,7 +21,7 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
     private removeTimers();
     open(elemPageRect: any, elemSize: any): void;
     show(elemPageRect: any, elemSize: any): void;
-    size(): any;
+    getSize(): any;
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
 }
@@ -35,7 +35,7 @@ export declare class IntegralUITooltip {
     tooltipRef: any;
     constructor(elemRef: ElementRef, cmpResolver: ComponentFactoryResolver, commonService?: IntegralUICommonService);
     closeTooltip(): void;
-    size(): {
+    getSize(): {
         width: any;
         height: any;
     };

@@ -45,6 +45,23 @@ import { Component, ViewContainerRef, ViewChild } from '@angular/core';
             <div class="feature-help" style="width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> SlideBar</strong> is a native Angular component that allows you to animate slides created using images or custom content.</p>
                 <p><span class="initial-space"></span>The demonstration above shows only the basic features available in SlideBar component. There are few slides each showing a title. Slide changes are automatic and animated from right to left. Whenever a slide is selected, an animation runs showing the slide content in current view of the SlideBar component. Using navigation buttons, you can quickly switch to specific slide.</p>
+                <ul class="feature-points">
+                    <li><span style="color:#c60d0d">allowAnimation</span> - Determines whether animation is enabled or not</li>
+                    <li><span style="color:#c60d0d">animationPause</span> - Specifies a time delay in milliseconds between slide changes during animation</li>
+                    <li><span style="color:#c60d0d">animationSpeed</span> - Specifies the speed of animation</li>
+                    <li><span style="color:#c60d0d">controlStyle</span> - Specifies an object that holds the names of custom CSS classes</li>
+                    <li><span style="color:#c60d0d">navigationButtons</span> - Determines whether left/right navigation buttons are visible or not</li>
+                    <li><span style="color:#c60d0d">selectedIndex</span> - Specifies the index of currently selected slide</li>
+                    <li><span style="color:#c60d0d">selectedSlide</span> - An object that points to the currently selected slide</li>
+                    <li><span style="color:#c60d0d">slides</span> - Holds a reference to the slide collection defined in your application component</li>
+                    <br/>
+                    <li><span style="color:#c60d0d">clear</span> - Occurs when all items are removed from the SlideBar</li>
+                    <li><span style="color:#c60d0d">slideAdded</span> - Occurs when new slide is added to the SlideBar</li>
+                    <li><span style="color:#c60d0d">slideAdding</span> - Occurs before slide is added</li>
+                    <li><span style="color:#c60d0d">slideRemoved</span> - Occurs when slide is removed from the SlideBar</li>
+                    <li><span style="color:#c60d0d">slideRemoving</span> - Occurs before slide is removed</li>
+                    <li><span style="color:#c60d0d">slideChanged</span> - Occurs when currently selected slide has changed</li>
+                </ul>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>slidebar/slidebar-overview.ts</i>) file, or read the following article:</p> 
                 <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx">Overview of IntegralUI SlideBar for Angular</a></p>
             </div>

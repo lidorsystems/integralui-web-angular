@@ -27,6 +27,7 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
+    ngAfterContentChecked(): void;
     addItem(item: any): void;
     clearItems(): void;
     insertItemAt(item: any, index: number): void;
@@ -36,6 +37,7 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     protected updateScrollItemList(): void;
     getItemFromComponent(cmp: IntegralUIListItem): any;
     protected updateItemList(): void;
+    invokeEvent(key: string, item: any): boolean;
     protected updateBlockSize(): void;
     protected getContentSize(): {
         width: any;
@@ -43,6 +45,7 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     };
     protected getItemElemList(): ElementRef[];
     updateLayout(): void;
+    getControlStyle(): any;
     private resetRefresh();
     refresh(obj?: any): void;
 }

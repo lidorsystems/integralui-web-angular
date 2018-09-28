@@ -1,0 +1,41 @@
+.iui-tab-header
+{
+	background-color: #31d928;
+	border: solid thin #4ba346;
+	border-bottom-color: gray;
+	color: white;
+}
+.iui-tab-header-hovered
+{
+	background-color: #6dec66;
+	border: solid thin #25df1c;
+	color: black;
+}
+.iui-tab-header-selected
+{
+	background-color: white;
+	border: solid thin gray;
+	color: black;
+}
+.iui-tab-content
+{
+	background: white;
+	border-color: gray;
+}
+.iui-tab-selected-top
+{
+	border-bottom-color: white;
+}
+.iui-tab-selected-right
+{
+	border-left-color: white;
+}
+.iui-tab-selected-bottom
+{
+	border-top-color: white;
+}
+.iui-tab-selected-left
+{
+	border-right-color: white;
+}
+

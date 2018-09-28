@@ -160,7 +160,6 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewOverviewSample {
-
     @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
 
     public items: Array<any>;

@@ -23,7 +23,6 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             }
             .acc-ovw-group-content
             {
-                border: thin solid #bbbbbb;
                 border-top-color: transparent;
                 padding: 10px;
             }

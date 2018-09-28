@@ -66,7 +66,6 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
     encapsulation: ViewEncapsulation.None
 })
 export class ListBoxFastLoadSample {
-
     @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
     @ViewChild('listbox') listbox: IntegralUIListBox;
 

@@ -1,0 +1,20 @@
+.iui-splitcontainer-tab
+{
+	background-color: #c5dbea;
+	border: solid thin #c5dbea;
+	color: #242424;
+}
+.iui-splitcontainer-splitter
+{
+	background-color: #ebf2f7;
+	border: solid thin #c5dbea;
+}
+.iui-splitcontainer-panel
+{
+	border-color: #c5dbea;
+}
+.iui-splitcontainer-swap-button:hover
+{
+	background: #dde4e9;
+	border-color: #c5dbea;
+}

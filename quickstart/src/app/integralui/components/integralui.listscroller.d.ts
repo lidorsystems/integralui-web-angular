@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIScrollMode, IntegralUISortOrder } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIScrollMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
@@ -57,6 +57,7 @@ export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
     protected refreshTimer: any;
     items: Array<any>;
     itemSize: any;
+    mouseWheelSpeed: IntegralUISpeedMode;
     scrollMode: IntegralUIScrollMode;
     selectedItem: any;
     sorting: IntegralUISortOrder;
@@ -124,8 +125,8 @@ export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
     protected updateScrollSize(): void;
     private changeValueTimerElapsed(flag?);
     private changeValue(flag?);
-    decreaseValue(): void;
-    increaseValue(): void;
+    prevItem(): void;
+    nextItem(): void;
     private startChange(flag?);
     private stopChange();
     findItemById(id: any): any;
@@ -137,7 +138,7 @@ export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
     protected applySorting(list: Array<any>): void;
     protected isSortingAllowed(): boolean;
     sort(order: IntegralUISortOrder, comparer?: any): void;
-    getModifiedControlStyle(): any;
+    getControlStyle(): any;
     protected updateItemStyle(obj: any): void;
     protected getItemStyle(value: any): {
         general: any;

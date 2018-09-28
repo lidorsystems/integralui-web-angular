@@ -18,6 +18,7 @@ export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     private trialRef;
     appRef: any;
     items: Array<any>;
+    showAnimation: boolean;
     virtualMode: boolean;
     itemClick: EventEmitter<any>;
     constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
@@ -29,4 +30,5 @@ export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     getItemParent(item: any): any;
     invokeMethod(name: string, value: any): void;
     updateLayout(): void;
+    getControlStyle(): any;
 }

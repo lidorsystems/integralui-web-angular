@@ -1,6 +1,7 @@
 /* Normal State */
 .iui-header
 {
+	overflow: hidden;
 	position: relative;
 }
 .iui-header-move-marker

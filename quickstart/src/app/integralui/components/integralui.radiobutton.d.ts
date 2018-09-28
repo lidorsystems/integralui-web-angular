@@ -14,6 +14,7 @@ export declare class IntegralUIRadioButton extends IntegralUIBaseValueComponent 
     protected initStyle(): void;
     ngAfterViewInit(): void;
     checkMouseDown(e: any): void;
+    getControlStyle(): any;
     protected updateButtonClass(): void;
     getButtonClass(): any[];
     protected getButtonStyle(value: any): any;

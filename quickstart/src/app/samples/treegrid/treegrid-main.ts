@@ -80,6 +80,7 @@ export class TreeGridSample {
             { text: "Add/Remove", link: './add-remove' },
             { text: "Add Row Dynamically", link: './add-row-dynamically' },
             { text: "Cell with DropDown", link: './cell-dropdown' },
+            { text: "Cell with Rating", link: './cell-rating' },
             { text: "Context Menu", link: './context-menu' },
             { text: "Different Cell Templates", link: './cell-templates' },
             { text: "Drag Drop", link: './drag-drop' },
@@ -88,16 +89,18 @@ export class TreeGridSample {
             { text: "Export to CSV or JSON", link: './export' },
             { text: "Fast Load", link: './fast-load' },
             { text: "Filter", link: './filter' },
+            { text: "Highlight Rows", link: './highlight-rows' },
             { text: "Multi Select", link: './multi-select' },
             { text: "Overview", link: './overview' },
             { text: "Pagination", link: './pagination' },
+            { text: "Pagination on Demand", link: './pagination-on-demand' },
             { text: "Show/Hide Header | Footer", link: './show-hide-header-footer' },
             { text: "Sorting", link: './sorting' },
             { text: "Tooltip", link: './tooltip' },
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[12];
+        this.selectedItem = this.sideList[14];
     }   
 
     ngAfterContentChecked(){

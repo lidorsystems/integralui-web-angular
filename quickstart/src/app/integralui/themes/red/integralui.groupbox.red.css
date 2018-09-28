@@ -1,0 +1,30 @@
+/* Normal State */
+.iui-groupbox-header
+{
+	background-color: #f41800;
+	border: thin solid #d91500;
+	color: white;
+}
+/* Hover State */
+.iui-groupbox-header-hovered
+{
+	background-color: #ff5340;
+}
+/* Selected State */
+.iui-groupbox-header-selected
+{
+	background-color: #a61000;
+	border-color: #960000;
+	color: white;
+}
+.iui-groupbox-content
+{
+	background-color: #fff0f0;
+	border: solid thin #fb4b54;
+}
+
+.iui-groupbox-header .iui-groupbox-header-expand-box
+{
+	background: #ffffff !important;
+}
+

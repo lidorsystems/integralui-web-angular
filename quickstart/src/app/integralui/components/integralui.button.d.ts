@@ -19,6 +19,7 @@ export declare class IntegralUIButton extends IntegralUIBaseComponent {
     refresh(): void;
     ctrlMouseEnter(e: any): void;
     ctrlMouseLeave(e: any): void;
+    getControlStyle(): any;
     protected updateContentClass(): void;
     getContentClass(): any[];
     protected getContentStyle(value: any): any;
