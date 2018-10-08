@@ -1,4 +1,4 @@
-# IntegralUI Web for Angular 5
+# IntegralUI Web for Angular
 
 IntegralUI Web is a library built on top of Angular 5 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
