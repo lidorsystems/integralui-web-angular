@@ -1,0 +1,38 @@
+.iui-calendar-cell-hovered, .iui-calendar-cell-grayed:hover
+{
+	background: #82ff82;
+	border-color: #82ff82;
+}
+.iui-calendar-cell-selected
+{
+    background: #00c400;
+    border-color: #00c400;
+	color: white;
+}
+.iui-calendar-cell-today
+{
+	border-color: #00c400;
+}
+
+@keyframes calendar-cell-enter
+{
+	0% { 	   
+	    background: transparent;
+	    border-color: transparent;
+	}
+	100% { 
+	    background: #82ff82;
+	    border-color: #82ff82;
+	}
+}
+@keyframes calendar-cell-leave
+{
+	0% { 	   
+	    background: #82ff82;
+	    border-color: #82ff82;
+	}
+	100% { 
+	    background: transparent;
+	    border-color: transparent;
+	}
+}

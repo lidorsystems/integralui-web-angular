@@ -20,4 +20,7 @@
 	background-color: #d4d4d4;
 	color: #333333;
 }
-
+.iui-treelistitem-animate-select
+{
+	background: #e6e6e6;
+}

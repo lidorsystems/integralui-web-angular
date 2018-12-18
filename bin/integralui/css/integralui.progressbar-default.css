@@ -12,8 +12,9 @@
 }
 .iui-progressbar-content
 {
-	background: blue;
+	background: #bebebe;
 	border-radius: 3px;
+	height: 12px;
 }
 
 

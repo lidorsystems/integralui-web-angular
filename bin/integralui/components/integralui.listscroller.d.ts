@@ -153,6 +153,12 @@ export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
             hovered: any;
             normal: any;
             selected: any;
+        } | {
+            disabled?: undefined;
+            focused?: undefined;
+            hovered?: undefined;
+            normal?: undefined;
+            selected?: undefined;
         };
         item: {
             general: {

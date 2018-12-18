@@ -94,13 +94,17 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             {
                 background-position: -168px -72px;
             }
+            .treelist-item-text
+            {
+                margin: 0 0 0 5px;
+            }
         </style>
         <h2 class="feature-title">TreeList / Overview</h2>
         <div class="feature-content">
-            <iui-treelist [title]="treeTitle" [items]="items">
+            <iui-treelist [title]="treeTitle" [items]="items" [allowAnimation]="true">
                 <ng-template let-item>
                     <span [ngClass]="item.icon"></span>
-                    <span>{{item.text}}</span>
+                    <span class="treelist-item-text">{{item.text}}</span>
                     <span *ngIf="item.items" class="expand-icons-right next"></span>
                 </ng-template>
             </iui-treelist>

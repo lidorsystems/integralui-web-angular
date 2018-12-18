@@ -54,7 +54,7 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
         </style>
         <h2 class="feature-title">GroupBox / Overview</h2>
         <div class="feature-content">
-           <iui-groupbox [text]="'Login'" [icon]="'user'" [expandBoxType]="'arrow'" [controlStyle]="ctrlStyle" #groupbox>
+           <iui-groupbox [text]="'Login'" [icon]="'user'" [expandBoxType]="'arrow'" [controlStyle]="ctrlStyle" [allowAnimation]="true" #groupbox>
                 <div class="grbox-ovw-group-content">
                     <span>User name:</span><input type="text" /><br/>
                     <span>Password:</span><input type="password" /><br/>

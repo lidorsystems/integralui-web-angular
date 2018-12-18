@@ -7,10 +7,16 @@ export declare class IntegralUITreeListItem extends IntegralUIItem {
     protected commonService: IntegralUICommonService;
     protected baseService: IntegralUIBaseService;
     templateData: Array<any>;
+    clickPos: any;
+    isClicked: boolean;
+    isHovered: boolean;
     protected parentCtrl: any;
     templateRef: any;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
+    onMouseDown(e: any): void;
+    onMouseEnter(e: any): void;
+    onMouseLeave(e: any): void;
 }
 export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
@@ -18,12 +24,16 @@ export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     protected commonService: IntegralUICommonService;
     protected cmpResolver: ComponentFactoryResolver;
     protected baseService: IntegralUIBaseService;
+    animateItemSize: any;
     private animSpeed;
+    protected prevClickedObj: any;
     protected itemList: Array<IntegralUITreeListItem>;
     prevData: any;
     itemData: any;
     nextData: any;
+    clickPos: any;
     private hoverItem;
+    isClicked: boolean;
     blockPos: {
         top: number;
         left: number;

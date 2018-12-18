@@ -49,7 +49,7 @@ enableProdMode();
         <div class="feature-content">
             <div style="width:400px;height:400px;">
                 <iui-listbar #listbar [groups]="groups" [selectedIndex]="selIndex" [controlStyle]="ctrlStyle" [mouseWheelSpeed]="1">
-                   <iui-listgroup *ngFor="let group of groups" [text]="group.text" [items]="group.items" [expandBoxType]="'arrow'">
+                   <iui-listgroup *ngFor="let group of groups" [text]="group.text" [items]="group.items" [expandBoxType]="'arrow'" [allowAnimation]="true">
                         <iui-item *ngFor="let item of group.items" [controlStyle]="itemStyle">
                             <span>{{item.text}}</span>
                         </iui-item>

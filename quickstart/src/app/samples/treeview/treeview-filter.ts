@@ -47,12 +47,17 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             {
                 float: left;
                 margin-left: 30px;
-                width: 300px;
+                width: 350px;
             }
             .trw-ftr-inline-block
             {
                 display: inline-block;
                 margin: 3px 0;
+            }
+            .trw-ftr-inline-block input
+            {
+                display: inline-block;
+                vertical-align: top;
             }
             .trw-ftr-inline-radio
             {
@@ -68,7 +73,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             .trw-ftr-cmb
             {
                 display: inline-block;
-                width: 165px;
+                width: 200px;
                 margin: 0 5px;
             }
             .trw-ftr-cmb .iui-combobox-header
@@ -79,7 +84,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
         <h2 class="feature-title">TreeView / Filter</h2>
         <div class="feature-content">
             <div style="float:left">
-                <iui-treeview [items]="treeItems" [controlStyle]="treeStyle" [virtualMode]="true" #treeview>
+                <iui-treeview [items]="treeItems" [controlStyle]="treeStyle" [allowAnimation]="true" [virtualMode]="true" #treeview>
                     <ng-template let-item>
                         <span [ngClass]="getCheckBoxClass(item)" (mousedown)="checkItem($event, item)"></span>
                         <span class="trw-ftr-item-label">{{item.text}}</span>

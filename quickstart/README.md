@@ -2,13 +2,13 @@
 
 This application contains samples for each component included in the [IntegralUI Web](http://www.lidorsystems.com/products/web/studio/) product package. It can help you to get started quickly with learning about the components and write tests immediatelly.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Dependencies
 
 This app requires only the following library:
 
-Angular - v5.0 and above
+Angular - v6.0 and above
 
 ## Development server
 

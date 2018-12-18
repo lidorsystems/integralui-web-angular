@@ -37,7 +37,7 @@ import { Component, ViewContainerRef, ViewChild, ViewEncapsulation } from '@angu
         <h2 class="feature-title">TreeGrid / Drag Drop to TreeGrid</h2>
         <div class="feature-content">
             <div #application>
-                <iui-treegrid [name]="'TreeGrid 1'" [appRef]="applicationRef" [controlStyle]="treegridStyle" [columns]="columns" [rows]="rows" [showFooter]="false" [allowDrag]="allowDrag" [allowDrop]="allowDrop"  #treegrid>
+                <iui-treegrid [name]="'TreeGrid 1'" [appRef]="applicationRef" [controlStyle]="treegridStyle" [columns]="columns" [rows]="rows" [showFooter]="false" [allowDrag]="allowDrag" [allowDrop]="allowDrop"  #grid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         {{column.headerText}}
                     </ng-template>

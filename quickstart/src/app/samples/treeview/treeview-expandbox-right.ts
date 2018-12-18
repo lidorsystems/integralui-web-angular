@@ -23,6 +23,10 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
                 width: 350px;
                 height: 300px;
             }
+            .trw-expbox-right .iui-treeitem-animate
+            {
+                margin: 1px 0;
+            }
             .trw-expbox-right .iui-treeitem
             {
                 cursor: pointer;
@@ -33,7 +37,6 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .trw-expbox-right .iui-treeitem-content
             {
-                margin: 1px 0 !important;
                 padding: 5px !important;
             }
             .computer-icons
@@ -194,7 +197,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
         <h2 class="feature-title">TreeView / ExpandBox on Right</h2>
         <div class="feature-content">
             <div style="width:400px" #application>
-                <iui-treeview [items]="items" [appRef]="applicationRef" [allowDrag]="true" [controlStyle]="ctrlStyle" [showExpandBox]="false" #treeview>
+                <iui-treeview [items]="items" [appRef]="applicationRef" [allowDrag]="true" [controlStyle]="ctrlStyle" [showExpandBox]="false" [allowAnimation]="true" #treeview>
                     <ng-template let-item>
                         <div (click)="toggle(item)" (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
                             <span [ngClass]="item.icon"></span>

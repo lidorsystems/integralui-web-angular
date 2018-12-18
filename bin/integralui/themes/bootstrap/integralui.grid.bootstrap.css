@@ -71,6 +71,16 @@
 	background: url(../../resources/expandbox-icons.png) no-repeat -32px -16px;
 }
 
+/* Animation */
+.iui-grid-column-animate-select
+{
+	background: #eaeaea;
+}
+.iui-grid-row-animate-select
+{
+	background: #eaeaea;
+}
+
 
 /* Grouping */
 .iui-grid-grouping-panel
@@ -111,3 +121,4 @@
 {
     background-position: -32px -80px;
 }
+

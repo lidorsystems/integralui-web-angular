@@ -31,6 +31,7 @@ export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     ctrlMouseMove(e: any): void;
     ctrlMouseUp(e: any): void;
     ctrlMouseWheel(e: any): void;
+    ctrlTouchEnd(e: any): void;
     onWindowMouseUp(e: any): void;
     getControlStyle(): any;
     getRatingValueClass(): any[];

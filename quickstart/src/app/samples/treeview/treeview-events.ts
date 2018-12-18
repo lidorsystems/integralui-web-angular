@@ -49,7 +49,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .add-remove-btns button
             {
-                margin: 5px 0;
+                margin: 5px;
                 width: 75px;
             }
         </style>

@@ -37,7 +37,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
         </style>
         <h2 class="feature-title">TreeView / Context Menu</h2>
         <div class="feature-content">
-            <iui-treeview [items]="data" [controlStyle]="treeStyle" #treeview>
+            <iui-treeview [items]="data" [controlStyle]="treeStyle" [allowAnimation]="true" #treeview>
                 <ng-template let-item>
                     {{item.text}}
                 </ng-template>

@@ -1,9 +1,11 @@
 @import 'integralui.css';
 @import 'integralui.accordion.css';
 @import 'integralui.button.css';
+@import 'integralui.calendar.css';
 @import 'integralui.checkbox.css';
 @import 'integralui.contextmenu.css';
 @import 'integralui.combobox.css';
+@import 'integralui.datepicker.css';
 @import 'integralui.dialog.css';
 @import 'integralui.dropdown.css';
 @import 'integralui.dropdownbutton.css';

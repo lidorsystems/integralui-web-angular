@@ -12,6 +12,7 @@
 */
 
 import { Component, ElementRef, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { animate, animateChild, group, query, trigger, sequence, state, style, transition } from '@angular/animations';
 
 @Component({
     selector: '',
@@ -25,6 +26,7 @@ import { Component, ElementRef, ViewContainerRef, ViewChild, ViewChildren, ViewE
                 left: 0;
                 width: 251px;
                 overflow: hidden;
+                z-index: 2;
             }
             .sidebar ul
             {
@@ -52,14 +54,14 @@ import { Component, ElementRef, ViewContainerRef, ViewChild, ViewChildren, ViewE
         <div style="background:url('app/sidebar.png') repeat-y 0 0;margin:0;" [ngStyle]="{ height: blockHeight }">
             <div class="sidebar">
                 <ul>
-                    <li *ngFor="let sideItem of sideList" routerLink="{{sideItem.link}}" (mousedown)="selectFeature(sideItem)" (mouseenter)="itemMouseEnter(sideItem)" (mouseleave)="itemMouseLeave()" [ngStyle]="{ 'margin-top': sideItem.margin + 'px' }">
+                    <li *ngFor="let sideItem of sideList" routerLink="{{sideItem.link}}" (mousedown)="selectFeature(sideItem)" (mouseenter)="itemMouseEnter(sideItem)" (mouseleave)="itemMouseLeave(sideItem)" [ngStyle]="{ 'margin-top': sideItem.margin + 'px' }">
                         <span [ngStyle]="getItemStyle(sideItem)">{{sideItem.text}}</span>
                         <span class="sel-mark" *ngIf="sideItem==selectedItem"></span>
                     </li>
                 </ul>
             </div>
-            <div style="display:inline-block;margin-left:275px" #featureContent>
-                <router-outlet></router-outlet>
+            <div style="display:inline-block;margin-left:275px;z-index: 0;" #featureContent>
+                <router-outlet #o="outlet"></router-outlet>
             </div>
         </div>
     `,
@@ -107,12 +109,13 @@ export class AccordionSample {
         this.hoverItem = item;
     }
 
-    itemMouseLeave(){
+    itemMouseLeave(item: any){
         this.hoverItem = null;
     }
 
     getItemStyle(item: any){
         let style: any = {
+            display: 'block',
             color: '#ababab',
             'font-weight': 'normal'
         }

@@ -23,9 +23,12 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
                 width: 350px;
                 height: 300px;
             }
+            .trw-add-dynamic .iui-treeitem-animate
+            {
+                margin: 1px 0;
+            }
             .trw-add-dynamic .iui-treeitem-content
             {
-                margin: 1px 0 !important;
                 padding: 5px !important;
             }
             .trw-add-dynamic-toolbar

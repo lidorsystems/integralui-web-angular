@@ -74,3 +74,13 @@
 {
     background-position: -32px -80px;
 }
+
+/* Animation */
+.iui-treegrid-column-animate-select
+{
+	background: #eaeaea;
+}
+.iui-treegrid-row-animate-select
+{
+	background: #beddf4;
+}

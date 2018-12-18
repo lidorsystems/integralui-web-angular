@@ -86,7 +86,10 @@ export class ListBoxFastLoadSample {
     } 
     
     ngAfterViewInit(){
-        this.add();
+        let self = this;
+        setTimeout(function(){
+            self.add();
+        }, 250);
     }
 
     addItems(){

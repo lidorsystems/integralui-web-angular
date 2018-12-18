@@ -14,6 +14,10 @@ export declare class IntegralUICommonService {
         bottom: number;
         left: number;
     };
+    getClientPos(e: any, elem: any): {
+        x: number;
+        y: number;
+    };
     getMargin(elem: any): {
         top: number;
         right: number;

@@ -58,7 +58,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
         <h2 class="feature-title">TreeGrid / Show or Hide the Column Header and Footer</h2>
         <div class="feature-content" style="width:900px;">
             <div #application>
-                <iui-treegrid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [showHeader]="isHeaderVisible" [showFooter]="isFooterVisible" [gridLines]="checkGridLines()" [expandColumnIndex]="1" [selectionMode]="gridSelMode" [allowDrag]="true" (dragOver)="treegridDragOver($event)" [rowHeight]="22" #treegrid>
+                <iui-treegrid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [showHeader]="isHeaderVisible" [showFooter]="isFooterVisible" [gridLines]="checkGridLines()" [expandColumnIndex]="1" [selectionMode]="gridSelMode" [allowAnimation]="true" [rowHeight]="22" #treegrid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         <span *ngIf="column.id==1" class="cell-checkbox" [ngStyle]="{ 'background-image': getCheckValue(column) }" (mousedown)="columnCheckClicked(column)"></span>
                         <span>{{column.headerText}}</span>
@@ -378,35 +378,6 @@ export class TreeGridShowHideHeaderFooterSample {
 
     private getCellRating(cell: any): string {
         return cell.value ? 'app/integralui/resources/stars-small-' + cell.value.toString() + '.png' : '';
-    }
-
-    treegridDragOver(e: any){
-        if (e.targetRow){
-            // When multi selection is active dragRow field is an array of all selected rows, otherwise it is a single object
-            let dragRow = e.dragRow && Array.isArray(e.dragRow) ? e.dragRow[0] : e.dragRow;
-
-            switch (e.dropPos){
-                case 0:
-                    e.cancel = true;
-                    break;
-
-                case 1:
-                    if (!dragRow.pid && e.targetRow.pid)
-                        e.cancel = true;
-                    else if (dragRow.pid && !e.targetRow.pid)
-                        e.cancel = true;
-                    break;
-
-                case 2:
-                    if (!dragRow.pid && e.targetRow.pid)
-                        e.cancel = true;
-                    else if (dragRow.pid && !e.targetRow.pid)
-                        e.cancel = true;
-                    break;
-            }
-        }
-        else if (e.dragRow.pid)
-            e.cancel = true;
     }
 
     checkGridLines(){

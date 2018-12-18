@@ -1,5 +1,9 @@
-.iui-slider-value
+.iui-slider-background, .iui-slider-background-vertical
 {
-	background: #6791e1;
-	border: thin solid #5f8bde;
+	background: #5f8bde;
+}
+.iui-slider-button
+{
+	background: transparent;
+	border: 2px solid #5f8bde;
 }

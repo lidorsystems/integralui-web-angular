@@ -157,22 +157,28 @@ export class TreeGridTooltipSample {
     }
 
     ngAfterViewInit(){
-        // Set the reference component by which the position of tooltip is calculated
-        // Usually, the appRef should point to the root component, to avoid position adjustment
-        this.tooltipReference = this.applicationRef;
+        let self = this;
 
-        // Set a tooltip for columns
-        for (let j = 0; j < this.columns.length; j++)
-            this.columns[j].headerTooltip = { 
-                title: this.columns[j].headerText
-            }
+        let initTimeout = setTimeout(function(){
+            // Set the reference component by which the position of tooltip is calculated
+            // Usually, the appRef should point to the root component, to avoid position adjustment
+            self.tooltipReference = self.applicationRef;
 
-        // Set a tooltip for row cells
-        let list = this.treegrid.getFullList();
-        for (let i = 0; i < list.length; i++)
-            for (let j = 0; j < list[i].cells.length; j++)
-                list[i].cells[j].tooltip = {
-                    title: list[i].cells[j].text
+            // Set a tooltip for columns
+            for (let j = 0; j < self.columns.length; j++)
+                self.columns[j].headerTooltip = { 
+                    title: self.columns[j].headerText
                 }
+
+            // Set a tooltip for row cells
+            let list = self.treegrid.getFullList();
+            for (let i = 0; i < list.length; i++)
+                for (let j = 0; j < list[i].cells.length; j++)
+                    list[i].cells[j].tooltip = {
+                        title: list[i].cells[j].text
+                    }
+
+            clearTimeout(initTimeout);
+        }, 100);
     }
 }

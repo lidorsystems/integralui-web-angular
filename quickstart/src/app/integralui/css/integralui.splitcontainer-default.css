@@ -132,7 +132,7 @@
 	border: thin solid #808080;
 	border-radius: 2px;
 	display: inline-block;
-	margin: 0;
+	margin: 2px;
 	padding: 0;
 	opacity: 0.75;
 }

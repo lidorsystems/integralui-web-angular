@@ -79,6 +79,7 @@ export class TreeGridSample {
         this.sideList = [
             { text: "Add/Remove", link: './add-remove' },
             { text: "Add Row Dynamically", link: './add-row-dynamically' },
+            { text: "Built-in Editors", link: './builtin-editors' },
             { text: "Cell with DropDown", link: './cell-dropdown' },
             { text: "Cell with Rating", link: './cell-rating' },
             { text: "Context Menu", link: './context-menu' },
@@ -100,7 +101,7 @@ export class TreeGridSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[14];
+        this.selectedItem = this.sideList[15];
     }   
 
     ngAfterContentChecked(){

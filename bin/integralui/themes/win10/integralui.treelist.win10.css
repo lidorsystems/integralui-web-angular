@@ -18,4 +18,7 @@
     background-color: #cce8ff;
 	color: #000000;
 }
-
+.iui-treelistitem-animate-select
+{
+	background: #e5f3fe;
+}

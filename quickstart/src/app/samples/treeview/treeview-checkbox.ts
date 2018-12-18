@@ -118,14 +118,22 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
             .trw-cbox-cmb
             {
                 display: inline-block;
-                margin-top: 10px;
+                vertical-align: top;
                 width: 200px;
             }
             .trw-cbox-cmb-button
             {
-                width: 100px;
+                display: inline-block;
                 margin-left: 3px;
                 padding: 5px;
+                vertical-align: top;
+                width: 100px;
+            }
+            .trw-cbox-cmb-label
+            {
+                display: inline-block;
+                margin-top: 10px;
+                vertical-align: top;
             }
             .trw-cbox-list
             {
@@ -143,8 +151,8 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
                 </ng-template>
             </iui-treeview>
             <div style="float:left;margin-left:30px;">
-                <label>List of items depending on their check state: </label><br />
-                <label>State: </label>
+                <label>List of items depending on their check state: </label><br /><br />
+                <label class="trw-cbox-cmb-label">State: </label>
                 <iui-combobox [items]="checkStates" [controlStyle]="comboStyle" [maxDropDownItems]="3" [integralHeight]="true" [selectedIndex]="2" (selectedIndexChanged)="onComboSelectionChanged($event)">
                     <iui-item *ngFor="let item of checkStates" [text]="item.text"></iui-item>
                 </iui-combobox>

@@ -45,7 +45,7 @@ import { Component, ViewContainerRef, ViewChild, ViewEncapsulation } from '@angu
                         <span class="grid-ddtg-item-label">{{cell.text}}</span>
                     </ng-template>
                 </iui-grid>
-                <iui-treegrid [name]="'TreeGrid'" [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns2" [rows]="rows2" [showFooter]="false" [allowDrag]="allowDrag2" [allowDrop]="allowDrop2" (dragEnd)="onDragEnd($event)"  #grid>
+                <iui-treegrid [name]="'TreeGrid'" [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns2" [rows]="rows2" [showFooter]="false" [allowDrag]="allowDrag2" [allowDrop]="allowDrop2" #treegrid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         {{column.headerText}}
                     </ng-template>
@@ -83,10 +83,7 @@ import { Component, ViewContainerRef, ViewChild, ViewEncapsulation } from '@angu
     encapsulation: ViewEncapsulation.None
 })
 export class GridDragDropTreeGridSample {
-    onDragEnd(e: any){
-        console.log(e);
-    }
-    
+
     @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
 
     // Grid  settings

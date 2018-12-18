@@ -21,7 +21,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             .grid-evnts-normal
             {
                 width: 800px;
-                height: 300px;
+                height: 320px;
             }
             .grid-evnts-control-panel
             {
@@ -57,15 +57,16 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-evnts-add-remove-btns button
             {
-                margin: 5px 0;
-                width: 125px;
+                margin: 5px;
+                padding: 3px;
+                width: 100px;
             }
         </style>
         <div>
             <h2 class="feature-title">Grid / Events</h2>
             <div class="feature-content" #application>
                 <div class="grid-evnts-add-remove-btns">
-                    <button (click)="add()">Add Row</button>
+                    <button style="margin-left:0;" (click)="add()">Add Row</button>
                     <button (click)="remove()" [disabled]="disableButtons">Remove Row</button>
                     <button (click)="clear()" [disabled]="disableButtons">Clear Rows</button>
                 </div>

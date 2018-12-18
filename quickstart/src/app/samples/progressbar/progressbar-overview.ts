@@ -75,7 +75,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
             {
                 display: inline-block;
                 height: 300px;
-                margin: 0;
+                margin: 0 3px;
                 width: 12px;
             }
             .prb-ovw-vertical .prb-ovw-content
@@ -87,7 +87,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
             {
                 display: inline-block;
                 height: 300px;
-                margin: 0;
+                margin: 0 3px;
                 width: 16px;
             }
             .prb-ovw-block-vertical .prb-ovw-block-content
@@ -141,20 +141,22 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
         <h2 class="feature-title">ProgressBar / Overview</h2>
         <div class="feature-content">
             <div class="prb-ovw-container">
-                <iui-progressbar 
+                <iui-progressbar
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyleRed" 
                     [value]="ctrlValue" 
                     [orientation]="ctrlOrientation" 
                     [ngClass]="{ 'prb-ovw-vertical': ctrlOrientation == 1 }"
-                    [enabled]="false"
                 ></iui-progressbar>
-                <iui-progressbar 
+                <iui-progressbar
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyleGreen" 
                     [value]="ctrlValue" 
                     [orientation]="ctrlOrientation" 
                     [ngClass]="{ 'prb-ovw-vertical': ctrlOrientation == 1 }"
                 ></iui-progressbar>
                 <iui-progressbar 
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyleBlue" 
                     [value]="ctrlValue" 
                     [orientation]="ctrlOrientation" 
@@ -162,18 +164,21 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
                 ></iui-progressbar>
                 <p class="prb-ovw-block-space" [ngClass]="{ 'prb-ovw-block-space-vertical': ctrlOrientation == 1 }"></p>
                 <iui-progressbar
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyleBlockRed" 
                     [value]="ctrlValue" 
                     [orientation]="ctrlOrientation" 
                     [ngClass]="{ 'prb-ovw-block-vertical': ctrlOrientation == 1 }"
                 ></iui-progressbar>
                 <iui-progressbar
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyleBlockGreen"
                     [value]="ctrlValue" 
                     [orientation]="ctrlOrientation" 
                     [ngClass]="{ 'prb-ovw-block-vertical': ctrlOrientation == 1 }"
                 ></iui-progressbar>
                 <iui-progressbar 
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyleBlockBlue" 
                     [value]="ctrlValue" 
                     [orientation]="ctrlOrientation" 
@@ -192,6 +197,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
                 <p><span class="initial-space"></span>You can also change orientation of the ProgressBar to: horizontal or vertical. The appearance of progresss value is based on different set of CSS styles, based on orientation.</p>
                 <p><span class="initial-space"></span>The following properties and events are supported:</p>
                 <ul class="feature-points">
+                    <li><span style="color:#c60d0d">allowAnimation</span> - Determines whether changes to the progress value are animated or not</li>
                     <li><span style="color:#c60d0d">controlStyle</span> - Specifies an object that contains all style settings for the component</li>
                     <li><span style="color:#c60d0d">data</span> - Specifies an object that holds data related to the component</li>
                     <li><span style="color:#c60d0d">enabled</span> - Determines whether the component is enabled or disabled</li>

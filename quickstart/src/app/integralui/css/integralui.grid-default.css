@@ -93,6 +93,7 @@
 {
 	background-color: #ededed;
 	border: thin solid #d5d5d5;
+	color: black;
 	margin: 0;
 	padding: 3px 0;
 	position: relative;
@@ -103,11 +104,13 @@
 {
 	background-color: #d5d5d5;
 	border-color: #cecece;
+	color: black;
 }
 .iui-grid-column-header-selected
 {
 	background-color: #bebebe;
 	border: thin solid #aeaeae;
+	color: black;
 }
 .iui-grid-column-header > div, .iui-grid-column-footer > div, .iui-grid-row-cell > div
 {
@@ -135,6 +138,7 @@
 }
 .iui-grid-row, .iui-grid-row-fixed
 {
+	color: black;
 	margin: 0;
 	padding: 0;
 	white-space: nowrap;
@@ -144,11 +148,13 @@
 {
 	background-color: #f5f5f5;
 	border: thin solid #efefef;
+	color: black;
 }
 .iui-grid-row-selected
 {
 	background-color: #e5e5e5;
 	border: thin solid #dedede;
+	color: black;
 }
 .iui-grid-row-cell
 {
@@ -479,4 +485,200 @@
 	opacity: 0.75;
 	pointer-events: none;
 }
+
+
+/* Animation */
+.iui-grid-column-animate
+{
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    overflow: hidden;
+    position: relative;
+}
+.iui-grid-column-animate-enter
+{
+	animation-name: grid-column-animate-enter;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.175s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes grid-column-animate-enter
+{
+	0% { 	   
+	    border: thin solid transparent;
+	    box-shadow: none;
+	}
+	100% { 
+	    border: thin solid #242424;
+	    box-shadow: 2px 3px 3px #cecece;
+	}
+}
+.iui-grid-column-animate-select-block
+{
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.iui-grid-column-animate-select
+{
+	background: #d5d5d5;
+	display: block;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+}
+.iui-grid-column-animate-select-left
+{
+	animation-name: grid-column-animate-select-left;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes grid-column-animate-select-left
+{
+	0% { 	   
+	    left: 100%;
+	    opacity: 0.5;
+	    width: 0;
+	}
+	100% { 
+	    left: 0;
+	    opacity: 0;
+	    width: 100%;
+	}
+}
+.iui-grid-column-animate-select-right
+{
+	animation-name: grid-column-animate-select-right;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes grid-column-animate-select-right
+{
+	0% { 	   
+	    width: 0;
+	    opacity: 0.5;
+	}
+	100% { 
+	    width: 100%;
+	    opacity: 0;
+	}
+}
+
+
+.iui-grid-row-animate
+{
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.iui-grid-row-animate-enter
+{
+	animation-name: grid-row-animate-enter;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.175s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes grid-row-animate-enter
+{
+	0% { 	   
+	    border: thin solid transparent;
+	    box-shadow: none;
+	}
+	100% { 
+	    border: thin solid #242424;
+	    box-shadow: 2px 3px 3px #cecece;
+	}
+}
+.iui-grid-row-animate-select-block
+{
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.iui-grid-row-animate-select
+{
+	background: #f5f5f5;
+	display: block;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+}
+.iui-grid-row-animate-select-left
+{
+	animation-name: grid-row-animate-select-left;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes grid-row-animate-select-left
+{
+	0% { 	   
+	    left: 100%;
+	    opacity: 0.5;
+	    width: 0;
+	}
+	100% { 
+	    left: 0;
+	    opacity: 0;
+	    width: 100%;
+	}
+}
+.iui-grid-row-animate-select-right
+{
+	animation-name: grid-row-animate-select-right;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes grid-row-animate-select-right
+{
+	0% { 	   
+	    width: 0;
+	    opacity: 0.5;
+	}
+	100% { 
+	    width: 100%;
+	    opacity: 0;
+	}
+}
+
+
 

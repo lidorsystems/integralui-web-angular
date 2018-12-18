@@ -42,19 +42,19 @@ import { IntegralUIIncrementMode } from '../../integralui/components/integralui.
         <div class="feature-content">
             <div class="rbtn-ovw-container">
                 <iui-radio-group [(ngModel)]="groupVal">
-                    <iui-radio-button [value]="'btn1'">Radio 1</iui-radio-button>
-                    <iui-radio-button [value]="'btn2'">Radio 2</iui-radio-button>
-                    <iui-radio-button [value]="'btn3'">Radio 3</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [value]="'btn1'">Radio 1</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [value]="'btn2'">Radio 2</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [value]="'btn3'">Radio 3</iui-radio-button>
                 </iui-radio-group><br/>
                 <iui-radio-group [(ngModel)]="groupVal2">
-                    <iui-radio-button [controlStyle]="ctrlStyle2" [value]="'btn4'">Radio 4</iui-radio-button>
-                    <iui-radio-button [controlStyle]="ctrlStyle2" [value]="'btn5'">Radio 5</iui-radio-button>
-                    <iui-radio-button [controlStyle]="ctrlStyle2" [value]="'btn6'">Radio 6</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [controlStyle]="ctrlStyle2" [value]="'btn4'">Radio 4</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [controlStyle]="ctrlStyle2" [value]="'btn5'">Radio 5</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [controlStyle]="ctrlStyle2" [value]="'btn6'">Radio 6</iui-radio-button>
                 </iui-radio-group><br/>
                 <iui-radio-group [(ngModel)]="groupVal3">
-                    <iui-radio-button [controlStyle]="ctrlStyle3" [value]="'btn7'">Radio 7</iui-radio-button>
-                    <iui-radio-button [controlStyle]="ctrlStyle3" [value]="'btn8'">Radio 8</iui-radio-button>
-                    <iui-radio-button [controlStyle]="ctrlStyle3" [value]="'btn9'">Radio 9</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [controlStyle]="ctrlStyle3" [value]="'btn7'">Radio 7</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [controlStyle]="ctrlStyle3" [value]="'btn8'">Radio 8</iui-radio-button>
+                    <iui-radio-button [allowAnimation]="true" [controlStyle]="ctrlStyle3" [value]="'btn9'">Radio 9</iui-radio-button>
                 </iui-radio-group><br/>
             </div>
             <br style="clear:both;"/>
@@ -63,6 +63,7 @@ import { IntegralUIIncrementMode } from '../../integralui/components/integralui.
                 <p><span class="initial-space"></span>You can customize the appearance of radio buttons using different images via CSS.</p>
                 <p><span class="initial-space"></span>The following properties and events are supported:</p>
                 <ul class="feature-points">
+                    <li><span style="color:#c60d0d">allowAnimation</span> - Determines whether component appearance is animated or not</li>
                     <li><span style="color:#c60d0d">checked</span> - Specifies whether Radio Button is checked or not: true or false</li>
                     <li><span style="color:#c60d0d">controlStyle</span> - Specifies an object that contains all style settings for the component</li>
                     <li><span style="color:#c60d0d">data</span> - Specifies an object that holds data related to the component</li>

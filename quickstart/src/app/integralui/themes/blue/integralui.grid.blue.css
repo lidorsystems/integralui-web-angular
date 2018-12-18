@@ -28,3 +28,12 @@
 	color: white;
 }
 
+/* Animation */
+.iui-grid-column-animate-select
+{
+	background: #3174b0;
+}
+.iui-grid-row-animate-select
+{
+	background: #a6c9e6;
+}

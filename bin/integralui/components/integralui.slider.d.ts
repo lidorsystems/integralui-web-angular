@@ -4,6 +4,7 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
     protected commonService: IntegralUICommonService;
+    animationState: string;
     protected ctrlMaxValue: number;
     protected ctrlMinValue: number;
     protected currentOrientation: IntegralUIOrientation;
@@ -15,8 +16,10 @@ export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     protected sliderSize: any;
     sliderPos: number;
     handleElem: ElementRef;
-    protected sliderClass: Array<any>;
-    protected sliderClassName: string;
+    protected sliderBackgroundClass: Array<any>;
+    protected sliderBackgroundClassName: string;
+    protected sliderButtonClass: Array<any>;
+    protected sliderButtonClassName: string;
     value: number;
     orientation: IntegralUIOrientation;
     min: number;
@@ -32,6 +35,8 @@ export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     processValueChange(): void;
     updateLayout(): void;
     protected isSliderChangeActive: boolean;
+    ctrlMouseEnter(e: any): void;
+    ctrlMouseLeave(e: any): void;
     ctrlMouseDown(e: any): void;
     ctrlMouseMove(e: any): void;
     ctrlMouseUp(e: any): void;
@@ -40,10 +45,15 @@ export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     onWindowMouseUp(e: any): void;
     getControlStyle(): any;
     getSliderBackStyle(): any;
+    getSliderBackValueStyle(): any;
     getSliderValueStyle(): any;
     protected updateContentClass(): void;
-    getSliderValueClass(): any[];
-    protected updateSliderClass(): void;
-    protected getSliderStyle(value: any): any;
+    getSliderBackgroundClass(): any[];
+    protected updateSliderBackgroundClass(): void;
+    getSliderButtonClass(): any[];
+    protected updateSliderButtonClass(): void;
+    protected getSliderBackgroundStyle(value: any): any;
+    protected getSliderButtonStyle(value: any): any;
+    protected getSliderStyle(value?: any): any;
     protected updateStyle(value: any): void;
 }

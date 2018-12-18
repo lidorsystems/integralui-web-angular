@@ -1,0 +1,61 @@
+.iui-datepicker
+{
+	background: white;
+	border: thin solid #cecece;
+	cursor: default;
+	margin: 0;
+	padding: 2px;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.iui-datepicker-header
+{
+	margin:0 2px 0 0;
+}
+.iui-datepicker-header-title
+{
+}
+.iui-datepicker-header-button
+{
+	display: inline-block;
+	opacity: 0.6;
+}
+.iui-datepicker-header-button:hover
+{
+	opacity: 1;
+}
+.iui-datepicker-header-button span
+{
+    background-image: url(../resources/icons-x24.png);
+    background-repeat: no-repeat;
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+.iui-datepicker-header-button-down
+{
+	float: right;
+}
+.iui-datepicker-header-button-down span
+{
+	background-position: -192px -192px;
+}
+
+/* Disabled State */
+.iui-datepicker-disabled
+{
+	opacity: 0.75;
+	pointer-events: none;
+}

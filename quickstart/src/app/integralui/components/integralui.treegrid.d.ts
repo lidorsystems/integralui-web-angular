@@ -91,6 +91,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     rowDragDrop(e: any, obj: any): void;
     protected isParentOf(targetRow: any, row: any): boolean;
     protected isChildOf(targetRow: any, row: any): boolean;
+    openDropDown(e: any, obj: any, i: number, j: number): void;
     collapse(row?: any): void;
     expand(row?: any): void;
     toggle(row?: any, value?: boolean): void;
@@ -179,6 +180,12 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
             hovered: any;
             normal: any;
             selected: any;
+        } | {
+            disabled?: undefined;
+            focused?: undefined;
+            hovered?: undefined;
+            normal?: undefined;
+            selected?: undefined;
         };
         column: {
             header: {

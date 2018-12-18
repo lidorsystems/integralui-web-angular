@@ -26,8 +26,8 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
             .sld-ovw-slider-round
             {
                 border-radius: 9px;
-                width: 18px !important;
-                height: 18px !important;
+                width: 16px !important;
+                height: 16px !important;
             }
 
             /* Vertical Orientation */
@@ -72,6 +72,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
         <div class="feature-content">
             <div class="sld-ovw-container">
                 <iui-slider
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyle" 
                     [(ngModel)]="ctrlValue" 
                     [orientation]="ctrlOrientation"
@@ -79,6 +80,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
                 ></iui-slider>
                 <p class="sld-ovw-block-space" [ngClass]="{ 'sld-ovw-block-space-vertical': ctrlOrientation == 1 }"></p>
                 <iui-slider
+                    [allowAnimation]="true"
                     [controlStyle]="ctrlStyleRound" 
                     [(ngModel)]="ctrlValue2" 
                     [orientation]="ctrlOrientation"
@@ -96,6 +98,7 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
                 <p><span class="initial-space"></span>You can move the slider by dragging it or by clicking the mouse to either side. In addition, you can customize its appearance using different colors or shapes via CSS.</p>
                 <p><span class="initial-space"></span>The following properties and events are supported:</p>
                 <ul class="feature-points">
+                    <li><span style="color:#c60d0d">allowAnimation</span> - Determines whether component appearance is animated or not</li>
                     <li><span style="color:#c60d0d">controlStyle</span> - Specifies an object that contains all style settings for the component</li>
                     <li><span style="color:#c60d0d">data</span> - Specifies an object that holds data related to the component</li>
                     <li><span style="color:#c60d0d">enabled</span> - Determines whether the component is enabled or disabled</li>
@@ -123,7 +126,9 @@ export class SliderOverviewSample {
 
     public ctrlStyleRound: any = {
         general: { normal: 'sld-ovw' },
-        slider: { normal: 'sld-ovw-slider-round' }
+        slider: { 
+            button: { normal: 'sld-ovw-slider-round' }
+        }
     }
 
     public ctrlValue: number = 30;

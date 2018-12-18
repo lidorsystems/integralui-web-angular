@@ -1,5 +1,6 @@
 import { ElementRef, EventEmitter, OnChanges, Renderer, SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import { IntegralUIDataService } from '../services/integralui.data.service';
 export declare class IntegralUIDraggable {
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
@@ -43,6 +44,11 @@ export declare enum IntegralUICheckState {
     Indeterminate = 1,
     Checked = 2,
 }
+export declare enum IntegralUIDateFormat {
+    Short = 0,
+    Long = 1,
+    Custom = 2,
+}
 export declare enum IntegralUIDirection {
     None = 0,
     Above = 1,
@@ -53,6 +59,21 @@ export declare enum IntegralUIDirection {
 export declare enum IntegralUIDragDropDisplayMode {
     Popup = 0,
     Handle = 1,
+}
+export declare enum IntegralUIEditorType {
+    None = 0,
+    Button = 1,
+    CheckBox = 2,
+    Date = 3,
+    DropList = 4,
+    Image = 5,
+    Label = 6,
+    ListScroller = 7,
+    Numeric = 8,
+    Progress = 9,
+    Rating = 10,
+    Slider = 11,
+    TextBox = 12,
 }
 export declare enum IntegralUINumericDisplayMode {
     InBound = 0,
@@ -129,6 +150,15 @@ export declare enum IntegralUIVisibility {
     Click = 2,
     Always = 3,
 }
+export declare enum IntegralUIWeekDays {
+    Monday = 0,
+    Tuesday = 1,
+    Wednesday = 2,
+    Thursday = 3,
+    Friday = 4,
+    Saturday = 5,
+    Sunday = 6,
+}
 export declare class IntegralUIBaseComponent {
     protected commonService: IntegralUICommonService;
     private ctrlState;
@@ -146,6 +176,7 @@ export declare class IntegralUIBaseComponent {
     protected generalClassName: string;
     protected defaultStyle: any;
     protected ctrlClass: Array<any>;
+    allowAnimation: boolean;
     controlStyle: any;
     data: any;
     name: string;
@@ -153,6 +184,7 @@ export declare class IntegralUIBaseComponent {
     size: any;
     state: IntegralUIObjectState;
     enabledChanged: EventEmitter<any>;
+    sizeChanged: EventEmitter<any>;
     styleChanged: EventEmitter<any>;
     stateChanged: EventEmitter<any>;
     constructor(commonService?: IntegralUICommonService);
@@ -168,6 +200,12 @@ export declare class IntegralUIBaseComponent {
             hovered: any;
             normal: any;
             selected: any;
+        } | {
+            disabled?: undefined;
+            focused?: undefined;
+            hovered?: undefined;
+            normal?: undefined;
+            selected?: undefined;
         };
     };
     protected getDefaultGeneralStyle(): {
@@ -176,6 +214,12 @@ export declare class IntegralUIBaseComponent {
         hovered: any;
         normal: any;
         selected: any;
+    } | {
+        disabled?: undefined;
+        focused?: undefined;
+        hovered?: undefined;
+        normal?: undefined;
+        selected?: undefined;
     };
     protected getGeneralStyle(value: any): any;
     protected updateStyle(value: any): void;
@@ -188,14 +232,8 @@ export declare class IntegralUIBaseService {
 }
 export declare class IntegralUIDragWindow {
     iconClass: string;
-    position: {
-        x: number;
-        y: number;
-    };
-    size: {
-        width: number;
-        height: number;
-    };
+    position: any;
+    size: any;
     title: string;
     display: string;
     updatePos(value: any): void;
@@ -263,7 +301,7 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
     onMouseMove(e: any): void;
     onMouseLeave(e: any): void;
     getContentSize(): any;
-    getIconStatus(): "inline-block" | "none";
+    getIconStatus(): "none" | "inline-block";
     getMargin(): {
         top: number;
         right: number;
@@ -275,6 +313,34 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
     private resetPos();
     updateLayout(ref: any, pos: any): void;
     updatePos(pos: any): void;
+}
+export declare class IntegralUIList extends IntegralUIBaseComponent {
+    protected dataService: IntegralUIDataService;
+    protected elemRef: ElementRef;
+    protected commonService: IntegralUICommonService;
+    private dataItems;
+    itemElem: ElementRef;
+    protected currentControlStyle: any;
+    ctrlClassObj: string;
+    controlStyle: any;
+    items: Array<any>;
+    maxVisibleItems: number;
+    selectedItem: any;
+    contentSizeChanged: EventEmitter<any>;
+    selectionChanged: EventEmitter<any>;
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    protected updateData(): void;
+    ctrlClick(e: any): void;
+    ctrlMouseDown(e: any): void;
+    ctrlMouseUp(e: any): void;
+    itemMouseDown(e: any, item: any): void;
+    private contentSize;
+    updateLayout(): void;
+    refresh(): void;
+    getControlStyle(): any;
+    protected updateControlClass(): void;
 }
 export declare class IntegralUIFocus {
     private elemRef;
@@ -309,6 +375,100 @@ export declare class IntegralUIHeaderItem extends IntegralUIItem {
     expandBoxClicked(e: any): void;
     getControlStyle(): any;
     protected updateStyle(value: any): void;
+}
+export declare class IntegralUIPopup {
+    protected elemRef: ElementRef;
+    private ctrlState;
+    protected options: any;
+    protected ctrlSize: any;
+    protected generalClassName: string;
+    protected defaultStyle: any;
+    protected ctrlClass: Array<any>;
+    private currentControlStyle;
+    allowAnimation: boolean;
+    display: string;
+    position: any;
+    controlStyle: any;
+    size: any;
+    state: IntegralUIObjectState;
+    stateChanged: EventEmitter<any>;
+    constructor(elemRef: ElementRef);
+    ngOnInit(): void;
+    protected initStyle(): void;
+    focus(): void;
+    protected isFieldAvailable(field: any, value: any): any;
+    getControlStyle(): any;
+    protected updateControlClass(): void;
+    getControlClass(): any[];
+    protected getDefaultStyle(): {
+        general: {
+            disabled: any;
+            focused: any;
+            hovered: any;
+            normal: any;
+            selected: any;
+        } | {
+            disabled?: undefined;
+            focused?: undefined;
+            hovered?: undefined;
+            normal?: undefined;
+            selected?: undefined;
+        };
+    };
+    protected getDefaultGeneralStyle(): {
+        disabled: any;
+        focused: any;
+        hovered: any;
+        normal: any;
+        selected: any;
+    } | {
+        disabled?: undefined;
+        focused?: undefined;
+        hovered?: undefined;
+        normal?: undefined;
+        selected?: undefined;
+    };
+    protected getGeneralStyle(value: any): {
+        disabled: any;
+        focused: any;
+        hovered: any;
+        normal: any;
+        selected: any;
+    } | {
+        disabled?: undefined;
+        focused?: undefined;
+        hovered?: undefined;
+        normal?: undefined;
+        selected?: undefined;
+    };
+    protected updateStyle(value: any): void;
+}
+export declare class IntegralUIListPopup extends IntegralUIPopup {
+    protected elemRef: ElementRef;
+    private dataItems;
+    listDisplay: string;
+    listPos: any;
+    listOpacity: number;
+    listSize: any;
+    listComponent: IntegralUIList;
+    items: Array<any>;
+    listStyle: any;
+    maxVisibleItems: number;
+    minWidth: number;
+    selectedItem: any;
+    size: any;
+    closed: EventEmitter<any>;
+    selectionChanged: EventEmitter<any>;
+    constructor(elemRef: ElementRef);
+    ngOnInit(): void;
+    ngAfterContentInit(): void;
+    ngAfterViewInit(): void;
+    open(): void;
+    close(value: Date): void;
+    listContentSizeChanged(e: any): void;
+    processItemSelection(e: any): void;
+    onBlur(e: any): void;
+    refresh(): void;
 }
 export declare class IntegralUITComponent {
     tvStyle: string;

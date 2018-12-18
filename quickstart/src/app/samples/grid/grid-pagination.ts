@@ -43,7 +43,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
         <div class="feature-content">
             <div #application>
                 <div>
-                    <span style="display:inline-block;padding:10px 5px 5px 0;">Rows per page: </span>
+                    <span style="display:inline-block;padding:10px 5px 5px 0;vertical-align:top;">Rows per page: </span>
                     <iui-combobox [items]="comboItems" [controlStyle]="comboStyle" [maxDropDownItems]="5" [integralHeight]="true" [selectedIndex]="4" (selectedItemChanged)="onComboSelectionChanged($event)">
                         <iui-item *ngFor="let item of comboItems" [text]="item.text"></iui-item>
                     </iui-combobox>

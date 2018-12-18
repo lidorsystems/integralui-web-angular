@@ -57,7 +57,6 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
                     <div class="acc-ovw-group-content">Content of {{group.text}}</div>
                 </iui-groupbox>
             </iui-accordion>
-            <br style="clear:both;"/>
             <div class="feature-help" style="width:800px;">
                 <p><span class="initial-space"></span>An example on how to add a <a routerLink="../../contextmenu">Context Menu</a> to Accordion component. The sample also shows how to edit the group title using a simple text editor.</p>
                 <p><span class="initial-space"></span>By right-clicking over Accordion, a context menu will popup showing options where to add a new group. When an option is selected, a group is created and placed at specified position. Then, a text editor appears where you can enter the group title.</p>

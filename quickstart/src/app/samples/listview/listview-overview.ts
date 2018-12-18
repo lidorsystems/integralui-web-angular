@@ -28,6 +28,10 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                 width: 600px;
                 height: 400px;
             }
+            .lview-ovw-normal .iui-listitem-animate
+            {
+                margin: 2px;
+            }
             .lview-ovw-num
             {
                 display: inline-block;
@@ -131,8 +135,6 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
             .lview-ovw-item
             {
                 border: thin solid #e9e9e9;
-                display: inline-block;
-                margin: 2px;
             }
             .lview-ovw-custom-item
             {
@@ -212,7 +214,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                 </div>
                 <iui-listview [name]="'ListView'" [items]="items" [appRef]="applicationRef" [controlStyle]="ctrlStyle" [scrollMode]="scrollType" [allowDrag]="true" (selectionChanged)="itemSelectionChanged($event)" #listview>
                     <div *ngIf="isScrollHorizontal()">
-                        <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="horItemStyle">
+                        <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="horItemStyle" [allowAnimation]="true">
                             <div class="lview-ovw-custom-item" (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
                                 <img class="lview-ovw-star" src="{{getRating(item.rating)}}" />
                                 <span class="lview-ovw-rating">{{getRatingValue(item.rating)}}</span>
@@ -223,7 +225,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                         </iui-listitem>
                     </div>
                     <div *ngIf="isScrollVertical()">
-                        <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="verItemStyle">
+                        <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="verItemStyle" [allowAnimation]="true">
                             <div class="lview-ovw-custom-item-large" (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
                                 <span *ngIf="item == currentSelection" class="lview-ovw-corner"></span>
                                 <span class="lview-ovw-num-corner">{{i+1}}</span><br />

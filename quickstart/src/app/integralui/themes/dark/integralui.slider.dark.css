@@ -1,9 +1,13 @@
-.iui-slider-content
+.iui-slider-content.iui-slider-content, .iui-slider-content-vertical
 {
-	background: #606060;
+	background: #242424;
 }
-.iui-slider-value
+.iui-slider-background, .iui-slider-background-vertical
 {
 	background: #808080;
-	border-color: #606060;
+}
+.iui-slider-button
+{
+	background: transparent;
+	border: 2px solid #808080;
 }

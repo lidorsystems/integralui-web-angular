@@ -43,7 +43,7 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
         width: any;
         height: any;
     };
-    protected getItemElemList(): ElementRef[];
+    protected getItemElemList(): ElementRef<any>[];
     updateLayout(): void;
     getControlStyle(): any;
     private resetRefresh();

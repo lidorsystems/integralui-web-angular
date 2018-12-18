@@ -124,3 +124,13 @@
     opacity: 0.75;
     pointer-events: none;
 }
+
+/* Animations */
+.iui-treeitem-animate
+{
+    border: 0 solid transparent;
+    background-color: transparent;
+    box-shadow: none;
+    list-style-type: none;
+    position: relative;
+}

@@ -61,8 +61,9 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             }
             .treegrid-evnts-add-remove-btns button
             {
-                margin: 5px 0;
-                width: 125px;
+                margin: 5px;
+                padding: 5px;
+                width: 100px;
             }
             .treegrid-evnts-cell-label
             {
@@ -74,7 +75,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             <h2 class="feature-title">TreeGrid / Events</h2>
             <div class="feature-content" #application>
                 <div class="treegrid-evnts-add-remove-btns">
-                    <button (click)="add()">Add Row</button>
+                    <button style="margin-left:0;" (click)="add()">Add Row</button>
                     <button (click)="remove()" [disabled]="disableButtons">Remove Row</button>
                     <button (click)="clear()" [disabled]="disableButtons">Clear Rows</button>
                 </div>

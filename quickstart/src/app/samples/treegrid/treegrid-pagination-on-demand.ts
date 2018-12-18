@@ -62,7 +62,7 @@ import { IntegralUIVisibility } from '../../integralui/components/integralui.cor
             .treegrid-pgn-rsz-control-panel button
             {
                 display: inline-block;
-                margin: 5px 0;
+                margin: 5px;
                 width: 100px;
                 height: 25px;
             }

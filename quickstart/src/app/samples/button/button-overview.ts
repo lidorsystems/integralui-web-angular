@@ -39,19 +39,34 @@ import { IntegralUICheckState } from '../../integralui/components/integralui.cor
             {
                 white-space: nowrap;
             }
+
+
+            .btn-vertical
+            {
+                cursor: pointer;
+                margin: 5px 0;
+                padding: 10px;
+                text-align: center;
+                width: 75px;
+            }
         </style>
         <h2 class="feature-title">Button / Overview</h2>
         <div class="feature-content">
             <div class="btn-ovw-container">
-                <iui-button [controlStyle]="ctrlStyle2" [pressed]="isButtonPressed[0]" (click)="onButtonClicked(0)">Button 1</iui-button>
-                <iui-button [controlStyle]="ctrlStyle" [pressed]="isButtonPressed[1]" (click)="onButtonClicked(1)">Button 2</iui-button>
-                <iui-button [controlStyle]="ctrlStyle3" [pressed]="isButtonPressed[2]" (click)="onButtonClicked(2)">Button 3</iui-button>
+                <iui-button [allowAnimation]="true" [controlStyle]="ctrlStyle2" [pressed]="isButtonPressed[0]" (click)="onButtonClicked(0)">Button 1</iui-button>
+                <iui-button [allowAnimation]="true" [controlStyle]="ctrlStyle" [pressed]="isButtonPressed[1]" (click)="onButtonClicked(1)">Button 2</iui-button>
+                <iui-button [allowAnimation]="true" [controlStyle]="ctrlStyle3" [pressed]="isButtonPressed[2]" (click)="onButtonClicked(2)">Button 3</iui-button>
+                <br/><br/>
+                <iui-button [allowAnimation]="true" [controlStyle]="ctrlStyleVertical">Button 4</iui-button>
+                <iui-button [allowAnimation]="true" [controlStyle]="ctrlStyleVertical">Button 5</iui-button>
+                <iui-button [allowAnimation]="true" [controlStyle]="ctrlStyleVertical">Button 6</iui-button>
             </div>
             <div class="feature-help" style="margin-top:50px;width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Button</strong> is a native Angular component that represents a button. It is fully customizable via CSS.</p>
-                <p><span class="initial-space"></span>In thios example, there are buttons aligned close to each other to form a button group. Each button when clicked changes its <span style="color:#c60d0d">pressed</span> property value, to true or false.</p>
+                <p><span class="initial-space"></span>In this example, there are buttons aligned close to each other to form a button group. Each button when clicked changes its <span style="color:#c60d0d">pressed</span> property value, to true or false.</p>
                 <p><span class="initial-space"></span>The following properties and events are supported:</p>
                 <ul class="feature-points">
+                    <li><span style="color:#c60d0d">allowAnimation</span> - Determines whether component appearance is animated or not</li>
                     <li><span style="color:#c60d0d">controlStyle</span> - Specifies an object that contains all style settings for the component</li>
                     <li><span style="color:#c60d0d">data</span> - Specifies an object that holds data related to the component</li>
                     <li><span style="color:#c60d0d">enabled</span> - Determines whether the component is enabled or disabled</li>
@@ -84,6 +99,12 @@ export class ButtonOverviewSample {
     public ctrlStyle3: any = {
         general: { 
             normal: 'btn-ovw btn3-ovw',
+        }
+    }
+
+    public ctrlStyleVertical: any = {
+        general: { 
+            normal: 'btn-vertical',
         }
     }
 

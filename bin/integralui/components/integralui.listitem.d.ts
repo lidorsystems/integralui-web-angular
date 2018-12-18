@@ -5,6 +5,9 @@ export declare class IntegralUIListItem extends IntegralUIItem {
     protected elemRef: ElementRef;
     protected commonService: IntegralUICommonService;
     protected baseService: IntegralUIBaseService;
+    clickPos: any;
+    isClicked: boolean;
+    isHovered: boolean;
     contentElem: ElementRef;
     dragElem: ElementRef;
     protected parentCtrl: any;
@@ -23,6 +26,7 @@ export declare class IntegralUIListItem extends IntegralUIItem {
     onMouseEnter(e: any): void;
     onMouseDown(e: any): void;
     onMouseUp(e: any): void;
+    onMouseLeave(e: any): void;
     selectItem(): void;
     onTouchStart(e: any): void;
     getControlStyle(): any;

@@ -12,6 +12,8 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected commonService: IntegralUICommonService;
     protected filterService: IntegralUIFilterService;
     protected cmpResolver: ComponentFactoryResolver;
+    animateItemSize: any;
+    protected prevClickedObj: any;
     protected currentList: Array<any>;
     protected options: any;
     private dataItems;
@@ -26,7 +28,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected isDragActive: boolean;
     protected filterParams: any;
     ctrlCursor: string;
-    protected hoverItem: any;
+    hoverItem: any;
     protected currentFocusItem: any;
     protected isKeyboardActive: boolean;
     protected allowUpdate: boolean;
@@ -48,7 +50,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     maxScrollPos: any;
     private accelerator;
     protected isScrollActive: boolean;
-    private isScrollTimerActive;
+    protected isScrollTimerActive: boolean;
     protected prevScrollPos: {
         x: number;
         y: number;
@@ -145,7 +147,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected updateItem(item: any): void;
     protected updateScrollItemList(): void;
     private addDropMark(pos);
-    protected removeDropMark(): void;
+    removeDropMark(): void;
     protected callDragDropEvent(e: any, data: any, flag?: boolean): boolean;
     private checkEmptySpace(e);
     ctrlDragEnd(e: any): void;
@@ -283,6 +285,12 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
             hovered: any;
             normal: any;
             selected: any;
+        } | {
+            disabled?: undefined;
+            focused?: undefined;
+            hovered?: undefined;
+            normal?: undefined;
+            selected?: undefined;
         };
         item: {
             general: {

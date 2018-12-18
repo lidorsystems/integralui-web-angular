@@ -138,8 +138,8 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
         <div>
             <h2 class="feature-title">Accordion / Custom Header</h2>
             <div class="feature-content">
-                <iui-accordion [groups]="data" [controlStyle]="ctrlStyle" #accordion>
-                   <iui-groupbox *ngFor="let group of data" [controlStyle]="groupStyle">
+                <iui-accordion [groups]="data" [controlStyle]="ctrlStyle" [allowAnimation]="true" #accordion>
+                   <iui-groupbox *ngFor="let group of data" [controlStyle]="groupStyle" [allowAnimation]="true">
                         <iui-group-header>
                             <div class="custom-group-header">
                                 <span class="icons {{group.icon}}"></span>

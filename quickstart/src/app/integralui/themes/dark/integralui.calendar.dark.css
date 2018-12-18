@@ -1,0 +1,56 @@
+.iui-calendar
+{
+    background-color: #363636;
+    border-color: #121212;
+    color: #c5c5c5;
+}
+.iui-calendar-cell
+{
+    color: #c5c5c5;
+}
+.iui-calendar-cell-hovered, .iui-calendar-cell-grayed:hover
+{
+	background: #808080;
+	border-color: #808080;
+}
+.iui-calendar-cell-selected
+{
+    background: #646464;
+    border-color: #646464;
+	color: white;
+}
+.iui-calendar-cell-today
+{
+	border-color: #646464;
+}
+.iui-calendar-header-button-prev span
+{
+	background-position: -120px -216px;
+}
+.iui-calendar-header-button-next span
+{
+	background-position: -144px -216px;
+}
+
+@keyframes calendar-cell-enter
+{
+	0% { 	   
+	    background: transparent;
+	    border-color: transparent;
+	}
+	100% { 
+	    background: #808080;
+	    border-color: #808080;
+	}
+}
+@keyframes calendar-cell-leave
+{
+	0% { 	   
+	    background: #808080;
+	    border-color: #808080;
+	}
+	100% { 
+	    background: transparent;
+	    border-color: transparent;
+	}
+}

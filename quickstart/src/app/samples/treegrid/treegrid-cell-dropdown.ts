@@ -236,19 +236,25 @@ export class TreeGridCellDropDownSample {
     }
 
     ngAfterViewInit(){
-        // Set a dropdown for row cells
-        let list = this.treegrid.getFullList();
-        for (let i = 0; i < list.length; i++)
-            for (let j = 0; j < list[i].cells.length; j++){
-                let cell: any = list[i].cells[j];
+        let self = this;
 
-                if (cell.cid == 4)
-                    cell.dropdown = {
-                        appRef: this.applicationRef,
-                        adjustment: { top: 0, left: -3 },
-                        data: cell
-                    }
-            }
+        let initTimeout = setTimeout(function(){
+            // Set a dropdown for row cells
+            let list = self.treegrid.getFullList();
+            for (let i = 0; i < list.length; i++)
+                for (let j = 0; j < list[i].cells.length; j++){
+                    let cell: any = list[i].cells[j];
+
+                    if (cell.cid == 4)
+                        cell.dropdown = {
+                            appRef: self.applicationRef,
+                            adjustment: { top: 0, left: -3 },
+                            data: cell
+                        }
+                }
+
+            clearTimeout(initTimeout);
+        }, 100);
     }
 
     // CheckBox Cell ---------------------------------------------------------------------

@@ -46,6 +46,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             <div class="cmb-ovw-block">
                 <iui-combobox #combobox
                     [items]="items"
+                    [allowAnimation]="true"
                     [dropDownWidth]="comboOptions.dropDownWidth"
                     [dropDownHeight]="comboOptions.dropDownHeight"
                     [integralHeight]="comboOptions.integralHeight"

@@ -28,9 +28,12 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
             {
                 display: inline-block;
                 margin-left: 25px;
+                vertical-align: top;
             }
             .grid-ftr-dropdown
             {
+                display: inline-block;
+                vertical-align: top;
             }
             .grid-ftr-column-filter-mark
             {
@@ -73,6 +76,11 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
                 margin: 3px 0;
                 white-space: nowrap;
             }
+            .grid-ftr-inline-block input
+            {
+                display: inline-block;
+                vertical-align: top;
+            }
             .grid-ftr-cmb
             {
                 display: inline-block;
@@ -90,7 +98,6 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
                 <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                     <span [ngSwitch]="column.id">
                         <span *ngSwitchCase="3">
-                            <span class="grid-ftr-column-title">{{column.headerText}}</span> 
                             <span class="grid-ftr-dropdown" [iuiDropDown]="column.dropdown" (dropDownOpen)="onAuthorDropDownOpen($event)" #dropdown1>
                                 <span class="grid-ftr-column-filter-mark"></span>
                                 <ng-template let-obj [iuiTemplate]="{ type: 'dropdown' }">
@@ -119,9 +126,9 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
                                     </div>
                                 </ng-template>
                             </span>
+                            <span class="grid-ftr-column-title">{{column.headerText}}</span> 
                         </span>
                         <span *ngSwitchCase="4">
-                            <span class="grid-ftr-column-title">{{column.headerText}}</span> 
                             <span class="grid-ftr-dropdown" [iuiDropDown]="column.dropdown" (dropDownOpen)="onPriceDropDownOpen($event)" #dropdown2>
                                 <span class="grid-ftr-column-filter-mark"></span>
                                 <ng-template let-obj [iuiTemplate]="{ type: 'dropdown' }">
@@ -150,6 +157,7 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
                                     </div>
                                 </ng-template>
                             </span>
+                            <span class="grid-ftr-column-title">{{column.headerText}}</span> 
                         </span>
                         <span *ngSwitchDefault>
                             {{column.headerText}}
@@ -212,8 +220,8 @@ export class GridFilterSample {
     constructor(){
         this.columns = [
             { id: 2, headerText: "Name", width: 400 },
-            { id: 3, headerText: "Author/Supplier", headerAlignment: "center", contentAlignment: "center", width: 225, allowFilter: true },
-            { id: 4, headerText: "Price", headerAlignment: "center", contentAlignment: "right", width: 120, allowFilter: true }
+            { id: 3, headerText: "Author/Supplier", contentAlignment: "center", width: 225, allowFilter: true },
+            { id: 4, headerText: "Price", contentAlignment: "right", width: 120, allowFilter: true }
         ];
 
         this.rows = [
@@ -332,13 +340,13 @@ export class GridFilterSample {
         // Set a dropdown for columns
         this.columns[1].dropdown = {
             appRef: this.applicationRef,
-            adjustment: { top: 25, left: -1 },
+            adjustment: { top: 22, left: -5 },
             autoClose: false
         }
 
         this.columns[2].dropdown = {
             appRef: this.applicationRef,
-            adjustment: { top: 25, left: -1 },
+            adjustment: { top: 22, left: -5 },
             autoClose: false
         }
     }

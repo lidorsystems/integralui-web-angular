@@ -76,6 +76,15 @@
 	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
 }
 
+/* Animation */
+.iui-grid-column-animate-select
+{
+	background: #d9ebf9;
+}
+.iui-grid-row-animate-select
+{
+	background: #e5f3fe;
+}
 
 /* Grouping */
 .iui-grid-grouping-panel

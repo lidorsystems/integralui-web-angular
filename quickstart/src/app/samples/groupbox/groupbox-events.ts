@@ -58,7 +58,7 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
         <div>
             <h2 class="feature-title">GroupBox / Events</h2>
             <div class="feature-content">
-                <iui-groupbox [text]="groupObj.text" [data]="groupObj" [expandBoxType]="'plus-minus'" [controlStyle]="ctrlStyle"
+                <iui-groupbox [text]="groupObj.text" [data]="groupObj" [expandBoxType]="'plus-minus'" [controlStyle]="ctrlStyle" [allowAnimation]="true"
                     (afterCollapse)="onAfterCollapse($event)"
                     (afterExpand)="onAfterExpand($event)"
                     (afterSelect)="onAfterSelect($event)"

@@ -29,9 +29,12 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
             {
                 display: inline-block;
                 margin-left: 25px;
+                vertical-align: top;
             }
             .treegrid-ftr-dropdown
             {
+                display: inline-block;
+                vertical-align: top;
             }
             .treegrid-ftr-column-filter-mark
             {
@@ -112,6 +115,11 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
                 margin: 3px 0;
                 white-space: nowrap;
             }
+            .treegrid-ftr-inline-block input
+            {
+                display: inline-block;
+                vertical-align: top;
+            }
             .treegrid-ftr-cmb
             {
                 display: inline-block;
@@ -129,7 +137,6 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
                 <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                     <span [ngSwitch]="column.id">
                         <span *ngSwitchCase="2">
-                            <span class="treegrid-ftr-column-title">{{column.headerText}}</span> 
                             <span class="treegrid-ftr-dropdown" [iuiDropDown]="column.dropdown" (dropDownOpen)="onCategoriesDropDownOpen($event)" #dropdown1>
                                 <span class="treegrid-ftr-column-filter-mark"></span>
                                 <ng-template let-obj [iuiTemplate]="{ type: 'dropdown' }">
@@ -147,9 +154,9 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
                                     </div>
                                 </ng-template>
                             </span>
+                            <span class="treegrid-ftr-column-title">{{column.headerText}}</span> 
                         </span>
                         <span *ngSwitchCase="3">
-                            <span class="treegrid-ftr-column-title">{{column.headerText}}</span> 
                             <span class="treegrid-ftr-dropdown" [iuiDropDown]="column.dropdown" (dropDownOpen)="onAuthorDropDownOpen($event)" #dropdown2>
                                 <span class="treegrid-ftr-column-filter-mark"></span>
                                 <ng-template let-obj [iuiTemplate]="{ type: 'dropdown' }">
@@ -178,9 +185,9 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
                                     </div>
                                 </ng-template>
                             </span>
+                            <span class="treegrid-ftr-column-title">{{column.headerText}}</span> 
                         </span>
                         <span *ngSwitchCase="4">
-                            <span class="treegrid-ftr-column-title">{{column.headerText}}</span> 
                             <span class="treegrid-ftr-dropdown" [iuiDropDown]="column.dropdown" (dropDownOpen)="onPriceDropDownOpen($event)" #dropdown3>
                                 <span class="treegrid-ftr-column-filter-mark"></span>
                                 <ng-template let-obj [iuiTemplate]="{ type: 'dropdown' }">
@@ -209,6 +216,7 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
                                     </div>
                                 </ng-template>
                             </span>
+                            <span class="treegrid-ftr-column-title">{{column.headerText}}</span> 
                         </span>
                         <span *ngSwitchDefault>
                             {{column.headerText}}
@@ -275,8 +283,8 @@ export class TreeGridFilterSample {
     constructor(protected filterService: IntegralUIFilterService){
         this.columns = [
             { id: 2, headerText: "Category/Name", width: 400 },
-            { id: 3, headerText: "Author/Supplier", headerAlignment: "center", contentAlignment: "center", width: 225, allowFilter: true },
-            { id: 4, headerText: "Price", headerAlignment: "center", contentAlignment: "right", width: 120, allowFilter: true }
+            { id: 3, headerText: "Author/Supplier", contentAlignment: "center", width: 225, allowFilter: true },
+            { id: 4, headerText: "Price", contentAlignment: "right", width: 120, allowFilter: true }
         ];
 
         this.rows = [];
@@ -467,7 +475,7 @@ export class TreeGridFilterSample {
         // Set a dropdown for columns
         let dropDownObj: any = {
             appRef: this.applicationRef,
-            adjustment: { top: 25, left: -1 },
+            adjustment: { top: 22, left: -5 },
             autoClose: false
         }
 

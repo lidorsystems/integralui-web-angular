@@ -124,7 +124,7 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
         <div>
             <h2 class="feature-title">GroupBox / Custom Header</h2>
             <div class="feature-content">
-               <iui-groupbox [controlStyle]="groupStyle">
+               <iui-groupbox [controlStyle]="groupStyle" [allowAnimation]="true">
                     <iui-group-header>
                         <div class="grpbox-custom-group-header">
                             <span class="icons {{groupObj.icon}}"></span>

@@ -48,9 +48,9 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
                 </iui-listbox>
                 <br />
                 <div align="center">
-                    <span>Max items:</span> <input class="listview-keynav-input-numeric" type="number" [(ngModel)]="numItems" min="1" max="100000" />
-                    <button (click)="add()" class="listview-keynav-ctrl-button">Add</button>
-                    <button (click)="clear()" class="listview-keynav-ctrl-button">Clear</button>
+                    <span>Max items:</span> <input class="listbox-keynav-input-numeric" type="number" [(ngModel)]="numItems" min="1" max="100000" />
+                    <button (click)="add()" class="listbox-keynav-ctrl-button">Add</button>
+                    <button (click)="clear()" class="listbox-keynav-ctrl-button">Clear</button>
                 </div>
             </div>
             <br style="clear:both;"/>
@@ -93,7 +93,10 @@ export class ListBoxKeyboardSample {
     } 
     
     ngAfterViewInit(){
-        this.add();
+        let self = this;
+        setTimeout(function(){
+            self.add();
+        }, 250);
     }
 
     addItems(){

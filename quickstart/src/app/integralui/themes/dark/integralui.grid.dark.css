@@ -70,6 +70,38 @@
 	background: url(../../resources/collapse-white.png) no-repeat 0 0;
 }
 
+/* Animation */
+.iui-grid-column-animate-select
+{
+	background: #808080;
+}
+.iui-grid-row-animate-select
+{
+	background: #808080;
+}
+@keyframes grid-column-animate-enter
+{
+	0% { 	   
+	    border: thin solid transparent;
+	    box-shadow: none;
+	}
+	100% { 
+	    border: thin solid #cecece;
+	    box-shadow: 2px 3px 3px #242424;
+	}
+}
+@keyframes grid-row-animate-enter
+{
+	0% { 	   
+	    border: thin solid transparent;
+	    box-shadow: none;
+	}
+	100% { 
+	    border: thin solid #cecece;
+	    box-shadow: 2px 3px 3px #242424;
+	}
+}
+
 /* Grouping */
 .iui-grid-grouping-panel
 {

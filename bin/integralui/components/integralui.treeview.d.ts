@@ -93,8 +93,8 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     getPrevItem(item: any): any;
     getNextItem(item: any): any;
     moveItem(item: any, direction: IntegralUIMoveDirection, targetItem?: any, position?: number): void;
-    processLeftAritemKey(item: any, e?: any): any;
-    processRightAritemKey(item: any, e?: any): any;
+    processLeftArrowKey(item: any, e?: any): any;
+    processRightArrowKey(item: any, e?: any): any;
     protected getContentSize(): {
         width: any;
         height: any;
@@ -104,7 +104,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     private isItemInCurrentList(item);
     private updateLongestItem();
     protected updateCurrentLayout(): void;
-    protected getItemElemList(): ElementRef[];
+    protected getItemElemList(): ElementRef<any>[];
     protected updateScrollSize(): void;
     beginLoad(item?: any): void;
     endLoad(item?: any): void;

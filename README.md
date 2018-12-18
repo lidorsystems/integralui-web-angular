@@ -1,8 +1,8 @@
 # IntegralUI Web for Angular
 
-IntegralUI Web is a library built on top of Angular 5 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
+IntegralUI Web is a library built on top of Angular 6 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
-![IntegralUI Web 18.1 - 30+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
+![IntegralUI Web 18.4 - 30+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
 
 Here is a brief overview of what is included:
 
@@ -12,9 +12,13 @@ Here is a brief overview of what is included:
 
 [Button](http://www.lidorsystems.com/products/web/studio/samples/angular/#/button/overview/) - Represents a button
 
+[Calendar](http://www.lidorsystems.com/products/web/studio/samples/angular/#/calendar/overview/) - Enables the user to select a date using a visual monthly calendar display
+
 [CheckBox](http://www.lidorsystems.com/products/web/studio/samples/angular/#/checkbox/overview/) - Represents a check box
 
 [ComboBox](http://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx) - Advanced version of standard ComboBox element
+
+[DatePicker](http://www.lidorsystems.com/products/web/studio/samples/angular/#/datepicker/overview/) - Allows the user to select a date by using a drop-down calendar
 
 [Dialog](http://www.lidorsystems.com/products/web/studio/samples/angular/#/dialog/overview/) - Displays a modal window
 
@@ -92,7 +96,7 @@ All components are inheritable, you can further extend functionalities of specif
 
 IntegralUI Web requires only the following library:
 
-Angular - v5.0 and above
+Angular - v6.0 and above
 
 
 ## DEMO

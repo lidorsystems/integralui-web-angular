@@ -60,8 +60,8 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
         <div>
             <h2 class="feature-title">Accordion / Header with CheckBox</h2>
             <div class="feature-content">
-                <iui-accordion [groups]="data" [controlStyle]="ctrlStyle" (beforeSelect)="onBeforeSelect($event)" #accordion>
-                   <iui-groupbox *ngFor="let group of data" [data]="group" [expandBoxType]="'plus-minus'" #groupbox>
+                <iui-accordion [groups]="data" [controlStyle]="ctrlStyle" (beforeSelect)="onBeforeSelect($event)" [allowAnimation]="true" #accordion>
+                   <iui-groupbox *ngFor="let group of data" [data]="group" [expandBoxType]="'plus-minus'" [allowAnimation]="true" #groupbox>
                         <iui-group-header>
                             <div class="acc-hcb-group-header">
                                 <input class="acc-checkbox" type="checkbox" [(ngModel)]="group.checked" (mousedown)="onMouseDownCheckBox($event, group)" />

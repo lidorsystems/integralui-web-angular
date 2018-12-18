@@ -16,7 +16,6 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     protected changeRef: ChangeDetectorRef;
     protected cmpResolver: ComponentFactoryResolver;
     protected baseService: IntegralUIBaseService;
-    protected updateDragHandlePos(e: any): void;
     headerData: Array<any>;
     rowData: Array<any>;
     cellData: Array<any>;
@@ -131,6 +130,8 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     protected processDataDropAtTargetGroup(row: any, targetGroup: any): void;
     protected processDataDropAtTargetRow(row: any, targetRow: any, pos: number): void;
     private getFirstGroupChildRow(group);
+    protected updateDragHandlePos(e: any): void;
+    openDropDown(e: any, obj: any, i: number, j: number): void;
     collapse(row?: any): void;
     expand(row?: any): void;
     toggle(row?: any, value?: boolean): void;
@@ -250,6 +251,12 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
             hovered: any;
             normal: any;
             selected: any;
+        } | {
+            disabled?: undefined;
+            focused?: undefined;
+            hovered?: undefined;
+            normal?: undefined;
+            selected?: undefined;
         };
         column: {
             header: {

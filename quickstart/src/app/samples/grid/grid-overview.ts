@@ -106,7 +106,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
         <h2 class="feature-title">Grid / Overview</h2>
         <div class="feature-content">
             <div #application>
-                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true" #grid>
+                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true" [allowAnimation]="true" #grid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         <span *ngIf="column.id==9" class="grid-ovw-cell-checkbox" [ngStyle]="{ 'background-image': getCheckValue(column) }" (mousedown)="columnCheckClicked(column)"></span>
                         {{column.headerText}}
@@ -153,8 +153,10 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             <div class="feature-help">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Grid</strong> is a native Angular component that displays tabular data sets. You can load data on demand during run-time from local or remote data sources. Each grid cell can have custom HTML content or other Angular components.</p>
                 <p><span class="initial-space"></span>In above demo, there are cells with different content: checkbox, icon with image and dropdown list. In addition, the footer displays the total volume in bold. Using the dropdown you can choose a different country from the list, and using the checkbox in column header you can check or uncheck all rows.</p>
+                <p><span class="initial-space"></span>In order to see columns with different kinds of editors, check out this example <a routerLink="/grid/builtin-editors">Built-In Editors</a>. By default editor is not specified, and the content in each cell is determined by its template, where you can add any custom HTML elements.</p>
                 <p><span class="initial-space"></span>To start a drag and drop operation, left-click on a row and move the mouse cursor, so that you can reorder rows during run-time. In this example, there are no restrictions set, and you can drag and drop a row and placed it as a child of another row. However, if you want you can set conditions and provide custom drag drop operations on your own.</p>
                 <p><span class="initial-space"></span>To select multiple rows, hold SHIFT or CTRL key and click on specific row.</p>
+                <p><span class="initial-space"></span>This example also shows an animation effect during hovering or selection of columns and rows. This is controlled by the <span style="color:#c60d0d">allowAnimation</span> property, which by default is set to false.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>grid/grid-overview.ts</i>) file, or read the following article:</p> 
                 <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/grid/grid-component.aspx">Overview of IntegralUI Grid for Angular</a></p>
             </div>

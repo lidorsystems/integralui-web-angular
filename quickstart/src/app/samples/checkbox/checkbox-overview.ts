@@ -75,16 +75,17 @@ import { IntegralUICheckState } from '../../integralui/components/integralui.cor
         <h2 class="feature-title">CheckBox / Overview</h2>
         <div class="feature-content">
             <div class="rtg-ovw-container">
-                <iui-checkbox [threeState]="true" [(ngModel)]="checkValue">CheckBox 1</iui-checkbox><br/>
-                <iui-checkbox [controlStyle]="ctrlStyle2" [threeState]="true" [(ngModel)]="checkValue2">CheckBox 2</iui-checkbox><br/>
-                <iui-checkbox [controlStyle]="ctrlStyle3" [(ngModel)]="checkValue3">CheckBox 3</iui-checkbox><br/>
-                <iui-checkbox [controlStyle]="ctrlStyle4" [(ngModel)]="checkValue4">CheckBox 4</iui-checkbox><br/>
-                <iui-checkbox [controlStyle]="ctrlStyle5" [(ngModel)]="checkValue5">CheckBox 5</iui-checkbox>
+                <iui-checkbox [allowAnimation]="true" [threeState]="true" [(ngModel)]="checkValue">CheckBox 1</iui-checkbox><br/>
+                <iui-checkbox [allowAnimation]="true" [controlStyle]="ctrlStyle2" [threeState]="true" [(ngModel)]="checkValue2">CheckBox 2</iui-checkbox><br/>
+                <iui-checkbox [allowAnimation]="true" [controlStyle]="ctrlStyle3" [(ngModel)]="checkValue3">CheckBox 3</iui-checkbox><br/>
+                <iui-checkbox [allowAnimation]="true" [controlStyle]="ctrlStyle4" [(ngModel)]="checkValue4">CheckBox 4</iui-checkbox><br/>
+                <iui-checkbox [allowAnimation]="true" [controlStyle]="ctrlStyle5" [(ngModel)]="checkValue5">CheckBox 5</iui-checkbox>
             </div>
             <div class="feature-help" style="margin-top:50px;width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> CheckBox</strong> is a native Angular component that represents a check box. It is fully customizable via CSS, supports <strong>ngModel</strong> directive and can be used within Angular Forms.</p>
                 <p><span class="initial-space"></span>The following properties and events are supported:</p>
                 <ul class="feature-points">
+                    <li><span style="color:#c60d0d">allowAnimation</span> - Determines whether component appearance is animated or not</li>
                     <li><span style="color:#c60d0d">checked</span> - Specifies whether CheckBox is checked or not: true or false</li>
                     <li><span style="color:#c60d0d">checkState</span> - Specifies one of the three state values: unchecked, indeterminate or checked</li>
                     <li><span style="color:#c60d0d">controlStyle</span> - Specifies an object that contains all style settings for the component</li>

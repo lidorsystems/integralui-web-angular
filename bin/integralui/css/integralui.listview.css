@@ -24,3 +24,38 @@
     pointer-events: none;
 }
 
+.iui-listviewitem-animate
+{
+    border: 0 solid transparent;
+    background-color: transparent;
+    box-shadow: none;
+    list-style-type: none;
+}
+.iui-listviewitem-animate-enter
+{
+    animation-name: listviewitem-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.175s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes listviewitem-animate-enter
+{
+    0% {       
+        border: thin solid transparent;
+        box-shadow: none;
+        overflow: hidden;
+        padding-bottom: 2px;
+        z-index: 9;
+    }
+    100% { 
+        border: thin solid #242424;
+        box-shadow: 2px 3px 3px #cecece;
+        overflow: hidden;
+        padding-bottom: 2px;
+        z-index: 9;
+    }
+}

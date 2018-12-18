@@ -49,11 +49,11 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
         <h2 class="feature-title">TreeGrid / Multi Select</h2>
         <div class="feature-content">
             <div style="float:left">
-                <div style="float:right">
-                    <span style="display:inline-block;padding:10px 5px 5px 0;">Selection Mode: </span>
+                <div>
                     <iui-combobox [items]="comboItems" [controlStyle]="comboStyle" [maxDropDownItems]="4" [integralHeight]="true" [selectedIndex]="1" (selectedIndexChanged)="onComboSelectionChanged($event)">
                         <iui-item *ngFor="let item of comboItems" [text]="item.text"></iui-item>
                     </iui-combobox>
+                    <span style="display:inline-block;float:right;padding:10px 5px 5px 0;">Selection Mode: </span>
                 </div>
                 <iui-treegrid [columns]="columns" [rows]="rows" [controlStyle]="treegridStyle" [selectionMode]="selMode" (selectionChanged)="onSelectionChanged($event)" #treegrid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">

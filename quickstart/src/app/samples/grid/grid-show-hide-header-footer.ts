@@ -107,7 +107,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
         <h2 class="feature-title">Grid / Show or Hide the Column Header and Footer</h2>
         <div class="feature-content" style="width:900px;">
             <div #application>
-                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [showHeader]="isHeaderVisible" [showFooter]="isFooterVisible" [gridLines]="checkGridLines()"  #grid>
+                <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [showHeader]="isHeaderVisible" [showFooter]="isFooterVisible" [gridLines]="checkGridLines()" [allowAnimation]="true"  #grid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         <span *ngIf="column.id==9" class="grid-shf-cell-checkbox" [ngStyle]="{ 'background-image': getCheckValue(column) }" (mousedown)="columnCheckClicked(column)"></span>
                         {{column.headerText}}

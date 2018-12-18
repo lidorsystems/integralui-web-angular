@@ -25,7 +25,7 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
                 overflow: visible !important;
                 margin: 0;
                 width: 300px;
-                height: 600px;
+                height: 680px;
             }
             .list-item
             {
@@ -199,11 +199,19 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
             {
                 background-position: -192px -48px;
             }
-]        </style>
+            .calendar
+            {
+                background-position: -240px -48px;
+            }
+            .datepicker
+            {
+                background-position: -264px -48px;
+            }
+        </style>
         <div class="component-list">
             <h2 class="feature-title" style="color2:#c60d0d;font-size:1.6em;margin:0 0 20px 200px;padding-left:7px;">Components by Category</h2>
             <iui-listview [items]="items" [appRef]="applicationRef" [controlStyle]="ctrlStyle" [scrollMode]="scrollType" #listview>
-                <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="getItemStyle(item)">
+                <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="getItemStyle(item)" [allowAnimation]="false">
                     <div [ngSwitch]="item.tag">
                         <div *ngSwitchCase="'category'">
                             {{item.text}}
@@ -218,10 +226,6 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
                         </a>
                     </div>
                 </iui-listitem>
-
-                <!-- <iui-listitem *ngFor="let item of items; let i = index">
-                    {{item.text}}
-                </iui-listitem> -->
             </iui-listview>
         </div>
     `,
@@ -252,6 +256,7 @@ export class StartComponent {
             { text: "Button", icon: 'button', link: '/button' },
             { text: "CheckBox", icon: 'checkbox', link: '/checkbox' },
             { text: "ComboBox", icon: 'combobox', link: '/combobox' },
+            { text: "DatePicker", icon: 'datepicker', link: '/datepicker' },
             { text: "NumericUpDown", icon: 'numeric-updown', link: '/numeric-updown' },
             { text: "ProgressBar", icon: 'progressbar', link: '/progressbar' },
             { text: "Radio Button", icon: 'radiobutton', link: '/radiobutton' },
@@ -270,11 +275,12 @@ export class StartComponent {
             { text: "Menu", icon: 'menu', link: '/menu' },
             { text: "TreeList", icon: 'treelist', link: '/treelist' },
             { text: "TreeView", icon: 'treeview', link: '/treeview' },
-            { tag: 'separator', size: 50 },
+            { tag: 'separator', size: 75 },
             { text: "PRESENTATION", tag: 'category' },
             { text: "SlideBar", icon: 'slidebar', link: '/slidebar' },
             { tag: 'separator', size: 0 },
             { text: "UTILITY", tag: 'category' },
+            { text: "Calendar", icon: 'calendar', link: '/calendar' },
             { text: "Context Menu", icon: 'contextmenu', link: '/contextmenu' },
             { text: "Dialog", icon: 'dialog', link: '/dialog' },
             { text: "DropDown Button", icon: 'dropdownbutton', link: '/dropdownbutton' },

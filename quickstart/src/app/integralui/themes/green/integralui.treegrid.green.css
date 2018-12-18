@@ -30,3 +30,12 @@
 	color: white;
 }
 
+/* Animation */
+.iui-treegrid-column-animate-select
+{
+	background: #74b031;
+}
+.iui-treegrid-row-animate-select
+{
+	background: #82ff82;
+}

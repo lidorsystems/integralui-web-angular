@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "18.3.0",
+  "version": "18.4.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,9 +11,7 @@
   },
   "keywords": [
     "angular",
-    "angular2",
-    "angular4",
-    "angular5",
+    "angular6",
     "integralui",
     "components",
     "ui"
@@ -69,9 +67,11 @@
     "quickstart/src/app/samples/*.*",
     "quickstart/src/app/samples/accordion/*.*",
     "quickstart/src/app/samples/button/*.*",
+    "quickstart/src/app/samples/calendar/*.*",
     "quickstart/src/app/samples/checkbox/*.*",
     "quickstart/src/app/samples/combobox/*.*",
     "quickstart/src/app/samples/contextmenu/*.*",
+    "quickstart/src/app/samples/datepicker/*.*",
     "quickstart/src/app/samples/dialog/*.*",
     "quickstart/src/app/samples/dropdownbutton/*.*",
     "quickstart/src/app/samples/frame/*.*",
@@ -99,13 +99,14 @@
     "quickstart/src/app/samples/treeview/*.*"
   ],
   "devDependencies": {
-    "@angular/common": "~5.2.0",
-    "@angular/compiler": "~5.2.0",
-    "@angular/core": "~5.2.0",
-    "@angular/forms": "~5.2.0",
-    "@angular/http": "~5.2.0",
-    "@angular/platform-browser": "~5.2.0",
-    "@angular/platform-browser-dynamic": "~5.2.0",
-    "@angular/router": "~5.2.0"
+    "@angular/animations": "^6.0.3",
+    "@angular/common": "^6.0.3",
+    "@angular/compiler": "^6.0.3",
+    "@angular/core": "^6.0.3",
+    "@angular/forms": "^6.0.3",
+    "@angular/http": "^6.0.3",
+    "@angular/platform-browser": "^6.0.3",
+    "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/router": "^6.0.3"
   }
 }

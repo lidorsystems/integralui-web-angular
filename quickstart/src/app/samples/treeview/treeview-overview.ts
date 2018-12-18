@@ -23,13 +23,16 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
                 width: 350px;
                 height: 300px;
             }
+            .trw-overview .iui-treeitem-animate
+            {
+                margin: 1px 0;
+            }
             .trw-overview .iui-treeitem-expand-box
             {
                 margin-top: 4px !important;
             }
             .trw-overview .iui-treeitem-content
             {
-                margin: 1px 0 !important;
                 padding: 5px !important;
             }
             .computer-icons
@@ -134,7 +137,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
         <h2 class="feature-title">TreeView / Overview</h2>
         <div class="feature-content">
             <div style="width:400px" #application>
-                <iui-treeview [items]="items" [appRef]="applicationRef" [allowDrag]="true" [controlStyle]="ctrlStyle" [selectionMode]="selMode" #treeview>
+                <iui-treeview [items]="items" [appRef]="applicationRef" [allowDrag]="true" [controlStyle]="ctrlStyle" [selectionMode]="selMode" [allowAnimation]="true" #treeview>
                     <ng-template let-item>
                         <div (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
                             <span [ngClass]="item.icon"></span>

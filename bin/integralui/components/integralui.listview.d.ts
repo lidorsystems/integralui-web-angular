@@ -65,6 +65,7 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     protected getLeftItem(item: any): any;
     protected getRightItem(item: any): any;
     protected getUpItem(item: any): any;
+    itemMouseDown(e: any, obj: any): void;
     protected getContentSize(): {
         width: any;
         height: any;
@@ -74,7 +75,7 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     updateLayoutVirtual(): void;
     protected updateScrollSize(): void;
     protected updateVisibleRange(): void;
-    protected getItemElemList(): ElementRef[];
+    protected getItemElemList(): ElementRef<any>[];
     protected changeHorizontalScrollPos(value: number): void;
     isVerScrollVisible(): boolean;
     isHorScrollVisible(): boolean;

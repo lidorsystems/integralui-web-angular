@@ -112,4 +112,69 @@
 	pointer-events: none;
 }
 
+/* Animation */
+.iui-groupbox-header-animate-select-block
+{
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.iui-groupbox-header-animate-select
+{
+	background: #f5f5f5;
+	display: block;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+}
+.iui-groupbox-header-animate-select-left
+{
+	animation-name: groupbox-header-animate-select-left;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes groupbox-header-animate-select-left
+{
+	0% { 	   
+	    left: 100%;
+	    opacity: 0.5;
+	    width: 0;
+	}
+	100% { 
+	    left: 0;
+	    opacity: 0;
+	    width: 100%;
+	}
+}
+.iui-groupbox-header-animate-select-right
+{
+	animation-name: groupbox-header-animate-select-right;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes groupbox-header-animate-select-right
+{
+	0% { 	   
+	    width: 0;
+	    opacity: 0.5;
+	}
+	100% { 
+	    width: 100%;
+	    opacity: 0;
+	}
+}
 

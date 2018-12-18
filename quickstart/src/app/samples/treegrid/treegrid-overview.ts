@@ -67,7 +67,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
         <h2 class="feature-title">TreeGrid / Overview</h2>
         <div class="feature-content">
             <div #application>
-                <iui-treegrid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [showFooter]="false" [expandColumnIndex]="1" [selectionMode]="treegridSelMode" [allowDrag]="true" (dragOver)="treegridDragOver($event)" [rowHeight]="22" #treegrid>
+                <iui-treegrid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" [showFooter]="false" [expandColumnIndex]="1" [selectionMode]="treegridSelMode" [allowDrag]="true" (dragOver)="treegridDragOver($event)" [rowHeight]="22" [allowAnimation]="true" #treegrid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         <span *ngIf="column.id==1" class="cell-checkbox" [ngStyle]="{ 'background-image': getCheckValue(column) }" (mousedown)="columnCheckClicked(column)"></span>
                         <span>{{column.headerText}}</span>
@@ -90,10 +90,11 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             <br style="clear:both;"/>
             <div class="feature-help">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeGrid</strong> is a native Angular component that displays hierarchical data structures in multiple columns. You can load data on demand during run-time from local or remote data sources, and add custom HTML content or other Angular components in each treegrid cell.</p>
-                <p><span class="initial-space"></span>In above demo, the treegrid has columns with different content: checkbox, text and image. When you click on header with check box, all rows become checked or unchecked. In addition, a click on parent row changes the check box value to its child rows. In this example, check boxes can have 2 values: checked or unchecked, but you can change this easily by providing three values.</p>
+                <p><span class="initial-space"></span>In above demo, the treegrid has columns with different content: <a routerLink="/checkbox">checkbox</a>, <a routerLink="/rating">rating</a> and label. When you click on header with check box, all rows become checked or unchecked. In addition, a click on parent row changes the check box value to its child rows. In this example, check boxes can have 2 values: checked or unchecked, but you can change this easily by providing three values.</p>
                 <p><span class="initial-space"></span>Some columns have their content aligned to center, while others have their alignment set to left. You may also notice that expand icon is shown in second column. This is customizable, you can set which column has the expand box in your code.</p>
-                <p><span class="initial-space"></span>The Ratings column in this example uses an image. Instead of an image, you can use the <a routerLink="/rating">Rating component</a> that allows user interaction and changes to the rating value on the fly. An example that shows a TreeGrid where cells have a rating component, is available here: <a routerLink="/treegrid/cell-rating">TreeGrid Cells with Rating Component</a>.</p>
                 <p><span class="initial-space"></span>To select multiple rows, hold SHIFT or CTRL key and click on specific row.</p>
+                <p><span class="initial-space"></span>In order to see columns with different kinds of editors, check out this example <a routerLink="/treegrid/builtin-editors">Built-In Editors</a>. By default editor is not specified, and the content in each cell is determined by its template, where you can add any custom HTML elements.</p>
+                <p><span class="initial-space"></span>This example also shows an animation effect during hovering or selection of columns and rows. This is controlled by the <span style="color:#c60d0d">allowAnimation</span> property, which by default is set to false.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treegrid/trg-overview.ts</i>) file, or read the following article:</p> 
                 <p style="padding-bottom:30px"><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treegrid/trg-component.aspx">Overview of IntegralUI TreeGrid for Angular</a></p>
             </div>

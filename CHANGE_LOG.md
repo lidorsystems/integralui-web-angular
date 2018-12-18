@@ -1,3 +1,24 @@
+v18.4.0
+- New components: Calendar and DatePicker
+- Grid and TreeGrid components have built-in editors for: Boolean, Date, Image, List, Numeric, Progress, Rating and Text values
+- Option to select a different editor for each column cells
+- Cell editors are fully customizable via CSS
+- Components now have built-in animations during hovering or selection
+- All components now have a property  that determines whether animations are enabled or not
+- New events: cellValueChanging and cellValueChanged, fired when cell value changes
+- A getClientPos method is added to CommonService, which returns the mouse position in client coordinates based on specified element<
+- New and updated samples
+
+- Changes to the value property when common component is disabled is no longer applied
+- Fixed the issue that caused columnClick event to fire twice when column is clicked in Grid and TreeGrid components
+- When mouse cursor is moved from side of column border over rows, it no longer remains as resize cursor
+- Fixed the issue with MultiExtended selection in Grid and TreeGrid that caused deselection when SHIFT key is pressed
+- When moving an item from one TreeView to another with drag drop, the drop marker from the first tree view is now correctly removed from the DOM
+- Drop mark now correctly appears over the first row during drag drop operation
+- Fixed the issue that caused changes to the sorting order twice, when column header is clicked
+- Themes are updated to reflect component changes
+- Other minor bug fixes
+
 v18.3.0
 - SplitContainer now have buttons in splitter space to quickly change orientation to vertical or horizontal layout
 - TabStrip scrolling options: None, InBound and OutBound

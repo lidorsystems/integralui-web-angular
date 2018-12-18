@@ -194,6 +194,12 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
             hovered: any;
             normal: any;
             selected: any;
+        } | {
+            disabled?: undefined;
+            focused?: undefined;
+            hovered?: undefined;
+            normal?: undefined;
+            selected?: undefined;
         };
         panel: {
             disabled: any;

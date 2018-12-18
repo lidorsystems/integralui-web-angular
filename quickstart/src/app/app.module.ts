@@ -32,6 +32,9 @@ import { AccordionTooltipSample } from './samples/accordion/accordion-tooltip';
 import { ButtonSample } from './samples/button/button-main';
 import { ButtonOverviewSample } from './samples/button/button-overview';
 
+import { CalendarSample } from './samples/calendar/calendar-main';
+import { CalendarOverviewSample } from './samples/calendar/calendar-overview';
+
 import { CheckBoxSample } from './samples/checkbox/checkbox-main';
 import { CheckBoxOverviewSample } from './samples/checkbox/checkbox-overview';
 
@@ -42,6 +45,9 @@ import { ContextMenuSample } from './samples/contextmenu/contextmenu-main';
 import { ContextMenuMultiLevelSample } from './samples/contextmenu/contextmenu-multi-level';
 import { ContextMenuOverviewSample } from './samples/contextmenu/contextmenu-overview';
 import { ContextMenuTemplateSample } from './samples/contextmenu/contextmenu-templates';
+
+import { DatePickerSample } from './samples/datepicker/datepicker-main';
+import { DatePickerOverviewSample } from './samples/datepicker/datepicker-overview';
 
 import { DialogSample } from './samples/dialog/dialog-main';
 import { DialogOverviewSample } from './samples/dialog/dialog-overview';
@@ -55,6 +61,7 @@ import { FrameOverviewSample } from './samples/frame/frame-overview';
 import { GridSample } from './samples/grid/grid-main';
 import { GridAddRemoveSample } from './samples/grid/grid-add-remove';
 import { GridAddRowDynamicallySample } from './samples/grid/grid-add-row-dynamically';
+import { GridBuiltinEditorsSample } from './samples/grid/grid-builtin-editors';
 import { GridCellDropDownSample } from './samples/grid/grid-cell-dropdown';
 import { GridCellDropDownCheckedListSample } from './samples/grid/grid-cell-dropdown-checked-list';
 import { GridCellTemplatesSample } from './samples/grid/grid-cell-templates';
@@ -140,6 +147,7 @@ import { TooltipOverviewSample } from './samples/tooltip/tooltip-overview';
 import { TreeGridSample } from './samples/treegrid/treegrid-main';
 import { TreeGridAddRemoveSample } from './samples/treegrid/treegrid-add-remove';
 import { TreeGridAddRowDynamicallySample } from './samples/treegrid/treegrid-add-row-dynamically';
+import { TreeGridBuiltinEditorsSample } from './samples/treegrid/treegrid-builtin-editors';
 import { TreeGridCellDropDownSample } from './samples/treegrid/treegrid-cell-dropdown';
 import { TreeGridCellDropDownCheckedListSample } from './samples/treegrid/treegrid-cell-dropdown-checked-list';
 import { TreeGridCellRatingSample } from './samples/treegrid/treegrid-cell-rating';
@@ -193,13 +201,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             path: 'accordion', component: AccordionSample,
             children: [
               { path: '', redirectTo: 'overview', pathMatch: 'full' },
-              { path: 'add-remove', component: AccordionAddRemoveSample },
-              { path: 'context-menu', component: AccordionAddGroupContextMenuSample },
-              { path: 'custom-header', component: AccordionCustomHeaderSample },
-              { path: 'header-checkbox', component: AccordionHeaderCheckBoxSample },
-              { path: 'events', component: AccordionEventsSample },
-              { path: 'overview', component: AccordionOverviewSample },
-              { path: 'tooltip', component: AccordionTooltipSample }
+              { path: 'add-remove', component: AccordionAddRemoveSample, data: { state: 'add-remove'} },
+              { path: 'context-menu', component: AccordionAddGroupContextMenuSample, data: { state: 'context-menu'} },
+              { path: 'custom-header', component: AccordionCustomHeaderSample, data: { state: 'custom-header' } },
+              { path: 'header-checkbox', component: AccordionHeaderCheckBoxSample, data: { state: 'header-checkbox' } },
+              { path: 'events', component: AccordionEventsSample, data: { state: 'events' } },
+              { path: 'overview', component: AccordionOverviewSample, data: { state: 'overview' } },
+              { path: 'tooltip', component: AccordionTooltipSample, data: { state: 'tooltip' } }
             ]
           },
           { 
@@ -207,6 +215,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             children: [
               { path: '', redirectTo: 'overview', pathMatch: 'full' },
               { path: 'overview', component: ButtonOverviewSample }
+            ]
+          },
+          { 
+            path: 'calendar', component: CalendarSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: CalendarOverviewSample }
             ]
           },
           { 
@@ -230,6 +245,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: 'multi-level', component: ContextMenuMultiLevelSample },
               { path: 'overview', component: ContextMenuOverviewSample },
               { path: 'templates', component: ContextMenuTemplateSample }
+            ]
+          },
+          { 
+            path: 'datepicker', component: DatePickerSample,
+            children: [
+              { path: '', redirectTo: 'overview', pathMatch: 'full' },
+              { path: 'overview', component: DatePickerOverviewSample }
             ]
           },
           { 
@@ -259,6 +281,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: '', redirectTo: 'overview', pathMatch: 'full' },
               { path: 'add-remove', component: GridAddRemoveSample },
               { path: 'add-row-dynamically', component: GridAddRowDynamicallySample },
+              { path: 'builtin-editors', component: GridBuiltinEditorsSample },
               { path: 'cell-dropdown', component: GridCellDropDownSample },
               { path: 'cell-dropdown-checked-list', component: GridCellDropDownCheckedListSample },
               { path: 'cell-templates', component: GridCellTemplatesSample },
@@ -421,6 +444,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               { path: '', redirectTo: 'overview', pathMatch: 'full' },
               { path: 'add-remove', component: TreeGridAddRemoveSample },
               { path: 'add-row-dynamically', component: TreeGridAddRowDynamicallySample },
+              { path: 'builtin-editors', component: TreeGridBuiltinEditorsSample },
               { path: 'cell-dropdown', component: TreeGridCellDropDownSample },
               { path: 'cell-dropdown-checked-list', component: TreeGridCellDropDownCheckedListSample },
               { path: 'cell-rating', component: TreeGridCellRatingSample },
@@ -488,6 +512,8 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         AccordionTooltipSample,
         ButtonSample,
         ButtonOverviewSample,
+        CalendarSample,
+        CalendarOverviewSample,
         CheckBoxSample,
         CheckBoxOverviewSample,
         ComboBoxSample,
@@ -496,6 +522,8 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         ContextMenuMultiLevelSample,
         ContextMenuOverviewSample,
         ContextMenuTemplateSample,
+        DatePickerSample,
+        DatePickerOverviewSample,
         DialogSample,
         DialogOverviewSample,
         DropDownButtonSample,
@@ -505,6 +533,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         GridSample,
         GridAddRemoveSample,
         GridAddRowDynamicallySample,
+        GridBuiltinEditorsSample,
         GridCellDropDownSample,
         GridCellDropDownCheckedListSample,
         GridCellTemplatesSample,
@@ -571,6 +600,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         TreeGridSample,
         TreeGridAddRemoveSample,
         TreeGridAddRowDynamicallySample,
+        TreeGridBuiltinEditorsSample,
         TreeGridCellDropDownSample,
         TreeGridCellDropDownCheckedListSample,
         TreeGridCellRatingSample,

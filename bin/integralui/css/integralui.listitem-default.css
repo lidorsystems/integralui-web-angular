@@ -5,6 +5,10 @@
     list-style-type: none;
     overflow: hidden;
 }
+.iui-listitem-general
+{
+    list-style-type: none;
+}
 .iui-item-drag
 {
 	height: 0;
@@ -60,6 +64,7 @@
 {
 	background-color: #e5e5e5;
 	border: 2px solid #dedede;
+	z-index: 2;
 }
 .iui-listitem-focused
 {
@@ -93,3 +98,99 @@
 	pointer-events: none;
 }
 
+/* Animation */
+.iui-listitem-animate
+{
+    border: 0 solid transparent;
+    background-color: transparent;
+    box-shadow: none;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+}
+.iui-listitem-animate-enter
+{
+	animation-name: listitem-animate-enter;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.175s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes listitem-animate-enter
+{
+	0% { 	   
+	    border: thin solid transparent;
+	    box-shadow: none;
+	}
+	100% { 
+	    border: thin solid #242424;
+	    box-shadow: 2px 3px 3px #cecece;
+	}
+}
+.iui-listitem-animate-select-block
+{
+	display: block;
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.iui-listitem-animate-select
+{
+	background: #f5f5f5;
+	display: block;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+}
+.iui-listitem-animate-select-left
+{
+	animation-name: listitem-animate-select-left;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes listitem-animate-select-left
+{
+	0% { 	   
+	    left: 100%;
+	    opacity: 0.5;
+	    width: 0;
+	}
+	100% { 
+	    left: 0;
+	    opacity: 0;
+	    width: 100%;
+	}
+}
+.iui-listitem-animate-select-right
+{
+	animation-name: listitem-animate-select-right;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes listitem-animate-select-right
+{
+	0% { 	   
+	    width: 0;
+	    opacity: 0.5;
+	}
+	100% { 
+	    width: 100%;
+	    opacity: 0;
+	}
+}

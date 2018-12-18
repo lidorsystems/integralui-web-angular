@@ -17,10 +17,20 @@
 	background: #cecece;
 	width: 1px;
 }
-.iui-slider-value
+.iui-slider-background
+{
+	background: #afafaf;
+	height: 1px;
+}
+.iui-slider-background-vertical
+{
+	background: #afafaf;
+	width: 1px;
+}
+.iui-slider-button
 {
 	background: #e5e5e5;
-	border: thin solid #cecece;
+	border: 2px solid #afafaf;
 	border-radius: 3px;
 
 	pointer-events: none;

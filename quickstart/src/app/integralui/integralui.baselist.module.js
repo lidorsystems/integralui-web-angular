@@ -1,6 +1,6 @@
 /*
   filename: integralui.baselist.module.js
-  version : 2.2.0
+  version : 2.3.0
   Copyright © 2016-2018 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
@@ -12,5 +12,4 @@
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
-var __decorate=this&&this.__decorate||function(g,b,c,d){var e=arguments.length,a=3>e?b:null===d?d=Object.getOwnPropertyDescriptor(b,c):d,f;if("object"===typeof Reflect&&"function"===typeof Reflect.decorate)a=Reflect.decorate(g,b,c,d);else for(var h=g.length-1;0<=h;h--)if(f=g[h])a=(3>e?f(a):3<e?f(b,c,a):f(b,c))||a;return 3<e&&a&&Object.defineProperty(b,c,a),a},core_1=require("@angular/core"),integralui_base_list_1=require("./components/integralui.base.list"),IntegralUIBaseListModule=function(){return function(){}}();
-IntegralUIBaseListModule=__decorate([core_1.NgModule({imports:[],declarations:[integralui_base_list_1.IntegralUIBaseList],exports:[integralui_base_list_1.IntegralUIBaseList]})],IntegralUIBaseListModule);exports.IntegralUIBaseListModule=IntegralUIBaseListModule;
+Object.defineProperty(exports,"__esModule",{value:!0});var core_1=require("@angular/core"),integralui_base_list_1=require("./components/integralui.base.list"),IntegralUIBaseListModule=function(){function a(){}a.decorators=[{type:core_1.NgModule,args:[{imports:[],declarations:[integralui_base_list_1.IntegralUIBaseList],exports:[integralui_base_list_1.IntegralUIBaseList]}]}];return a}();exports.IntegralUIBaseListModule=IntegralUIBaseListModule;

@@ -240,7 +240,6 @@ export class TreeGridAddRemoveSample {
         this.rowIndex = -1;
 
         this.parentRow = this.treegrid.getRowParent(e.row);
-        console.log(this.parentRow);
         let list: Array<any> = this.treegrid.getList('', this.parentRow);
         if (list && list.length > 0)
             this.rowIndex = list.indexOf(e.row);

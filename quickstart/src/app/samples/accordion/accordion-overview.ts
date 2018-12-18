@@ -54,21 +54,19 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
                 right: 2px;
             }
         </style>
-        <div>
-            <h2 class="feature-title">Accordion / Overview</h2>
-            <div class="feature-content">
-                 <iui-accordion [groups]="data" [selectedGroup]="selGroup" [controlStyle]="ctrlStyle" #accordion>
-                   <iui-groupbox *ngFor="let group of data" text="{{group.text}}" icon="{{group.icon}}" [expandBoxType]="'arrow'" #groupbox>
-                        <div class="acc-ovw-group-content">{{group.body}}</div>
-                    </iui-groupbox>
-                </iui-accordion>
-                <br style="clear:both;"/>
-                <div class="feature-help" style="width:600px;">
-                    <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Accordion</strong> is a native Angular component that represents a list of expandable panels arranged vertically.</p>
-                    <p><span class="initial-space"></span>The demonstration above shows only the basic features available in Accordion component. There are few <a routerLink="/groupbox">group boxes</a> each with a header and a content panel.</p>
-                    <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>accordion/accordion-overview.ts</i>) file, or read the following article:</p> 
-                    <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx">Overview of IntegralUI Accordion for Angular</a></p>
-                </div>
+        <h2 class="feature-title">Accordion / Overview</h2>
+        <div class="feature-content">
+             <iui-accordion [groups]="data" [selectedGroup]="selGroup" [controlStyle]="ctrlStyle" [allowAnimation]="true" #accordion>
+               <iui-groupbox *ngFor="let group of data" text="{{group.text}}" icon="{{group.icon}}" [expandBoxType]="'arrow'" [allowAnimation]="true" #groupbox>
+                    <div class="acc-ovw-group-content">{{group.body}}</div>
+                </iui-groupbox>
+            </iui-accordion>
+            <!-- <br style="clear:both;"/> -->
+            <div class="feature-help" style="width:600px;">
+                <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Accordion</strong> is a native Angular component that represents a list of expandable panels arranged vertically.</p>
+                <p><span class="initial-space"></span>The demonstration above shows only the basic features available in Accordion component. There are few <a routerLink="/groupbox">group boxes</a> each with a header and a content panel.</p>
+                <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>accordion/accordion-overview.ts</i>) file, or read the following article:</p> 
+                <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx">Overview of IntegralUI Accordion for Angular</a></p>
             </div>
         </div>
     `,

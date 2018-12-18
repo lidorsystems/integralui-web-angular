@@ -4,3 +4,20 @@
     border-color: #121212;
     color: #c5c5c5;
 }
+@keyframes listviewitem-animate-enter
+{
+    0% {       
+        border: thin solid transparent;
+	    box-shadow: none;
+        overflow: hidden;
+        padding-bottom: 2px;
+        z-index: 9;
+    }
+    100% { 
+	    border: thin solid #cecece;
+	    box-shadow: 2px 3px 3px #242424;
+        overflow: hidden;
+        padding-bottom: 2px;
+        z-index: 9;
+    }
+}

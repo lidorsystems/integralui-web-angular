@@ -43,6 +43,11 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             .lbox-ovw-title
             {
                 display: inline-block;
+                margin-left: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+                white-space: nowrap;
                 width: 40%;
             }
             .lbox-ovw-year
@@ -115,6 +120,11 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
                 display: inline-block;
                 margin: auto;
             }
+            .lbox-ovw-rating
+            {
+                display: inline-block;
+                vertical-align: middle;
+            }
             .lbox-ovw-rating-stars-content
             {
                 background-image: url(app/integralui/resources/rating/star-empty-white.png);
@@ -123,8 +133,8 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
         <h2 class="feature-title">ListBox / Overview</h2>
         <div class="feature-content">
             <div #application>
-                <iui-listbox #listbox [appRef]="applicationRef" [items]="items" [allowDrag]="true" [controlStyle]="listStyle" [selectionMode]="selMode">
-                    <iui-listitem *ngFor="let item of items" [controlStyle]="itemStyle">  
+                <iui-listbox [appRef]="applicationRef" [items]="items" [allowDrag]="true" [controlStyle]="listStyle" [selectionMode]="selMode" #listbox>
+                    <iui-listitem *ngFor="let item of items" [controlStyle]="itemStyle" [allowAnimation]="true">  
                         <div class="lbox-ovw-item-content">
                             <span class="lbox-ovw-icons {{item.icon}}"></span>
                             <span class="lbox-ovw-title">{{item.text}}</span>

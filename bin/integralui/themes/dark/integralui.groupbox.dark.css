@@ -68,3 +68,8 @@
 	80% { opacity: 0.75; }
 	100% { opacity: 1; }
 }
+
+.iui-groupbox-header-animate-select
+{
+	background: #969696;
+}

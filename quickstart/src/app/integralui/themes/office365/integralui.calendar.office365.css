@@ -1,0 +1,39 @@
+.iui-calendar-cell-hovered, .iui-calendar-cell-grayed:hover
+{
+	background: #e6f2fb;
+	border-color: #e6f2fb;
+	color: #242424;
+}
+.iui-calendar-cell-selected
+{
+    background: #d7eaf9;
+    border-color: #d7eaf9;
+	color: #242424;
+}
+.iui-calendar-cell-today
+{
+	border-color: #a5cff1;
+}
+
+@keyframes calendar-cell-enter
+{
+	0% { 	   
+	    background: transparent;
+	    border-color: transparent;
+	}
+	100% { 
+	    background: #e6f2fb;
+	    border-color: #e6f2fb;
+	}
+}
+@keyframes calendar-cell-leave
+{
+	0% { 	   
+	    background: #e6f2fb;
+	    border-color: #e6f2fb;
+	}
+	100% { 
+	    background: transparent;
+	    border-color: transparent;
+	}
+}

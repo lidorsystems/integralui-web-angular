@@ -80,7 +80,7 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
                     <button (click)="clear()" [disabled]="disableButtons">Clear</button>
                 </div>
                 <div *ngIf="data.length==50" class="empty-block"></div>
-                <iui-accordion [groups]="data" [controlStyle]="ctrlStyle"
+                <iui-accordion [groups]="data" [controlStyle]="ctrlStyle" [allowAnimation]="true"
                     (afterCollapse)="onAfterCollapse($event)"
                     (afterExpand)="onAfterExpand($event)"
                     (afterSelect)="onAfterSelect($event)"
@@ -94,7 +94,7 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
                     (groupRemoved)="onGroupRemoved($event)"
                     (selectionChanged)="onSelectionChanged($event)"
                  #accordion >
-                   <iui-groupbox *ngFor="let group of data" text="{{group.text}}" [expandBoxType]="'plus-minus'" #groupbox>
+                   <iui-groupbox *ngFor="let group of data" text="{{group.text}}" [expandBoxType]="'plus-minus'" [allowAnimation]="true" #groupbox>
                         <div class="acc-evt-group-content">Content of {{group.name}}</div>
                     </iui-groupbox>
                 </iui-accordion>

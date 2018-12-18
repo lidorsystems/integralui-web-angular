@@ -121,7 +121,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
                                 <iui-numeric-updown [controlStyle]="numUpDownStyle" [(ngModel)]="item.value"></iui-numeric-updown>
                             </span>
                             <span *ngSwitchDefault>
-                                <iui-combobox [items]="item.combo" [controlStyle]="comboStyle" [size]="{ width: item.comboWidth }" [maxDropDownItems]="5" [integralHeight]="true" [selectedItem]="getComboSelection(item)" (selectedItemChanged)="onComboSelectionChanged($event, item)" (dropDownClosed)="onComboClosed($event)">
+                                <iui-combobox [items]="item.combo" [controlStyle]="comboStyle" [allowAnimation]="true" [size]="{ width: item.comboWidth }" [maxDropDownItems]="5" [integralHeight]="true" [selectedItem]="getComboSelection(item)" (selectedItemChanged)="onComboSelectionChanged($event, item)" (dropDownClosed)="onComboClosed($event)">
                                     <iui-item *ngFor="let item of item.combo" [text]="item.text"></iui-item>
                                 </iui-combobox>
                             </span>
