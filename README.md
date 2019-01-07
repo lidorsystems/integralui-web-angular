@@ -135,9 +135,9 @@ After installation, in angular.json under styles section add this code line:
 "node_modules/integralui-web/bin/integralui/css/integralui.module.css"
 ```
 
-To apply a theme, also add code line for corresonding theme file::
+To apply a theme, also add code line for corresonding theme file:
 ```bash
-"node_modules/integralui-web/bin/integralui/themes/integralui.themes.blue.css";
+"node_modules/integralui-web/bin/integralui/themes/integralui.themes.blue.css"
 ```
 
 <b>Note</b>   You can choose a theme from available themes located at '~ ... /integralui/themes' folder.
