@@ -191,7 +191,7 @@ In this example, the TreeView component will have its width and height set from 
 
 There is a demo application with source code that contains samples for each component included in the [IntegralUI Web](http://www.lidorsystems.com/products/web/studio/) product package. It can help you to get started quickly with learning about the components and write tests immediatelly.
 
-In order to start this application, you only need to install the Angular 5 libraries. Open the nodejs command prompt, go to application directory and type:
+In order to start this application, you only need to install the latest Angular library. Open the nodejs command prompt, go to application directory and type:
 
 ```bash
     npm install
