@@ -156,7 +156,7 @@ To include resources that are used by IntegralUI components in your project duri
 
 ### Creating Custom Styles for IntegralUI Components
 
-When you create custom styles or changes to built-in CSS classes of IntegralUI components, placed for example within app.component.css file, make sure ViewEncapsulation is set to None. This allows to override default settings from corresponding component css file. For example, the app.component.ts file should look like this:
+When you create custom styles or changes to built-in CSS classes of IntegralUI components, placed for example within app.component.css file, make sure ViewEncapsulation is set to None. This allows to override default settings from corresponding component css file. For example:
 
 <b>app.component.ts</b>
 
