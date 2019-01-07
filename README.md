@@ -154,29 +154,38 @@ To include resources that are used by IntegralUI components in your project duri
 
 <b>Note</b>   This is required because Angular compiler cannot detect resources that are outside the /src section of your app. It is needed if you are using resources that are part of IntegralUI Web, in your application.
 
-### Angular QuickStart App
+### Creating Custom Styles for IntegralUI Components
 
-Add following lines to the app.components.ts file:
+When you create custom styles or changes to built-in CSS classes of IntegralUI components, placed for example within app.component.css file, make sure ViewEncapsulation is set to None. This allows to override default settings from corresponding component css file. For example, the app.component.ts file should look like this:
 
-```bash
-    styleUrls: ['../node_modules/integralui-web/bin/integralui/css/integralui.module.css'],
-    encapsulation: ViewEncapsulation.None
-```
-
-Also copy/paste the content of node_modules/integralui-web/bin/integralui/resources/ folder to your project src/resources folder.
-
-If you are using SystemJS, make sure you have the following settings in systemjs.config.js file
+<b>app.component.ts</b>
 
 ```bash
-    map: {
-      'integralui-web': 'npm:integralui-web'
-    },
-    packages: {
-      'integralui-web': {
-        defaultExtension: 'js'
-      }
-    }
+import { Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
+})
+export class AppComponent {
+}
 ```
+
+<b>app.component.css</b>
+
+```bash
+.iui-treeview
+{
+  width: 400px;
+  height: 300px;
+}
+```
+
+In this example, the TreeView component will have its width and height set from within the app.component. 
+
+<b>Note</b>   Changes to ViewEncapsulation set to None is avoidable, if you create your own CSS style sheets and include it in angular.json file under styles section. Like it is explained above for general InetegralUI styles.
 
 ## QuickStart App
 
