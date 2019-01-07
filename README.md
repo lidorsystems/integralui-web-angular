@@ -185,7 +185,7 @@ export class AppComponent {
 
 In this example, the TreeView component will have its width and height set from within the app.component. 
 
-<b>Note</b>   Changes to ViewEncapsulation set to None is avoidable, if you create your own CSS style sheets and include it in angular.json file under styles section. Like it is explained above for general InetegralUI styles.
+<b>Note</b>   Changes to ViewEncapsulation set to None is avoidable, if you create your own CSS style sheet and include it in angular.json file under styles section. Like it is explained above for general IntegralUI styles.
 
 ## QuickStart App
 
