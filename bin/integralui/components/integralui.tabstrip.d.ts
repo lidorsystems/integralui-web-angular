@@ -116,7 +116,7 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     ctrlMouseUp(e: any): void;
     protected updateReorderTabPos(): void;
     protected resetReorderTabSettings(): void;
-    getTabOpacity(cmp: IntegralUITab): 0 | 1;
+    getTabOpacity(cmp: IntegralUITab): 1 | 0;
     onWindowMouseUp(e: any): void;
     private startScroll(flag?);
     private stopScroll();

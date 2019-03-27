@@ -75,7 +75,8 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     ngOnDestroy(): void;
     ngAfterContentChecked(): void;
     protected updateScrollColumnList(): void;
-    protected updateScrollRowList(): void;
+    protected updateScrollRowList(flag?: boolean): void;
+    protected createScrollObjFromRow(row: any, rowObj?: any, scrollIndex?: number): any;
     private addColumnToCurrentList(column);
     protected updateCurrentColumnList(): void;
     protected updateCurrentRowList(): void;

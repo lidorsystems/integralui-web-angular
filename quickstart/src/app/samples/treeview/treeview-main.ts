@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -79,7 +79,9 @@ export class TreeViewSample {
         this.sideList = [
             { text: "Add/Remove", link: './add-remove' },
             { text: "Add Items Dynamically", link: './add-items-dynamically' },
+            { text: "Compact View", link: './compact' },
             { text: "Context Menu", link: './context-menu' },
+            { text: "Data Fields - Load JSON", link: './data-fields' },
             { text: "Drag Drop", link: './drag-drop' },
             { text: "Events", link: './events' },
             { text: "ExpandBox on Right", link: './expandbox-right' },
@@ -97,7 +99,7 @@ export class TreeViewSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[14];
+        this.selectedItem = this.sideList[16];
     }   
 
     ngAfterContentChecked(){

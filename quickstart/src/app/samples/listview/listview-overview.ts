@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -163,6 +163,8 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                 width: 125px;
                 white-space: nowrap;
                 z-index: 0;
+
+                display: inline-block;
             }
             .lview-ovw-title-large
             {
@@ -225,7 +227,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                         </iui-listitem>
                     </div>
                     <div *ngIf="isScrollVertical()">
-                        <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="verItemStyle" [allowAnimation]="true">
+                        <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="verItemStyle" [allowAnimation]="true" [spacing]="2" [size]="{ width: 143, height: 151 }">
                             <div class="lview-ovw-custom-item-large" (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
                                 <span *ngIf="item == currentSelection" class="lview-ovw-corner"></span>
                                 <span class="lview-ovw-num-corner">{{i+1}}</span><br />

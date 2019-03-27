@@ -1,14 +1,18 @@
 # IntegralUI Web for Angular
 
-IntegralUI Web is a library built on top of Angular 6 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
+IntegralUI Web is a library built on top of Angular 7 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
-![IntegralUI Web 18.4 - 30+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
+![IntegralUI Web 19.1 - 35+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
 
 Here is a brief overview of what is included:
 
 ## Components
 
 [Accordion](http://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx) - Displays a list of expandable groups in vertical layout
+
+[AutoComplete](http://www.lidorsystems.com/products/web/studio/samples/angular/#/autocomplete/overview/) - Represents a text box with a dropdown list where you can choose among suggested options<
+
+[Breadcrumb](http://www.lidorsystems.com/products/web/studio/samples/angular/#/breadcrumb/overview/) - Used for navigation, where each item can have a link that is automatically separated
 
 [Button](http://www.lidorsystems.com/products/web/studio/samples/angular/#/button/overview/) - Represents a button
 
@@ -58,6 +62,8 @@ Here is a brief overview of what is included:
 
 [TabStrip](http://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx) - Consists of multiple scrollable panels that share the same space 
 
+[Toolbar](http://www.lidorsystems.com/products/web/studio/samples/angular/#/toolbar/overview/) - Displays a collection of different tool items and editors in one line
+
 [TreeGrid](http://www.lidorsystems.com/support/articles/angular/treegrid/treegrid-component.aspx) - Displays hierarchical data structures in multiple columns
 
 [TreeList](http://www.lidorsystems.com/support/articles/angular/treelist/treelist-component.aspx) - Allows you to navigate through tree hierarchy showing only one list at a time
@@ -72,6 +78,8 @@ Here is a brief overview of what is included:
 <b>DropDown</b> - Represents a dropdown window
 
 [Frame](http://www.lidorsystems.com/support/articles/angular/frame/frame-component.aspx) - Places a grip handle that allows you to resize a container during run-time
+
+[Popover](http://www.lidorsystems.com/products/web/studio/samples/angular/#/popover/overview/) - Displays custom HTML content over specified element
 
 [Range](http://www.lidorsystems.com/support/articles/angular/range/range-component.aspx) - Allows you to set limits in which an element can resize during run-time
 
@@ -96,7 +104,7 @@ All components are inheritable, you can further extend functionalities of specif
 
 IntegralUI Web requires only the following library:
 
-Angular - v6.0 and above
+Angular - v7.1 and above
 
 
 ## DEMO

@@ -11,6 +11,7 @@ export declare class IntegralUIListItem extends IntegralUIItem {
     contentElem: ElementRef;
     dragElem: ElementRef;
     protected parentCtrl: any;
+    spacing: number;
     itemClick: EventEmitter<any>;
     itemDblClick: EventEmitter<any>;
     itemRightClick: EventEmitter<any>;

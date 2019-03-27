@@ -16,6 +16,7 @@
 {
 	background-color: #242424;
 	border-color: #121212;
+	color: #b5b5b5;
 }
 .iui-grid-column-header-hovered
 {
@@ -28,6 +29,10 @@
 	background-color: #040404;
 	border: thin solid #000000;
 	color: white;
+}
+.iui-grid-row
+{
+	color: #b5b5b5;
 }
 .iui-grid-row-hovered
 {

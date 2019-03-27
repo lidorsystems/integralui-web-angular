@@ -1,0 +1,210 @@
+.iui-toolitem
+{
+    border: thin solid transparent;
+    border-radius: 3px;
+    color: black;
+    cursor: default;
+    display: inline-block;
+    margin: 0 1px;
+    overflow: hidden;
+    padding: 1px;
+    vertical-align: top;
+}
+
+/* Disabled State */
+.iui-toolitem-disabled div
+{
+	opacity: 0.75;
+	pointer-events: none;
+}
+
+
+.iui-toolitem-button
+{
+    background: #e5e5e5;
+    border: thin solid #dedede;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px;
+}
+.iui-toolitem-hovered .iui-toolitem-button {
+    animation-name: animate-toolitem-button-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes animate-toolitem-button-enter
+{
+    0% { background: #e5e5e5; border-color: #dedede; }
+    100% { background: #f5f5f5; border-color: #cecece;  }
+}
+.iui-toolitem-button-leave {
+    animation-name: animate-toolitem-button-leave;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes animate-toolitem-button-leave
+{
+    0% { background: #f5f5f5; border-color: #cecece;  }
+    100% { background: #e5e5e5; border-color: #dedede; }
+}
+
+.iui-toolitem-checkbox
+{
+    margin-top: 7px;
+}
+.iui-toolitem-checkbox .iui-checkbox {
+    margin: 0;
+    padding: 0;
+}
+.iui-toolitem-datepicker {
+    background: white;
+    border: thin solid #cecece;
+    cursor: pointer;
+    padding: 3px;
+    white-space: nowrap;
+}
+.iui-toolitem-datepicker:hover {
+    border-color: #999999;
+}
+.iui-toolitem-datepicker-button
+{
+    display: inline-block;
+    float: right;
+    opacity: 0.4;
+}
+.iui-toolitem-datepicker-button-hover
+{
+    opacity: 1;
+}
+.iui-toolitem-datepicker-button span
+{
+    background-image: url(../resources/icons.png);
+    background-position: -144px -80px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0;
+    margin: 0 0 0 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.iui-toolitem-droplist {
+    background: white;
+    border: thin solid #cecece;
+    cursor: pointer;
+    padding: 3px;
+    white-space: nowrap;
+}
+.iui-toolitem-droplist:hover {
+    border-color: #999999;
+}
+.iui-toolitem-droplist-label {
+    display: inline-block;
+    margin-top: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 20px);
+}
+.iui-toolitem-dropdown-button
+{
+    display: inline-block;
+    float: right;
+    opacity: 0.4;
+}
+.iui-toolitem-dropdown-button-hover
+{
+    opacity: 1;
+}
+.iui-toolitem-dropdown-button span
+{
+    background-image: url(../resources/icons.png);
+    background-position: -144px -80px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0;
+    margin: 2px 0 0 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.iui-toolitem-image
+{
+    text-align: center;
+}
+.iui-toolitem-image img {
+    padding: 3px;
+}
+.iui-toolitem-label {
+    margin: 0 2px;
+}
+.iui-toolitem-numeric
+{
+    background: white;
+    border: thin solid #cecece;
+    padding: 3px;
+    font-size: 1em;
+    text-align: right;
+    width: 50px;
+}
+.iui-toolitem-numeric:hover {
+    border-color: #999999;
+}
+.iui-toolitem-numeric[type=number]::-webkit-inner-spin-button, .iui-toolitem-numeric[type=number]::-webkit-outer-spin-button
+{  
+    margin-left: 5px;
+    opacity: 1;
+}
+.iui-toolitem-progress
+{
+    background: transparent;
+    border: 0;
+    border-radius: 3px;
+    color: black;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.iui-toolitem-progress-content
+{
+    background: #bebebe;
+    border-radius: 3px;
+    height: 12px;
+}
+.iui-toolitem-rating .iui-rating {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-top: -2px;
+}
+.iui-toolitem-separator {
+    background: #dedede;
+    height: 100%;
+    margin: 0 5px;
+    width: 1px;
+}
+.iui-toolitem-separator-vertical {
+    width: 100%;
+    margin: 5px 0;
+    height: 1px;
+}
+.iui-toolitem-slider {
+}
+.iui-toolitem-textbox
+{
+    background: white;
+    border: thin solid #cecece;
+    font-size: 1rem;
+    padding: 3px;
+    width: calc(100% - 8px);
+}

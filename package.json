@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "18.4.0",
+  "version": "19.1.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,7 @@
     "ui"
   ],
   "author": "Lidor Systems",
-  "license": "Commercial",
+  "license": "SEE LICENSE in LICENSE.md",
   "homepage": "https://github.com/lidorsystems/integralui-web",
   "files": [
     "*.js",
@@ -69,6 +69,8 @@
     "quickstart/src/app/integralui/themes/win10/*.*",
     "quickstart/src/app/samples/*.*",
     "quickstart/src/app/samples/accordion/*.*",
+    "quickstart/src/app/samples/autocomplete/*.*",
+    "quickstart/src/app/samples/breadcrumb/*.*",
     "quickstart/src/app/samples/button/*.*",
     "quickstart/src/app/samples/calendar/*.*",
     "quickstart/src/app/samples/checkbox/*.*",
@@ -87,6 +89,7 @@
     "quickstart/src/app/samples/menu/*.*",
     "quickstart/src/app/samples/numeric-updown/*.*",
     "quickstart/src/app/samples/paginator/*.*",
+    "quickstart/src/app/samples/popover/*.*",
     "quickstart/src/app/samples/progressbar/*.*",
     "quickstart/src/app/samples/radiobutton/*.*",
     "quickstart/src/app/samples/range/*.*",
@@ -96,20 +99,21 @@
     "quickstart/src/app/samples/splitcontainer/*.*",
     "quickstart/src/app/samples/splitter/*.*",
     "quickstart/src/app/samples/tabstrip/*.*",
+    "quickstart/src/app/samples/toolbar/*.*",
     "quickstart/src/app/samples/tooltip/*.*",
     "quickstart/src/app/samples/treegrid/*.*",
     "quickstart/src/app/samples/treelist/*.*",
     "quickstart/src/app/samples/treeview/*.*"
   ],
   "devDependencies": {
-    "@angular/animations": "^6.0.3",
-    "@angular/common": "^6.0.3",
-    "@angular/compiler": "^6.0.3",
-    "@angular/core": "^6.0.3",
-    "@angular/forms": "^6.0.3",
-    "@angular/http": "^6.0.3",
-    "@angular/platform-browser": "^6.0.3",
-    "@angular/platform-browser-dynamic": "^6.0.3",
-    "@angular/router": "^6.0.3"
+    "@angular/animations": "^7.1.0",
+    "@angular/common": "^7.1.0",
+    "@angular/compiler": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "@angular/forms": "^7.1.0",
+    "@angular/http": "^7.1.0",
+    "@angular/platform-browser": "^7.1.0",
+    "@angular/platform-browser-dynamic": "^7.1.0",
+    "@angular/router": "^7.1.0"
   }
 }

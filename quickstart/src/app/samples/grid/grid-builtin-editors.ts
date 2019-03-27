@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -12,7 +12,7 @@
 */
 
 import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { IntegralUIDateFormat, IntegralUIEditorType } from '../../integralui/components/integralui.core';
+import { IntegralUIDateFormat, IntegralUIEditorType, IntegralUIVisibility } from '../../integralui/components/integralui.core';
 import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
 
 @Component({
@@ -39,7 +39,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
                     </ng-template>
                     <ng-template let-cell [iuiTemplate]="{ type: 'cell' }">
                         <button style="display:inline-block;float:right">Button</button>
-                        <span style="display:inline-block;padding-top:3px;">{{cell.text}}</span>
+                        <span style="display:inline-block;margin-right:5px;padding-top:3px;">{{cell.text}}</span>
                     </ng-template>
                 </iui-grid>
             </div>
@@ -81,14 +81,14 @@ export class GridBuiltinEditorsSample {
     }
 
     private dropListItems: Array<any> = [
-        { text: "Action " },
-        { text: "Adventure" },
-        { text: "Comedy " },
-        { text: "Drama " },
-        { text: "Horror " },
-        { text: "Mystery " },
-        { text: "Romance " },
-        { text: "Sci-Fi" }
+        { value: "Action" },
+        { value: "Adventure" },
+        { value: "Comedy " },
+        { value: "Drama " },
+        { value: "Horror " },
+        { value: "Mystery " },
+        { value: "Romance " },
+        { value: "Sci-Fi" }
     ];
 
     constructor(){
@@ -241,7 +241,7 @@ export class GridBuiltinEditorsSample {
                         break;
 
                     case 5: // DropList
-                        cell.value = this.dropListItems[i % this.dropListItems.length];
+                        cell.value = this.dropListItems[i % this.dropListItems.length].value;
                         break;
 
                     case 6: // Progress
@@ -278,7 +278,6 @@ export class GridBuiltinEditorsSample {
 
                 row.cells.push(cell);
             }
-
 
             this.rows.push(row);
         }

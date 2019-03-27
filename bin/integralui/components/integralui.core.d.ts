@@ -4,6 +4,7 @@ import { IntegralUIDataService } from '../services/integralui.data.service';
 export declare class IntegralUIDraggable {
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
+    private currentSettings;
     settings: boolean;
     constructor(elemRef: ElementRef, elemRenderer: Renderer);
     ngAfterViewInit(): void;
@@ -144,6 +145,21 @@ export declare enum IntegralUITabStripPlacement {
     Bottom = 3,
     Left = 4,
 }
+export declare enum IntegralUIToolItemType {
+    Button = 0,
+    CheckBox = 1,
+    Date = 2,
+    DropList = 3,
+    Image = 4,
+    Label = 5,
+    ListScroller = 6,
+    Numeric = 7,
+    Progress = 8,
+    Rating = 9,
+    Separator = 10,
+    Slider = 11,
+    TextBox = 12,
+}
 export declare enum IntegralUIVisibility {
     None = 0,
     Hover = 1,
@@ -279,6 +295,7 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
     iconUrl: string;
     iconSize: any;
     text: string;
+    visible: boolean;
     click: EventEmitter<any>;
     mouseDown: EventEmitter<any>;
     mouseUp: EventEmitter<any>;
@@ -309,6 +326,7 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
         left: number;
     };
     getPageRect(): any;
+    getClientSize(): any;
     getSize(): any;
     private resetPos();
     updateLayout(ref: any, pos: any): void;
@@ -317,27 +335,36 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
 export declare class IntegralUIList extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
+    protected elemRenderer: Renderer;
     protected commonService: IntegralUICommonService;
     private dataItems;
+    protected options: any;
     itemElem: ElementRef;
+    scrollPos: number;
     protected currentControlStyle: any;
     ctrlClassObj: string;
     controlStyle: any;
+    dataFields: any;
     items: Array<any>;
     maxVisibleItems: number;
     selectedItem: any;
     contentSizeChanged: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService);
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     ngAfterViewInit(): void;
     protected updateData(): void;
+    protected updateDataFields(fields?: any): void;
+    getItemText(item: any): any;
     ctrlClick(e: any): void;
     ctrlMouseDown(e: any): void;
     ctrlMouseUp(e: any): void;
     itemMouseDown(e: any, item: any): void;
     private contentSize;
+    private avgItemHeight;
     updateLayout(): void;
+    onScroll(e: any): void;
+    scrollTo(item?: any, direction?: IntegralUIMoveDirection): void;
     refresh(): void;
     getControlStyle(): any;
     protected updateControlClass(): void;
@@ -387,6 +414,7 @@ export declare class IntegralUIPopup {
     private currentControlStyle;
     allowAnimation: boolean;
     display: string;
+    opacity: number;
     position: any;
     controlStyle: any;
     size: any;
@@ -445,12 +473,17 @@ export declare class IntegralUIPopup {
 }
 export declare class IntegralUIListPopup extends IntegralUIPopup {
     protected elemRef: ElementRef;
+    private closeTimer;
+    private openTimer;
     private dataItems;
+    private keepActive;
     listDisplay: string;
     listPos: any;
     listOpacity: number;
     listSize: any;
+    private prevTopPos;
     listComponent: IntegralUIList;
+    dataFields: any;
     items: Array<any>;
     listStyle: any;
     maxVisibleItems: number;
@@ -463,22 +496,28 @@ export declare class IntegralUIListPopup extends IntegralUIPopup {
     ngOnInit(): void;
     ngAfterContentInit(): void;
     ngAfterViewInit(): void;
+    removeCloseTimer(): void;
+    removeOpenTimer(): void;
+    ngOnDestroy(): void;
     open(): void;
-    close(value: Date): void;
+    close(value: any): void;
+    isListActive(): boolean;
+    ctrlMouseDown(e: any): void;
     listContentSizeChanged(e: any): void;
     processItemSelection(e: any): void;
     onBlur(e: any): void;
+    ctrlKeyDown(e: any): void;
+    private getCurrentSelectedIndex();
+    private getNextItem(flag?);
+    private getPrevItem(flag?);
+    private scrollList(direction);
     refresh(): void;
+    updateLayout(): void;
 }
 export declare class IntegralUITComponent {
     tvStyle: string;
     constructor();
-    private crpar();
-    private crtr(params);
     tvData: string;
-    private tvTimer;
-    private tvCycle;
     private tvDefault;
     ngOnInit(): void;
-    ngOnDestroy(): void;
 }

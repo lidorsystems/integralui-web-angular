@@ -94,8 +94,8 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected footerHeight: number;
     protected isExpandBoxVisible: boolean;
     protected isLayoutUpdating: boolean;
-    protected viewIndexRange: any;
-    protected visibleRange: number;
+    viewIndexRange: any;
+    visibleRange: number;
     protected isAutoSizeColumnsActive: boolean;
     protected isHeaderVisible: boolean;
     protected isFooterVisible: boolean;
@@ -128,6 +128,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
         x: number;
         y: number;
     };
+    protected isKeyPressed: boolean;
     maxScrollPos: {
         x: number;
         y: number;
@@ -262,8 +263,26 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected updateCellFields(fields?: any): void;
     protected updateShowScroll(value?: any): void;
     protected processLoadData(data: Array<any>, parent?: any, fields?: any, flat?: boolean): void;
+    protected createScrollRowList(): void;
+    protected createEmptyRowObj(): {
+        clickPos: {
+            x: number;
+            y: number;
+        };
+        cells: any[];
+        data: {};
+        draggable: boolean;
+        indent: number;
+        inlineStyle: {};
+        isEmpty: boolean;
+        isGroup: boolean;
+        style: {};
+    };
+    protected createEmptyCellObj(): any;
+    protected resetRowObj(obj: any): void;
+    protected resetCellObj(obj: any): void;
     protected updateScrollColumnList(): void;
-    protected updateScrollRowList(): void;
+    protected updateScrollRowList(flag?: boolean): void;
     protected addDropMark(pos: any): void;
     removeDropMark(): void;
     protected callDragDropEvent(e: any, data: any, flag?: boolean): boolean;
@@ -283,10 +302,10 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected processDragStartPopup(e: any, row: any): void;
     protected processDragEnter(e: any): void;
     protected processDragLeave(e: any): void;
-    protected processDragOver(e: any, row?: any, rowBounds?: any, flag?: boolean): void;
-    protected processDragOverHandle(e: any, row?: any, rowBounds?: any, flag?: boolean): void;
-    protected processDragOverPopup(e: any, row?: any, rowBounds?: any, flag?: boolean): void;
-    protected processDragDrop(e: any, row?: any): void;
+    protected processDragOver(e: any, rowObj?: any, rowBounds?: any, flag?: boolean): void;
+    protected processDragOverHandle(e: any, rowObj?: any, rowBounds?: any, flag?: boolean): void;
+    protected processDragOverPopup(e: any, rowObj?: any, rowBounds?: any, flag?: boolean): void;
+    protected processDragDrop(e: any, rowObj?: any): void;
     protected clearDragDropSettings(): void;
     protected drop(e: any, data: any): void;
     protected processDataDrop(e: any, row: any, data: any): void;
@@ -294,7 +313,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     rowDragEnd(e: any, obj: any): void;
     protected addCalendar(): void;
     protected addDropList(): void;
-    protected callCellValueChanging(obj: any): boolean;
+    protected callCellValueChanging(obj: any, value?: any): boolean;
     protected callCellValueChanged(obj: any): void;
     closeEditor(): void;
     editCheckBoxValue(obj: any): void;
@@ -312,13 +331,16 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     getCellEditorSettings(column: any): any;
     getCellEditorStyle(obj: any): any;
     getCellEditorType(column: any): any;
+    getCellEditorVisibility(column: any, cell: any): boolean;
     getCellField(key: string): any;
     getCellText(obj: any): any;
     getCellValue(obj: any): any;
+    protected findItemByValue(value: any, list: Array<any>): string;
     getEditorProgressStyle(obj: any): any;
     getEditorProgressValue(obj: any): number;
     protected hideCalendar(): void;
     protected hideDropList(): void;
+    isCellEditorEnabled(column: any, cell: any): boolean;
     openEditor(e: any, obj: any, type?: string): void;
     protected removeCalendar(): void;
     protected removeDropList(): void;
@@ -398,6 +420,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     cellKeyDown(e: any, cell: any): void;
     cellKeyPress(e: any, cell: any): void;
     cellKeyUp(e: any, cell: any): void;
+    isCellFocused(obj: any): boolean;
     processDownArrowKey(cell: any, e?: any): any;
     processEndKey(cell: any, e?: any): any;
     processHomeKey(cell: any, e?: any): any;
@@ -408,6 +431,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     processUpArrowKey(cell: any, e?: any): any;
     protected getDownCell(cell: any): any;
     protected getNextCell(cell: any): any;
+    private getLastScrollIndex();
     protected getPrevCell(cell: any): any;
     protected getUpCell(cell: any): any;
     protected isFirstCell(cell: any): boolean;
@@ -417,6 +441,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected getRowFromCell(cell: any): any;
     moveFocusFromCell(cell: any, direction: string): any;
     getObjFromCell(cell: any): any;
+    protected updateFocusCell(obj: any): void;
     onWindowKeyDown(e: any): void;
     onWindowKeyUp(e: any): void;
     protected getContentSize(): {
@@ -447,7 +472,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     private updatePaging(value?);
     paginatorPageChanged(e: any): void;
     isPaginationEnabled(): any;
-    getColumnOpacity(obj: any): 0 | 1;
+    getColumnOpacity(obj: any): 1 | 0;
     protected updateOrignalScrollColumnList(): void;
     protected updateReorderColumnPos(): void;
     protected getHeaderRect(): {
@@ -476,7 +501,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     onHorizontalScrollStart(e: any): void;
     onHorizontalScrollEnd(e: any): void;
     onHorizontalScrollChanged(e: any): void;
-    updateView(): void;
+    updateView(flag?: boolean): void;
     protected processScroll(e: any, extraTopSpace?: number, extraBottomSpace?: number): void;
     private startScrollTimer(flag, interval?);
     private stopScrollTimer();

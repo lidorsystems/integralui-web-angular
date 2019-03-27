@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -11,7 +11,7 @@
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
 
-import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
 import { IntegralUITreeGrid } from '../../integralui/components/integralui.treegrid';
 import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropdown';
 import { IntegralUIFilterService } from '../../integralui/services/integralui.filter.service';
@@ -133,7 +133,7 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
         </style>
         <h2 class="feature-title">TreeGrid / Filter</h2>
         <div class="feature-content" #application>
-            <iui-treegrid [columns]="columns" [rows]="rows" [controlStyle]="gridStyle" [showFooter]="false" [allowFilter]="true" #treegrid>
+            <iui-treegrid [columns]="columns" [rows]="rows" [controlStyle]="gridStyle" [showFooter]="false" [allowFilter]="true" (beforeSelect)="onBeforeSelect($event)" #treegrid>
                 <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                     <span [ngSwitch]="column.id">
                         <span *ngSwitchCase="2">
@@ -746,5 +746,21 @@ export class TreeGridFilterSample {
     onPriceDropDownOpen(e: any){
         this.authorDropdown.close();
         this.categoriesDropdown.close();
+    }
+
+    // Close panels if clicked outside its space
+
+    closePanels(){
+        this.authorDropdown.close();
+        this.categoriesDropdown.close();
+        this.priceDropdown.close();
+    }
+
+    onBeforeSelect(e: any){
+        this.closePanels();
+    }
+
+    @HostListener('mousedown', ['$event']) onMouseDown(e: any){
+        this.closePanels();
     }
 }

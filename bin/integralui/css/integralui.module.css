@@ -1,5 +1,7 @@
 @import 'integralui.css';
 @import 'integralui.accordion.css';
+@import 'integralui.autocomplete.css';
+@import 'integralui.breadcrumb.css';
 @import 'integralui.button.css';
 @import 'integralui.calendar.css';
 @import 'integralui.checkbox.css';
@@ -9,6 +11,7 @@
 @import 'integralui.dialog.css';
 @import 'integralui.dropdown.css';
 @import 'integralui.dropdownbutton.css';
+@import 'integralui.editors.css';
 @import 'integralui.frame.css';
 @import 'integralui.grid.css';
 @import 'integralui.groupbox.css';
@@ -23,6 +26,7 @@
 @import 'integralui.menu.css';
 @import 'integralui.numeric-updown.css';
 @import 'integralui.paginator.css';
+@import 'integralui.popover.css';
 @import 'integralui.progressbar.css';
 @import 'integralui.radiobutton.css';
 @import 'integralui.rating.css';
@@ -33,6 +37,8 @@
 @import 'integralui.splitter.css';
 @import 'integralui.tab.css';
 @import 'integralui.tabstrip.css';
+@import 'integralui.toolbar.css';
+@import 'integralui.toolitem.css';
 @import 'integralui.tooltip.css';
 @import 'integralui.treegrid.css';
 @import 'integralui.treeitem.css';

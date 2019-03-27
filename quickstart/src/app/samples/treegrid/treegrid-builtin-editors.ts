@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -94,14 +94,14 @@ export class TreeGridBuiltinEditorsSample {
     }
 
     private dropListItems: Array<any> = [
-        { text: "Action " },
-        { text: "Adventure" },
-        { text: "Comedy " },
-        { text: "Drama " },
-        { text: "Horror " },
-        { text: "Mystery " },
-        { text: "Romance " },
-        { text: "Sci-Fi" }
+        { value: "Action " },
+        { value: "Adventure" },
+        { value: "Comedy " },
+        { value: "Drama " },
+        { value: "Horror " },
+        { value: "Mystery " },
+        { value: "Romance " },
+        { value: "Sci-Fi" }
     ];
 
     constructor(){
@@ -259,7 +259,7 @@ export class TreeGridBuiltinEditorsSample {
                             break;
 
                         case 5: // DropList
-                            cell.value = this.dropListItems[i % this.dropListItems.length];
+                            cell.value = this.dropListItems[i % this.dropListItems.length].value;
                             break;
 
                         case 6: // Progress

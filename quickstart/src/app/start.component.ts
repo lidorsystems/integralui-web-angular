@@ -207,6 +207,22 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
             {
                 background-position: -264px -48px;
             }
+            .autocomplete
+            {
+                background-position: -288px 0;
+            }
+            .breadcrumb
+            {
+                background-position: -264px 0;
+            }
+            .popover
+            {
+                background-position: -288px -24px;
+            }
+            .toolbar
+            {
+                background-position: -264px -24px;
+            }
         </style>
         <div class="component-list">
             <h2 class="feature-title" style="color2:#c60d0d;font-size:1.6em;margin:0 0 20px 200px;padding-left:7px;">Components by Category</h2>
@@ -270,24 +286,28 @@ export class StartComponent {
             { text: "TabStrip", icon: 'tabstrip', link: '/tabstrip' },
             { tag: 'separator' },
             { text: "NAVIGATION", tag: 'category' },
+            { text: "BreadCrumb", icon: 'breadcrumb', link: '/breadcrumb' },
             { text: "ListBar", icon: 'listbar', link: '/listbar' },
             { text: "ListScroller", icon: 'listscroller', link: '/listscroller' },
             { text: "Menu", icon: 'menu', link: '/menu' },
             { text: "TreeList", icon: 'treelist', link: '/treelist' },
             { text: "TreeView", icon: 'treeview', link: '/treeview' },
-            { tag: 'separator', size: 75 },
+            { tag: 'separator', size: 50 },
             { text: "PRESENTATION", tag: 'category' },
             { text: "SlideBar", icon: 'slidebar', link: '/slidebar' },
             { tag: 'separator', size: 0 },
             { text: "UTILITY", tag: 'category' },
+            { text: "AutoComplete", icon: 'autocomplete', link: '/autocomplete' },
             { text: "Calendar", icon: 'calendar', link: '/calendar' },
             { text: "Context Menu", icon: 'contextmenu', link: '/contextmenu' },
             { text: "Dialog", icon: 'dialog', link: '/dialog' },
             { text: "DropDown Button", icon: 'dropdownbutton', link: '/dropdownbutton' },
             { text: "Paginator", icon: 'paginator', link: '/paginator' },
+            { text: "PopOver", icon: 'popover', link: '/popover' },
             { text: "Range", icon: 'range', link: '/range' },
             { text: "Frame", icon: 'frame', link: '/frame' },
-            { text: "Tooltip", icon: 'tooltip', link: '/tooltip' },
+            { text: "Toolbar", icon: 'toolbar', link: '/toolbar' },
+            { text: "Tooltip", icon: 'tooltip', link: '/tooltip' }
         ];
 
     } 

@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -80,6 +80,12 @@ export class GridSample {
             { text: "Add/Remove", link: './add-remove' },
             { text: "Add Row Dynamically", link: './add-row-dynamically' },
             { text: "Built-in Editors", link: './builtin-editors' },
+            { text: "Cell with CheckBox", link: './edit-cell-checkbox', space: 20 },
+            { text: "Cell with DatePicker", link: './edit-cell-datepicker', space: 20 },
+            { text: "Cell with DropList", link: './edit-cell-droplist', space: 20 },
+            { text: "Cell with Numeric UpDown", link: './edit-cell-numeric', space: 20 },
+            { text: "Cell with Rating", link: './edit-cell-rating', space: 20 },
+            { text: "Cell with TextBox", link: './edit-cell-text', space: 20 },
             { text: "Cell with DropDown", link: './cell-dropdown' },
             { text: "Column with DropDown", link: './column-dropdown' },
             { text: "Context Menu", link: './context-menu' },
@@ -100,7 +106,7 @@ export class GridSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[15];
+        this.selectedItem = this.sideList[21];
     }   
 
     ngAfterContentChecked(){
@@ -127,7 +133,8 @@ export class GridSample {
     getItemStyle(item: any){
         let style: any = {
             color: '#ababab',
-            'font-weight': 'normal'
+            'font-weight': 'normal',
+            'margin-left': item.space ? item.space + 'px': '0'
         }
 
         if (item == this.selectedItem){

@@ -86,8 +86,10 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     allowDrop: boolean;
     allowFilter: boolean;
     allowFocus: boolean;
+    dataFields: any;
     focusedItem: any;
     items: Array<any>;
+    itemSpacing: number;
     mouseWheelSpeed: IntegralUISpeedMode;
     showScroll: any;
     selectedItem: any;

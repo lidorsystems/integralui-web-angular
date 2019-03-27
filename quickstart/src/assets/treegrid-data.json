@@ -1,0 +1,141 @@
+﻿[
+    { 
+        "nodeID": 1, 
+        "items": [{ "columnID":  2, "description":  "Theme Park Construction" }, { "columnID":  3 }, { "columnID":  4, "description":  "In Progress" } ],
+        "children": [
+            { 
+                "nodeID":  11,
+                "parentID": 1,
+                "items": [{ "columnID":  2, "description":  "Site Preparations" }, { "columnID":  3 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Steven Beck" } ],
+                "children": [
+                    { 
+                        "nodeID":  111,
+                        "parentID": 11,
+                        "isExpanded": false,
+                        "items": [{ "columnID":  2, "description":  "Location Map" }, { "columnID":  3 }, { "columnID":  4, "description":  "In Progress" } ],
+                        "children": [
+                            { 
+                                "nodeID":  1111,
+                                "parentID": 111,
+                                "items": [{ "columnID":  2, "description":  "Relocate trees" }, { "columnID":  3, "itemValue": 100 }, { "columnID":  4, "description":  "Resolved" }, { "columnID":  5, "description":  "Unassigned" } ]
+                            },
+                            { 
+                                "nodeID":  1112,
+                                "parentID": 111,
+                                "items": [{ "columnID":  2, "description":  "Relocate Elves" }, { "columnID":  3, "itemValue": 78 }, { "columnID":  4, "description":  "Reopened" }, { "columnID":  5, "description":  "Bruno Klein" } ]
+                            },
+                            { 
+                                "nodeID":  1113,
+                                "parentID": 111,
+                                "items": [{ "columnID":  2, "description":  "Bulldoze the hills" }, { "columnID":  3, "itemValue": 40 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Kamal Fuller" } ]
+                            },
+                            { 
+                                "nodeID":  1114,
+                                "parentID": 111,
+                                "items": [{ "columnID":  2, "description":  "Remove waste rock and soil" }, { "columnID":  3, "itemValue": 90 }, { "columnID":  4, "description":  "In Progress" }, { "columnID":  5, "description":  "Ryan Foley" } ]
+                            },
+                            { 
+                                "nodeID":  1115,
+                                "parentID": 111,
+                                "items": [{ "columnID":  2, "description":  "Build access road" }, { "columnID":  3, "itemValue": 28 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Ryan Foley" } ]
+                            }
+                        ]
+                    },
+                    { 
+                        "nodeID":  112,
+                        "parentID": 11,
+                        "items": [{ "columnID":  2, "description":  "Dig escape tunnels for staff" }, { "columnID":  3, "itemValue": 71 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Kamal Fuller" } ]
+                    },
+                    { 
+                        "nodeID":  113,
+                        "parentID": 11,
+                        "items": [{ "columnID":  2, "description":  "Build a transparent dome over the theme park" }, { "columnID":  3 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Kamal Fuller" } ],
+                        "children": [
+                            { 
+                                "nodeID":  1131,
+                                "parentID": 113,
+                                "items": [{ "columnID":  2, "description":  "Check seismic activity" }, { "columnID":  3, "itemValue": 0 }, { "columnID":  4, "description":  "To Do" }, { "columnID":  5, "description":  "Unassigned" } ]
+                            }
+                        ]
+                    },
+                    { 
+                        "nodeID":  114,
+                        "parentID": 11,
+                        "items": [{ "columnID":  2, "description":  "Install entrance checkpoints" }, { "columnID":  3, "itemValue": 50 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Ryan Foley" } ]
+                    }
+                ]
+            },
+            { 
+                "nodeID":  12,
+                "parentID": 1,
+                "items": [{ "columnID":  2, "description":  "Marketing + PR activities" }, { "columnID":  3 }, { "columnID":  4, "description":  "In Progress" }, { "columnID":  5, "description":  "Aurelia Rivers" } ],
+                "children": [
+                    { 
+                        "nodeID":  121,
+                        "parentID": 12,
+                        "items": [{ "columnID":  2, "description":  "New folders" }, { "columnID":  3 }, { "columnID":  4, "description":  "Open" } ],
+                        "children": [
+                            { 
+                                "nodeID":  1211,
+                                "parentID": 121,
+                                "items": [{ "columnID":  2, "description":  "Advertising" }, { "columnID":  3, "itemValue": 0 }, { "columnID":  4, "description":  "To Do" }, { "columnID":  5, "description":  "Unassigned" } ]
+                            },
+                            { 
+                                "nodeID":  1212,
+                                "parentID": 121,
+                                "items": [{ "columnID":  2, "description":  "Backlog Breakdown Plugin requirements" }, { "columnID":  3, "itemValue": 0 }, { "columnID":  4, "description":  "To Do" }, { "columnID":  5, "description":  "Unassigned" } ]
+                            },
+                            { 
+                                "nodeID":  1213,
+                                "parentID": 121,
+                                "items": [{ "columnID":  2, "description":  "30-minute TV advertisement for prime-time broadcast/superbowl etc." }, { "columnID":  3, "itemValue": 0 }, { "columnID":  4, "description":  "To Do" }, { "columnID":  5, "description":  "Bert Gibbs" } ]
+                            },
+                            { 
+                                "nodeID":  1214,
+                                "parentID": 121,
+                                "items": [{ "columnID":  2, "description":  "Celebrity endorsements" }, { "columnID":  3, "itemValue": 90 }, { "columnID":  4, "description":  "To Do" }, { "columnID":  5, "description":  "Isabella Parsons" } ]
+                            }
+                        ]
+                    },
+                    { 
+                        "nodeID":  122,
+                        "parentID": 12,
+                        "items": [{ "columnID":  2, "description":  "Anti-PR campaign to discredit safety of competing theme parks" }, { "columnID":  3, "itemValue": 76 }, { "columnID":  4, "description":  "In Progress" }, { "columnID":  5, "description":  "Bert Gibbs" } ]
+                    }
+                ]
+            },
+            { 
+                "nodeID":  13,
+                "parentID": 1,
+                "items": [{ "columnID":  2, "description":  "Rides + attractions" }, { "columnID":  3 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Theodore Reese" } ],
+                "children": [
+                    { 
+                        "nodeID":  131,
+                        "parentID": 13,
+                        "items": [{ "columnID":  2, "description":  "Redefine the Standard Model of particle physics" }, { "columnID":  3, "itemValue": 0 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Benjamin Oliver" } ]
+                    },
+                    { 
+                        "nodeID":  132,
+                        "parentID": 13,
+                        "items": [{ "columnID":  2, "description":  "Arrange black hole insurance" }, { "columnID":  3, "itemValue": 100 }, { "columnID":  4, "description":  "Reopened" }, { "columnID":  5, "description":  "Benjamin Oliver" } ]
+                    },
+                    { 
+                        "nodeID":  133,
+                        "parentID": 13,
+                        "items": [{ "columnID":  2, "description":  "Automatic hyper-drive engine warm up when enemy ships are close" }, { "columnID":  3, "itemValue": 0 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "George Thornton" } ]
+                    },
+                    { 
+                        "nodeID":  134,
+                        "parentID": 13,
+                        "items": [{ "columnID":  2, "description":  "Use reverse hyper-driving to accumulate energy on braking" }, { "columnID":  3, "itemValue": 15 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Larissa Olsen" } ]
+                    },
+                    { 
+                        "nodeID":  135,
+                        "parentID": 13,
+                        "items": [{ "columnID":  2, "description":  "Fuel Efficiency" }, { "columnID":  3, "itemValue": 30 }, { "columnID":  4, "description":  "Open" }, { "columnID":  5, "description":  "Blaze Lester" } ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -34,7 +34,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected isExpandBoxTouched: boolean;
     private trialRef;
     autoExpand: boolean;
-    dataFields: any;
+    compactMode: boolean;
     indent: number;
     itemDisplay: IntegralUIItemDisplayMode;
     showExpandBox: boolean;
@@ -61,6 +61,9 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected updateCurrentList(): void;
     private addChildItems(parentItem, indent, pid, flag, parent?);
     private addItemToCurrentList(item, indent, pid, flag, parent);
+    protected resetVisiblity(list: Array<any>): void;
+    protected collapseChildren(list: Array<any>): void;
+    protected createCompactList(orgList: Array<any>): any[];
     loadData(data: Array<any>, parent?: any, fields?: any, flat?: boolean): void;
     protected updateItem(item: any): void;
     protected updateScrollItemList(): void;
@@ -72,6 +75,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     expandBoxMouseDown(e: any, item: any): void;
     expandBoxMouseUp(e: any): void;
     expandBoxTouchStart(e: any, item: any): void;
+    expandBoxTouchEnd(e: any, item: any): void;
     toggle(item?: any, value?: boolean): void;
     exportToJSON(fields?: any, spacing?: any, flat?: boolean): string;
     getFullList(): any[];
@@ -110,6 +114,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     endLoad(item?: any): void;
     private isItemLoading(item);
     scrollTo(item: any): void;
+    protected callAfterSelectEvent(item: any): void;
     protected clearComponentSelection(): void;
     getControlStyle(): any;
     getBlockStyle(): any;

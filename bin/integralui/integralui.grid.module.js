@@ -1,7 +1,7 @@
 /*
   filename: integralui.grid.module.js
-  version : 2.3.0
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  version : 3.0.0
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    

@@ -1,7 +1,7 @@
 /*
   filename: integralui.accordion.js
   version : 1.5.0
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    

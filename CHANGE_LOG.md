@@ -1,3 +1,26 @@
+v19.1.0
+- New components: AutoComplete, Breadcrumb, Popover, Toolbar
+- Compact Mode in TreeView, displays limited set of tree hierarchy based on selected item
+- Improved overall performance of Grid and TreeGrid components
+- Option to disable editing from built-in editor in specific cell
+- Option to show or hide cell editor on demand
+- Item spacing is now available in ListView
+- New  and updated samples
+
+- CSS settings for editors are now moved in separate style sheet
+- Fixed the issue that incorrectly changes the rating values when division is larger than 1 in Rating component
+- cellValueChanged event for TextBox now includes the original text
+- TextBox editor with padding set, no longer causes cropping of the right border in the grid cell
+- When editor becomes active, the row is auto-selected in Grid and TreeGrid
+- mousewheel in ListView with horizontal layout now also works when virtual mode is not used
+- TabStrip layout is now correctly updated on parent resize
+- tabOrderChanged event now correctly includes the tab object
+- Fixed the issue that caused the Filter panel in Grid sample to remain open when clicked outside its space
+- Fixed the issue that causes resize cursor in grids to remain visible after mouse button is released over rows
+- cellvalueChanging event now correctly carries the new value 
+- The mousedown event is now suspended from bubbling up, when item is selected from dropdown list in ComboBox
+- Other minor bug fixes
+
 v18.4.0
 - New components: Calendar and DatePicker
 - Grid and TreeGrid components have built-in editors for: Boolean, Date, Image, List, Numeric, Progress, Rating and Text values

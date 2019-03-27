@@ -44,6 +44,7 @@ export declare class IntegralUIDropDown {
     protected elemRef: ElementRef;
     protected cmpResolver: ComponentFactoryResolver;
     protected commonService: IntegralUICommonService;
+    private currentSettings;
     private eventList;
     private templateData;
     private isDropDownOpen;
@@ -59,6 +60,7 @@ export declare class IntegralUIDropDown {
     dropDownClose: EventEmitter<any>;
     constructor(elemRef: ElementRef, cmpResolver: ComponentFactoryResolver, commonService?: IntegralUICommonService);
     ngAfterContentInit(): void;
+    private updateTemplate();
     closeDropDown(): void;
     close(): void;
     open(mouseEvent?: any): void;

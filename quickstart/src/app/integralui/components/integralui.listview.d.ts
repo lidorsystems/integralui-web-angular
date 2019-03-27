@@ -45,8 +45,9 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     insertItemAt(item: any, index: number): void;
     removeItemAt(index: number): boolean;
     itemDragOver(e: any, obj: any, index: number, flag?: boolean): void;
-    protected updateCurrentList(): void;
     private addItemToCurrentList(item);
+    loadData(data: Array<any>, fields?: any): void;
+    protected updateCurrentList(): void;
     protected updateScrollItemList(): void;
     getItem(cmp: IntegralUIListItem): any;
     getItemFromComponent(cmp: IntegralUIListItem): any;

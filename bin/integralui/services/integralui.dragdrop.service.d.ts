@@ -9,5 +9,5 @@ export declare class IntegralUIDragDropService {
     getData(): any;
     setData(value: any): void;
     hitTest(x: any, y: any, bounds: any): boolean;
-    getDropPos(pos: any, bounds: any, flag?: boolean, type?: string): 0 | 1 | 2 | -1;
+    getDropPos(pos: any, bounds: any, flag?: boolean, type?: string): 1 | -1 | 0 | 2;
 }

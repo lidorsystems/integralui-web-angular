@@ -97,7 +97,8 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     protected updateDataFields(data?: any): void;
     protected updateGroupFields(fields?: any): void;
     protected updateScrollColumnList(): void;
-    protected updateScrollRowList(): void;
+    protected updateScrollRowList(flag?: boolean): void;
+    private isRowGroup(row);
     protected createScrollObjFromRow(row: any, rowObj?: any, scrollIndex?: number): any;
     protected updateScrollRowListDragOver(row: any): void;
     private addColumnToCurrentList(column);
@@ -164,7 +165,7 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     groupMouseLeave(e: any, group: any): void;
     groupMouseDown(e: any, group: any): void;
     groupButtonMouseDown(e: any, group: any): void;
-    protected addGroup(group: any): void;
+    protected addGroup(group: any): boolean;
     protected removeGroup(group: any): void;
     groupListItemSelected(item: any): void;
     groupListMouseDown(e: any): void;
@@ -204,7 +205,7 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     beginLoad(row?: any): void;
     endLoad(row?: any): void;
     private isRowLoading(row);
-    getColumnOpacity(obj: any): 0 | 1;
+    getColumnOpacity(obj: any): 1 | 0;
     protected getHeaderRect(): any;
     scrollTo(row: any): void;
     rowMouseDown(e: any, obj: any, index: number): void;

@@ -35,7 +35,7 @@ export declare class IntegralUICommonService {
         bottom: number;
         left: number;
     };
-    getPageRect(elem: any): any;
+    getPageRect(elem?: any): any;
     getShiftPos(): {
         x: number;
         y: number;

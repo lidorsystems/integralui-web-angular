@@ -5,9 +5,12 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
     protected elemRef: ElementRef;
     protected commonService: IntegralUICommonService;
     tooltipOptions: any;
-    private showTimer;
-    private popupTimer;
-    private mousePos;
+    protected showTimer: any;
+    protected popupTimer: any;
+    protected mousePos: {
+        x: number;
+        y: number;
+    };
     tooltipDisplay: string;
     tooltipPos: {
         top: number;
@@ -17,8 +20,8 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
     options: any;
     closed: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
-    private updateOptions(value?);
-    private removeTimers();
+    protected updateOptions(value?: any): void;
+    protected removeTimers(): void;
     open(elemPageRect: any, elemSize: any): void;
     show(elemPageRect: any, elemSize: any): void;
     getSize(): any;
@@ -29,8 +32,8 @@ export declare class IntegralUITooltip {
     protected elemRef: ElementRef;
     protected cmpResolver: ComponentFactoryResolver;
     protected commonService: IntegralUICommonService;
-    private eventList;
-    private cmpRef;
+    protected eventList: Array<any>;
+    protected cmpRef: any;
     settings: any;
     tooltipRef: any;
     constructor(elemRef: ElementRef, cmpResolver: ComponentFactoryResolver, commonService?: IntegralUICommonService);

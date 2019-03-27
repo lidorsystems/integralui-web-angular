@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -77,13 +77,14 @@ export class ListBoxSample {
 
     constructor(){
         this.sideList = [
+            { text: "Drag Drop to ListView", link: './drag-drop-listview' },
             { text: "Fast Load", link: './fast-load' },
             { text: "Keyboard Navigation", link: './keyboard' },
             { text: "Overview", link: './overview' },
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[2];
+        this.selectedItem = this.sideList[3];
     }   
 
     ngAfterContentChecked(){

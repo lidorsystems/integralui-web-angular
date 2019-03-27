@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -80,10 +80,12 @@ export class TreeGridSample {
             { text: "Add/Remove", link: './add-remove' },
             { text: "Add Row Dynamically", link: './add-row-dynamically' },
             { text: "Built-in Editors", link: './builtin-editors' },
+            { text: "Cell with ProgressBar", link: './edit-cell-progress', space: 20 },
             { text: "Cell with DropDown", link: './cell-dropdown' },
             { text: "Cell with Rating", link: './cell-rating' },
             { text: "Context Menu", link: './context-menu' },
             { text: "Different Cell Templates", link: './cell-templates' },
+            { text: "Data Fields - Load JSON", link: './data-fields' },
             { text: "Drag Drop", link: './drag-drop' },
             { text: "Events", link: './events' },
             { text: "Excel Editor", link: './excel-editor' },
@@ -101,7 +103,7 @@ export class TreeGridSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[15];
+        this.selectedItem = this.sideList[17];
     }   
 
     ngAfterContentChecked(){
@@ -128,7 +130,8 @@ export class TreeGridSample {
     getItemStyle(item: any){
         let style: any = {
             color: '#ababab',
-            'font-weight': 'normal'
+            'font-weight': 'normal',
+            'margin-left': item.space ? item.space + 'px': '0'
         }
 
         if (item == this.selectedItem){

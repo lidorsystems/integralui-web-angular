@@ -1,0 +1,143 @@
+.iui-popover
+{
+	animation: popover-open 0.5s 0s 1 forwards;
+    background-color: #ffffff;
+	border: thin solid #ababab;
+    color: #323232;
+	cursor: default;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: -999999px;
+	z-index: 999;
+	
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+@keyframes popover-open
+{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+.iui-popover div /*Compatibility with Bootstrap */
+{
+	-webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: content-box;    /* Firefox, other Gecko */
+	box-sizing: content-box; 
+}
+.iui-popover-marker-top::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent #1e4691 transparent;
+	position: absolute;
+	top: -9px;
+	left: calc(50% - 4px);
+	width: 0;
+	height: 0;
+}
+.iui-popover-marker-top::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent #fefefe transparent;
+	position: absolute;
+	top: -8px;
+	left: calc(50% - 4px);
+	width: 0;
+	height: 0;
+}
+.iui-popover-marker-bottom::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: #1e4691 transparent transparent transparent;
+	position: absolute;
+	bottom: -9px;
+	left: calc(50% - 4px);
+	width: 0;
+	height: 0;
+}
+.iui-popover-marker-bottom::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: #fefefe transparent transparent transparent;
+	position: absolute;
+	bottom: -8px;
+	left: calc(50% - 4px);
+	width: 0;
+	height: 0;
+}
+.iui-popover-marker-left::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent #1e4691 transparent transparent;
+	position: absolute;
+	top: calc(50% - 4px);
+	left: -9px;
+}
+.iui-popover-marker-left::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent #fefefe transparent transparent;
+	position: absolute;
+	top: calc(50% - 4px);
+	left: -8px;
+}
+.iui-popover-marker-right::before
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent transparent #1e4691;
+	position: absolute;
+	top: calc(50% - 2px);
+	right: -9px;
+}
+.iui-popover-marker-right::after
+{
+	content: "";
+	border: 4px solid #fefefe;
+	border-color: transparent transparent transparent #fefefe;
+	position: absolute;
+	top: calc(50% - 2px);
+	right: -8px;
+}
+
+.iui-popover-header {
+	background: #e5e5e5;
+	border-bottom: thin solid #cecece;
+	padding: 5px;
+}
+.iui-popover-header:hover {
+	background: #efefef;
+}
+.iui-popover-title {
+}
+.iui-popover-close-button {
+	opacity: 0.5;
+}
+.iui-popover-close-button:hover {
+	opacity: 1;
+}
+.iui-popover-close-button span
+{
+    background-image: url(../resources/icons.png);
+    background-position: -160px -96px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+.iui-popover-content {
+	padding: 0;
+}

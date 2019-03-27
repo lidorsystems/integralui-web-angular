@@ -1,5 +1,5 @@
 /*
-  Copyright © 2016-2018 Lidor Systems. All rights reserved.
+  Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
                                                                    
@@ -54,6 +54,14 @@ import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../inte
             .star-empty
             {
                 background-position: -216px -72px;
+            }
+            .notes
+            {
+                background-position: -192px -72px;
+            }
+            .sports
+            {
+                background-position: -96px -72px;
             }
         </style>
         <h2 class="feature-title">TabStrip / Overview</h2>
@@ -119,13 +127,23 @@ export class TabStripOverviewSample {
             },
             { 
                 icon: 'tab-icon album',
-                text: 'Music 2',
+                text: 'Music',
                 body: 'Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat.'
             },
             { 
                 icon: 'tab-icon star-empty',
-                text: 'Favorites ABC',
+                text: 'Favorites',
                 body: 'Fusce convallis, mauris imperdiet gravida bibendum, nisl turpis suscipit mauris, sed placerat ipsum urna sed risus. In convallis tellus a mauris. Curabitur non elit ut libero tristique sodales. Mauris a lacus. Donec mattis semper leo. In hac habitasse platea dictumst.'
+            },
+            { 
+                icon: 'tab-icon notes',
+                text: 'Notes',
+                body: 'Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.'
+            },
+            { 
+                icon: 'tab-icon sports',
+                text: 'Sports',
+                body: 'Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat.'
             }
         ];
     }   

@@ -1,0 +1,65 @@
+﻿[
+    { "itemId": 1, "label": "Solution 'Application1' (1 project)", "icon": "project-icons solution" },
+    { 
+        "itemId": 2,
+        "label": "Application1",
+        "icon": "project-icons documents",
+        "children": [
+            { 
+                "itemId": 21,
+                "parentId": 2,
+                "label": "Properties",
+                "icon": "project-icons properties",
+                "children": [
+                    { "itemId": 211, "parentId": 21, "label": "AssemblyInfo.cs", "icon": "project-icons assembly" },
+                    { "itemId": 212, "parentId": 21, "label": "licenses.licx", "icon": "project-icons notes" },
+                    { 
+                        "itemId": 213,
+                        "parentId": 21,
+                        "label": "Resources.resx",
+                        "isExpanded": false,
+                        "icon": "project-icons resources",
+                        "children": [
+                            { "itemId": 2131, "parentId": 213, "label": "Resources.Designer.cs" }
+                        ]
+                    },
+                    { 
+                        "itemId": 214,
+                        "parentId": 21,
+                        "label": "Settings.settings",
+                        "icon": "project-icons documents",
+                        "isExpanded": false,
+                        "children": [
+                            { "itemId": 2141, "parentId": 214, "label": "Settings.Designer.cs" }
+                        ]
+                    }
+                ]
+            },
+            { 
+                "itemId": 22,
+                "parentId": 2,
+                "label": "References",
+                "icon": "project-icons references",
+                "isExpanded": false,
+                "children": [
+                    { "itemId": 221, "parentId": 22, "label": "System" },
+                    { "itemId": 222, "parentId": 22, "label": "System.Data" },
+                    { "itemId": 223, "parentId": 22, "label": "System.Deployment" },
+                    { "itemId": 224, "parentId": 22, "label": "System.Drawing" },
+                    { "itemId": 225, "parentId": 22, "label": "System.Xml" }
+                ]
+            },
+            { 
+                "itemId": 23,
+                "parentId": 2,
+                "label": "Form1.cs",
+                "icon": "project-icons form",
+                "children": [
+                    { "itemId": 231, "parentId": 23, "label": "Form1.Designer.cs" },
+                    { "itemId": 232, "parentId": 23, "label": "Form1.resx" }
+                ]
+            },
+            { "itemId": 24, "parentId": 2, "label": "Program.cs", "icon": "project-icons new" }
+        ]
+    }
+]

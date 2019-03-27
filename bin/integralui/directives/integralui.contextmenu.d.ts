@@ -56,9 +56,10 @@ export declare class IntegralUIContextMenu {
     protected elemRef: ElementRef;
     private viewContainer;
     protected cmpResolver: ComponentFactoryResolver;
+    private currentSettings;
+    private eventList;
     private isMenuActive;
     private winScrollPos;
-    private eventList;
     templates: QueryList<IntegralUITemplate>;
     private cmpRef;
     private templateList;
@@ -72,6 +73,7 @@ export declare class IntegralUIContextMenu {
     menuClosed: EventEmitter<any>;
     constructor(elemRef: ElementRef, viewContainer: ViewContainerRef, cmpResolver: ComponentFactoryResolver);
     ngAfterContentInit(): void;
+    private updateTemplate();
     ngOnDestroy(): void;
     getSize(): {
         width: any;
