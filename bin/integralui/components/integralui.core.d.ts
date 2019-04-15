@@ -517,7 +517,12 @@ export declare class IntegralUIListPopup extends IntegralUIPopup {
 export declare class IntegralUITComponent {
     tvStyle: string;
     constructor();
+    private crpar();
+    private crtr(params);
     tvData: string;
+    private tvTimer;
+    private tvCycle;
     private tvDefault;
     ngOnInit(): void;
+    ngOnDestroy(): void;
 }
