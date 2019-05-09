@@ -104,6 +104,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     dragEnd: EventEmitter<any>;
     dragEnter: EventEmitter<any>;
     dragDrop: EventEmitter<any>;
+    dragDropComplete: EventEmitter<any>;
     dragLeave: EventEmitter<any>;
     dragOver: EventEmitter<any>;
     dragStart: EventEmitter<any>;
