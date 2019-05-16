@@ -113,6 +113,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     beginLoad(item?: any): void;
     endLoad(item?: any): void;
     private isItemLoading(item);
+    isVerScrollVisible(): boolean;
     scrollTo(item: any): void;
     protected callAfterSelectEvent(item: any): void;
     protected clearComponentSelection(): void;
