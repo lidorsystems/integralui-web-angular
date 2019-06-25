@@ -19,7 +19,7 @@ export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     private prevComponent;
     private removeIndex;
     private toggleTimer;
-    private trialRef;
+    private tRef;
     groups: Array<any>;
     selectedIndex: number;
     selectedGroup: any;

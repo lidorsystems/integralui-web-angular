@@ -46,6 +46,34 @@
     height: 16px;
     vertical-align: middle;
 }
+/*.iui-treeview-enter .iui-treeitem-expand-box {
+    animation-name: iui-treeview-animate-expand-box-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-treeview-animate-expand-box-enter {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+} 
+.iui-treeview-leave .iui-treeitem-expand-box {
+    animation-name: iui-treeview-animate-expand-box-leave;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-treeview-animate-expand-box-leave {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}*/ 
 .iui-treeitem-expand-box-open
 {
     background-position: 0 -16px;

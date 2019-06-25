@@ -1,0 +1,9 @@
+/* ComboBox Header */
+.iui-combobox-header
+{
+	border: thin solid #d9d9d9;
+}
+.iui-combobox-header-hovered .iui-combobox-header-expand-box, .iui-combobox-header-selected .iui-combobox-header-expand-box
+{
+	background: #0d7edb !important;
+}

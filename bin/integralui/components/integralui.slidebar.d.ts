@@ -38,7 +38,7 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     private currentSelectedIndex;
     private selectedSlideComponent;
     private removeIndex;
-    private trialRef;
+    private tRef;
     allowAnimation: boolean;
     animationPause: number;
     animationSpeed: IntegralUISpeedMode;

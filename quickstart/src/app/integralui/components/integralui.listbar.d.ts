@@ -32,7 +32,7 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     private selectedComponent;
     private prevComponent;
     private removeIndex;
-    private trialRef;
+    private tRef;
     groups: Array<any>;
     mouseWheelSpeed: IntegralUISpeedMode;
     selectedIndex: number;

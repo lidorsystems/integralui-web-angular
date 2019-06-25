@@ -22,6 +22,7 @@
 }
 .iui-menuitem-root-hovered, .iui-menuitem-root-selected
 {
+    animation-name: none;
 	background-color: #363636 !important;
 	border: solid thin #121212 !important;
 	color: white;
@@ -38,12 +39,14 @@
 }
 .iui-menuitem-hovered
 {
+    animation-name: none;
     background-color: #646464 !important;
     border-color: #323232 !important;
     color: white;
 }
 .iui-menuitem-selected
 {
+    animation-name: none;
     background-color: #646464 !important;
     border-color: #323232 !important;
     color: white;

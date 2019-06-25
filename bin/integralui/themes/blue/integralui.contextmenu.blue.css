@@ -15,6 +15,7 @@
 }
 .iui-contextmenu .iui-menuitem-root-hovered, .iui-contextmenu .iui-menuitem-root-selected
 {
+    animation-name: none;
 	background-color: #ddeeff !important;
 	border: solid thin #b3d9ff !important;
 	color: black;

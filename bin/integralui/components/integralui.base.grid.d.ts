@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, ComponentFactoryResolver, ElementRef, EventEmitter, Renderer } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIDragDropDisplayMode, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIDragDropDisplayMode, IntegralUIEditorType, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -30,12 +30,18 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     animateRowSize: any;
     protected prevClickedObj: any;
     protected currentColumnList: Array<any>;
+    protected currentLeftColumnList: Array<any>;
+    protected currentRightColumnList: Array<any>;
     protected currentRowList: Array<any>;
     private dataColumns;
     private dataRows;
     protected options: any;
     scrollColumnList: Array<any>;
+    scrollLeftColumnList: Array<any>;
+    scrollRightColumnList: Array<any>;
     scrollRowList: Array<any>;
+    scrollLeftRowList: Array<any>;
+    scrollRightRowList: Array<any>;
     protected columnList: Array<any>;
     protected rowList: Array<any>;
     protected columnDataKey: string;
@@ -67,6 +73,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     isEditorFocused: boolean;
     protected originalEditorText: string;
     protected originalEditorValue: any;
+    protected currentExpandColumnID: any;
     protected expandColIndex: number;
     protected hoverCell: any;
     protected hoverColumn: any;
@@ -76,6 +83,8 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected prevIndex: number;
     protected tabIndexCount: number;
     ctrlCursor: string;
+    blockHoverRect: any;
+    hoverRowObj: any;
     protected columnStartPos: {
         x: number;
         y: number;
@@ -88,22 +97,30 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected isKeyboardActive: boolean;
     protected allowUpdate: boolean;
     protected avgRowHeight: number;
+    blockMarginTop: number;
+    blockSize: any;
+    leftBlockSize: any;
+    rightBlockSize: any;
     protected columnPadding: any;
     protected currentGridLines: IntegralUIGridLines;
-    protected headerHeight: number;
-    protected footerHeight: number;
+    protected currentHeaderHeight: number;
+    protected currentFooterHeight: number;
     protected isExpandBoxVisible: boolean;
     protected isLayoutUpdating: boolean;
     viewIndexRange: any;
+    fixedLeftViewIndexRange: number;
+    fixedRightViewIndexRange: number;
     visibleRange: number;
     protected isAutoSizeColumnsActive: boolean;
     protected isHeaderVisible: boolean;
     protected isFooterVisible: boolean;
+    isUpdateActive: boolean;
     protected scrollSize: {
         width: number;
         height: number;
     };
     contentLeftPos: number;
+    protected initialContentLeftPos: number;
     protected allColWidth: number;
     horScrollElemPos: any;
     cornerScrollElemPos: any;
@@ -161,7 +178,6 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected touchEndPos: any;
     appRef: any;
     autoUpdate: boolean;
-    rowHeight: number;
     allowColumnReorder: boolean;
     allowDrag: boolean;
     allowDrop: boolean;
@@ -171,14 +187,18 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     columns: Array<any>;
     dataFields: any;
     focusedCell: any;
+    footerHeight: number;
     gridLines: IntegralUIGridLines;
+    headerHeight: number;
     mouseWheelSpeed: IntegralUISpeedMode;
     paging: any;
+    rowHeight: number;
     rows: Array<any>;
     selectedColumn: any;
     selectedRow: any;
     selectionMode: IntegralUISelectionMode;
     showExpandBox: boolean;
+    showHoverRow: boolean;
     showScroll: any;
     sorting: IntegralUISortOrder;
     afterSelect: EventEmitter<any>;
@@ -265,6 +285,9 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected updateShowScroll(value?: any): void;
     protected processLoadData(data: Array<any>, parent?: any, fields?: any, flat?: boolean): void;
     protected createScrollRowList(): void;
+    protected createScrollNormalRowList(): void;
+    protected createScrollLeftRowList(): void;
+    protected createScrollRightRowList(): void;
     protected createEmptyRowObj(): {
         clickPos: {
             x: number;
@@ -280,6 +303,11 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
         style: {};
     };
     protected createEmptyCellObj(): any;
+    protected updateScrollRowListLimit(limit: number): void;
+    protected updateScrollNormalRowListLimit(limit: number): void;
+    protected updateScrollLeftRowListLimit(limit: number): void;
+    protected updateScrollRightRowListLimit(limit: number): void;
+    protected getNumScrollColumns(fixed?: string): any;
     protected resetRowObj(obj: any): void;
     protected resetCellObj(obj: any): void;
     protected updateScrollColumnList(): void;
@@ -339,9 +367,11 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected findItemByValue(value: any, list: Array<any>): string;
     getEditorProgressStyle(obj: any): any;
     getEditorProgressValue(obj: any): number;
+    getHoverRow(): any;
     protected hideCalendar(): void;
     protected hideDropList(): void;
     isCellEditorEnabled(column: any, cell: any): boolean;
+    protected isEditorPresent(type: IntegralUIEditorType): boolean;
     openEditor(e: any, obj: any, type?: string): void;
     protected removeCalendar(): void;
     protected removeDropList(): void;
@@ -371,6 +401,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     getColumnById(id: any): any;
     protected getColumnCurrentIndex(column: any): number;
     protected getColumnIndexFromList(column: any): number;
+    protected getColumnList(fixed?: string): any[];
     protected getColumnIndex(column: any): any;
     protected getColumnRealIndex(j: number): any;
     protected getPrevColumnIndex(column: any): number;
@@ -380,6 +411,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     setColumnWidth(column: any, width: number): void;
     protected getPrevColumn(column: any, flag?: boolean): any;
     protected getExpandingColumn(): any;
+    updateExpandingColumnID(): void;
     protected getFilterTree(column: any): any;
     private getCurrentList();
     getList(key?: string, parent?: any): Array<any>;
@@ -387,14 +419,17 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     getTopRow(): any;
     protected getObjFromRow(row: any): any;
     protected createScrollObjFromRow(row: any, rowObj?: any, scrollIndex?: number): any;
-    protected getObjIndexFromScrollList(row: any): number;
+    protected getObjIndexFromScrollList(row: any, fixed?: string): number;
+    protected getObjFromScrollList(row: any, fixed?: string): any;
     protected getRowCurrentIndex(row: any): number;
     protected getRowIndent(rowObj: any, column: any): number;
     getRowLevel(row: any): number;
+    protected getRowList(fixed?: string): any[];
     getRowFromComponent(cmp: any): any;
     protected isChildOf(targetRow: any, row: any): boolean;
+    protected isColumnFixed(column: any, fixed?: string): boolean;
     protected isColumnVisible(column: any): boolean;
-    protected isColumnWidthFixed(j: number): boolean;
+    protected isColumnWidthFixed(column: any): boolean;
     protected isComponentIndexInRange(index: number): boolean;
     protected isExpandBoxAllowed(column: any): boolean;
     protected isIndexInRange(index: number, list: Array<any>): boolean;
@@ -405,9 +440,13 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected isRowHovered(row: any): boolean;
     protected isRowSelected(row: any): boolean;
     protected isParentOf(targetRow: any, row: any): boolean;
+    isThereFixedColumns(fixed: string): boolean;
     processStateChanged(): void;
     updateExpandStatus(): void;
+    protected resetHoverRowObj(): void;
     moveColumn(column: any, direction: IntegralUIMoveDirection, targetColumn?: any, position?: number): void;
+    paginatorMouseEnter(e: any): void;
+    scrollMouseEnter(e: any): void;
     cellGotFocus(cell: any): void;
     cellLostFocus(cell: any): void;
     onContentScroll(e: any): void;
@@ -459,7 +498,8 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected checkWidthChanges(): void;
     protected updateCellWidth(column: any): void;
     protected updateRange(): void;
-    getFooterBottomPos(): number;
+    getBlockBottomPos(): number;
+    getBlockRightPos(): 0 | 16;
     protected onCtrlMouseEnter(e: any): void;
     protected onCtrlMouseLeave(e: any): void;
     currentPage(value?: number): number;

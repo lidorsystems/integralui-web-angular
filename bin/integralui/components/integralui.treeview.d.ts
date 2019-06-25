@@ -32,7 +32,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected longestObj: any;
     protected expandBoxClassName: string;
     protected isExpandBoxTouched: boolean;
-    private trialRef;
+    private tRef;
     autoExpand: boolean;
     compactMode: boolean;
     indent: number;

@@ -1,6 +1,6 @@
 /*
   filename: integralui.slidebar.module.js
-  version : 3.0.0
+  version : 3.1.0
   Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

@@ -18,7 +18,7 @@ export declare class IntegralUIContextMenuComponent extends IntegralUIBaseCompon
     blockOpacity: number;
     contentRef: ViewContainerRef;
     contentList: QueryList<IntegralUIMenuItem>;
-    private trialRef;
+    private tRef;
     adjustment: {
         top: number;
         left: number;

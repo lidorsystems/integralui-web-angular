@@ -15,7 +15,7 @@ export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     contentList: QueryList<IntegralUIMenuItem>;
     contentRef: ViewContainerRef;
     itemTemplate: any;
-    private trialRef;
+    private tRef;
     appRef: any;
     items: Array<any>;
     showAnimation: boolean;

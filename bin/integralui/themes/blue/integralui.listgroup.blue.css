@@ -9,12 +9,14 @@
 /* Header Hover State */
 .iui-listgroup-header-hovered
 {
+    animation-name: none;
 	background-color: #83a6e7;
 	border: thin solid #5f8bde;
 }
 /* Header Selected State */
 .iui-listgroup-header-selected
 {
+    animation-name: none;
 	background-color: #2455b0;
 	border: thin solid #1e4691;
 	color: white;

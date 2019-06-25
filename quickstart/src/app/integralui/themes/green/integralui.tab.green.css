@@ -7,6 +7,7 @@
 }
 .iui-tab-header-hovered
 {
+    animation-name: none;
 	background-color: #6dec66;
 	border: solid thin #25df1c;
 	color: black;

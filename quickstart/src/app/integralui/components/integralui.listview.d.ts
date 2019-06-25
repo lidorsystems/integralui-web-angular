@@ -29,7 +29,7 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     itemTemplate: any;
     private currentScrollMode;
     overflowSettings: any;
-    private trialRef;
+    private tRef;
     itemSize: any;
     scrollMode: IntegralUIScrollMode;
     protected updateOverflowSettings(): void;

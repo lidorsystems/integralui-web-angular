@@ -34,7 +34,7 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     protected itemGeneralClassName: string;
     protected itemContentClassName: string;
     protected contentClass: Array<any>;
-    private trialRef;
+    private tRef;
     dropDownHeight: number;
     integralHeight: boolean;
     items: Array<any>;

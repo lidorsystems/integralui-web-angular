@@ -1,27 +1,29 @@
 .iui-treeitem-content-hovered
 {
+    animation-name: none;
     background-color: #808080;
     border: 2px solid #808080;
 }
 .iui-treeitem-content-selected
 {
+    animation-name: none;
     background-color: #646464;
     border: 2px solid #646464;
     color: white;
 }
-.iui-treeitem-expand-box-open
+.iui-treeitem-expand-box-open, .iui-treeitem-expand-box-open:hover
 {
     background-position: -48px -16px;
+    opacity: 0.5;
+}
+.iui-treeitem-expand-box-close, .iui-treeitem-expand-box-close:hover
+{
+    background-position: -48px 0;
     opacity: 0.5;
 }
 .iui-treeitem-expand-box-open-animate
 {
     background-position: -48px 0;
-}
-.iui-treeitem-expand-box-close
-{
-    background-position: -48px 0;
-    opacity: 0.5;
 }
 .iui-treeitem-expand-box-close-animate
 {

@@ -22,6 +22,7 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     protected updateOptions(value?: any): void;
     protected removeTimers(): void;
+    close(): void;
     open(elemPageRect: any, elemSize: any): void;
     show(elemPageRect: any, elemSize: any): void;
     getSize(): any;
@@ -34,9 +35,11 @@ export declare class IntegralUITooltip {
     protected commonService: IntegralUICommonService;
     protected eventList: Array<any>;
     protected cmpRef: any;
+    protected cmp: any;
     settings: any;
     tooltipRef: any;
     constructor(elemRef: ElementRef, cmpResolver: ComponentFactoryResolver, commonService?: IntegralUICommonService);
+    ngOnDestroy(): void;
     closeTooltip(): void;
     getSize(): {
         width: any;

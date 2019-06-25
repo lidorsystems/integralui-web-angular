@@ -20,7 +20,7 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     contentElem: ElementRef;
     itemElems: QueryList<ElementRef>;
     itemTemplate: any;
-    private trialRef;
+    private tRef;
     constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected updateData(): void;

@@ -62,7 +62,7 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     private prevComponent;
     private removeIndex;
     private tabHeaderClassName;
-    private trialRef;
+    private tRef;
     allowDrag: boolean;
     allowDrop: boolean;
     autoSize: boolean;

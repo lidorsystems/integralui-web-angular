@@ -1,0 +1,38 @@
+.iui-editor-progress-content
+{
+	background: #ABD8FC;
+}
+.iui-list li:hover
+{
+	background-color: transparent;
+	border: 2px solid transparent;
+
+    animation-name: iui-list-item-hovered-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-list-item-hovered-animate-enter {
+    0% { background: transparent; border-color: transparent; }
+    100% { background: #d9edfd; border-color: #d9edfd; }
+}
+.iui-list-item-selected {
+	background-color: #d9edfd;
+
+    animation-name: iui-list-item-selected-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-list-item-selected-animate-enter {
+    0% { background: #d9edfd; border-color: #d9edfd; }
+    100% { background: #a5d3fa; border-color: #a5d3fa; }
+}

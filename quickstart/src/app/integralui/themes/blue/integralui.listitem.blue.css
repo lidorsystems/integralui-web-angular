@@ -1,10 +1,12 @@
 .iui-listitem-hovered
 {
+    animation-name: none;
 	background-color: #a6c9e6;
 	border: 2px solid #97c0e1;
 }
 .iui-listitem-selected
 {
+    animation-name: none;
 	background-color: #428bca;
 	border: 2px solid #357ebd;
     color: white;

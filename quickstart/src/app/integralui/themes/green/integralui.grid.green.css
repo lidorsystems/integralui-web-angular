@@ -1,3 +1,127 @@
+.iui-grid-block-left, .iui-grid-block-right
+{
+	background: #f5f5f5;
+}
+.iui-grid-block-top-left .iui-grid-column-header, 
+.iui-grid-block-top-left .iui-grid-column-footer, 
+.iui-grid-block-top-right .iui-grid-column-header, 
+.iui-grid-block-top-right .iui-grid-column-footer {
+	background-color: #f0f0f0;
+	border: thin solid #d5d5d5 !important;
+    color: #000000;
+}
+.iui-grid-block-top-left .iui-grid-column-header-hovered, 
+.iui-grid-block-top-right .iui-grid-column-header-hovered {
+	background-color: #74b031;
+	border: thin solid #65992b !important;
+    color: #000000;
+}
+.iui-grid-block-top-left .iui-grid-column-header-selected, 
+.iui-grid-block-top-right .iui-grid-column-header-selected {
+	background-color: #3e5e1a;
+	border: thin solid #253810 !important;
+    color: #ffffff;
+}
+
+.iui-grid-column-header, .iui-grid-column-footer
+{
+	color: black;
+}
+.iui-grid-column-header
+{
+	border-bottom: thin solid #d5d5d5 !important;
+}
+.iui-grid-column-footer
+{
+	border-top: thin solid #d5d5d5 !important;
+}
+.iui-grid-column-header-hovered, .iui-grid-column-header-selected, .iui-grid-row-hovered, .iui-grid-row-selected
+{
+    animation-name: none;
+}
+.iui-grid-column-header-selected
+{
+	color: white !important;
+}
+.iui-grid-row-cell:first-child
+{
+	border-left: thin solid #d5d5d5;
+}
+.iui-grid-row-cell:last-child
+{
+	border-right: thin solid #d5d5d5;
+}
+.iui-grid-lines-horizontal:not(:last-child)
+{
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: #d5d5d5;
+}
+.iui-grid-lines-horizontal:last-child
+{
+	border-left-color: transparent;
+	border-bottom-color: #d5d5d5;
+}
+.iui-grid-lines-vertical
+{
+	border-right-color: #d5d5d5;
+}
+.iui-grid-lines-both
+{
+	border-right-color: #d5d5d5;
+	border-bottom-color: #d5d5d5;
+}
+.iui-grid-expand-box-open
+{
+	background: url(../../resources/expand.png) no-repeat 0 0;
+}
+.iui-grid-expand-box-open:hover
+{
+	background: url(../../resources/expand.png) no-repeat 0 0;
+}
+.iui-grid-expand-box-close
+{
+	background: url(../../resources/collapse.png) no-repeat 0 0;
+}
+.iui-grid-expand-box-close:hover
+{
+	background: url(../../resources/collapse.png) no-repeat 0 0;
+}
+.iui-grid-row, .iui-grid-row-fixed {
+	color: black;
+}
+
+
+.iui-grid-grouping-panel
+{
+	background-color: #f0f0f0;
+	border-bottom: thin solid #d5d5d5;
+}
+.iui-grid-grouping-panel-item
+{
+	background-color: #dedede;
+	border: thin solid #bebebe;
+}
+.iui-grid-grouping-panel-toolbar-button-add
+{
+	background: #dedede;
+    border: thin solid #bebebe;
+}
+.iui-grid-grouping-marker::before
+{
+	border: 6px solid #dedede;
+	border-color: transparent transparent transparent #ababab;
+}
+.iui-grid-grouping-marker::after
+{
+	border: 6px solid #dedede;
+	border-color: transparent transparent transparent #dedede;
+}
+.iui-grid-grouping-panel-dropdown-list li:hover
+{
+    background: #e5e5e5;
+}
+
 .iui-grid
 {
 	background-color: white;

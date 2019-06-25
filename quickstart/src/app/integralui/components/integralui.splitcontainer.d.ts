@@ -82,7 +82,7 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     protected swapButtonClassName: string;
     protected tabClass: Array<any>;
     protected tabClassName: string;
-    private trialRef;
+    private tRef;
     orientation: IntegralUIOrientation;
     panel1: any;
     panel2: any;

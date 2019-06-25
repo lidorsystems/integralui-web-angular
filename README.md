@@ -1,8 +1,8 @@
-# IntegralUI Web for Angular
+# IntegralUI Web for Angular, v19.2
 
 IntegralUI Web is a library built on top of Angular 7 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
-![IntegralUI Web 19.1 - 35+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
+![IntegralUI Web 19.2 - 35+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
 
 Here is a brief overview of what is included:
 

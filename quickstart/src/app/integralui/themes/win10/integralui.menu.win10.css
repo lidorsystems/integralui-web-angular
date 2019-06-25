@@ -26,6 +26,7 @@
 }
 .iui-menuitem-root-hovered, .iui-menuitem-root-selected
 {
+    animation-name: none;
 	background-color: #dedede;
 	border: solid thin #dedede;
 	border-radius: 0;
@@ -58,6 +59,7 @@
 }
 .iui-menuitem-hovered, .iui-menuitem-selected
 {
+    animation-name: none;
 	background-color: #f5f5f5 !important;
 	border: solid thin #f5f5f5 !important;
 	color: #000000;

@@ -1,11 +1,13 @@
 .iui-treeitem-content-hovered
 {
+    animation-name: none;
     background-color: #e6e6e6;
     border-color: #adadad;
     color: black;
 }
 .iui-treeitem-content-selected
 {
+    animation-name: none;
     background-color: #d4d4d4;
     border-color: #9a9a9a;
     color: black;
@@ -19,11 +21,15 @@
 {
     background-position: -32px -16px;
 }
-.iui-treeitem-expand-box-open-animate
+.iui-treeitem-expand-box-open, .iui-treeitem-expand-box-open:hover
+{
+    background-position: -32px -16px;
+}
+.iui-treeitem-expand-box-close, .iui-treeitem-expand-box-close:hover
 {
     background-position: -32px 0;
 }
-.iui-treeitem-expand-box-close
+.iui-treeitem-expand-box-open-animate
 {
     background-position: -32px 0;
 }

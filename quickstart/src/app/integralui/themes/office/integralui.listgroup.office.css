@@ -1,0 +1,59 @@
+@import 'integralui.groupbox.office.css';
+
+/* Header Normal State */
+.iui-listgroup-header
+{
+	background-color: #e2e2e2;
+	border: thin solid #e2e2e2;
+	color: black;
+}
+/* Header Hover State */
+.iui-listgroup-header-hovered
+{
+	background-color: #e2e2e2;
+	border: thin solid #e2e2e2;
+	color: black;
+
+    animation-name: iui-listgroup-header-hovered-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-listgroup-header-hovered-animate-enter {
+    0% { background: #e2e2e2; border: thin solid #e2e2e2; }
+    100% { background: #a5d3fa; border: thin solid #a5d3fa; }
+}
+/* Header Selected State */
+.iui-listgroup-header-selected
+{
+	background-color: #a5d3fa;
+	border: thin solid #a5d3fa;
+	color: white;
+
+    animation-name: iui-listgroup-header-selected-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-listgroup-header-selected-animate-enter {
+    0% { background: #a5d3fa; border: thin solid #a5d3fa; color: black; }
+    100% { background: #0a64ad; border: thin solid #0a64ad; color: white; }
+}
+.iui-listgroup-content
+{
+	background-color: #ffffff;
+	border: solid thin #d9d9d9;
+}
+
+.iui-listgroup-header-selected .iui-listgroup-header-expand-box
+{
+	background: #ffffff !important;
+}

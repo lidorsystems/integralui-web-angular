@@ -1,3 +1,107 @@
+.iui-treegrid-block-left, .iui-treegrid-block-right
+{
+	background: #f5f5f5;
+}
+.iui-treegrid-block-top-left .iui-treegrid-column-header, 
+.iui-treegrid-block-top-right .iui-treegrid-column-header {
+	background-color: #efefef;
+	border-color: transparent;
+	border-bottom: thin solid #e6e6e6 !important;
+	color: #49678f;
+}
+.iui-treegrid-block-top-left .iui-treegrid-column-footer, 
+.iui-treegrid-block-top-right .iui-treegrid-column-footer {
+	background-color: #ffffff;
+	border-color: transparent;
+	border-right: thin solid #e6e6e6 !important;
+	border-top: thin solid #e6e6e6 !important;
+	color: #323232;
+}
+.iui-treegrid-block-top-left .iui-treegrid-column-header-hovered, 
+.iui-treegrid-block-top-right .iui-treegrid-column-header-hovered {
+	background-color: #d9ebf9;
+	border: thin solid #d9ebf9 !important;
+    color: #49678f;
+}
+.iui-treegrid-block-top-left .iui-treegrid-column-header-selected, 
+.iui-treegrid-block-top-right .iui-treegrid-column-header-selected {
+	background-color: #bcdcf4;
+	border: thin solid #bcdcf4 !important;
+    color: #3d5576;
+}
+
+.iui-treegrid-column-header, .iui-treegrid-column-footer
+{
+	color: black;
+}
+.iui-treegrid-column-header
+{
+	border-bottom: thin solid transparent !important;
+}
+.iui-treegrid-column-footer
+{
+	border-top: thin solid transparent !important;
+}
+.iui-treegrid-column-header-hovered, .iui-treegrid-column-header-selected, .iui-treegrid-row-hovered, .iui-treegrid-row-selected
+{
+    animation-name: none;
+}
+.iui-treegrid-column-header-selected
+{
+	color: white !important;
+}
+.iui-treegrid-row-cell:first-child
+{
+	border-left: thin solid transparent;
+}
+.iui-treegrid-row-cell:last-child
+{
+	border-right: thin solid transparent;
+}
+.iui-treegrid-lines-horizontal:not(:last-child)
+{
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+.iui-treegrid-lines-horizontal:last-child
+{
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+}
+.iui-treegrid-lines-vertical
+{
+	border-right-color: transparent;
+}
+.iui-treegrid-lines-both
+{
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+.iui-treegrid-expand-box-open
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	opacity: 0.5;
+}
+.iui-treegrid-expand-box-open:hover
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	opacity: 0.5;
+}
+.iui-treegrid-expand-box-close
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+}
+.iui-treegrid-expand-box-close:hover
+{
+	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+}
+.iui-treegrid-row, .iui-treegrid-row-fixed {
+	color: black;
+}
+
+
+
 .iui-treegrid
 {
 	border: thin solid #d9d9d9;

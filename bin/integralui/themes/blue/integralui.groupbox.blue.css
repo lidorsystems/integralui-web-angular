@@ -7,12 +7,14 @@
 /* Hover State */
 .iui-groupbox-header-hovered
 {
+    animation-name: none;
 	background-color: #83a6e7;
 	border: thin solid #5f8bde;
 }
 /* Selected State */
 .iui-groupbox-header-selected
 {
+    animation-name: none;
 	background-color: #2455b0;
 	border: thin solid #1e4691;
 	color: white;

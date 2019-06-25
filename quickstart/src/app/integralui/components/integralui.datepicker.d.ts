@@ -64,6 +64,8 @@ export declare class IntegralUIDatePicker extends IntegralUIBaseComponent {
     private showCalendar(e);
     updateLayout(): void;
     private updateHeaderLayout();
+    onCtrlMouseEnter(e: any): void;
+    onCtrlMouseLeave(e: any): void;
     openCalendar(e: any): void;
     getControlStyle(): any;
     protected updateHeaderClass(): void;

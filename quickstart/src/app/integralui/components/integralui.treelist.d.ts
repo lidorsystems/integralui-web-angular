@@ -64,7 +64,7 @@ export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     headerItem: any;
     headerText: string;
     private selList;
-    private trialRef;
+    private tRef;
     items: Array<any>;
     title: string;
     selectedItem: any;

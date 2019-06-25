@@ -1,3 +1,25 @@
+v19.2.0        
+- Fixed columns on left and right in Grid and TreeGrid
+- Option to show custom content like command buttons, when row is hovered in Grid and TreeGrid
+- A new event is added named dragDropComplete, which is fired after drag drop finishes and grid layout is updated. This event is present in Grid, ListBox, ListView, TreeGrid and TreeView components
+- Sorting and Filtering icon improvements
+- New theme Office (animations are added on hovering, selection etc. for most components)
+- Option to show expand boxes only on hover in TreeGrid
+- Option to set header and footer height from code
+- New  and updated samples
+
+- Improve performance on grid update (internal data size scalling based on columns and rows)
+- While dragging a row close to top or bottom grid border, the view is scrolled vertically is now corrected
+- Vertical scrolling is now correctly updated during drag drop in Grid and TreeGrid
+- Vertical scrollbar doesn't appear when row is expanded in the TreeGrid with only one row
+- Fixed the issue that caused horizontal scrollbar to appear incorrectly in TreeView
+- Fixed the issue that caused dropdown list editor to appear for cells that has it set to hidden
+- ListPopup now longer causes style error with its position is set in Grid
+- CalendarPopup and ListPopup are added to the DOM from the Grid only when associated editor is present
+- With many columns in Grid scrolling speed is now increased when using touch
+- Fixed the issue of closing the DropDown editors when touch is made outside the editor
+- Tooltip no longer appears after the attached element is removed
+
 v19.1.0
 - New components: AutoComplete, Breadcrumb, Popover, Toolbar
 - Compact Mode in TreeView, displays limited set of tree hierarchy based on selected item

@@ -1,0 +1,49 @@
+.iui-treelist
+{
+    background-color: #ffffff;
+    border: thin solid #d9d9d9;
+}
+.iui-treelist-header
+{
+    background-color: #0a64ad;
+    border: solid thin #06487d;
+    color: white;
+}
+.iui-treelistitem-hovered
+{
+    background-color: transparent;
+
+    animation-name: iui-treelistitem-hovered-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-treelistitem-hovered-animate-enter {
+    0% { background: transparent; }
+    100% { background: #d9edfd; }
+}
+.iui-treelistitem-selected
+{
+	background: transparent;
+
+    animation-name: iui-treelistitem-selected-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-treelistitem-selected-animate-enter {
+    0% { background: #d9edfd; }
+    100% { background: #a5d3fa; }
+}
+.iui-treelistitem-animate-select
+{
+	background: #d9edfd;
+}

@@ -1,11 +1,13 @@
 .iui-treeitem-content-hovered
 {
+    animation-name: none;
     background-color: #e6f2fb;
     border: 2px solid #e6f2fb;
     color: #242424;
 }
 .iui-treeitem-content-selected
 {
+    animation-name: none;
     background-color: #d7eaf9;
     border: 2px solid #d7eaf9;
     color: #242424;
@@ -14,19 +16,19 @@
 {
     background: url(../../resources/expandbox-icons.png) no-repeat -16px -48px;
 }
-.iui-treeitem-expand-box-open
+.iui-treeitem-expand-box-open, .iui-treeitem-expand-box-open:hover
 {
     background-position: -16px -16px;
-	opacity: 0.5;
+    opacity: 0.5;
+}
+.iui-treeitem-expand-box-close, .iui-treeitem-expand-box-close:hover
+{
+    background-position: -16px 0;
 }
 .iui-treeitem-expand-box-open-animate
 {
     background-position: -16px 0;
 	opacity: 0.5;
-}
-.iui-treeitem-expand-box-close
-{
-    background-position: -16px 0;
 }
 .iui-treeitem-expand-box-close-animate
 {

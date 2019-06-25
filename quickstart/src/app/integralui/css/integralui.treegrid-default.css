@@ -37,13 +37,71 @@
 	overflow: hidden;
 	padding: 0;
 	position: relative;
+	z-index: 0;
+}
+.iui-treegrid-block-left
+{
+	background: #f5f5f5;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	z-index: 4;
+}
+.iui-treegrid-block-right
+{
+	background: #f5f5f5;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 3;
 }
 .iui-treegrid-block-top
 {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 10;
+}
+.iui-treegrid-block-top-left
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 12;
+}
+.iui-treegrid-block-top-right
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 11;
+}
+.iui-treegrid-block-bottom
+{
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	z-index: 7;
+}
+.iui-treegrid-block-bottom-left
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	z-index: 9;
+}
+.iui-treegrid-block-bottom-right
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 8;
 }
 .iui-treegrid-block-middle
 {
@@ -51,26 +109,21 @@
 	top: 0;
 	left: 0;
 }
-.iui-treegrid-block-left
-{
-	left: 0;
+.iui-treegrid-block-hover {
+	background: transparent;
+	border: thin solid #cecece;
+	box-shadow: 2px 3px 3px #e5e5e5;
+	pointer-events: none;
 	position: absolute;
-	top: 0;
-	z-index: 7;
+	z-index: 6;
 }
-.iui-treegrid-block-right
-{
+.iui-treegrid-block-hover > div {
+	background: #f5f5f5;
+	pointer-events: auto;
 	position: absolute;
 	right: 0;
 	top: 0;
-	z-index: 6;
-}
-.iui-treegrid-block-bottom
-{
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	z-index: 8;
+	z-index: 5;
 }
 .iui-treegrid-block-shift-left
 {
@@ -97,8 +150,16 @@
 	margin: 0;
 	padding: 3px 0;
 	position: relative;
+	vertical-align: top;
 	white-space: nowrap;
 	z-index: 1;
+}
+.iui-treegrid-block-top-left .iui-treegrid-column-header, 
+.iui-treegrid-block-top-left .iui-treegrid-column-footer, 
+.iui-treegrid-block-top-right .iui-treegrid-column-header, 
+.iui-treegrid-block-top-right .iui-treegrid-column-footer {
+	background-color: #dddddd;
+	border: thin solid #c5c5c5;
 }
 .iui-treegrid-column-header-hovered
 {
@@ -157,6 +218,7 @@
 	border-bottom: thin solid transparent;
 	padding: 0;
 	/*position: relative;*/
+	vertical-align: top;
 }
 .iui-treegrid-row-cell-content
 {
@@ -184,6 +246,34 @@
 	margin: 0 3px 0 0;
 	vertical-align: middle;
 }
+.iui-treegrid-enter .iui-treegrid-expand-box {
+    animation-name: iui-treegrid-animate-expand-box-enter;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.4s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes iui-treegrid-animate-expand-box-enter {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+} 
+.iui-treegrid-leave .iui-treegrid-expand-box {
+    animation-name: iui-treegrid-animate-expand-box-leave;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes iui-treegrid-animate-expand-box-leave {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+} 
 .iui-treegrid-expand-box-load
 {
 	background: url(../resources/load.gif) no-repeat 0 0;
@@ -534,3 +624,4 @@
 	    opacity: 0;
 	}
 }
+
