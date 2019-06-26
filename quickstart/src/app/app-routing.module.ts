@@ -84,10 +84,12 @@ import { GridExcelEditorSample } from './samples/grid/grid-excel-editor';
 import { GridExportSample } from './samples/grid/grid-export';
 import { GridFastLoadSample } from './samples/grid/grid-fast-load';
 import { GridFilterSample } from './samples/grid/grid-filter';
+import { GridFixedColumnsSample } from './samples/grid/grid-fixed-columns';
 import { GridGroupingSample } from './samples/grid/grid-grouping';
 import { GridMultiSelectSample } from './samples/grid/grid-multi-select';
 import { GridOverviewSample } from './samples/grid/grid-overview';
 import { GridPaginationSample } from './samples/grid/grid-pagination';
+import { GridRowHoverButtonsSample } from './samples/grid/grid-row-hover-buttons';
 import { GridShowHideHeaderFooterSample } from './samples/grid/grid-show-hide-header-footer';
 import { GridSortingSample } from './samples/grid/grid-sorting';
 import { GridTooltipSample } from './samples/grid/grid-tooltip';
@@ -179,11 +181,13 @@ import { TreeGridExcelEditorSample } from './samples/treegrid/treegrid-excel-edi
 import { TreeGridExportSample } from './samples/treegrid/treegrid-export';
 import { TreeGridFastLoadSample } from './samples/treegrid/treegrid-fast-load';
 import { TreeGridFilterSample } from './samples/treegrid/treegrid-filter';
+import { TreeGridFixedColumnsSample } from './samples/treegrid/treegrid-fixed-columns';
 import { TreeGridHighlightRowsSample } from './samples/treegrid/treegrid-highlight-rows';
 import { TreeGridMultiSelectSample } from './samples/treegrid/treegrid-multi-select';
 import { TreeGridOverviewSample } from './samples/treegrid/treegrid-overview';
 import { TreeGridPaginationSample } from './samples/treegrid/treegrid-pagination';
 import { TreeGridPaginationOnDemandSample } from './samples/treegrid/treegrid-pagination-on-demand';
+import { TreeGridRowHoverButtonsSample } from './samples/treegrid/treegrid-row-hover-buttons';
 import { TreeGridShowHideHeaderFooterSample } from './samples/treegrid/treegrid-show-hide-header-footer';
 import { TreeGridSortingSample } from './samples/treegrid/treegrid-sorting';
 import { TreeGridTooltipSample } from './samples/treegrid/treegrid-tooltip';
@@ -324,21 +328,23 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             		{ path: 'column-dropdown', component: GridColumnDropDownSample },
             		{ path: 'context-menu', component: GridContextMenuSample },
             		{ path: 'drag-drop-treegrid', component: GridDragDropTreeGridSample },
-                { path: 'edit-cell-checkbox', component: GridEditCellCheckBoxSample },
-                { path: 'edit-cell-datepicker', component: GridEditCellDatePickerSample },
-                { path: 'edit-cell-droplist', component: GridEditCellDropListSample },
-                { path: 'edit-cell-numeric', component: GridEditCellNumericSample },
-                { path: 'edit-cell-rating', component: GridEditCellRatingSample },
-                { path: 'edit-cell-text', component: GridEditCellTextBoxSample },
+                    { path: 'edit-cell-checkbox', component: GridEditCellCheckBoxSample },
+                    { path: 'edit-cell-datepicker', component: GridEditCellDatePickerSample },
+                    { path: 'edit-cell-droplist', component: GridEditCellDropListSample },
+                    { path: 'edit-cell-numeric', component: GridEditCellNumericSample },
+                    { path: 'edit-cell-rating', component: GridEditCellRatingSample },
+                    { path: 'edit-cell-text', component: GridEditCellTextBoxSample },
             		{ path: 'events', component: GridEventsSample },
             		{ path: 'excel-editor', component: GridExcelEditorSample },
             		{ path: 'export', component: GridExportSample },
             		{ path: 'fast-load', component: GridFastLoadSample },
             		{ path: 'filter', component: GridFilterSample },
+                    { path: 'fixed-columns', component: GridFixedColumnsSample },
             		{ path: 'grouping', component: GridGroupingSample },
             		{ path: 'multi-select', component: GridMultiSelectSample },
             		{ path: 'overview', component: GridOverviewSample },
             		{ path: 'pagination', component: GridPaginationSample },
+                    { path: 'row-hover-buttons', component: GridRowHoverButtonsSample },
             		{ path: 'show-hide-header-footer', component: GridShowHideHeaderFooterSample },
             		{ path: 'sorting', component: GridSortingSample },
             		{ path: 'tooltip', component: GridTooltipSample }
@@ -507,19 +513,21 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             		{ path: 'cell-rating', component: TreeGridCellRatingSample },
             		{ path: 'cell-templates', component: TreeGridCellTemplatesSample },
             		{ path: 'context-menu', component: TreeGridContextMenuSample },
-                { path: 'data-fields', component: TreeGridDataFieldsSample },
+                    { path: 'data-fields', component: TreeGridDataFieldsSample },
             		{ path: 'drag-drop', component: TreeGridDragDropSample },
-                { path: 'edit-cell-progress', component: TreeGridEditCellProgressSample },
+                    { path: 'edit-cell-progress', component: TreeGridEditCellProgressSample },
             		{ path: 'events', component: TreeGridEventsSample },
             		{ path: 'excel-editor', component: TreeGridExcelEditorSample },
             		{ path: 'export', component: TreeGridExportSample },
             		{ path: 'fast-load', component: TreeGridFastLoadSample },
             		{ path: 'filter', component: TreeGridFilterSample },
+                    { path: 'fixed-columns', component: TreeGridFixedColumnsSample },
             		{ path: 'highlight-rows', component: TreeGridHighlightRowsSample },
             		{ path: 'multi-select', component: TreeGridMultiSelectSample },
             		{ path: 'overview', component: TreeGridOverviewSample },
             		{ path: 'pagination', component: TreeGridPaginationSample },
             		{ path: 'pagination-on-demand', component: TreeGridPaginationOnDemandSample },
+                    { path: 'row-hover-buttons', component: TreeGridRowHoverButtonsSample },
             		{ path: 'show-hide-header-footer', component: TreeGridShowHideHeaderFooterSample },
             		{ path: 'sorting', component: TreeGridSortingSample },
             		{ path: 'tooltip', component: TreeGridTooltipSample }
@@ -615,10 +623,12 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         GridExportSample,
         GridFastLoadSample,
         GridFilterSample,
+        GridFixedColumnsSample,
         GridGroupingSample,
         GridMultiSelectSample,
         GridOverviewSample,
         GridPaginationSample,
+        GridRowHoverButtonsSample,
         GridShowHideHeaderFooterSample,
         GridSortingSample,
         GridTooltipSample,
@@ -689,11 +699,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         TreeGridExportSample,
         TreeGridFastLoadSample,
         TreeGridFilterSample,
+        TreeGridFixedColumnsSample,
         TreeGridHighlightRowsSample,
         TreeGridMultiSelectSample,
         TreeGridOverviewSample,
         TreeGridPaginationSample,
         TreeGridPaginationOnDemandSample,
+        TreeGridRowHoverButtonsSample,
         TreeGridShowHideHeaderFooterSample,
         TreeGridSortingSample,
         TreeGridTooltipSample,

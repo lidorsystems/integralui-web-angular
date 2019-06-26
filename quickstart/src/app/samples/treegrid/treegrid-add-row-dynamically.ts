@@ -73,7 +73,7 @@ enableProdMode();
             .treegrid-ardyn-normal .iui-treegrid-expand-box
             {
                 float: left;
-                margin: 3px 3px 0 0;
+                margin: 5px 5px 0 0;
             }
 
             /* 
@@ -84,7 +84,7 @@ enableProdMode();
                 background: #0064bb;
                 border: thin solid #0048aa;
                 color: white;
-                margin-top: 1px;
+                margin: 1px 1px 0 1px;
                 padding: 3px 5px;
             }
             .treegrid-ardyn-normal button:hover

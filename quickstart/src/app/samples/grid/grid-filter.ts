@@ -38,7 +38,7 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
             .grid-ftr-column-filter-mark
             {
                 background-image: url(app/integralui/resources/icons.png);
-                background-position: -96px -80px;
+                background-position: -96px -128px;
                 background-repeat: no-repeat;
                 margin: 1px 0 0 0;
                 position: absolute;
@@ -49,7 +49,7 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
             }
             .grid-ftr-column-filter-mark:hover
             {
-                background-position: -112px -80px;
+                background-position: -112px -128px;
             }
 
             /* Filter Templates */

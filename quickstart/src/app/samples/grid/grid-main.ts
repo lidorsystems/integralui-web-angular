@@ -86,6 +86,7 @@ export class GridSample {
             { text: "Cell with Numeric UpDown", link: './edit-cell-numeric', space: 20 },
             { text: "Cell with Rating", link: './edit-cell-rating', space: 20 },
             { text: "Cell with TextBox", link: './edit-cell-text', space: 20 },
+            { text: "Buttons on Row Hovering", link: './row-hover-buttons' },
             { text: "Cell with DropDown", link: './cell-dropdown' },
             { text: "Column with DropDown", link: './column-dropdown' },
             { text: "Context Menu", link: './context-menu' },
@@ -97,6 +98,7 @@ export class GridSample {
             { text: "Export to CSV or JSON", link: './export' },
             { text: "Fast Load", link: './fast-load' },
             { text: "Filter", link: './filter' },
+            { text: "Fixed Columns", link: './fixed-columns' },
             { text: "Multi Select", link: './multi-select' },
             { text: "Overview", link: './overview' },
             { text: "Pagination", link: './pagination' },
@@ -106,7 +108,7 @@ export class GridSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[21];
+        this.selectedItem = this.sideList[23];
     }   
 
     ngAfterContentChecked(){

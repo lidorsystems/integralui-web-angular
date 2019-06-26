@@ -12,7 +12,6 @@
 */
 
 import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { IntegralUIToolItemType } from '../../integralui/components/integralui.core';
 
 @Component({
     selector: '',
@@ -22,6 +21,7 @@ import { IntegralUIToolItemType } from '../../integralui/components/integralui.c
             {
                 background: #fefefe;
                 border-color: #e5e5e5;
+                cursor: pointer;
             }
         </style>
         <h2 class="feature-title">BreadCrumb / Overview</h2>

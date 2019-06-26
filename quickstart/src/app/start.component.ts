@@ -219,7 +219,7 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
             {
                 background-position: -288px -24px;
             }
-            .toolbar
+            .tool
             {
                 background-position: -264px -24px;
             }
@@ -306,7 +306,7 @@ export class StartComponent {
             { text: "PopOver", icon: 'popover', link: '/popover' },
             { text: "Range", icon: 'range', link: '/range' },
             { text: "Frame", icon: 'frame', link: '/frame' },
-            { text: "Toolbar", icon: 'toolbar', link: '/toolbar' },
+            { text: "Toolbar", icon: 'tool', link: '/toolbar' },
             { text: "Tooltip", icon: 'tooltip', link: '/tooltip' }
         ];
 

@@ -26,7 +26,7 @@
             ],
             "styles": [
               "src/app/integralui/css/integralui.module.css",
-              "src/app/integralui/themes/integralui.themes.blue.css",
+              "src/app/integralui/themes/integralui.themes.office.css",
               "src/styles.css"
             ],
             "scripts": []

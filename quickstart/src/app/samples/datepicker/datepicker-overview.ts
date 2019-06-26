@@ -24,7 +24,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
         </style>
         <h2 class="feature-title">DatePicker / Overview</h2>
         <div class="feature-content" #application>
-            <iui-datepicker [appRef]="applicationRef" [controlStyle]="ctrlStyle"></iui-datepicker>
+            <iui-datepicker [appRef]="applicationRef" [allowAnimation]="true" [controlStyle]="ctrlStyle"></iui-datepicker>
             <div class="feature-help" style="margin-top:50px;width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> DatePicker</strong> is a native Angular component that allows the user to select a date by using a drop-down <a routerLink="/calendar">Calendar</a> component. This component is fully customizable via CSS.</p>
                 <p><span class="initial-space"></span>The following properties and events are supported:</p>

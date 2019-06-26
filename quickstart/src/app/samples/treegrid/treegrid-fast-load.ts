@@ -43,11 +43,17 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
                 margin: 5px 20px 5px 0;
                 width: 75px;
             }
+            .treegrid-row-buttons {
+                white-space: no-wrap;
+            }
+            .treegrid-row-buttons button {
+                display: inline-block;
+            }
         </style>
         <h2 class="feature-title" style="margin-left:0">TreeGrid / Fast Load</h2>
         <div class="feature-content" style="width:900px">
             <div #application>
-                <iui-treegrid [appRef]="applicationRef" [controlStyle]="treegridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true" [autoExpand]="true" #treegrid>
+                <iui-treegrid [appRef]="applicationRef" [controlStyle]="treegridStyle" [columns]="columns" [rows]="rows" [selectionMode]="selMode" [allowDrag]="true" [autoExpand]="true" [allowColumnReorder]="true" [allowAnimation]="false" #treegrid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
                         {{column.title}}
                     </ng-template>
@@ -113,15 +119,12 @@ export class TreeGridFastLoadSample {
     
     addColumns(){
         for (let j = 1; j <= this.numColumns; j++){
-            let column = { 
+            let column: any = { 
                 id: j, 
                 title: "Header " + j,
                 footerText: "Footer " + j,
                 width: 100
             }
-
-            if (j == 1)
-                column.width = 200;
 
             this.columns.push(column);
         }
@@ -138,11 +141,16 @@ export class TreeGridFastLoadSample {
                     text : 'Row ' + (this.rowCount+1).toString(),
                     id: this.rowCount,
                     expanded : false,
-                    cells: []
+                    cells: [],
+                    buttons: [
+                        { text: "Bttn 1" },
+                        { text: "Bttn 2" },
+                        { text: "Bttn 3" }
+                    ]
                 };
                     
                 for (let j = 0; j < this.columns.length; j++){
-                    row.cells.push({ text: "Item" + (this.rowCount+1).toString() + j });
+                    row.cells.push({ cid: j+1, text: "Item" + (this.rowCount+1).toString() + (j+1).toString() });
                 }
 
                 this.treegrid.addRow(row, parentRow);
