@@ -105,7 +105,9 @@
     "quickstart/src/app/samples/tooltip/*.*",
     "quickstart/src/app/samples/treegrid/*.*",
     "quickstart/src/app/samples/treelist/*.*",
-    "quickstart/src/app/samples/treeview/*.*"
+    "quickstart/src/app/samples/treeview/*.*",
+    "quickstart/src/assets/*.*",
+    "quickstart/src/environments/*.*"
   ],
   "devDependencies": {
     "@angular/animations": "^7.1.0",
