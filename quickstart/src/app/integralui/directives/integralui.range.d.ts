@@ -3,7 +3,7 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIRange {
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     private defaultSettings;
     private resizeInterval;
     private originalElemSize;

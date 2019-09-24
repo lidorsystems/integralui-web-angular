@@ -66,7 +66,7 @@ import { Component, ElementRef, ViewContainerRef, ViewChild, ViewChildren, ViewE
     encapsulation: ViewEncapsulation.None
 })
 export class GroupBoxSample {
-    @ViewChild('featureContent', {read: ElementRef}) featureContentElem: ElementRef;
+    @ViewChild('featureContent', {read: ElementRef, static: false}) featureContentElem: ElementRef;
 
     public blockHeight: any = "auto";
 

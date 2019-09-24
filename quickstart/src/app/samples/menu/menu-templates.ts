@@ -181,7 +181,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
     encapsulation: ViewEncapsulation.None
 })
 export class MenuTemplateSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public items: Array<any>;
     public ctrlStyle: any = {

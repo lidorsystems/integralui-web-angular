@@ -166,8 +166,8 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridCellTemplatesSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
 
     // TreeGrid  settings
     public columns: Array<any>;

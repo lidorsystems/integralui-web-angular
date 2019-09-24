@@ -6,8 +6,8 @@ import { IntegralUIListItem } from './integralui.listitem';
 export declare class IntegralUITreeItem extends IntegralUIListItem {
     protected elemRef: ElementRef;
     private dataService;
-    protected commonService: IntegralUICommonService;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected baseService?: IntegralUIBaseService;
     private contentAnimation;
     private numItems;
     templateData: Array<any>;

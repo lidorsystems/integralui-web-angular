@@ -93,8 +93,8 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridShowHideHeaderFooterSample {
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public gridSelMode: IntegralUISelectionMode = IntegralUISelectionMode.MultiExtended;
     public columns: Array<any>;

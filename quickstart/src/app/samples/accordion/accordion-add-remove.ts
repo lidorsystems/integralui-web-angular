@@ -102,7 +102,7 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
     encapsulation: ViewEncapsulation.None
 })
 export class AccordionAddRemoveSample {
-    @ViewChild('accordion') accordion: IntegralUIAccordion;
+    @ViewChild('accordion', { static: false }) accordion: IntegralUIAccordion;
 
     public data: Array<any>;
     public selGroup: any = null;

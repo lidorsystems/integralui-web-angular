@@ -4,7 +4,7 @@ import { IntegralUIDirection, IntegralUIPlacement } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIDropDownButton extends IntegralUIButton {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     protected originalDropDownSettings: any;
     protected dropDownSettings: any;
     protected placementValue: IntegralUIPlacement;
@@ -23,8 +23,8 @@ export declare class IntegralUIDropDownButton extends IntegralUIButton {
     dropDownOpening: EventEmitter<any>;
     dropDownOpened: EventEmitter<any>;
     dropDownClosed: EventEmitter<any>;
-    private getAdjustmentValue(value?);
-    private updateDropDownSettings(value?);
+    private getAdjustmentValue;
+    private updateDropDownSettings;
     updateAdjustment(): void;
     onButtonContextMenu(e: any): void;
     onDropDownItemClick(e: any): void;

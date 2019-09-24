@@ -2,7 +2,7 @@ import { ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIDialog extends IntegralUIBaseComponent {
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     inputLabelElem: ElementRef;
     protected isEnabled: boolean;
     protected isVisible: boolean;

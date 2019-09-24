@@ -192,7 +192,7 @@ enableProdMode();
 export class TreeGridAddRowDynamicallySample {
 
     // Get a reference to the TreeGrid component
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
 
     // An Array object that holds all column objects shown in the TreeGrid
     public columns: Array<any>;

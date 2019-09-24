@@ -11,10 +11,10 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
-    protected filterService: IntegralUIFilterService;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected filterService?: IntegralUIFilterService;
+    protected cmpResolver?: ComponentFactoryResolver;
+    protected baseService?: IntegralUIBaseService;
     protected clientSpace: any;
     contentPos: any;
     protected currentItemSize: any;
@@ -45,7 +45,7 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     insertItemAt(item: any, index: number): void;
     removeItemAt(index: number): boolean;
     itemDragOver(e: any, obj: any, index: number, flag?: boolean): void;
-    private addItemToCurrentList(item);
+    private addItemToCurrentList;
     loadData(data: Array<any>, fields?: any): void;
     protected updateCurrentList(): void;
     protected updateScrollItemList(): void;
@@ -54,6 +54,7 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     getItemIndex(cmp: IntegralUIListItem): number;
     protected updateItemList(): void;
     invokeEvent(key: string, item: any): boolean;
+    isDropPosHorizontal(): boolean;
     processDownArrowKey(item: any, e?: any): any;
     processEndKey(item: any, e?: any): any;
     processHomeKey(item: any, e?: any): any;
@@ -86,10 +87,10 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     scrollTo(item: any): void;
     clearSelection(): void;
     selectItem(cmp: IntegralUIListItem): void;
-    private updateSelectedItemFromElem(cmp);
-    private updateSelectedItem(item);
+    private updateSelectedItemFromElem;
+    private updateSelectedItem;
     getControlStyle(): any;
     protected getItemInlineStyle(itemObj: any): any;
-    private resetRefresh();
+    private resetRefresh;
     refresh(obj?: any): void;
 }

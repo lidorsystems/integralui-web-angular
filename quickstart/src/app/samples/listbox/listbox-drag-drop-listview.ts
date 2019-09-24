@@ -248,7 +248,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
     encapsulation: ViewEncapsulation.None
 })
 export class ListBoxDragDropListViewSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     // ListBox settings
     public lBoxItems: Array<any>;

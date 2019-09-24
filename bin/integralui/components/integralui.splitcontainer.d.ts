@@ -5,9 +5,9 @@ export declare class IntegralUISplitContainerTags {
 }
 export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
+    protected baseService?: IntegralUIBaseService;
     panel1Data: any;
     panel2Data: any;
     private blockPos;

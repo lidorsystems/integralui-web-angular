@@ -105,7 +105,7 @@ import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../inte
     encapsulation: ViewEncapsulation.None
 })
 export class TabStripOverviewSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public data: Array<any>;
 

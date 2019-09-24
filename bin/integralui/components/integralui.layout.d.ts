@@ -5,7 +5,7 @@ import { IntegralUIDataService } from '../services/integralui.data.service';
 export declare class IntegralUILayout extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     private ctrlData;
     currentList: Array<any>;
     private dataPanels;
@@ -22,12 +22,12 @@ export declare class IntegralUILayout extends IntegralUIBaseComponent {
     protected updateOptions(value?: any): void;
     protected updateDataFields(fields?: any): void;
     protected updateCurrentList(): void;
-    private addChildPanels(parent, pid, flag?);
-    private addPanelToCurrentList(panel, pid, flag?);
+    private addChildPanels;
+    private addPanelToCurrentList;
     protected isPanelAllowed(panel: any): boolean;
     protected resetLayout(): void;
     updateLayout(): void;
-    private updatePanelLayout(panel, bounds);
-    private getCurrentPanelObj(id);
+    private updatePanelLayout;
+    private getCurrentPanelObj;
     getControlStyle(): any;
 }

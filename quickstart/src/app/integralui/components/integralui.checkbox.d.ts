@@ -3,7 +3,7 @@ import { IntegralUIBaseValueComponent, IntegralUICheckState } from './integralui
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUICheckBox extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     animationState: string;
     protected buttonClassName: string;
     protected buttonClass: Array<any>;

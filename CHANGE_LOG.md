@@ -1,3 +1,32 @@
+v19.3.0  
+- Compatible with Angular 8
+- Reduced bundle size for all individual component modules
+- Option to choose whether you want the dropdown to appear downwards or upwards
+- Tooltips can now appear without animation
+- Option to reorder tabs through code using the moveTab method accompanied with change event
+- Option to scroll to specified tab
+- Option to change the drag drop position in user code and display the correct icon
+- Option to set drag drop action to copy or move in code
+- Drop mark icon for ListView changes to left/right in vertical mode
+- Option to show expanded boxes in TreeView only on hover, in normal mode
+- Editors now open only on left mouse click or touch
+- Option to change calendar style from DatePicker controlStyle property
+- Breadcrumb now adjust visible items based on its size and provides a root dropdown menu
+- Samples are updated to work on Angular 8
+
+- Space between ListBox items that appears under IE is now corrected
+- In drop event in user code, selection of items now can be cleared
+- Fixed the issue that caused getValue for DropList in ToolItem to thrown a style error exception
+- Fixed the issue that shows previous item from where dragging starts to appear as hovered, after drag and drop completes 
+- The image of dragged item is now correctly shown in FireFox and appears the same in all browsers
+- When TabStrip is scrolled, the empty space position is now correctly set during drag and drop
+- Fixed the issue that caused tab headers view to reset its position when tab is drag and dropped when OutBound scrolling mode is active
+- Calendar and dropdown list in Toolbar now appear only on left mouse click
+- Fixed the issue that prevented loading icon from appearing during load on demand in TreeView
+- Changes to the data field names in Breadcrumb is now correctly applied
+- Fixed the issue that caused style error to be thrown when Breadcrumb is initialized
+- Other minor bug fixes
+
 v19.2.0        
 - Fixed columns on left and right in Grid and TreeGrid
 - Option to show custom content like command buttons, when row is hovered in Grid and TreeGrid

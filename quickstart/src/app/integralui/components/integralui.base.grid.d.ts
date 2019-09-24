@@ -8,24 +8,17 @@ export declare enum IntegralUIGridLines {
     None = 0,
     Horizontal = 1,
     Vertical = 2,
-    Both = 3,
+    Both = 3
 }
 export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
-    protected filterService: IntegralUIFilterService;
-    protected changeRef: ChangeDetectorRef;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected dragGhost: any;
-    protected emptyRowObj: any;
-    protected getEmptyObj(status: number): any;
-    protected removeEmptyRow(status: number): void;
-    protected updateDragHandlePos(e: any): void;
-    protected updateScrollRowListDragOver(row: any): void;
-    dragMode: IntegralUIDragDropDisplayMode;
+    protected commonService?: IntegralUICommonService;
+    protected filterService?: IntegralUIFilterService;
+    protected changeRef?: ChangeDetectorRef;
+    protected cmpResolver?: ComponentFactoryResolver;
     animateColumnSize: any;
     animateRowSize: any;
     protected prevClickedObj: any;
@@ -314,8 +307,23 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected updateScrollRowList(flag?: boolean): void;
     protected addDropMark(pos: any): void;
     removeDropMark(): void;
-    protected callDragDropEvent(e: any, data: any, flag?: boolean): boolean;
-    private checkEmptySpace(e);
+    protected callDragDropEvent(e: any, data: any, flag?: boolean): {
+        action: any;
+        cancel: boolean;
+        dragRow: any;
+        dropPos: any;
+        event: any;
+        isDropAllowed: any;
+        mousePos: {
+            x: any;
+            y: any;
+        };
+        resume: () => void;
+        sourceCtrl: any;
+        targetCtrl: any;
+        targetRow: any;
+    };
+    private checkEmptySpace;
     ctrlDragEnter(e: any): void;
     ctrlDragDrop(e: any): void;
     ctrlDragLeave(e: any): void;
@@ -331,15 +339,22 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected processDragStartPopup(e: any, row: any): void;
     protected processDragEnter(e: any): void;
     protected processDragLeave(e: any): void;
-    protected processDragOver(e: any, rowObj?: any, rowBounds?: any, flag?: boolean): void;
-    protected processDragOverHandle(e: any, rowObj?: any, rowBounds?: any, flag?: boolean): void;
-    protected processDragOverPopup(e: any, rowObj?: any, rowBounds?: any, flag?: boolean): void;
+    protected processDragOver(e: any, rowObj?: any, rowBounds?: any, flag?: boolean, type?: string): void;
+    protected processDragOverHandle(e: any, rowObj?: any, rowBounds?: any, flag?: boolean, type?: string): void;
+    protected processDragOverPopup(e: any, rowObj?: any, rowBounds?: any, flag?: boolean, type?: string): void;
     protected processDragDrop(e: any, rowObj?: any): void;
     protected clearDragDropSettings(): void;
     protected drop(e: any, data: any): void;
     protected processDataDrop(e: any, row: any, data: any): void;
     protected callAfterSelectEvent(obj: any): void;
     rowDragEnd(e: any, obj: any): void;
+    protected dragGhost: any;
+    dragMode: IntegralUIDragDropDisplayMode;
+    protected emptyRowObj: any;
+    protected getEmptyObj(status: number): any;
+    protected removeEmptyRow(status: number): void;
+    protected updateDragHandlePos(e: any): void;
+    protected updateScrollRowListDragOver(row: any): void;
     protected addCalendar(): void;
     protected addDropList(): void;
     protected callCellValueChanging(obj: any, value?: any): boolean;
@@ -390,6 +405,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     filter(column: any, params?: any): void;
     protected changeCursor(flag?: boolean): void;
     checkStatus(type?: string): boolean;
+    clearHoverRow(row?: any): void;
     cloneRow(row: any): any;
     protected createCloneList(list: Array<any>): any[];
     getCellByColumnId(list: Array<any>, id: any): any;
@@ -413,7 +429,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected getExpandingColumn(): any;
     updateExpandingColumnID(): void;
     protected getFilterTree(column: any): any;
-    private getCurrentList();
+    private getCurrentList;
     getList(key?: string, parent?: any): Array<any>;
     getFullList(): Array<any>;
     getTopRow(): any;
@@ -471,7 +487,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     processUpArrowKey(cell: any, e?: any): any;
     protected getDownCell(cell: any): any;
     protected getNextCell(cell: any): any;
-    private getLastScrollIndex();
+    private getLastScrollIndex;
     protected getPrevCell(cell: any): any;
     protected getUpCell(cell: any): any;
     protected isFirstCell(cell: any): boolean;
@@ -494,7 +510,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected updateCurrentLayout(): void;
     updateLayout(): void;
     protected updateColumnWidth(): void;
-    private updateColumnWidthByFactor(list, widthFactor?);
+    private updateColumnWidthByFactor;
     protected checkWidthChanges(): void;
     protected updateCellWidth(column: any): void;
     protected updateRange(): void;
@@ -510,7 +526,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     prevPage(): void;
     protected resetPageNumber(): void;
     protected updatePageNumber(): void;
-    private updatePaging(value?);
+    private updatePaging;
     paginatorPageChanged(e: any): void;
     isPaginationEnabled(): any;
     getColumnOpacity(obj: any): 1 | 0;
@@ -544,17 +560,17 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     onHorizontalScrollChanged(e: any): void;
     updateView(flag?: boolean): void;
     protected processScroll(e: any, extraTopSpace?: number, extraBottomSpace?: number): void;
-    private startScrollTimer(flag, interval?);
-    private stopScrollTimer();
-    private scrollTimerElapsed(flag);
+    private startScrollTimer;
+    private stopScrollTimer;
+    private scrollTimerElapsed;
     scrollTo(row: any): void;
     findRowById(id: any): any;
     findRowByText(text: string): any;
     clearSelection(): void;
     protected processColumnSelection(e: any, column: any, value?: any): any;
     protected clearComponentSelection(): void;
-    private clearPrevSelection(row?);
-    private isRowInSelectionList(row);
+    private clearPrevSelection;
+    private isRowInSelectionList;
     protected processRowSelection(e: any, row: any, value?: any): any;
     selectRows(rows: Array<any>): void;
     protected updateRowSelection(e: any, row: any): void;

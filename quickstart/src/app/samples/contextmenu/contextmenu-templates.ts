@@ -164,7 +164,7 @@ import { IntegralUIContextMenu } from '../../integralui/directives/integralui.co
     encapsulation: ViewEncapsulation.None
 })
 export class ContextMenuTemplateSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public menuSettings: any = {
         appRef: null,

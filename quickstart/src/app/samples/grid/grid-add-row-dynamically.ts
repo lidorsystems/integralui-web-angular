@@ -191,7 +191,7 @@ enableProdMode();
 export class GridAddRowDynamicallySample {
 
     // Get a reference to the Grid component
-    @ViewChild('grid') grid: IntegralUIGrid;
+    @ViewChild('grid', { static: false }) grid: IntegralUIGrid;
 
     // An Array object that holds all column objects shown in the Grid
     public columns: Array<any>;

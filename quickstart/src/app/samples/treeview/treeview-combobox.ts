@@ -141,8 +141,8 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewComboBoxSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treeview') treeview: IntegralUITreeView;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treeview', { static: false }) treeview: IntegralUITreeView;
 
     // An object that holds all items in the TreeView
     public data: Array<any>;

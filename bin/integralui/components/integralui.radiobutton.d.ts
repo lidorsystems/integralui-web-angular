@@ -3,7 +3,7 @@ import { IntegralUIBaseValueComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIRadioButton extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     animationState: string;
     protected checkedValue: boolean;
     protected buttonClassName: string;

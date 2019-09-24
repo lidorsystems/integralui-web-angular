@@ -66,7 +66,7 @@ import { Component, ElementRef, ViewContainerRef, ViewChild, ViewChildren, ViewE
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridSample {
-    @ViewChild('featureContent', {read: ElementRef}) featureContentElem: ElementRef;
+    @ViewChild('featureContent', {read: ElementRef, static: false}) featureContentElem: ElementRef;
 
     public blockHeight: any = "auto";
 
@@ -115,6 +115,8 @@ export class TreeGridSample {
             self.blockHeight = window.innerHeight - 61 + 'px';
         else
             self.blockHeight = "auto";
+
+        self.blockHeight = '976px';
     }
 
     selectFeature(item: any){

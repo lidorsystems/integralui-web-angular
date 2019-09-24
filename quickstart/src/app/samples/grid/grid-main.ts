@@ -66,7 +66,7 @@ import { Component, ElementRef, ViewContainerRef, ViewChild, ViewChildren, ViewE
     encapsulation: ViewEncapsulation.None
 })
 export class GridSample {
-    @ViewChild('featureContent', {read: ElementRef}) featureContentElem: ElementRef;
+    @ViewChild('featureContent', {read: ElementRef, static: false}) featureContentElem: ElementRef;
 
     public blockHeight: any = "auto";
 
@@ -118,6 +118,8 @@ export class GridSample {
             self.blockHeight = window.innerHeight - 61 + 'px';
         else
             self.blockHeight = "auto";
+
+        self.blockHeight = '1081px';
     }
 
     selectFeature(item: any){

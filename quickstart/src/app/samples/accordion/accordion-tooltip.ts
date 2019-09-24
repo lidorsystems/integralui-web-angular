@@ -64,7 +64,7 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
     encapsulation: ViewEncapsulation.None
 })
 export class AccordionTooltipSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public data: Array<any>;
 

@@ -70,8 +70,8 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
     encapsulation: ViewEncapsulation.None
 })
 export class AccordionAddGroupContextMenuSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('accordion') accordion: IntegralUIAccordion;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('accordion', { static: false }) accordion: IntegralUIAccordion;
 
     public data: Array<any>;
     public selGroup: any = null;

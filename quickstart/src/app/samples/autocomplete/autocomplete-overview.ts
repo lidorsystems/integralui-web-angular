@@ -64,7 +64,7 @@ import { Observable } from 'rxjs';
     encapsulation: ViewEncapsulation.None
 })
 export class AutoCompleteOverviewSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
     
     public ctrlStyle: any = {
         general: { 

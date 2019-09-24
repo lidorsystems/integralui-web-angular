@@ -3,7 +3,7 @@ import { IntegralUIBaseComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIButton extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     animationState: string;
     protected pressedValue: boolean;
     protected contentClassName: string;

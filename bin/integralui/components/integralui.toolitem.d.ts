@@ -3,9 +3,9 @@ import { IntegralUIBaseService, IntegralUIItem, IntegralUIToolItemType } from '.
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIToolItem extends IntegralUIItem {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected baseService: IntegralUIBaseService;
-    protected cmpResolver: ComponentFactoryResolver;
+    protected commonService?: IntegralUICommonService;
+    protected baseService?: IntegralUIBaseService;
+    protected cmpResolver?: ComponentFactoryResolver;
     private dataFields;
     value: any;
     currentSettings: any;
@@ -58,7 +58,7 @@ export declare class IntegralUIToolItem extends IntegralUIItem {
     protected showPopup(e: any): void;
     getDataField(key: string): any;
     isHovered(): boolean;
-    private resetLayoutTimer();
+    private resetLayoutTimer;
     updateLayout(): void;
     getControlStyle(): any;
     getProgressStyle(): any;

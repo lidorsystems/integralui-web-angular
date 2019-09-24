@@ -3,8 +3,8 @@ import { IntegralUIBaseService, IntegralUIItem } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIListItem extends IntegralUIItem {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected baseService?: IntegralUIBaseService;
     clickPos: any;
     isClicked: boolean;
     isHovered: boolean;

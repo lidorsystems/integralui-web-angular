@@ -83,7 +83,7 @@ import { IntegralUIDirection, IntegralUIPlacement } from '../../integralui/compo
     encapsulation: ViewEncapsulation.None
 })
 export class DropDownButtonOverviewSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: true}) applicationRef: ViewContainerRef;
 
     public dropDownSettings: any;
     public buttonPlacement: IntegralUIPlacement = IntegralUIPlacement.Right;

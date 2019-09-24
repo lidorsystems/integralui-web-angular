@@ -21,5 +21,5 @@ enableProdMode();
   	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 }

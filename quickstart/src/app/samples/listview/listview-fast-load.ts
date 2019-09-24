@@ -75,8 +75,8 @@ import { IntegralUIListView } from '../../integralui/components/integralui.listv
     encapsulation: ViewEncapsulation.None
 })
 export class ListViewFastLoadSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('listview') listview: IntegralUIListView;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('listview', { static: false }) listview: IntegralUIListView;
 
     public items: Array<any>;
 

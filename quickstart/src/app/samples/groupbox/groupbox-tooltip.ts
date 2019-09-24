@@ -63,7 +63,7 @@ import { IntegralUIBaseService } from '../../integralui/components/integralui.co
     encapsulation: ViewEncapsulation.None
 })
 export class GroupBoxTooltipSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public groupObj: any = { text: 'Group' }
 

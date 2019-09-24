@@ -2,8 +2,8 @@ import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewCont
 import { IntegralUIBaseComponent, IntegralUIHeaderItem, IntegralUIItem } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
     protected itemList: Array<IntegralUIItem>;
     private eventList;
     protected expandState: string;
@@ -55,11 +55,11 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
-    private attachItemEvents();
+    private attachItemEvents;
     comboClick(e: any): void;
     dropDownBlurEvent(e: any): void;
-    private callBeforeEvent(value?);
-    private callAfterEvent(value?);
+    private callBeforeEvent;
+    private callAfterEvent;
     closeDropDown(): void;
     openDropDown(): void;
     getComboIcon(): any;
@@ -67,13 +67,13 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     getComboText(): any;
     protected isIndexInRange(index: number): boolean;
     getDropDownWidth(): number;
-    private calcBlockHeight();
+    private calcBlockHeight;
     getDropDownHeight(): number;
     protected toggleContent(): void;
     processMouseWheel(e: any, flag?: boolean): void;
     protected clearSelection(cmp?: IntegralUIItem): void;
-    private updateSelectedIndex(index);
-    private updateSelection(index);
+    private updateSelectedIndex;
+    private updateSelection;
     getControlStyle(): any;
     protected updateContentClass(): void;
     getContentClass(): any[];

@@ -7,9 +7,9 @@ export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
+    protected baseService?: IntegralUIBaseService;
     protected itemList: Array<IntegralUIMenuItem>;
     private virtualization;
     contentList: QueryList<IntegralUIMenuItem>;

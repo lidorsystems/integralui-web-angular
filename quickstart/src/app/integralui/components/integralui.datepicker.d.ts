@@ -27,8 +27,8 @@ export declare class IntegralUICalendarPopup extends IntegralUIPopup {
 }
 export declare class IntegralUIDatePicker extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
     private calendarRef;
     private calendar;
     protected currentSelectedDate: Date;
@@ -44,6 +44,8 @@ export declare class IntegralUIDatePicker extends IntegralUIBaseComponent {
     headerTitleElem: ElementRef;
     protected headerClassName: string;
     protected headerClass: Array<any>;
+    protected calendarClassName: string;
+    protected calendarCellClassName: string;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver);
     ngOnInit(): void;
     ngAfterViewInit(): void;
@@ -58,12 +60,12 @@ export declare class IntegralUIDatePicker extends IntegralUIBaseComponent {
     selectedDate: Date;
     dateChanged: EventEmitter<any>;
     getSelectedDate(): string;
-    private addCalendar();
-    private hideCalendar();
+    private addCalendar;
+    private hideCalendar;
     protected removeCalendar(): void;
-    private showCalendar(e);
+    private showCalendar;
     updateLayout(): void;
-    private updateHeaderLayout();
+    private updateHeaderLayout;
     onCtrlMouseEnter(e: any): void;
     onCtrlMouseLeave(e: any): void;
     openCalendar(e: any): void;
@@ -71,6 +73,9 @@ export declare class IntegralUIDatePicker extends IntegralUIBaseComponent {
     protected updateHeaderClass(): void;
     getHeaderClass(): any[];
     protected getHeaderStyle(value: any): any;
+    protected getCalendarStyle(value: any): any;
+    protected getCalendarGeneralStyle(value?: any): any;
+    protected getCalendarCellStyle(value?: any): any;
     protected updateStyle(value: any): void;
     refresh(): void;
 }

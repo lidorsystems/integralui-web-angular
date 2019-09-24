@@ -55,8 +55,8 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewContextMenuSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treeview') treeview: IntegralUITreeView;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treeview', { static: false }) treeview: IntegralUITreeView;
 
     public data: Array<any>;
 

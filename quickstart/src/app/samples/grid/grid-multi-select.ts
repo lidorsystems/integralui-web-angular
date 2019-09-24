@@ -88,9 +88,9 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
     encapsulation: ViewEncapsulation.None
 })
 export class GridMultiSelectSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('grid') grid: IntegralUIGrid;
-    @ViewChild('listbox') listbox: IntegralUIListBox;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('grid', { static: false }) grid: IntegralUIGrid;
+    @ViewChild('listbox', { static: false }) listbox: IntegralUIListBox;
 
     // An array that holds all options in the comboo box
     public comboItems: Array<any>;

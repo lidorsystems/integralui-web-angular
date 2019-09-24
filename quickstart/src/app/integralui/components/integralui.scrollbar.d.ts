@@ -4,7 +4,7 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     private currentMaxValue;
     private currentMinValue;
     private currentValue;
@@ -55,7 +55,7 @@ export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     private scrollInterval;
     private scrollTimeout;
     changeScrollPos(e: any): void;
-    private processLargeChange(e);
-    private clearScrolling();
+    private processLargeChange;
+    private clearScrolling;
     getScrollBarStyle(): any;
 }

@@ -81,8 +81,8 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
     encapsulation: ViewEncapsulation.None
 })
 export class GridEditCellRatingSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('grid') grid: IntegralUIGrid;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('grid', { static: false }) grid: IntegralUIGrid;
 
     public columns: Array<any>;
     public rows: Array<any>;

@@ -4,9 +4,9 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIGroupBoxTags {
 }
 export declare class IntegralUIGroupBox extends IntegralUIBaseComponent {
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
+    protected baseService?: IntegralUIBaseService;
     clickPos: any;
     protected expandState: string;
     isClicked: boolean;
@@ -58,7 +58,7 @@ export declare class IntegralUIGroupBox extends IntegralUIBaseComponent {
     protected updateContentClass(): void;
     getContentClass(): any[];
     protected getContentStyle(value: any): any;
-    private updateHeaderBlockClass();
+    private updateHeaderBlockClass;
     getHeaderBlockClass(): any[];
     protected getHeaderClass(): string;
     protected getHeaderGeneralStyle(value: any): any;

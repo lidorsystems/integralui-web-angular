@@ -3,7 +3,7 @@ import { IntegralUIBaseComponent, IntegralUITemplate } from '../components/integ
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     private dropdownOptions;
     templateObj: any;
     private showTimer;
@@ -29,11 +29,11 @@ export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent
         bottom: any;
         left: any;
     };
-    private updateOptions(value?);
-    private updateDropDownSize(value?);
+    private updateOptions;
+    private updateDropDownSize;
     onBlur(e: any): void;
     onMouseDown(e: any): void;
-    private removeTimers();
+    private removeTimers;
     open(elemPageRect: any, elemSize: any, appSize?: any): void;
     show(elemPageRect: any, elemSize: any, appSize?: any): void;
     getSize(): any;
@@ -43,7 +43,7 @@ export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent
 export declare class IntegralUIDropDown {
     protected elemRef: ElementRef;
     protected cmpResolver: ComponentFactoryResolver;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     private currentSettings;
     private eventList;
     private templateData;
@@ -60,7 +60,7 @@ export declare class IntegralUIDropDown {
     dropDownClose: EventEmitter<any>;
     constructor(elemRef: ElementRef, cmpResolver: ComponentFactoryResolver, commonService?: IntegralUICommonService);
     ngAfterContentInit(): void;
-    private updateTemplate();
+    private updateTemplate;
     closeDropDown(): void;
     close(): void;
     open(mouseEvent?: any): void;

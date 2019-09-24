@@ -4,7 +4,7 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUISplitter extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     getMaxPos(): {
         x: number;
         y: number;
@@ -54,10 +54,10 @@ export declare class IntegralUISplitter extends IntegralUIBaseComponent {
     ngAfterContentInit(): void;
     protected initLayout(): void;
     ngAfterContentChecked(): void;
-    private updateSettings();
-    private calcSplitterDistance(startPos?, endPos?);
+    private updateSettings;
+    private calcSplitterDistance;
     updateLayout(startPos?: any, endPos?: any): void;
-    private updatePanelSize();
+    private updatePanelSize;
     private splitterStartPos;
     private isSplitterActive;
     splitterMouseDown(e: any): void;

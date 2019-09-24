@@ -6,9 +6,9 @@ import { IntegralUIFilterService } from '../services/integralui.filter.service';
 export declare class IntegralUIAutoComplete extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected filterService: IntegralUIFilterService;
-    protected cmpResolver: ComponentFactoryResolver;
+    protected commonService?: IntegralUICommonService;
+    protected filterService?: IntegralUIFilterService;
+    protected cmpResolver?: ComponentFactoryResolver;
     private dataList;
     protected currentList: Array<any>;
     protected options: any;
@@ -36,7 +36,7 @@ export declare class IntegralUIAutoComplete extends IntegralUIBaseComponent {
     ngOnDestroy(): void;
     protected updateDataFields(fields?: any): void;
     protected updateOptions(value?: any): void;
-    private addItemToCurrentList(item);
+    private addItemToCurrentList;
     protected updateCurrentList(): void;
     protected updateData(): void;
     protected addDropList(): void;

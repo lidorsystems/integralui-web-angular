@@ -4,8 +4,8 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 export declare class IntegralUITreeListItem extends IntegralUIItem {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected baseService?: IntegralUIBaseService;
     templateData: Array<any>;
     clickPos: any;
     isClicked: boolean;
@@ -21,9 +21,9 @@ export declare class IntegralUITreeListItem extends IntegralUIItem {
 export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
+    protected baseService?: IntegralUIBaseService;
     animateItemSize: any;
     private animSpeed;
     protected prevClickedObj: any;

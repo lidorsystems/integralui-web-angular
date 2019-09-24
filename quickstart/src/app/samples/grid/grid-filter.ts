@@ -187,10 +187,10 @@ import { IntegralUIDropDown } from '../../integralui/directives/integralui.dropd
     encapsulation: ViewEncapsulation.None
 })
 export class GridFilterSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('grid') grid: IntegralUIGrid;
-    @ViewChild('dropdown1', {read: IntegralUIDropDown}) authorDropdown: IntegralUIDropDown;
-    @ViewChild('dropdown2', {read: IntegralUIDropDown}) priceDropdown: IntegralUIDropDown;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('grid', { static: false }) grid: IntegralUIGrid;
+    @ViewChild('dropdown1', {read: IntegralUIDropDown, static: false}) authorDropdown: IntegralUIDropDown;
+    @ViewChild('dropdown2', {read: IntegralUIDropDown, static: false}) priceDropdown: IntegralUIDropDown;
 
     public columns: Array<any>;
     public rows: Array<any>;

@@ -103,8 +103,8 @@ import { IntegralUIVisibility } from '../../integralui/components/integralui.cor
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridPaginationOnDemandSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
 
     public containerSize: any = { width: 900, height: 400 }
     public gridScrollSettings: any = { vertical: false }

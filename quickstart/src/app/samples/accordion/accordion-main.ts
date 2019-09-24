@@ -68,7 +68,7 @@ import { animate, animateChild, group, query, trigger, sequence, state, style, t
     encapsulation: ViewEncapsulation.None
 })
 export class AccordionSample {
-    @ViewChild('featureContent', {read: ElementRef}) featureContentElem: ElementRef;
+    @ViewChild('featureContent', {read: ElementRef, static: false}) featureContentElem: ElementRef;
 
     public blockHeight: any = "auto";
 

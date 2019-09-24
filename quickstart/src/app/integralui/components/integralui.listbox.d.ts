@@ -11,10 +11,10 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
-    protected filterService: IntegralUIFilterService;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected filterService?: IntegralUIFilterService;
+    protected cmpResolver?: ComponentFactoryResolver;
+    protected baseService?: IntegralUIBaseService;
     contentList: QueryList<IntegralUIListItem>;
     contentRef: ViewContainerRef;
     contentElem: ElementRef;
@@ -32,10 +32,11 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     clearItems(): void;
     insertItemAt(item: any, index: number): void;
     removeItemAt(index: number): boolean;
-    private addItemToCurrentList(item);
+    private addItemToCurrentList;
     loadData(data: Array<any>, fields?: any): void;
     protected updateCurrentList(): void;
     protected updateScrollItemList(): void;
+    protected getItemElemList(): ElementRef<any>[];
     getItemFromComponent(cmp: IntegralUIListItem): any;
     protected updateItemList(): void;
     invokeEvent(key: string, item: any): boolean;
@@ -44,9 +45,8 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
         width: any;
         height: any;
     };
-    protected getItemElemList(): ElementRef<any>[];
     updateLayout(): void;
     getControlStyle(): any;
-    private resetRefresh();
+    private resetRefresh;
     refresh(obj?: any): void;
 }

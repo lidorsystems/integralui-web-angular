@@ -6,8 +6,8 @@ import { IntegralUIToolItem } from './integralui.toolitem';
 export declare class IntegralUIToolBar extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected baseService?: IntegralUIBaseService;
     private dataItems;
     protected itemList: Array<any>;
     protected options: any;

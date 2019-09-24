@@ -3,7 +3,7 @@ import { IntegralUIBaseValueComponent, IntegralUINumericDisplayMode, IntegralUIS
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     protected ctrlMaxValue: number;
     protected ctrlMinValue: number;
     protected currentStep: number;
@@ -37,12 +37,12 @@ export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponen
     ngAfterContentChecked(): void;
     getContentWidth(): any;
     updateLayout(): void;
-    private changeValueTimerElapsed(flag?);
-    private changeValue(flag?);
+    private changeValueTimerElapsed;
+    private changeValue;
     decreaseValue(): void;
     increaseValue(): void;
-    private startChange(flag?);
-    private stopChange();
+    private startChange;
+    private stopChange;
     ctrlMouseWheel(e: any): void;
     onMouseDown(e: any, flag?: boolean): void;
     onMouseUp(e: any): void;

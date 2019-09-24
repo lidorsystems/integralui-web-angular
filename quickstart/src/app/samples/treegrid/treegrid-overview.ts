@@ -104,8 +104,8 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
 })
 export class TreeGridOverviewSample {
 
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public treegridSelMode: IntegralUISelectionMode = IntegralUISelectionMode.MultiExtended;
     public columns: Array<any>;

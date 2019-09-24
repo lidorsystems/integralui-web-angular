@@ -3,7 +3,7 @@ import { IntegralUIBaseValueComponent, IntegralUIIncrementMode } from './integra
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     protected ctrlMaxValue: number;
     protected currentDivision: number;
     protected currentStepSize: number;

@@ -84,7 +84,7 @@ import { Component, ViewContainerRef, ViewChild, ViewEncapsulation } from '@angu
 })
 export class GridDragDropTreeGridSample {
 
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     // Grid  settings
     public allowDrag: boolean = true;

@@ -49,8 +49,8 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridTooltipSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
 
     // An array that holds treegrid columns
     public columns: Array<any>;

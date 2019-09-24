@@ -84,10 +84,10 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
     encapsulation: ViewEncapsulation.None
 })
 export class SplitterOverviewSample {
-    @ViewChild('container') containerElem: ElementRef;
-    @ViewChild('panel1') panel1Elem: ElementRef;
-    @ViewChild('panel2') panel2Elem: ElementRef;
-    @ViewChild('panel3') panel3Elem: ElementRef;
+    @ViewChild('container', { static: false }) containerElem: ElementRef;
+    @ViewChild('panel1', { static: false }) panel1Elem: ElementRef;
+    @ViewChild('panel2', { static: false }) panel2Elem: ElementRef;
+    @ViewChild('panel3', { static: false }) panel3Elem: ElementRef;
 
     public content1: any;
     public content2: any;

@@ -130,8 +130,8 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridCellDropDownSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
 
     // An array that holds all options in the comboo box
     public dropdownItems: Array<any>;

@@ -246,11 +246,11 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridFilterSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
-    @ViewChild('dropdown1', {read: IntegralUIDropDown}) categoriesDropdown: IntegralUIDropDown;
-    @ViewChild('dropdown2', {read: IntegralUIDropDown}) authorDropdown: IntegralUIDropDown;
-    @ViewChild('dropdown3', {read: IntegralUIDropDown}) priceDropdown: IntegralUIDropDown;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
+    @ViewChild('dropdown1', {read: IntegralUIDropDown, static: false}) categoriesDropdown: IntegralUIDropDown;
+    @ViewChild('dropdown2', {read: IntegralUIDropDown, static: false}) authorDropdown: IntegralUIDropDown;
+    @ViewChild('dropdown3', {read: IntegralUIDropDown, static: false}) priceDropdown: IntegralUIDropDown;
 
     public columns: Array<any>;
     public rows: Array<any>;

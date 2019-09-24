@@ -82,7 +82,7 @@ import { Component, ViewContainerRef, ViewChild, ViewEncapsulation } from '@angu
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridDragDropSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     // TreeGrid  settings
     public allowDrag: boolean = true;

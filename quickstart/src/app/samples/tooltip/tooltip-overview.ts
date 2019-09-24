@@ -103,7 +103,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
     encapsulation: ViewEncapsulation.None
 })
 export class TooltipOverviewSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
                 
     public tooltipPositions: any = [ 'mouse', 'above', 'below', 'left', 'right' ];
 

@@ -128,11 +128,6 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             {
                 background-position: -128px -81px;
             }
-            .item-content
-            {
-                background: red;
-                display: inline-block;
-            }
         </style>
         <h2 class="feature-title">TreeView / Overview</h2>
         <div class="feature-content">
@@ -163,7 +158,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewOverviewSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public items: Array<any>;
 

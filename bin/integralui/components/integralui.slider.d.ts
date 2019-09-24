@@ -3,7 +3,7 @@ import { IntegralUIBaseValueComponent, IntegralUIOrientation } from './integralu
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     animationState: string;
     protected ctrlMaxValue: number;
     protected ctrlMinValue: number;

@@ -73,8 +73,8 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
     encapsulation: ViewEncapsulation.None
 })
 export class ListBoxKeyboardSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('listbox') listbox: IntegralUIListBox;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('listbox', { static: false }) listbox: IntegralUIListBox;
 
     public items: Array<any>;
 

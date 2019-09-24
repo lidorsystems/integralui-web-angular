@@ -250,7 +250,7 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
 export class StartComponent {
     public items: Array<any>;
 
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public scrollType: IntegralUIScrollMode = IntegralUIScrollMode.Horizontal;  
 

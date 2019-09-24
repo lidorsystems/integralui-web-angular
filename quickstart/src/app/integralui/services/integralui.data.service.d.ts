@@ -2,7 +2,7 @@ export declare class IntegralUIDataService {
     private data;
     constructor();
     init(list: Array<any>): void;
-    private getDataFields(value?);
+    private getDataFields;
     updateDataFields(value?: any, key?: string): void;
     clear(parent?: any, key?: string): void;
     insertAt(obj: any, index?: number, parent?: any, key?: any): void;
@@ -12,11 +12,11 @@ export declare class IntegralUIDataService {
         obj: any;
         result: boolean;
     };
-    private createCloneIds(obj, newPid, fields);
+    private createCloneIds;
     clone(obj: any, key?: any): any;
     findObjectById(id: any, key?: any): any;
     findObjectByText(text: string, key?: any): any;
-    private searchObj(value, list, fields, type?);
+    private searchObj;
     findParent(obj: any, list: Array<any>, fields: any): any;
     getData(key?: any): any;
     getKey(key?: any): any;

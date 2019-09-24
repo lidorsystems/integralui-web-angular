@@ -55,7 +55,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
     encapsulation: ViewEncapsulation.None
 })
 export class DatePickerOverviewSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public ctrlStyle: any = {
         general: { 

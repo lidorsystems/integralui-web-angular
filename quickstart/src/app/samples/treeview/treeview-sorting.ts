@@ -63,7 +63,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewSortingSample {
-    @ViewChild('treeview') treeview: IntegralUITreeView;
+    @ViewChild('treeview', { static: false }) treeview: IntegralUITreeView;
 
     public data: Array<any>;
 

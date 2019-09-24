@@ -27,6 +27,10 @@
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 }
+.iui-tooltip-animation-none {
+	animation: none;
+	opacity: 1;
+}
 .iui-tooltip div /*Compatibility with Bootstrap */
 {
 	-webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */

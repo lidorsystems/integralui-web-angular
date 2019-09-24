@@ -7,9 +7,9 @@ import { IntegralUIMenuItem } from '../components/integralui.menuitem';
 export declare class IntegralUIContextMenuComponent extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
+    protected baseService?: IntegralUIBaseService;
     private itemList;
     blockDisplay: string;
     blockElemWidth: string;
@@ -73,7 +73,7 @@ export declare class IntegralUIContextMenu {
     menuClosed: EventEmitter<any>;
     constructor(elemRef: ElementRef, viewContainer: ViewContainerRef, cmpResolver: ComponentFactoryResolver);
     ngAfterContentInit(): void;
-    private updateTemplate();
+    private updateTemplate;
     ngOnDestroy(): void;
     getSize(): {
         width: any;
@@ -83,5 +83,5 @@ export declare class IntegralUIContextMenu {
     onContextMenu(e: any): void;
     onMouseDown(e: any): void;
     processMenuOpen(e: any, position?: string): void;
-    private createMenuList(list);
+    private createMenuList;
 }

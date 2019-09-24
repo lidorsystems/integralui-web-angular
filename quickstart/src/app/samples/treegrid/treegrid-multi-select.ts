@@ -93,9 +93,9 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridMultiSelectSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
-    @ViewChild('listbox') listbox: IntegralUIListBox;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
+    @ViewChild('listbox', { static: false }) listbox: IntegralUIListBox;
 
     // An array that holds all options in the comboo box
     public comboItems: Array<any>;

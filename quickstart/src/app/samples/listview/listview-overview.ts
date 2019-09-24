@@ -261,7 +261,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
 export class ListViewOverviewSample {
     public items: Array<any>;
 
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
 
     public scrollType: IntegralUIScrollMode = IntegralUIScrollMode.Horizontal;  
     public currentSelection: any = null;

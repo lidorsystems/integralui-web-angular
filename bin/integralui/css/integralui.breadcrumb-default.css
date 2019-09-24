@@ -6,6 +6,7 @@
     overflow: hidden;
     padding: 1px;
     position: relative;
+    white-space: nowrap;
 
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -15,8 +16,10 @@
     user-select: none;
 }
 .iui-breadcrumb-block {
+    display: inline-block;
     margin: 0;
     padding: 0;
+    vertical-align: top;
 }
 
 /* Disabled State */
@@ -24,6 +27,25 @@
 {
     opacity: 0.75;
     pointer-events: none;
+}
+
+.iui-breadcrumb-root-button {
+    border: thin solid transparent;
+    display: inline-block;
+    margin: 0;
+    padding: 0 3px;
+    vertical-align: top;
+}
+.iui-breadcrumb-root-button-box
+{
+    background: url(../resources/icons.png) no-repeat -176px -80px;
+    display: inline-block;
+    margin: 4px 0 0 0;
+    overflow: hidden;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
 }
 
 .iui-breadcrumb-item
@@ -102,7 +124,7 @@
 .iui-breadcrumb-item-hovered .iui-breadcrumb-item-button-first, .iui-breadcrumb-item-selected .iui-breadcrumb-item-button-first {
     border-left: thin solid #cecece;
 }
-.iui-breadcrumb-item-hovered .iui-breadcrumb-item-button {
+.iui-breadcrumb-root-button-hovered, .iui-breadcrumb-item-hovered .iui-breadcrumb-item-button {
     background-color: #f5f5f5;
     border-top: thin solid #cecece;
     border-right: thin solid #cecece;
@@ -117,7 +139,7 @@
     animation-play-state: running;
     animation-timing-function: linear; 
 }
-.iui-breadcrumb-item-selected .iui-breadcrumb-item-button {
+.iui-breadcrumb-root-button-selected, .iui-breadcrumb-item-selected .iui-breadcrumb-item-button {
     background-color: #e5e5e5;
     border-top: thin solid #cecece;
     border-right: thin solid #cecece;
@@ -131,6 +153,9 @@
     animation-iteration-count: 1;
     animation-play-state: running;
     animation-timing-function: linear; 
+}
+.iui-breadcrumb-root-button-hovered, .iui-breadcrumb-root-button-selected {
+    border: thin solid #cecece;
 }
 @keyframes animate-breadcrumb-item-enter
 {

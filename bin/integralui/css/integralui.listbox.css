@@ -15,10 +15,13 @@
     user-select: none;
 }
 
+.iui-listbox li {
+	display: block;
+}
+
 /* Disabled State */
 .iui-listbox-disabled div, .iui-listbox-disabled ul
 {
 	opacity: 0.75;
 	pointer-events: none;
 }
-

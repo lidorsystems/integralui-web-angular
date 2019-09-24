@@ -14,8 +14,8 @@ export declare class IntegralUISlide {
 export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected cmpResolver: ComponentFactoryResolver;
+    protected commonService?: IntegralUICommonService;
+    protected cmpResolver?: ComponentFactoryResolver;
     controlRef: ViewContainerRef;
     blockRef: ViewContainerRef;
     private animationTimeout;
@@ -58,7 +58,7 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     ngAfterContentInit(): void;
     ngOnDestroy(): void;
     ngAfterContentChecked(): void;
-    private checkClone();
+    private checkClone;
     clearSlides(): void;
     addSlide(slide: any): void;
     insertSlideAt(slide: any, index: number): void;
@@ -66,24 +66,24 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     insertSlideAfter(slide: any, refSlide: any): void;
     removeSlide(slide: any): void;
     removeSlideAt(index: number): void;
-    private callEventAdd(type, slide, index?, refSlide?, flag?);
-    private callEventRemove(slide);
+    private callEventAdd;
+    private callEventRemove;
     getButtonClass(button: any): "" | "iui-slidebar-navigator-button-selected";
-    private getSlideCurrentIndex(cmp);
-    private getSlideDataIndex(cmp);
-    private getSlideData(index);
-    private isIndexInRange(index);
+    private getSlideCurrentIndex;
+    private getSlideDataIndex;
+    private getSlideData;
+    private isIndexInRange;
     ctrlMouseEnter(e: any): void;
     ctrlMouseLeave(e: any): void;
     prevSlide(): void;
     nextSlide(): void;
     protected updateLayout(): void;
-    private cancelAnimation();
-    private changeSlide();
-    private getSpeedFactor();
-    private startAnimation();
-    private stopAnimation();
-    private selectSlide(cmp);
+    private cancelAnimation;
+    private changeSlide;
+    private getSpeedFactor;
+    private startAnimation;
+    private stopAnimation;
+    private selectSlide;
     selectSlideByIndex(index: number): void;
     getControlStyle(): any;
 }

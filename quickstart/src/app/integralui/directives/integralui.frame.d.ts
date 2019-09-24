@@ -3,7 +3,7 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIFrame {
     protected elemRef: ElementRef;
     protected elemRenderer: Renderer;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     private isActive;
     private startPos;
     private currentPos;
@@ -22,8 +22,8 @@ export declare class IntegralUIFrame {
     onMouseUp(e: any): void;
     onWindowMouseMove(e: any): void;
     onWindowMouseUp(e: any): void;
-    private hideFrame();
-    private showFrame();
-    private getElemSize();
+    private hideFrame;
+    private showFrame;
+    private getElemSize;
     updateSize(value: any): void;
 }

@@ -1,91 +1,91 @@
-# IntegralUI Web for Angular, v19.2
+# IntegralUI Web for Angular, v19.3
 
-IntegralUI Web is a library built on top of Angular 7 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
+IntegralUI Web is a library built on top of Angular 8 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
-![IntegralUI Web 19.2 - 35+ UI Components for Angular](http://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
+![IntegralUI Web 19.3 - 35+ UI Components for Angular](https://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
 
 Here is a brief overview of what is included:
 
 ## Components
 
-[Accordion](http://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx) - Displays a list of expandable groups in vertical layout
+[Accordion](https://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx) - Displays a list of expandable groups in vertical layout
 
-[AutoComplete](http://www.lidorsystems.com/products/web/studio/samples/angular/#/autocomplete/overview/) - Represents a text box with a dropdown list where you can choose among suggested options<
+[AutoComplete](https://www.lidorsystems.com/products/web/studio/samples/angular/#/autocomplete/overview/) - Represents a text box with a dropdown list where you can choose among suggested options<
 
-[Breadcrumb](http://www.lidorsystems.com/products/web/studio/samples/angular/#/breadcrumb/overview/) - Used for navigation, where each item can have a link that is automatically separated
+[Breadcrumb](https://www.lidorsystems.com/products/web/studio/samples/angular/#/breadcrumb/overview/) - Used for navigation, where each item can have a link that is automatically separated
 
-[Button](http://www.lidorsystems.com/products/web/studio/samples/angular/#/button/overview/) - Represents a button
+[Button](https://www.lidorsystems.com/products/web/studio/samples/angular/#/button/overview/) - Represents a button
 
-[Calendar](http://www.lidorsystems.com/products/web/studio/samples/angular/#/calendar/overview/) - Enables the user to select a date using a visual monthly calendar display
+[Calendar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/calendar/overview/) - Enables the user to select a date using a visual monthly calendar display
 
-[CheckBox](http://www.lidorsystems.com/products/web/studio/samples/angular/#/checkbox/overview/) - Represents a check box
+[CheckBox](https://www.lidorsystems.com/products/web/studio/samples/angular/#/checkbox/overview/) - Represents a check box
 
-[ComboBox](http://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx) - Advanced version of standard ComboBox element
+[ComboBox](https://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx) - Advanced version of standard ComboBox element
 
-[DatePicker](http://www.lidorsystems.com/products/web/studio/samples/angular/#/datepicker/overview/) - Allows the user to select a date by using a drop-down calendar
+[DatePicker](https://www.lidorsystems.com/products/web/studio/samples/angular/#/datepicker/overview/) - Allows the user to select a date by using a drop-down calendar
 
-[Dialog](http://www.lidorsystems.com/products/web/studio/samples/angular/#/dialog/overview/) - Displays a modal window
+[Dialog](https://www.lidorsystems.com/products/web/studio/samples/angular/#/dialog/overview/) - Displays a modal window
 
-[DropDownButton](http://www.lidorsystems.com/products/web/studio/samples/angular/#/dropdownbutton/overview/) - Represents a button with option to show a dropdown list
+[DropDownButton](https://www.lidorsystems.com/products/web/studio/samples/angular/#/dropdownbutton/overview/) - Represents a button with option to show a dropdown list
 
-[Grid](http://www.lidorsystems.com/support/articles/angular/grid/grid-component.aspx) - Displays tabular data sets
+[Grid](https://www.lidorsystems.com/support/articles/angular/grid/grid-component.aspx) - Displays tabular data sets
 
-[GroupBox](http://www.lidorsystems.com/support/articles/angular/groupbox/groupbox-component.aspx) - An expandable container with header and content
+[GroupBox](https://www.lidorsystems.com/support/articles/angular/groupbox/groupbox-component.aspx) - An expandable container with header and content
 
-[ListBar](http://www.lidorsystems.com/support/articles/angular/listbar/listbar-component.aspx) - Displays a list of expandable groups with items
+[ListBar](https://www.lidorsystems.com/support/articles/angular/listbar/listbar-component.aspx) - Displays a list of expandable groups with items
 
-[ListBox](http://www.lidorsystems.com/support/articles/angular/listbox/listbox-component.aspx) - Displays a collection of items with content in custom layouts
+[ListBox](https://www.lidorsystems.com/support/articles/angular/listbox/listbox-component.aspx) - Displays a collection of items with content in custom layouts
 
-[ListScroller](http://www.lidorsystems.com/products/web/studio/samples/angular/#/listscroller/overview/) - Displays a scrollable item list in horizontal or vertical layout
+[ListScroller](https://www.lidorsystems.com/products/web/studio/samples/angular/#/listscroller/overview/) - Displays a scrollable item list in horizontal or vertical layout
 
-[ListView](http://www.lidorsystems.com/support/articles/angular/listview/listview-component.aspx) - Displays a collection of items using several different views
+[ListView](https://www.lidorsystems.com/support/articles/angular/listview/listview-component.aspx) - Displays a collection of items using several different views
 
-[Menu](http://www.lidorsystems.com/support/articles/angular/menu/menu-component.aspx) - Allows you to create static or dynamic menus
+[Menu](https://www.lidorsystems.com/support/articles/angular/menu/menu-component.aspx) - Allows you to create static or dynamic menus
 
-[NumericUpDown](http://www.lidorsystems.com/products/web/studio/samples/angular/#/numeric-updown/overview/) - Displays a numeric value and allows changes within a range of defined minimum and maximum values
+[NumericUpDown](https://www.lidorsystems.com/products/web/studio/samples/angular/#/numeric-updown/overview/) - Displays a numeric value and allows changes within a range of defined minimum and maximum values
 
-[Paginator](http://www.lidorsystems.com/support/articles/angular/paginator/paginator-component.aspx) - Allows you to divide the content in multiple views in single page
+[Paginator](https://www.lidorsystems.com/support/articles/angular/paginator/paginator-component.aspx) - Allows you to divide the content in multiple views in single page
 
-[ProgressBar](http://www.lidorsystems.com/products/web/studio/samples/angular/#/progressbar/overview/) - Visualize the progression of an operation
+[ProgressBar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/progressbar/overview/) - Visualize the progression of an operation
 
-[RadioButton](http://www.lidorsystems.com/products/web/studio/samples/angular/#/radiobutton/overview/) - Represents a radio button
+[RadioButton](https://www.lidorsystems.com/products/web/studio/samples/angular/#/radiobutton/overview/) - Represents a radio button
 
-[Rating](http://www.lidorsystems.com/products/web/studio/samples/angular/#/rating/overview/) - Visualizes ratings
+[Rating](https://www.lidorsystems.com/products/web/studio/samples/angular/#/rating/overview/) - Visualizes ratings
 
-[SlideBar](http://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx) - Animates slides composed of custom content
+[SlideBar](https://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx) - Animates slides composed of custom content
 
-[Slider](http://www.lidorsystems.com/products/web/studio/samples/angular/#/slider/overview/) - Allows changes to a numeric value within a range of defined minimum and maximum values
+[Slider](https://www.lidorsystems.com/products/web/studio/samples/angular/#/slider/overview/) - Allows changes to a numeric value within a range of defined minimum and maximum values
 
-[SplitContainer](http://www.lidorsystems.com/support/articles/angular/splitcontainer/splitcontainer-component.aspx) - Consists of two resizable panels separated by a splitter with tabs and command buttons
+[SplitContainer](https://www.lidorsystems.com/support/articles/angular/splitcontainer/splitcontainer-component.aspx) - Consists of two resizable panels separated by a splitter with tabs and command buttons
 
-[Splitter](http://www.lidorsystems.com/support/articles/angular/splitter/splitter-component.aspx) - Allows you to resize two block elements during run-time
+[Splitter](https://www.lidorsystems.com/support/articles/angular/splitter/splitter-component.aspx) - Allows you to resize two block elements during run-time
 
-[TabStrip](http://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx) - Consists of multiple scrollable panels that share the same space 
+[TabStrip](https://www.lidorsystems.com/support/articles/angular/tabstrip/tabstrip-component.aspx) - Consists of multiple scrollable panels that share the same space 
 
-[Toolbar](http://www.lidorsystems.com/products/web/studio/samples/angular/#/toolbar/overview/) - Displays a collection of different tool items and editors in one line
+[Toolbar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/toolbar/overview/) - Displays a collection of different tool items and editors in one line
 
-[TreeGrid](http://www.lidorsystems.com/support/articles/angular/treegrid/treegrid-component.aspx) - Displays hierarchical data structures in multiple columns
+[TreeGrid](https://www.lidorsystems.com/support/articles/angular/treegrid/treegrid-component.aspx) - Displays hierarchical data structures in multiple columns
 
-[TreeList](http://www.lidorsystems.com/support/articles/angular/treelist/treelist-component.aspx) - Allows you to navigate through tree hierarchy showing only one list at a time
+[TreeList](https://www.lidorsystems.com/support/articles/angular/treelist/treelist-component.aspx) - Allows you to navigate through tree hierarchy showing only one list at a time
 
-[TreeView](http://www.lidorsystems.com/support/articles/angular/treeview/treeview-component.aspx) - Displays hierarchical data structures
+[TreeView](https://www.lidorsystems.com/support/articles/angular/treeview/treeview-component.aspx) - Displays hierarchical data structures
 
 
 ## Directives
 
-[ContextMenu](http://www.lidorsystems.com/support/articles/angular/contextmenu/contextmenu-component.aspx) - Represents a shortcut menu
+[ContextMenu](https://www.lidorsystems.com/support/articles/angular/contextmenu/contextmenu-component.aspx) - Represents a shortcut menu
 
 <b>DropDown</b> - Represents a dropdown window
 
-[Frame](http://www.lidorsystems.com/support/articles/angular/frame/frame-component.aspx) - Places a grip handle that allows you to resize a container during run-time
+[Frame](https://www.lidorsystems.com/support/articles/angular/frame/frame-component.aspx) - Places a grip handle that allows you to resize a container during run-time
 
-[Popover](http://www.lidorsystems.com/products/web/studio/samples/angular/#/popover/overview/) - Displays custom HTML content over specified element
+[Popover](https://www.lidorsystems.com/products/web/studio/samples/angular/#/popover/overview/) - Displays custom HTML content over specified element
 
-[Range](http://www.lidorsystems.com/support/articles/angular/range/range-component.aspx) - Allows you to set limits in which an element can resize during run-time
+[Range](https://www.lidorsystems.com/support/articles/angular/range/range-component.aspx) - Allows you to set limits in which an element can resize during run-time
 
 <b>Resize</b> - Detects changes to the element size and fires notifications when it happens
 
-[Tooltip](http://www.lidorsystems.com/support/articles/angular/tooltip/tooltip-component.aspx) - Adds a tooltip to an element
+[Tooltip](https://www.lidorsystems.com/support/articles/angular/tooltip/tooltip-component.aspx) - Adds a tooltip to an element
 
 ## Services
 
@@ -104,12 +104,12 @@ All components are inheritable, you can further extend functionalities of specif
 
 IntegralUI Web requires only the following library:
 
-Angular - v7.1 and above
+Angular - v8.0 and above
 
 
 ## DEMO
 
-[Online QuickStart App](http://www.lidorsystems.com/products/web/studio/samples/angular/) - An online demo of each component included
+[Online QuickStart App](https://www.lidorsystems.com/products/web/studio/samples/angular/) - An online demo of each component included
 
 
 ## Installation
@@ -134,6 +134,7 @@ export class AppModule { }
 ```
 
 <b>Note</b>   In order to use a specific component or directive in your application, follow the guidelines from corresponding article. From above links, you can find a separate article available for each component or directive.
+<b>Note</b>   In order to use a specific component or directive in your application, follow the [guidelines from corresponding article](https://www.lidorsystems.com/support/help/web/angular/guide/articles.aspx). You can find a separate article available for each component or directive.
 
 ### Angular CLI
 
@@ -197,7 +198,7 @@ In this example, the TreeView component will have its width and height set from 
 
 ## QuickStart App
 
-There is a demo application with source code that contains samples for each component included in the [IntegralUI Web](http://www.lidorsystems.com/products/web/studio/) product package. It can help you to get started quickly with learning about the components and write tests immediatelly.
+There is a demo application with source code that contains samples for each component included in the [IntegralUI Web](https://www.lidorsystems.com/products/web/studio/) product package. It can help you to get started quickly with learning about the components and write tests immediatelly.
 
 In order to start this application, you only need to install the latest Angular library. Open the nodejs command prompt, go to application directory and type:
 
@@ -222,6 +223,6 @@ This is Trial version of the product. All features are fully functional, except 
 You may use this version for the limited purposes of demonstrations, trials or design-time evaluations.
 
 This project has been released under the IntegralUI Web License, and may not be used except in compliance with the License.
-A copy of the License should have been installed in the product's root installation directory or it can be found here: [License Agreement](http://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf).
+A copy of the License should have been installed in the product's root installation directory or it can be found here: [License Agreement](https://www.lidorsystems.com/products/web/iui-web-license-agreement.pdf).
 
 This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language governing rights and limitations under the License.

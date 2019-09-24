@@ -3,7 +3,7 @@ import { IntegralUIBaseComponent } from '../components/integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     tooltipOptions: any;
     protected showTimer: any;
     protected popupTimer: any;
@@ -20,6 +20,7 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
     options: any;
     closed: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
+    ngOnInit(): void;
     protected updateOptions(value?: any): void;
     protected removeTimers(): void;
     close(): void;
@@ -32,7 +33,7 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
 export declare class IntegralUITooltip {
     protected elemRef: ElementRef;
     protected cmpResolver: ComponentFactoryResolver;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     protected eventList: Array<any>;
     protected cmpRef: any;
     protected cmp: any;

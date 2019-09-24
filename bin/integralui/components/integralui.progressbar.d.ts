@@ -3,7 +3,7 @@ import { IntegralUIBaseValueComponent, IntegralUIOrientation } from './integralu
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUIProgressBar extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
+    protected commonService?: IntegralUICommonService;
     private ctrlPadding;
     protected currentOrientation: IntegralUIOrientation;
     protected contentSize: any;
@@ -17,7 +17,7 @@ export declare class IntegralUIProgressBar extends IntegralUIBaseValueComponent 
     ngAfterContentChecked(): void;
     private delayTimeout;
     protected animateProgress(): void;
-    private removeDelayTimeout();
+    private removeDelayTimeout;
     processValueChange(): void;
     updateLayout(): void;
     getControlStyle(): any;

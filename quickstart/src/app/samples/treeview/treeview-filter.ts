@@ -139,8 +139,8 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewFilterSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treeview') treeview: IntegralUITreeView;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treeview', { static: false }) treeview: IntegralUITreeView;
     
     // An array that holds a flat list of tree hierarchy
     private flatData: Array<any>;

@@ -5,8 +5,8 @@ import { IntegralUIDataService } from '../services/integralui.data.service';
 export declare class IntegralUIMenuItem extends IntegralUIItem {
     private dataService;
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected baseService?: IntegralUIBaseService;
     private contentAnimation;
     private eventList;
     private itemList;
@@ -57,8 +57,8 @@ export declare class IntegralUIMenuItem extends IntegralUIItem {
     onMouseLeave(e: any): void;
     onContextMenu(e: any): void;
     onChildItemMouseDown(e: any): void;
-    private removePauseTimer();
-    private toggleContent();
+    private removePauseTimer;
+    private toggleContent;
     getControlStyle(): any;
     getItemDisplay(): string;
     protected updateControlClass(): void;

@@ -175,9 +175,9 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewCheckBoxSample {
-    @ViewChild('application', {read: ViewContainerRef}) applicationRef: ViewContainerRef;
-    @ViewChild('treeview') treeview: IntegralUITreeView;
-    @ViewChild('listbox') listbox: IntegralUIListBox;
+    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treeview', { static: false }) treeview: IntegralUITreeView;
+    @ViewChild('listbox', { static: false }) listbox: IntegralUIListBox;
 
     // An object that holds all items in the TreeView
     public data: Array<any>;

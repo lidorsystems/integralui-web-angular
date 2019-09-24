@@ -52,7 +52,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
     encapsulation: ViewEncapsulation.None
 })
 export class GridSortingSample {
-    @ViewChild('grid') grid: IntegralUIGrid;
+    @ViewChild('grid', { static: false }) grid: IntegralUIGrid;
 
     public columns: Array<any>;
     public rows: Array<any>;

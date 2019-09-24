@@ -3,8 +3,8 @@ import { IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.cor
 import { IntegralUICommonService } from '../services/integralui.common.service';
 export declare class IntegralUITab extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
-    protected commonService: IntegralUICommonService;
-    protected baseService: IntegralUIBaseService;
+    protected commonService?: IntegralUICommonService;
+    protected baseService?: IntegralUIBaseService;
     contentElem: ElementRef;
     protected parentCtrl: any;
     protected contentClassName: string;
@@ -27,7 +27,7 @@ export declare class IntegralUITab extends IntegralUIBaseComponent {
     ngOnInit(): void;
     protected initStyle(): void;
     protected processStateChanged(): void;
-    private getSize(elem);
+    private getSize;
     updateLayout(pos: any, size: any): void;
     getLayoutParams(): {
         size: {

@@ -64,7 +64,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridExportSample {
-    @ViewChild('treegrid') treegrid: IntegralUITreeGrid;
+    @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
 
     public columns: Array<any>;
     public rows: Array<any>;
