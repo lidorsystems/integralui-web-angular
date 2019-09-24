@@ -133,7 +133,6 @@ import { IntegralUIModule } from 'integralui-web/bin/integralui/integralui.modul
 export class AppModule { }
 ```
 
-<b>Note</b>   In order to use a specific component or directive in your application, follow the guidelines from corresponding article. From above links, you can find a separate article available for each component or directive.
 <b>Note</b>   In order to use a specific component or directive in your application, follow the [guidelines from corresponding article](https://www.lidorsystems.com/support/help/web/angular/guide/articles.aspx). You can find a separate article available for each component or directive.
 
 ### Angular CLI
