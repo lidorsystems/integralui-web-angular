@@ -12,7 +12,8 @@
 */
 
 import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { IntegralUISelectionMode } from '../../integralui/components/integralui.core';
+import { IntegralUIContentVisiblity, IntegralUISelectionMode } from '../../integralui/components/integralui.core';
+import { IntegralUITreeView } from '../../integralui/components/integralui.treeview';
 
 @Component({
     selector: '',
@@ -20,7 +21,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
         <style>
             .trw-overview
             {
-                width: 350px;
+                width: 100%;
                 height: 300px;
             }
             .trw-overview .iui-treeitem-animate
@@ -102,7 +103,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             .toolbar
             {
                 display: inline-block;
-                position: absolute;
+                /*position: absolute; */
                 right: 0;
                 top: 7px;
                 padding-left: 5px;
@@ -114,7 +115,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
                 display: inline-block;
                 overflow: hidden;
                 padding: 0;
-                margin: 1px 4px 0 4px;
+                margin: 10px 4px 0 4px;
                 width: 16px;
                 height: 16px;
                 float: right;
@@ -132,15 +133,22 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
         <h2 class="feature-title">TreeView / Overview</h2>
         <div class="feature-content">
             <div style="width:400px" #application>
-                <iui-treeview [items]="items" [appRef]="applicationRef" [allowDrag]="true" [controlStyle]="ctrlStyle" [selectionMode]="selMode" [allowAnimation]="true" #treeview>
-                    <ng-template let-item>
+                <iui-treeview [items]="items" [appRef]="applicationRef" [allowDrag]="true" [controlStyle]="ctrlStyle" [selectionMode]="selMode" [allowAnimation]="true" [virtualMode]="true" [itemDisplay]="0" (selectionChanged)="onSelectionChanged($event)" [contentVisibility]="contentVisibility" #treeview>
+                    <ng-template let-item [iuiTemplate]="{ type: 'item' }">
                         <div (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
                             <span [ngClass]="item.icon"></span>
                             <span *ngIf="item!=editItem">{{item.text}}</span>
                             <input *ngIf="item==editItem" type="text" [(ngModel)]="item.text" (keydown)="editorKeyDown($event)" [iuiFocus]="editorFocused" (focus)="selectContent($event)" (blur)="editorLostFocus()" />
-                            <div class="toolbar" *ngIf="item==hoverItem">
-                                <span class="item-button item-button-edit" (click)="showEditor(item)"></span>
-                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template let-item [iuiTemplate]="{ type: 'item-hover' }">
+                        <div class="toolbar">
+                            <span class="item-button item-button-edit" (click)="showEditor(item)"></span>
+                        </div>
+                    </ng-template>
+                    <ng-template let-item [iuiTemplate]="{ type: 'item-select' }">
+                        <div class="toolbar">
+                            <span class="item-button item-button-edit" (click)="showEditor(item)"></span>
                         </div>
                     </ng-template>
                 </iui-treeview>
@@ -149,6 +157,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             <div class="feature-help" style="width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TreeView</strong> is a native Angular component that displays tree hierarchy of items that can be reordered using advanced drag drop operations. You can load data on demand during run-time from local or remote data sources, and add custom HTML content in each tree item.</p>
                 <p><span class="initial-space"></span>Above demonstration shows a simple tree hierarchy, each item has an icon and an editable label. When item is hovered, a command button will appear on right side, which when clicked will open a text editor, where you can change the item label.</p>
+                <p><span class="initial-space"></span>Custom content (in this case edit button on right side), can appear when item is hovered or selected. You can determine the condition when this content appears, on general level for all items or on individual level for each item separately. The content appearance is determined by the <strong>contentVisibility</strong> property or item field which can accept values from <span style="color:#2424dd">IntegralUIContentVisiblity</span> enumeration: None, Hover, Select or Both.</p>
                 <p><span class="initial-space"></span>You can reorder items by click and drag over specific item. A dragging window will appear, stating the target item and position at which item can be dropped. During drag drop operations, you can also create a copy of an item by holding the SHIFT key. The dragging window will change its icon, showing a + sign next to the position marker.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treeview/treeview-overview.ts</i>) file, or read the following article:</p> 
                 <p><span class="initial-space"></span><a href="http://www.lidorsystems.com/support/articles/angular/treeview/treeview-component.aspx">Overview of IntegralUI TreeView for Angular</a></p>
@@ -158,7 +167,9 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewOverviewSample {
+
     @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('treeview', { static: false }) treeview: IntegralUITreeView;
 
     public items: Array<any>;
 
@@ -168,6 +179,7 @@ export class TreeViewOverviewSample {
     public editorFocused: boolean = false;
     public hoverItem: any = null;
     
+    public contentVisibility: IntegralUIContentVisiblity = IntegralUIContentVisiblity.Both;
     public selMode: IntegralUISelectionMode = IntegralUISelectionMode.MultiExtended;
 
     public ctrlStyle: any = {
@@ -184,13 +196,14 @@ export class TreeViewOverviewSample {
                 icon: "computer-icons favorites",
                 items: [
                     { id: 11, pid: 1, text: "Desktop", icon: "computer-icons empty-doc" },
-                    { id: 12, pid: 1, text: "Downloads", icon: "computer-icons downloads" }
+                    { id: 12, pid: 1, text: "Downloads", icon: "computer-icons downloads", contentVisibility: IntegralUIContentVisiblity.Hover }
                 ]
             },
             { 
                 id: 2,
                 text: "Libraries",
                 icon: "computer-icons folder",
+                expanded: false,
                 items: [
                     { 
                         id: 21, 
@@ -256,6 +269,7 @@ export class TreeViewOverviewSample {
             switch (e.keyCode){
                 case 13: // ENTER
                     this.closeEditor();
+                    this.treeview.updateLayout();
                     break;
                     
                 case 27: // ESCAPE
@@ -271,5 +285,12 @@ export class TreeViewOverviewSample {
             this.editItem.text = this.originalText;
 
         this.closeEditor();
+    }
+
+    // Custom Content on select
+    onSelectionChanged(e: any){
+        let selList = this.treeview.getList('selected');
+
+        this.contentVisibility = selList.length > 1 ? IntegralUIContentVisiblity.Hover : IntegralUIContentVisiblity.Both;
     }
 }

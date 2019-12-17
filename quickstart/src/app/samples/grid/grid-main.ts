@@ -79,9 +79,11 @@ export class GridSample {
         this.sideList = [
             { text: "Add/Remove", link: './add-remove' },
             { text: "Add Row Dynamically", link: './add-row-dynamically' },
+            { text: "Auto-Size Columns", link: './auto-size-columns' },
             { text: "Built-in Editors", link: './builtin-editors' },
             { text: "Cell with CheckBox", link: './edit-cell-checkbox', space: 20 },
-            { text: "Cell with DatePicker", link: './edit-cell-datepicker', space: 20 },
+            { text: "Cell with Color Picker", link: './edit-cell-colorpicker', space: 20 },
+            { text: "Cell with Date Picker", link: './edit-cell-datepicker', space: 20 },
             { text: "Cell with DropList", link: './edit-cell-droplist', space: 20 },
             { text: "Cell with Numeric UpDown", link: './edit-cell-numeric', space: 20 },
             { text: "Cell with Rating", link: './edit-cell-rating', space: 20 },
@@ -99,6 +101,7 @@ export class GridSample {
             { text: "Fast Load", link: './fast-load' },
             { text: "Filter", link: './filter' },
             { text: "Fixed Columns", link: './fixed-columns' },
+            { text: "Multi Level Headers", link: './multi-level-headers' },
             { text: "Multi Select", link: './multi-select' },
             { text: "Overview", link: './overview' },
             { text: "Pagination", link: './pagination' },
@@ -108,7 +111,7 @@ export class GridSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[23];
+        this.selectedItem = this.sideList[26];
     }   
 
     ngAfterContentChecked(){
@@ -119,7 +122,7 @@ export class GridSample {
         else
             self.blockHeight = "auto";
 
-        self.blockHeight = '1081px';
+        self.blockHeight = '1200px';
     }
 
     selectFeature(item: any){

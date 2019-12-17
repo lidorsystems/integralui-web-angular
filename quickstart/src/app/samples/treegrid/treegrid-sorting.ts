@@ -36,9 +36,9 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
         </style>
         <h2 class="feature-title">TreeGrid / Sorting</h2>
         <div class="feature-content">
-            <iui-treegrid [columns]="columns" [rows]="rows" [controlStyle]="treegridStyle" [showFooter]="false" (columnClick)="onColumnClick($event)" #treegrid>
+            <iui-treegrid [columns]="columns" [rows]="rows" [controlStyle]="treegridStyle" [showFooter]="false" (columnClick)="onColumnClick($event)" (columnSizeChanged)="gridColumnSizeChanged($event)" #treegrid>
                 <ng-template let-column [iuiTemplate]="{ type: 'header' }">
-                    {{column.headerText}}
+                    <div style="white-space:pre-wrap">{{column.headerText}}</div>
                 </ng-template>
                 <ng-template let-cell [iuiTemplate]="{ type: 'cell' }">
                     <span class="treegrid-sort-cell-label">{{cell.text}}</span>
@@ -61,6 +61,10 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
     encapsulation: ViewEncapsulation.None
 })
 export class TreeGridSortingSample {
+    gridColumnSizeChanged(e: any){
+        this.treegrid.updateLayout();
+    }
+
     @ViewChild('treegrid', { static: false }) treegrid: IntegralUITreeGrid;
 
     public columns: Array<any>;
@@ -79,10 +83,10 @@ export class TreeGridSortingSample {
 
     constructor(){
         this.columns = [
-            { id: 2, headerText: "Continents/Countries", width: 220 },
+            { id: 2, headerText: "Continents / Countries", width: 220 },
             { id: 3, headerText: "Population", headerAlignment: "center", contentAlignment: "right", width: 125 },
             { id: 4, headerText: "Date", headerAlignment: "center", contentAlignment: "center", width: 140 },
-            { id: 6, headerText: "Land in km2", headerAlignment: "center", contentAlignment: "right", width: 125 },
+            { id: 6, headerText: "Land in km2", headerAlignment: "center", contentAlignment: "right", width: 55 },
             { id: 7, headerText: "Capital", headerAlignment: "center", width: 120 }
         ];
 

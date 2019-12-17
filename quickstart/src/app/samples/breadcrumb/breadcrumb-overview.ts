@@ -115,7 +115,7 @@ export class BreadCrumbOverviewSample {
             { id: 5, text: "Recycle Bin", icon: "computer-icons recycle" }
         ];
 
-        this.selItem = this.items[0].items[1];
+        this.selItem = this.items[0].items[0];
     }
 
     itemSelected(e: any){

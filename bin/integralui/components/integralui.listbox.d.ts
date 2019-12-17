@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, QueryList, Renderer, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseService } from './integralui.core';
+import { IntegralUIBaseService, IntegralUITemplate } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -20,6 +20,7 @@ export declare class IntegralUIListBox extends IntegralUIBaseList {
     contentElem: ElementRef;
     itemElems: QueryList<ElementRef>;
     itemTemplate: any;
+    templates: QueryList<IntegralUITemplate>;
     private tRef;
     constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;

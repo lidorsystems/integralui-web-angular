@@ -30,9 +30,15 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             .grid-celldt-normal .iui-grid-row-cell:last-child {
                 border-right: thin solid #d9d9d9;
             }
-            .grid-celldt-label {
+            .grid-celldt-country, .grid-celldt-label {
                 display: block;
-                padding: 7px 0;
+                padding: 5px 0;
+            }
+            .grid-celldt-normal .iui-editor-label {
+                padding-top: 5px;
+            }
+            .grid-celldt-normal .iui-editor-dropdown-button span {
+                margin-top: 5px;
             }
             /*.calendar-cell {
                 background: #f5fff4;
@@ -97,7 +103,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             </div>
             <div class="feature-help">
                 <p><span class="initial-space"></span>An example with Grid component where you can edit cells using a DatePicker. You can enable the built-in Date editor for all cells in specific column. In addition, see how to customize the date editor with custom CSS styles</p>
-                <p><span class="initial-space"></span>To enable the checkbox editor, in <strong>column object</strong> you need to set the following fields:</p>
+                <p><span class="initial-space"></span>For demonstrations purposes only, you can select dates between 2010 and 2019. This restriction is set when cell value is changing. Check out the source code of this sample for more information.</p>
                 <p><span class="initial-space"></span>When cell is clicked, a dropdown window will popup showing a calendar that allows you to navigate among dates from different months or years and select a new date. Once a date is selected, the grid cell value is updated accordingly</p>
                 <ul class="feature-points">
                     <li><span style="color:#c60d0d">editorType</span> - determines the editor type in use, in this case <span style="color:#2424dd">IntegralUIEditorType.<strong>Date</strong></span></li>

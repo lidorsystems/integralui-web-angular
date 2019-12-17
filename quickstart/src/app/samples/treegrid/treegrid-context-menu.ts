@@ -51,7 +51,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             <div style="width:400px" #application>
                 <iui-treegrid [appRef]="applicationRef" [controlStyle]="treegridStyle" [columns]="columns" [rows]="rows" [allowDrag]="true" #treegrid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
-                        <div style="width:100%" [iuiContextMenu]="columnMenu" (itemClick)="columnMenuItemClick($event)">
+                        <div style="width:100%" [iuiContextMenu]="columnMenu" (itemClick)="columnMenuItemClick($event)" (menuOpening)="columnMenuOpening($event, column)">
                             {{column.headerText}}
                         </div>
                     </ng-template>
@@ -161,6 +161,10 @@ export class TreeGridContextMenuSample {
     }
 
     // ContextMenu events ----------------------------------------------------------------
+
+    columnMenuOpening(e: any, column: any){
+        this.treegrid.selectedColumn = column;
+    }
 
     columnMenuItemClick(e: any){
         if (e.item){

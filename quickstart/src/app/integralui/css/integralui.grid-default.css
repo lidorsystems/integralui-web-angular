@@ -108,7 +108,7 @@
 	top: 0;
 	left: 0;
 }
-.iui-grid-block-hover {
+.iui-grid-block-hover, .iui-grid-block-select {
 	background: transparent;
 	border: thin solid #cecece;
 	box-shadow: 2px 3px 3px #e5e5e5;
@@ -116,7 +116,7 @@
 	position: absolute;
 	z-index: 6;
 }
-.iui-grid-block-hover > div {
+.iui-grid-block-hover > div, .iui-grid-block-select > div {
 	background: #f5f5f5;
 	pointer-events: auto;
 	position: absolute;
@@ -149,7 +149,7 @@
 	margin: 0;
 	padding: 3px 0;
 	position: relative;
-	vertical-align: top;
+	vertical-align:middle;
 	white-space: nowrap;
 	z-index: 1;
 }

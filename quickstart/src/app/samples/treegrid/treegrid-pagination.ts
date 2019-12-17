@@ -194,6 +194,9 @@ export class TreeGridPaginationSample {
                 this.addRows(row, level + 1);
             }
         }
+
+        if (level === 0 && this.rowCount < this.numRows)
+            this.addRows(null, 0);
     }
             
     // Make sure each row has a random set of child rows
@@ -218,12 +221,13 @@ export class TreeGridPaginationSample {
     }
 
     add(){
-        this.clear();
+        this.treegrid.suspendLayout();
 
+        this.clear();
         this.addColumns();
         this.addRows(null, 0);
 
-        this.treegrid.updateLayout();
+        this.treegrid.resumeLayout();
     }
 
     clear(){
@@ -255,6 +259,7 @@ export class TreeGridPaginationSample {
     }
 
     private resetScrollPos(){
-        this.treegrid.scrollPos({ x: 0, y: 0 });
+        if (this.treegrid)
+            this.treegrid.scrollPos({ x: 0, y: 0 });
     }
 }

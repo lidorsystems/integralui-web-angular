@@ -61,6 +61,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             <div class="feature-help" style="width:750px">
                 <p><span class="initial-space"></span>This sample shows how to populate the TreeGrid using JSON file as a data source. The data source has custom data fields, which are mapped to the ones used by the tree grid.</p>
                 <p><span class="initial-space"></span>For data binding, use the <strong>dataFields</strong> property of the TreeGrid component. This property accepts an object that replaces the default field names with your own.</p>
+                <p><span class="initial-space"></span>You can find the JSON data file under /assets subfolder in this project.</p>
                 <p><span class="initial-space"></span>For more information check out the source code of this sample (<i>treegrid/treegrid-data-fields.ts</i>) file.</p> 
             </div>
         </div>

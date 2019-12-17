@@ -157,20 +157,20 @@ enableProdMode();
                         <div [ngSwitch]="cell.cid">
                             <div *ngSwitchCase="7" (dblclick)="onButtonsDblClick($event)" (mousedown)="onButtonsMouseDown($event)">
                                 <div *ngIf="cell.rid==currentEditRowID">
-                                    <button (mousedown)="saveRow(cell.rid)">Save</button>
-                                    <button (mousedown)="cancelEdit(cell.rid)">Cancel</button>
+                                    <button (mousedown)="saveRow(cell.rid)" (touchstart)="saveRow(cell.rid)" (keydown)="saveKeyDown($event, cell.rid)">Save</button>
+                                    <button (mousedown)="cancelEdit(cell.rid)" (touchstart)="cancelEdit(cell.rid)" (keydown)="cancelKeyDown($event, cell.rid)">Cancel</button>
                                 </div>
                                 <div *ngIf="cell.rid!=currentEditRowID">
-                                    <div class="grid-ardyn-button-block" (mousedown)="editRow(cell.rid)">
+                                    <div class="grid-ardyn-button-block" (mousedown)="editRow(cell.rid)" (touchstart)="editRow(cell.rid)">
                                         <span class="grid-ardyn-icons grid-ardyn-button-edit"></span>
                                     </div>
-                                    <div class="grid-ardyn-button-block" (mousedown)="removeRow(cell.rid)">
+                                    <div class="grid-ardyn-button-block" (mousedown)="removeRow(cell.rid)" (touchstart)="removeRow(cell.rid)">
                                         <span class="grid-ardyn-icons grid-ardyn-button-remove"></span>
                                     </div>
                                 </div>
                             </div>
                             <div *ngSwitchDefault style="display:inline-block;">
-                                <input *ngIf="cell.saved==false" class="grid-ardyn-cell-input" [(ngModel)]="cell.editText" [iuiFocus]="currentEditCell==cell" (focus)="selectContent($event)" (keydown)="editorKeyDown($event)" [ngStyle]="{ width: getCellWidth(cell) + 'px' }" />
+                                <input *ngIf="cell.saved==false" class="grid-ardyn-cell-input" [(ngModel)]="cell.editText" [iuiFocus]="currentEditCell==cell" (focus)="selectContent($event)" (keydown)="editorKeyDown($event)" (mousedown)="editorMouseDown($event, cell)" (touchstart)="editorTouch($event, cell)" [ngStyle]="{ width: getCellWidth(cell) + 'px' }" />
                                 <span *ngIf="cell.saved!=false" class="grid-ardyn-cell-text">{{cell.text}}</span>
                             </div>
                         </div>
@@ -337,6 +337,11 @@ export class GridAddRowDynamicallySample {
     }
 
     // Confirms the changes and saves the row
+    saveKeyDown(e: any, id: any){
+        if (e.keyCode === 13) // ENTER
+            this.saveRow(id);
+    }
+
     saveRow(id: any){
         let row = this.grid.findRowById(id);
         if (row){
@@ -354,6 +359,11 @@ export class GridAddRowDynamicallySample {
     }
 
     // Cancels the edit process and closes the editor
+    cancelKeyDown(e: any, id: any){
+        if (e.keyCode === 13) // ENTER
+            this.cancelEdit(id);
+    }
+
     cancelEdit(id: any){
         if (this.isNewRow)
             this.removeRow(id);
@@ -385,6 +395,16 @@ export class GridAddRowDynamicallySample {
                     break;
             }
         }
+    }
+
+    editorMouseDown(e: any, cell: any){
+        this.currentEditCell = cell;
+        e.stopPropagation();
+    }
+
+    editorTouch(e: any, cell: any){
+        this.currentEditCell = cell;
+        e.stopPropagation();
     }
 
     // Removes a row from the grid

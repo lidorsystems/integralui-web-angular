@@ -4,6 +4,7 @@ import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUICalendar } from './integralui.calendar';
 export declare class IntegralUICalendarPopup extends IntegralUIPopup {
     protected elemRef: ElementRef;
+    protected commonService?: IntegralUICommonService;
     calendarDisplayPosition: string;
     calendarPos: any;
     calendarOpacity: number;
@@ -15,7 +16,7 @@ export declare class IntegralUICalendarPopup extends IntegralUIPopup {
     size: any;
     closed: EventEmitter<any>;
     dateChanged: EventEmitter<any>;
-    constructor(elemRef: ElementRef);
+    constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     ngAfterContentInit(): void;
     ngAfterViewInit(): void;

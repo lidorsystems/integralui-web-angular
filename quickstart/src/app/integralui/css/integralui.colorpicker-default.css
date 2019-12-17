@@ -1,0 +1,178 @@
+.iui-colorpicker
+{
+	background: white;
+	border: thin solid #cecece;
+	cursor: default;
+	margin: 0;
+	max-width: 236px;
+	padding: 2px;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.iui-colorpicker-header
+{
+	margin:0 2px 0 0;
+}
+.iui-colorpicker-header-title
+{
+	display: inline-block;
+	vertical-align: top;
+}
+.iui-colorpicker-header-button
+{
+	display: inline-block;
+	opacity: 0.6;
+}
+.iui-colorpicker-header-button:hover
+{
+	opacity: 1;
+}
+.iui-colorpicker-header-button span
+{
+    background-image: url(../resources/icons-x24.png);
+    background-repeat: no-repeat;
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+.iui-colorpicker-header-button-down
+{
+	float: right;
+}
+.iui-colorpicker-header-button-down span
+{
+	background-position: -192px -192px;
+}
+
+.iui-colorpicker-block {
+	margin: 0 10px 10px 10px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.iui-colorpicker-block-color, .iui-colorpicker-header-color {
+	border: thin solid transparent;
+	display: inline-block;
+	vertical-align: top;
+	background: #f5f5f5;
+}
+
+.iui-colorpicker-block-value {
+	border: thin solid transparent;
+	display: inline-block;
+	padding: 0;
+	vertical-align: top;
+	white-space: nowrap;
+}
+.iui-colorpicker-block-value button {
+	background: transparent;
+	border: thin solid transparent;
+	display: inline-block;
+	padding: 3px;
+	vertical-align: top;
+}
+.iui-colorpicker-block-value button:hover {
+	background: #f5f5f5;
+	border-color: #e5e5e5;
+}
+.iui-colorpicker-block-value button:focus {
+    outline: none !important;
+}
+.iui-colorpicker-block input {
+	border: 0;
+	border-bottom: thin solid #cecece;
+	display: inline-block;
+	margin: 0 10px;
+	padding: 3px;
+	text-align: center;
+	vertical-align: top;
+}
+.iui-colorpicker-block input:focus {
+    outline: none !important;
+}
+
+.iui-colorpicker-block-button {
+	background: transparent;
+	border: thin solid transparent;
+    display: inline-block;
+    margin: 5px 2px 0 2px;
+    padding: 2px;
+    position: relative;
+    vertical-align: top;
+}
+.iui-colorpicker-block-button span {
+    background-image: url(../resources/icons.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+}
+.iui-colorpicker-block-button-ok {
+    background-position: -160px -128px !important;
+}
+.iui-colorpicker-block-button-ok:hover {
+    background-position: -128px -128px !important;
+}
+.iui-colorpicker-block-button-cancel {
+    background-position: -176px -128px !important;
+}
+.iui-colorpicker-block-button-cancel:hover {
+    background-position: -144px -128px !important;
+}
+
+/* Color Slider and Palette */
+.iui-colorslider, .iui-colorpalette {
+	cursor: pointer;
+	display: inline-block;
+	margin: 5px;
+	position: relative;
+	vertical-align: top;
+}
+.iui-colorslider-block, .iui-colorpalette-block {
+	margin: 7px 6px;
+	z-index: 0;
+}
+.iui-colorslider-button, .iui-colorpalette-button {
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+.iui-colorpalette-block {
+	height: 186px;
+}
+
+/* Disabled State */
+.iui-colorpicker-disabled
+{
+	opacity: 0.75;
+	pointer-events: none;
+}
+
+/* ColorPicker Popup */
+.iui-colorpicker-popup {
+	background: white;
+	border: thin solid #cecece;
+	overflow: hidden;
+	position: absolute;
+	z-index: 999;   
+}
+.iui-colorpicker-popup:focus {
+    outline: none !important;
+}

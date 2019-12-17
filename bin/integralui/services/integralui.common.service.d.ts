@@ -7,6 +7,13 @@ export declare class IntegralUICommonService {
         left: number;
     };
     checkHit(x: number, y: number, bounds: any): boolean;
+    checkNumInRange(num: number, num2: number, range: number): boolean;
+    colorToRgb(p: any, q: any, t: any): any;
+    convertRgbaToHex(value: string): string;
+    convertRgbaToHsl(value: string): string;
+    convertRgbaToNum(value: string, skipAlpha?: boolean): number[];
+    convertHexToRgba(value: string): any;
+    convertHslToRgba(value: string): string;
     getBodyElem(elem: any): any;
     getBorderWidth(elem: any): {
         top: number;
@@ -18,11 +25,16 @@ export declare class IntegralUICommonService {
         x: number;
         y: number;
     };
+    getColorAtPosition(context: CanvasRenderingContext2D, x: number, y: number): string;
     getMargin(elem: any): {
         top: number;
         right: number;
         bottom: number;
         left: number;
+    };
+    getMouseOffsetPos(e: any, elem: any): {
+        x: number;
+        y: number;
     };
     getMousePos(e: any): {
         x: any;
@@ -49,4 +61,5 @@ export declare class IntegralUICommonService {
     isString(value: any): boolean;
     moveObject(from: number, to: number, list: Array<any>): void;
     pointToView(pos: any): any;
+    setNumInRange(value: number, min: number, max: number): number;
 }

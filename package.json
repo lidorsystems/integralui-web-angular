@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "19.3.0",
+  "version": "19.4.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -76,6 +76,7 @@
     "quickstart/src/app/samples/button/*.*",
     "quickstart/src/app/samples/calendar/*.*",
     "quickstart/src/app/samples/checkbox/*.*",
+    "quickstart/src/app/samples/colorpicker/*.*",
     "quickstart/src/app/samples/combobox/*.*",
     "quickstart/src/app/samples/contextmenu/*.*",
     "quickstart/src/app/samples/datepicker/*.*",
@@ -96,6 +97,7 @@
     "quickstart/src/app/samples/radiobutton/*.*",
     "quickstart/src/app/samples/range/*.*",
     "quickstart/src/app/samples/rating/*.*",
+    "quickstart/src/app/samples/sidebar/*.*",
     "quickstart/src/app/samples/slidebar/*.*",
     "quickstart/src/app/samples/slider/*.*",
     "quickstart/src/app/samples/splitcontainer/*.*",

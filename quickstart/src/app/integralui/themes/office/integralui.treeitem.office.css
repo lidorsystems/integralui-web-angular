@@ -1,14 +1,12 @@
-.iui-treeitem-content
-{
+.iui-treeitem {
     color: #646464;
 }
-.iui-treeitem-content-hovered
-{
+.iui-treeitem-hovered, .iui-treeitem-content-hovered {
     background-color: transparent;
     border: 2px solid transparent;
-	color: #000000;
+    color: #000000;
 
-    animation-name: iui-treeitem-content-hovered-animate-enter;
+    animation-name: iui-treeitem-hovered-animate-enter;
     animation-delay: 0s;
     animation-direction: normal;
     animation-duration: 0.15s;
@@ -17,17 +15,16 @@
     animation-play-state: running;
     animation-timing-function: linear; 
 }
-@keyframes iui-treeitem-content-hovered-animate-enter {
+@keyframes iui-treeitem-hovered-animate-enter {
     0% { background: transparent; border-color: transparent; }
     100% { background: #d9edfd; border-color: #d9edfd; }
 }
-.iui-treeitem-content-selected
-{
+.iui-treeitem-selected, .iui-treeitem-content-selected {
     background-color: transparent;
     border: 2px solid transparent;
-	color: #000000;
+    color: #000000;
 
-    animation-name: iui-treeitem-content-selected-animate-enter;
+    animation-name: iui-treeitem-selected-animate-enter;
     animation-delay: 0s;
     animation-direction: normal;
     animation-duration: 0.25s;
@@ -36,7 +33,7 @@
     animation-play-state: running;
     animation-timing-function: linear; 
 }
-@keyframes iui-treeitem-content-selected-animate-enter {
+@keyframes iui-treeitem-selected-animate-enter {
     0% { background: #d9edfd; border-color: #d9edfd; }
     100% { background: #a5d3fa; border-color: #a5d3fa; }
 }

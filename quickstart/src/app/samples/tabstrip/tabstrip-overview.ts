@@ -67,7 +67,7 @@ import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../inte
         <h2 class="feature-title">TabStrip / Overview</h2>
         <div class="feature-content">
             <div style="float:left;width:400px;" #application>
-                <iui-tabstrip [controlStyle]="ctrlStyle" [tabs]="data" [tabSpacing]="2" [tabStripPlacement]="tabPlacement" [allowDrag]="true" [scrollMode]="tabScrollMode">
+                <iui-tabstrip [controlStyle]="ctrlStyle" [tabs]="data" [tabSpacing]="2" [tabStripPlacement]="tabPlacement" [allowDrag]="true" [scrollMode]="tabScrollMode" (scrollPosChanged)="tabScrollPosChanged($event)">
                    <iui-tab *ngFor="let tab of data" text="{{tab.text}}" icon="{{tab.icon}}" [allowDrag]="true">
                         <div class="tbs-ovw-tab-content">{{tab.body}}</div>
                     </iui-tab>
@@ -209,5 +209,9 @@ export class TabStripOverviewSample {
                 this.tabScrollMode = IntegralUITabScrollMode.None;
                 break;
         }
+    }
+
+    tabScrollPosChanged(e: any){
+        console.log("Tab scroll position is: ", e.value);
     }
 }

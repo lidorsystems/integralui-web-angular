@@ -52,9 +52,9 @@ export declare class IntegralUIMenuItem extends IntegralUIItem {
     isThereChildren(): boolean;
     isBlockVisible(): boolean;
     updateLayout(): void;
-    onMouseDown(e: any): void;
     onMouseEnter(e: any): void;
     onMouseLeave(e: any): void;
+    onMouseUp(e: any): void;
     onContextMenu(e: any): void;
     onChildItemMouseDown(e: any): void;
     private removePauseTimer;

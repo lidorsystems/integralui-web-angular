@@ -69,5 +69,7 @@ export declare class IntegralUITreeItem extends IntegralUIListItem {
     protected updateExpandBoxClass(): void;
     getExpandBoxClass(): any[];
     protected getExpandBoxStyle(value: any): any;
+    protected updateControlClass(): void;
+    protected updateContentClass(): void;
     protected updateStyle(value: any): void;
 }

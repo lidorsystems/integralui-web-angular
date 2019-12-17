@@ -1,0 +1,138 @@
+.iui-sidebar {
+	background: white;
+	border: thin solid #cecece;
+	position: relative;
+	color: black;
+	cursor: default;
+	overflow: hidden;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+    -ms-user-select: none;
+	user-select: none;
+}
+.iui-sidebar-line {
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+.iui-sidebar-header {
+	background: #e5e5e5;
+	border: thin solid #cecece;
+    padding: 2px;
+    position: relative;
+    white-space: nowrap;
+	z-index: 5;
+}
+.iui-sidebar-header-button {
+	background: #e5e5e5;
+	border: thin solid transparent;
+    display: inline-block;
+    margin: 0;
+    padding: 2px;
+    position: relative;
+    vertical-align: top;
+	z-index: 4;
+}
+.iui-sidebar-header-button span
+{
+    background: url(../resources/icons.png) no-repeat -176px -80px;
+    display: inline-block;
+    margin: 1px 0 0 1px;
+    overflow: hidden;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+}
+.iui-sidebar-header-block {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+	z-index: 3;
+}
+.iui-sidebar-header-title {
+	border: thin solid transparent;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+.iui-sidebar-header-content {
+	border: thin solid transparent;
+    display: block;
+    margin: 0;
+    vertical-align: middle;
+}
+.iui-sidebar-content {
+	overflow: auto;
+    position: relative;
+	z-index: 2;
+}
+
+/* Animations */
+.iui-sidebar-content-animate-open
+{
+	animation-name: sidebar-content-animate-open;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes sidebar-content-animate-open
+{
+	0% { 	   
+	    width: 0%;
+	}
+	100% { 
+	    width: 100%;
+	}
+}
+
+.iui-sidebar-content-animate-close
+{
+	animation-name: sidebar-content-animate-close;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes sidebar-content-animate-close
+{
+	0% { 	   
+	    width: 100%;
+	}
+	100% { 
+	    width: 0%;
+	}
+}
+
+.iui-sidecontent-popup {
+	background: white;
+	border:thin solid #cecece;
+	overflow:hidden;
+	position:absolute;
+	z-index:999;   
+}
+.iui-sidecontent-popup:focus {
+    outline: none !important;
+}
+
+/* Disabled State */
+.iui-sidebar-disabled div {
+	opacity: 0.75;
+	pointer-events: none;
+}

@@ -52,7 +52,7 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     private currentScrollMode;
     private isScrollActive;
     private scrollCount;
-    private scrollPos;
+    private currentScrollPos;
     private scrollTimer;
     private stopScrolling;
     private maxScrollPos;
@@ -81,6 +81,7 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     clear: EventEmitter<any>;
     tabRemoving: EventEmitter<any>;
     tabRemoved: EventEmitter<any>;
+    scrollPosChanged: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
     constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer, changeRef: ChangeDetectorRef, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
@@ -124,6 +125,7 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     getNextTab(tab: any): any;
     moveTab(tab: any, direction: IntegralUIMoveDirection, targetTab?: any, position?: number): void;
     protected moveTabAt(tab: any, targetTab: any, direction: IntegralUIMoveDirection, position?: number): void;
+    scrollPos(value?: any): any;
     private startScroll;
     private stopScroll;
     private processScroll;

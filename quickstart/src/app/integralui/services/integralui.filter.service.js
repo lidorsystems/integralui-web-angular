@@ -1,6 +1,6 @@
 /*
   filename: integralui.filter.service.js
-  version : 3.2.0
+  version : 3.3.0
   Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

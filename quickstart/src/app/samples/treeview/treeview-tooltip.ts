@@ -47,7 +47,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
     encapsulation: ViewEncapsulation.None
 })
 export class TreeViewTooltipSample {
-    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: true}) applicationRef: ViewContainerRef;
     @ViewChild('treeview', { static: false }) treeview: IntegralUITreeView;
 
     public data: Array<any>;
@@ -134,13 +134,9 @@ export class TreeViewTooltipSample {
         this.tooltipReference = this.applicationRef;
 
         // Get a flat list of all items in tree hierarchy
+        this.treeview.updateFullList();
+
         let list: Array<any> = this.treeview.getFullList();
-
-        if (list)
-            for (let i = 0; i < list.length; i++)
-                list[i].tooltip = {
-                    title: list[i].text
-                }
-
+        list.map(item => item.tooltip = { title: item.text });
     }
 }

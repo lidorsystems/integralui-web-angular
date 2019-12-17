@@ -26,6 +26,17 @@
 	opacity: 0.5;
 	pointer-events: none;
 }
+.iui-editor-color-background {
+	display: inline-block;
+	height: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+}
+.iui-editor-color-value {
+	margin: 0 0 0 22px;
+}
 
 .iui-editor-dropdown-button
 {

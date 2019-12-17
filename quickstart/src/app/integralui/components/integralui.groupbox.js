@@ -1,5 +1,5 @@
 /*
-  filename: integralui.groupbox.js
+  filename: integralui.groupobox.js
   version : 1.6.0
   Copyright © 2016-2019 Lidor Systems. All rights reserved.
 

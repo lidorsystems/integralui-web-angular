@@ -189,7 +189,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
     encapsulation: ViewEncapsulation.None
 })
 export class GridGroupingSample {
-    @ViewChild('application', {read: ViewContainerRef, static: false}) applicationRef: ViewContainerRef;
+    @ViewChild('application', {read: ViewContainerRef, static: true }) applicationRef: ViewContainerRef;
     @ViewChild('grid', { static: false }) grid: IntegralUIGrid;
 
     public columns: Array<any>;

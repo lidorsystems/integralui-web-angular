@@ -1,4 +1,4 @@
-﻿/*
+/*
   filename: integralui.dialog.js
   version : 1.2.0
   Copyright © 2016-2019 Lidor Systems. All rights reserved.

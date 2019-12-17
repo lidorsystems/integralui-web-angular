@@ -1,3 +1,28 @@
+v19.4.0  
+- New components: ColorPicker and SideBar
+- Option to use a Color Picker as Editor in Grid and TreeGrid
+- Multi-level headers in Grid and TreeGrid
+- Custom content when rows are hovered or selected in Grid, ListBox, TreeGrid and TreeView
+- Option to determine when custom content appears for items or rows: None, Hover, Select or Both
+- Reorder multi-level columns from code using the moveColumn method
+- Option to manually set the scrolling position of tabs and handle the scrolling event in TabStrip
+- New and updated samples
+
+- Fixed the issue that caused menu item clicks to open the dropdown editor In Grid and TreeGrid when menu is opened over grid cells
+- Fixed the issue that caused editor to open on mouseUp if mouse button is released over editor cell during scrolling
+- selectionChanged event is now fired when selected item or row is removed from list or grid component
+- Whenever data source is changed and component updated, the current selection is also updated and selection events are fired
+- When selecting items or rows from code, the previous selected items are now cleared
+- Fixed the issue that caused hover content to remain visible when item is no longer hovered
+- Fixed the issue that prevented scrolling using touch in Grid and TreeGrid
+- Fixed the issue in DropDown directive that prevented opening the dropdown list using touch
+- Selecting items using touch from DropList editor is now fixed
+- Calendar is updated to work with touch when included as part of DatePicker editor
+- Fixed the issue that caused group panel to disappear during reordering of groups when only one group is present
+- Appearance of resize cursor on left in first column when auto-sized is now fixed
+- Cell Editor is now active on click in Grid and TreeGrid
+- Changes to the page size in TreeGrid pagination now correctly updates the grid view
+
 v19.3.0  
 - Compatible with Angular 8
 - Reduced bundle size for all individual component modules

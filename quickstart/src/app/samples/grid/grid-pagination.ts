@@ -197,6 +197,7 @@ export class GridPaginationSample {
     }
 
     private resetScrollPos(){
-        this.grid.scrollPos({ x: 0, y: 0 });
+        if (this.grid)
+            this.grid.scrollPos({ x: 0, y: 0 });
     }
 }

@@ -25,7 +25,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
         </style>
         <h2 class="feature-title">Calendar / Overview</h2>
         <div class="feature-content">
-            <iui-calendar [controlStyle]="ctrlStyle" [allowAnimation]="true"></iui-calendar>
+            <iui-calendar [controlStyle]="ctrlStyle" [allowAnimation]="true" (dateChanged)="onDateChanged($event)"></iui-calendar>
             <div class="feature-help" style="margin-top:50px;width:700px">
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> Calendar</strong> is a native Angular component that enables the user to select a date using a visual monthly calendar display. This component is fully customizable via CSS.</p>
                 <p><span class="initial-space"></span>The following properties and events are supported:</p>
@@ -68,5 +68,9 @@ export class CalendarOverviewSample {
         date.setDate(31);
 
         //this.calendarDate = date;
+    }
+
+    onDateChanged(e: any){
+        console.log("Calendar date changed to: ", e.date);
     }
 }

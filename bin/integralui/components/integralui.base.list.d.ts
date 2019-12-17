@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, Renderer } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIOrientation, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIContentVisiblity, IntegralUIOrientation, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -14,7 +14,12 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected cmpResolver?: ComponentFactoryResolver;
     animateItemSize: any;
     protected prevClickedObj: any;
+    itemData: Array<any>;
+    itemHoverData: Array<any>;
+    itemSelectData: Array<any>;
+    protected templateList: Array<any>;
     protected currentList: Array<any>;
+    protected fullList: Array<any>;
     protected options: any;
     private dataItems;
     protected itemList: Array<any>;
@@ -25,13 +30,17 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     private dragHandleElem;
     private dragHandleCmpRef;
     private dragHandleCmp;
-    private cloneElem;
+    protected cloneElem: any;
     private cloneElemStartPos;
     protected isCtrlDragEntered: boolean;
     protected isDragActive: boolean;
     protected filterParams: any;
     ctrlCursor: string;
     hoverItem: any;
+    blockHoverRect: any;
+    blockSelectRect: Array<any>;
+    blockSelectHeight: number;
+    hoverItemObj: any;
     protected currentFocusItem: any;
     protected isKeyboardActive: boolean;
     protected allowUpdate: boolean;
@@ -46,6 +55,10 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     };
     protected currentIndex: number;
     protected prevIndex: number;
+    isHoverTemplatePresent: boolean;
+    isSelectedTemplatePresent: boolean;
+    isUpdateActive: boolean;
+    longestItemWidth: number;
     private virtualization;
     protected visibleRange: number;
     protected updateTimer: any;
@@ -77,7 +90,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected currentSelectionMode: IntegralUISelectionMode;
     private shiftFirstSelectedItem;
     private removeIndex;
-    protected currentSelectedItems: Array<any>;
+    currentSelectedItems: Array<any>;
     protected sortComparer: any;
     protected itemClassName: string;
     protected itemContentClassName: string;
@@ -91,6 +104,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     allowFocus: boolean;
     dataFields: any;
     focusedItem: any;
+    contentVisibility: IntegralUIContentVisiblity;
     items: Array<any>;
     itemSpacing: number;
     mouseWheelSpeed: IntegralUISpeedMode;
@@ -205,9 +219,12 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected getItemElemList(): any;
     getItemFromComponent(cmp: any): any;
     getList(key?: string): any;
+    getFullList(): Array<any>;
+    updateFullList(): any[];
     getTopItem(): any;
     invokeMethod(key: string, data: any): boolean;
     protected isChildOf(targetItem: any, item: any): boolean;
+    isContentAllowed(item: any, type: string): boolean;
     protected isComponentIndexInRange(index: number): boolean;
     protected isIndexInRange(index: number): boolean;
     protected isItemAllowed(item: any): boolean;
@@ -222,6 +239,9 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     getNextItem(item: any): any;
     moveItem(item: any, direction: IntegralUIMoveDirection, targetItem?: any, position?: number): void;
     protected moveItemAt(item: any, targetItem: any, direction: IntegralUIMoveDirection, position?: number): void;
+    getSelectBlockRect(i: number): any;
+    hoverBlockMouseMove(e: any): void;
+    hoverBlockMouseLeave(e: any): void;
     itemMouseEnter(e: any, obj: any): void;
     itemMouseMove(e: any, obj: any): void;
     itemMouseLeave(e: any, obj: any): void;
@@ -245,6 +265,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     moveFocusFromItem(item: any, direction: string): any;
     onWindowKeyDown(e: any): void;
     onWindowKeyUp(e: any): void;
+    checkForSelectionChange(): void;
     protected getContentSize(): {
         width: number;
         height: number;
@@ -254,14 +275,16 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected resetLayoutTimer(): void;
     suspendLayout(): void;
     resumeLayout(): void;
-    protected updateCurrentLayout(): void;
+    protected updateCurrentLayout(full?: boolean): void;
     updateLayout(): void;
     protected updateScrollSize(): void;
+    protected updateSelectPos(): void;
     protected updateVisibleRange(): void;
     updateView(): void;
     private updateCloneElemPos;
     onCtrlMouseEnter(e: any): void;
     onCtrlMouseLeave(e: any): void;
+    onCtrlMouseMove(e: any): void;
     itemMouseDown(e: any, obj: any): void;
     itemMouseUp(e: any, obj: any): void;
     onScroll(e: any): void;
@@ -277,6 +300,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     onHorizontalScrollStart(e: any): void;
     onHorizontalScrollEnd(e: any): void;
     onHorizontalScrollChanged(e: any): void;
+    scrollMouseEnter(e: any): void;
     protected processScroll(e: any): void;
     private startScrollTimer;
     private stopScrollTimer;

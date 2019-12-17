@@ -1,10 +1,10 @@
-.iui-treeitem-content-hovered
+.iui-treeitem-hovered, .iui-treeitem-content-hovered
 {
     animation-name: none;
 	background-color: #82ff82;
 	border: 2px solid #82ff82;
 }
-.iui-treeitem-content-selected
+.iui-treeitem-selected, .iui-treeitem-content-selected
 {
     animation-name: none;
 	background-color: #00c400;

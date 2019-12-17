@@ -46,7 +46,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             <div style="width:400px" #application>
                 <iui-grid [appRef]="applicationRef" [controlStyle]="gridStyle" [columns]="columns" [rows]="rows" #grid>
                     <ng-template let-column [iuiTemplate]="{ type: 'header' }">
-                        <div style="width:100%" [iuiContextMenu]="columnMenu" [contextMenuRef]="contextMenuReference" (itemClick)="columnMenuItemClick($event)">
+                        <div style="width:100%" [iuiContextMenu]="columnMenu" [contextMenuRef]="contextMenuReference" (itemClick)="columnMenuItemClick($event)" (menuOpening)="columnMenuOpening($event, column)">
                             {{column.headerText}}
                         </div>
                     </ng-template>
@@ -152,6 +152,10 @@ export class GridContextMenuSample {
     }
 
     // ContextMenu events ----------------------------------------------------------------
+
+    columnMenuOpening(e: any, column: any){
+        this.grid.selectedColumn = column;
+    }
 
     columnMenuItemClick(e: any){
         if (e.item){

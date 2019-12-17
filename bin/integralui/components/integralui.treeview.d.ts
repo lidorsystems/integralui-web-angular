@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseService, IntegralUIItemDisplayMode, IntegralUIMoveDirection } from './integralui.core';
+import { IntegralUIBaseService, IntegralUIItemDisplayMode, IntegralUIMoveDirection, IntegralUITemplate } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -16,7 +16,6 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected filterService?: IntegralUIFilterService;
     protected cmpResolver?: ComponentFactoryResolver;
     protected baseService?: IntegralUIBaseService;
-    private fullList;
     protected isThereChildItems: boolean;
     private expandTimeout;
     private expandItem;
@@ -27,6 +26,8 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     contentElem: ElementRef;
     itemTemplate: any;
     itemElems: QueryList<ElementRef>;
+    itemContentElems: QueryList<ElementRef>;
+    templates: QueryList<IntegralUITemplate>;
     verScrollCmp: IntegralUIScrollBar;
     horScrollCmp: IntegralUIScrollBar;
     protected longestObj: any;
@@ -78,8 +79,10 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     expandBoxTouchEnd(e: any, item: any): void;
     toggle(item?: any, value?: boolean): void;
     exportToJSON(fields?: any, spacing?: any, flat?: boolean): string;
-    getFullList(): any[];
+    getDisplayMode(): IntegralUIItemDisplayMode;
+    updateFullList(): any[];
     protected getItemElemList(): ElementRef<any>[];
+    protected getItemContentElemList(): ElementRef<any>[];
     getItemFromComponent(cmp: IntegralUITreeItem): any;
     getItemIndex(cmp: IntegralUITreeItem): number;
     getItemLevel(item: any): number;
@@ -108,7 +111,8 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected updateBlockSize(): void;
     private isItemInCurrentList;
     private updateLongestItem;
-    protected updateCurrentLayout(): void;
+    private calcLongestItem;
+    protected updateCurrentLayout(full?: boolean): void;
     protected updateScrollSize(): void;
     beginLoad(item?: any): void;
     endLoad(item?: any): void;
@@ -120,6 +124,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     getControlStyle(): any;
     getBlockStyle(): any;
     protected getItemInlineStyle(itemObj: any): any;
+    protected getItemInlineContentStyle(itemObj: any): any;
     protected updateItemStyle(obj: any): void;
     protected getItemStyle(value: any): {
         general: any;

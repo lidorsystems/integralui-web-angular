@@ -47,7 +47,8 @@ export declare class IntegralUIDropDown {
     private currentSettings;
     private eventList;
     private templateData;
-    private isDropDownOpen;
+    protected isDropDownOpen: boolean;
+    protected isTouchProcessed: boolean;
     private winScrollPos;
     templates: QueryList<IntegralUITemplate>;
     private cmpRef;
@@ -63,10 +64,13 @@ export declare class IntegralUIDropDown {
     private updateTemplate;
     closeDropDown(): void;
     close(): void;
-    open(mouseEvent?: any): void;
+    open(e?: any, flag?: boolean): void;
     getSize(): {
         width: any;
         height: any;
     };
     onMouseDown(e: any): void;
+    onTouchStart(e: any): void;
+    onTouchEnd(e: any): void;
+    private processOpen;
 }

@@ -1,0 +1,27 @@
+.iui-sidebar {
+    background: #363636;
+    border-color: #121212;
+    color: #c5c5c5;
+}
+.iui-sidebar-line {
+    background: #363636;
+}
+.iui-sidebar-header {
+	background-color: #484848;
+	border-color: #121212;
+    color: white;
+}
+.iui-sidebar-header-button {
+	background-color: #484848;
+}
+.iui-sidebar-header-button span
+{
+    background: url(../../resources/icons.png) no-repeat -192px -80px;
+}
+.iui-sidebar-content {
+    color: white;
+}
+.iui-sidecontent-popup {
+    background: #363636;
+    border-color: #121212;
+}

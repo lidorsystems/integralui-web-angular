@@ -32,7 +32,13 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-cellddlist-label {
                 display: block;
-                padding: 7px 0;
+                padding: 5px 0;
+            }
+            .grid-cellddlist-normal .iui-editor-label {
+                padding-top: 5px;
+            }
+            .grid-cellddlist-normal .iui-editor-dropdown-button span {
+                margin-top: 5px;
             }
             .grid-cellddlist-editor li{
                 background-color: #fcfcfc;

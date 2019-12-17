@@ -92,11 +92,12 @@ export declare class IntegralUICalendar extends IntegralUIBaseComponent {
     ctrlMouseEnter(e: any): void;
     ctrlMouseLeave(e: any): void;
     ctrlMouseUp(e: any): void;
+    ctrlTouchEnd(e: any): void;
     dayClicked(e: any, day: any): void;
     dayTouchEnd(e: any, day: any): void;
     dayEnter(e: any, day: any): void;
     dayLeave(e: any, day: any): void;
-    headerClicked(e: any): void;
+    headerClicked(e: any, flag?: boolean): void;
     monthClicked(e: any, month: any): void;
     monthTouchEnd(e: any, month: any): void;
     monthEnter(e: any, month: any): void;

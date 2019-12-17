@@ -1,23 +1,16 @@
-.iui-treeitem-content-hovered
+.iui-treeitem-hovered, .iui-treeitem-content-hovered
 {
     animation-name: none;
     background-color: #a6c9e6;
     border: 2px solid #97c0e1;
 }
-.iui-treeitem-content-selected
+.iui-treeitem-selected, .iui-treeitem-content-selected
 {
     animation-name: none;
     background-color: #428bca;
     border: 2px solid #357ebd;
     color: white;
 }
-
-
-
-.iui-treeitem-content-hovered, .iui-treeitem-content-selected {
-    animation-name: none;
-}
-
 .iui-treeitem-expand-box
 {
     background: url(../../resources/expandbox-icons.png) no-repeat 0 -48px;

@@ -22,6 +22,23 @@
     margin: 0;
 }
 
+.iui-treeview-block-hover, .iui-treeview-block-select {
+    background: transparent;
+    border: thin solid #cecece;
+    box-shadow: 2px 3px 3px #e5e5e5;
+    pointer-events: none;
+    position: absolute;
+    z-index: 6;
+}
+.iui-treeview-block-hover > div, .iui-treeview-block-select > div {
+    background: #f5f5f5;
+    pointer-events: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
 /* Disabled State */
 .iui-treeview-disabled div, .iui-treeview-disabled ul
 {

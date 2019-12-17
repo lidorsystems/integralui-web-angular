@@ -31,6 +31,7 @@ export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     position: any;
     value: number;
     width: number;
+    scrollMouseDown: EventEmitter<any>;
     scrollStart: EventEmitter<any>;
     scrollEnd: EventEmitter<any>;
     valueChanged: EventEmitter<any>;

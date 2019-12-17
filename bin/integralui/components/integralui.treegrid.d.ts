@@ -15,11 +15,6 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     protected filterService?: IntegralUIFilterService;
     protected cmpResolver?: ComponentFactoryResolver;
     protected baseService?: IntegralUIBaseService;
-    headerData: Array<any>;
-    rowData: Array<any>;
-    rowHoverData: Array<any>;
-    cellData: Array<any>;
-    footerData: Array<any>;
     private fullList;
     private expandTimeout;
     private expandRow;
@@ -35,6 +30,8 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     rowLeftElems: QueryList<ElementRef>;
     rowRightElems: QueryList<ElementRef>;
     cellElems: QueryList<ElementRef>;
+    cellLeftElems: QueryList<ElementRef>;
+    cellRightElems: QueryList<ElementRef>;
     headerElem: ElementRef;
     headerRowElem: ElementRef;
     footerElem: ElementRef;
@@ -86,9 +83,9 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     protected updateScrollNormalRowList(flag?: boolean): void;
     protected updateScrollLeftRowList(flag?: boolean): void;
     protected updateScrollRightRowList(flag?: boolean): void;
-    protected createScrollObjFromRow(row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
-    protected createScrollLeftObjFromRow(row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
-    protected createScrollRightObjFromRow(row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
+    protected createScrollObjFromRow(columnList: Array<any>, row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
+    protected createScrollLeftObjFromRow(columnList: Array<any>, row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
+    protected createScrollRightObjFromRow(columnList: Array<any>, row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
     private addColumnToCurrentList;
     protected updateCurrentColumnList(): void;
     protected updateCurrentRowList(): void;
@@ -104,7 +101,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     rowDragDrop(e: any, obj: any): void;
     protected isParentOf(targetRow: any, row: any): boolean;
     protected isChildOf(targetRow: any, row: any): boolean;
-    openDropDown(e: any, obj: any, i: number, j: number): void;
+    openDropDown(e: any, obj: any, i: number, j: number, fixed?: string): void;
     collapse(row?: any): void;
     expand(row?: any): void;
     toggle(row?: any, value?: boolean): void;
@@ -114,7 +111,8 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     private getColumnFromCell;
     protected getCellAlignment(column: any): string;
     getColumnAlignment(column: any, flag?: boolean): string;
-    private getRowElems;
+    private getCellElems;
+    protected getRowElems(fixed?: string): QueryList<ElementRef<any>>;
     isRowExpanded(row: any): boolean;
     protected isThereVisibleChildren(row: any): boolean;
     columnMouseDown(e: any, obj: any): void;
@@ -128,8 +126,6 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     gridMouseEnter(e: any): void;
     gridMouseLeave(e: any): void;
     rowMouseEnter(e: any, obj: any): void;
-    hoverBlockMouseMove(e: any): void;
-    hoverBlockMouseLeave(e: any): void;
     rowMouseLeave(e: any, obj: any): void;
     clearHoverRow(row?: any): void;
     processLeftArrowKey(cell: any): any;
@@ -144,7 +140,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     updateLayout(): void;
     private updateVisibleRange;
     private updateScrollSize;
-    private getRowScrollIndex;
+    protected updateSelectPos(): void;
     onWindowMouseMove(e: any): void;
     onWindowMouseUp(e: any): void;
     onWindowTouchEnd(e: any): void;

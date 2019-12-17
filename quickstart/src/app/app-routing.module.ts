@@ -43,6 +43,9 @@ import { CalendarOverviewSample } from './samples/calendar/calendar-overview';
 import { CheckBoxSample } from './samples/checkbox/checkbox-main';
 import { CheckBoxOverviewSample } from './samples/checkbox/checkbox-overview';
 
+import { ColorPickerSample } from './samples/colorpicker/colorpicker-main';
+import { ColorPickerOverviewSample } from './samples/colorpicker/colorpicker-overview';
+
 import { ComboBoxSample } from './samples/combobox/combobox-main';
 import { ComboBoxOverviewSample } from './samples/combobox/combobox-overview';
 
@@ -66,6 +69,7 @@ import { FrameOverviewSample } from './samples/frame/frame-overview';
 import { GridSample } from './samples/grid/grid-main';
 import { GridAddRemoveSample } from './samples/grid/grid-add-remove';
 import { GridAddRowDynamicallySample } from './samples/grid/grid-add-row-dynamically';
+import { GridAutoSizeColumnsSample } from './samples/grid/grid-auto-size-columns';
 import { GridBuiltinEditorsSample } from './samples/grid/grid-builtin-editors';
 import { GridCellDropDownSample } from './samples/grid/grid-cell-dropdown';
 import { GridCellDropDownCheckedListSample } from './samples/grid/grid-cell-dropdown-checked-list';
@@ -74,6 +78,7 @@ import { GridColumnDropDownSample } from './samples/grid/grid-column-dropdown';
 import { GridContextMenuSample } from './samples/grid/grid-context-menu';
 import { GridDragDropTreeGridSample } from './samples/grid/grid-drag-drop-treegrid';
 import { GridEditCellCheckBoxSample } from './samples/grid/grid-edit-cell-checkbox';
+import { GridEditCellColorPickerSample } from './samples/grid/grid-edit-cell-colorpicker';
 import { GridEditCellDatePickerSample } from './samples/grid/grid-edit-cell-datepicker';
 import { GridEditCellDropListSample } from './samples/grid/grid-edit-cell-droplist';
 import { GridEditCellNumericSample } from './samples/grid/grid-edit-cell-numeric';
@@ -86,6 +91,7 @@ import { GridFastLoadSample } from './samples/grid/grid-fast-load';
 import { GridFilterSample } from './samples/grid/grid-filter';
 import { GridFixedColumnsSample } from './samples/grid/grid-fixed-columns';
 import { GridGroupingSample } from './samples/grid/grid-grouping';
+import { GridMultiLevelHeadersSample } from './samples/grid/grid-multi-level-headers';
 import { GridMultiSelectSample } from './samples/grid/grid-multi-select';
 import { GridOverviewSample } from './samples/grid/grid-overview';
 import { GridPaginationSample } from './samples/grid/grid-pagination';
@@ -149,6 +155,9 @@ import { RangeOverviewSample } from './samples/range/range-overview';
 import { RatingSample } from './samples/rating/rating-main';
 import { RatingOverviewSample } from './samples/rating/rating-overview';
 
+import { SideBarSample } from './samples/sidebar/sidebar-main';
+import { SideBarOverviewSample } from './samples/sidebar/sidebar-overview';
+
 import { SlideBarSample } from './samples/slidebar/slidebar-main';
 import { SlideBarOverviewSample } from './samples/slidebar/slidebar-overview';
 
@@ -183,6 +192,7 @@ import { TreeGridFastLoadSample } from './samples/treegrid/treegrid-fast-load';
 import { TreeGridFilterSample } from './samples/treegrid/treegrid-filter';
 import { TreeGridFixedColumnsSample } from './samples/treegrid/treegrid-fixed-columns';
 import { TreeGridHighlightRowsSample } from './samples/treegrid/treegrid-highlight-rows';
+import { TreeGridMultiLevelHeadersSample } from './samples/treegrid/treegrid-multi-level-headers';
 import { TreeGridMultiSelectSample } from './samples/treegrid/treegrid-multi-select';
 import { TreeGridOverviewSample } from './samples/treegrid/treegrid-overview';
 import { TreeGridPaginationSample } from './samples/treegrid/treegrid-pagination';
@@ -271,6 +281,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             		{ path: 'overview', component: CheckBoxOverviewSample }
               	]
           	},
+            { 
+                path: 'colorpicker', component: ColorPickerSample,
+                children: [
+                { path: '', redirectTo: 'overview', pathMatch: 'full' },
+                { path: 'overview', component: ColorPickerOverviewSample }
+                ]
+            },
           	{ 
               	path: 'combobox', component: ComboBoxSample,
               	children: [
@@ -321,6 +338,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             		{ path: '', redirectTo: 'overview', pathMatch: 'full' },
             		{ path: 'add-remove', component: GridAddRemoveSample },
             		{ path: 'add-row-dynamically', component: GridAddRowDynamicallySample },
+                { path: 'auto-size-columns', component: GridAutoSizeColumnsSample },
             		{ path: 'builtin-editors', component: GridBuiltinEditorsSample },
             		{ path: 'cell-dropdown', component: GridCellDropDownSample },
             		{ path: 'cell-dropdown-checked-list', component: GridCellDropDownCheckedListSample },
@@ -329,6 +347,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             		{ path: 'context-menu', component: GridContextMenuSample },
             		{ path: 'drag-drop-treegrid', component: GridDragDropTreeGridSample },
                     { path: 'edit-cell-checkbox', component: GridEditCellCheckBoxSample },
+                    { path: 'edit-cell-colorpicker', component: GridEditCellColorPickerSample },
                     { path: 'edit-cell-datepicker', component: GridEditCellDatePickerSample },
                     { path: 'edit-cell-droplist', component: GridEditCellDropListSample },
                     { path: 'edit-cell-numeric', component: GridEditCellNumericSample },
@@ -341,6 +360,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             		{ path: 'filter', component: GridFilterSample },
                     { path: 'fixed-columns', component: GridFixedColumnsSample },
             		{ path: 'grouping', component: GridGroupingSample },
+                    { path: 'multi-level-headers', component: GridMultiLevelHeadersSample },
             		{ path: 'multi-select', component: GridMultiSelectSample },
             		{ path: 'overview', component: GridOverviewSample },
             		{ path: 'pagination', component: GridPaginationSample },
@@ -467,6 +487,13 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
               	]
           	},
             { 
+                path: 'sidebar', component: SideBarSample,
+                children: [
+                { path: '', redirectTo: 'overview', pathMatch: 'full' },
+                { path: 'overview', component: SideBarOverviewSample }
+                ]
+            },
+            { 
               	path: 'slidebar', component: SlideBarSample,
               	children: [
             		{ path: '', redirectTo: 'overview', pathMatch: 'full' },
@@ -523,6 +550,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
             		{ path: 'filter', component: TreeGridFilterSample },
                     { path: 'fixed-columns', component: TreeGridFixedColumnsSample },
             		{ path: 'highlight-rows', component: TreeGridHighlightRowsSample },
+                { path: 'multi-level-headers', component: TreeGridMultiLevelHeadersSample },
             		{ path: 'multi-select', component: TreeGridMultiSelectSample },
             		{ path: 'overview', component: TreeGridOverviewSample },
             		{ path: 'pagination', component: TreeGridPaginationSample },
@@ -588,6 +616,8 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         CalendarOverviewSample,
         CheckBoxSample,
         CheckBoxOverviewSample,
+        ColorPickerSample,
+        ColorPickerOverviewSample,
         ComboBoxSample,
         ComboBoxOverviewSample,
         ContextMenuSample,
@@ -605,6 +635,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         GridSample,
         GridAddRemoveSample,
         GridAddRowDynamicallySample,
+        GridAutoSizeColumnsSample,
         GridBuiltinEditorsSample,
         GridCellDropDownSample,
         GridCellDropDownCheckedListSample,
@@ -613,6 +644,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         GridContextMenuSample,
         GridDragDropTreeGridSample,
         GridEditCellCheckBoxSample,
+        GridEditCellColorPickerSample,
         GridEditCellDatePickerSample,
         GridEditCellDropListSample,
         GridEditCellNumericSample,
@@ -625,6 +657,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         GridFilterSample,
         GridFixedColumnsSample,
         GridGroupingSample,
+        GridMultiLevelHeadersSample,
         GridMultiSelectSample,
         GridOverviewSample,
         GridPaginationSample,
@@ -668,6 +701,8 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         RangeOverviewSample,
         RatingSample,
         RatingOverviewSample,
+        SideBarSample,
+        SideBarOverviewSample,
         SlideBarSample,
         SlideBarOverviewSample,
         SliderSample,
@@ -701,6 +736,7 @@ import { TreeViewTooltipSample } from './samples/treeview/treeview-tooltip';
         TreeGridFilterSample,
         TreeGridFixedColumnsSample,
         TreeGridHighlightRowsSample,
+        TreeGridMultiLevelHeadersSample,
         TreeGridMultiSelectSample,
         TreeGridOverviewSample,
         TreeGridPaginationSample,

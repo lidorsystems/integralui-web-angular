@@ -95,6 +95,7 @@ export class TreeGridSample {
             { text: "Filter", link: './filter' },
             { text: "Fixed Columns", link: './fixed-columns' },
             { text: "Highlight Rows", link: './highlight-rows' },
+            { text: "Multi Level Headers", link: './multi-level-headers' },
             { text: "Multi Select", link: './multi-select' },
             { text: "Overview", link: './overview' },
             { text: "Pagination", link: './pagination' },
@@ -105,7 +106,7 @@ export class TreeGridSample {
             { text: "Back to Main", link: '', margin: 50 }
         ];
 
-        this.selectedItem = this.sideList[19];
+        this.selectedItem = this.sideList[20];
     }   
 
     ngAfterContentChecked(){
@@ -116,7 +117,7 @@ export class TreeGridSample {
         else
             self.blockHeight = "auto";
 
-        self.blockHeight = '976px';
+        self.blockHeight = '1015px';
     }
 
     selectFeature(item: any){

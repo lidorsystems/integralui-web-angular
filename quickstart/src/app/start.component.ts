@@ -25,7 +25,7 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
                 overflow: visible !important;
                 margin: 0;
                 width: 300px;
-                height: 680px;
+                height: 725px;
             }
             .list-item
             {
@@ -209,7 +209,7 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
             }
             .autocomplete
             {
-                background-position: -288px 0;
+                background-position: 0 -72px;
             }
             .breadcrumb
             {
@@ -217,15 +217,23 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
             }
             .popover
             {
-                background-position: -288px -24px;
+                background-position: -24px -72px;
             }
             .tool
             {
                 background-position: -264px -24px;
             }
+            .colorpicker
+            {
+                background-position: -48px -72px;
+            }
+            .ctrl-sidebar
+            {
+                background-position: -72px -72px;
+            }
         </style>
         <div class="component-list">
-            <h2 class="feature-title" style="color2:#c60d0d;font-size:1.6em;margin:0 0 20px 200px;padding-left:7px;">Components by Category</h2>
+            <h2 class="feature-title" style="font-size:1.6em;margin:0 0 15px 200px;padding-left:7px;">Components by Category</h2>
             <iui-listview [items]="items" [appRef]="applicationRef" [controlStyle]="ctrlStyle" [scrollMode]="scrollType" #listview>
                 <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="getItemStyle(item)" [allowAnimation]="false">
                     <div [ngSwitch]="item.tag">
@@ -271,6 +279,7 @@ export class StartComponent {
             { text: "EDITORS", tag: 'category' },
             { text: "Button", icon: 'button', link: '/button' },
             { text: "CheckBox", icon: 'checkbox', link: '/checkbox' },
+            { text: "ColorPicker", icon: 'colorpicker', link: '/colorpicker' },
             { text: "ComboBox", icon: 'combobox', link: '/combobox' },
             { text: "DatePicker", icon: 'datepicker', link: '/datepicker' },
             { text: "NumericUpDown", icon: 'numeric-updown', link: '/numeric-updown' },
@@ -281,6 +290,7 @@ export class StartComponent {
             { text: "LAYOUT", tag: 'category' },
             { text: "Accordion", icon: 'accordion', link: '/accordion' },
             { text: "GroupBox", icon: 'groupbox', link: '/groupbox' },
+            { text: "SideBar", icon: 'ctrl-sidebar', link: '/sidebar' },
             { text: "SplitContainer", icon: 'splitcontainer', link: '/splitcontainer' },
             { text: "Splitter", icon: 'splitter', link: '/splitter' },
             { text: "TabStrip", icon: 'tabstrip', link: '/tabstrip' },

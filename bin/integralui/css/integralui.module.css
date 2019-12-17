@@ -5,6 +5,7 @@
 @import 'integralui.button.css';
 @import 'integralui.calendar.css';
 @import 'integralui.checkbox.css';
+@import 'integralui.colorpicker.css';
 @import 'integralui.contextmenu.css';
 @import 'integralui.combobox.css';
 @import 'integralui.datepicker.css';
@@ -31,6 +32,7 @@
 @import 'integralui.radiobutton.css';
 @import 'integralui.rating.css';
 @import 'integralui.scrollbar.css';
+@import 'integralui.sidebar.css';
 @import 'integralui.slidebar.css';
 @import 'integralui.slider.css';
 @import 'integralui.splitcontainer.css';

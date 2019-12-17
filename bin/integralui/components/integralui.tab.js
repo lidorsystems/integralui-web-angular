@@ -1,6 +1,6 @@
 /*
   filename: integralui.tab.js
-  version : 1.8.0
+  version : 1.9.0
   Copyright © 2016-2019 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

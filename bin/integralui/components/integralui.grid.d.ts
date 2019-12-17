@@ -16,11 +16,6 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     protected changeRef?: ChangeDetectorRef;
     protected cmpResolver?: ComponentFactoryResolver;
     protected baseService?: IntegralUIBaseService;
-    headerData: Array<any>;
-    rowData: Array<any>;
-    rowHoverData: Array<any>;
-    cellData: Array<any>;
-    footerData: Array<any>;
     private fullList;
     private expandTimeout;
     private expandRow;
@@ -49,6 +44,8 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     rowLeftElems: QueryList<ElementRef>;
     rowRightElems: QueryList<ElementRef>;
     cellElems: QueryList<ElementRef>;
+    cellLeftElems: QueryList<ElementRef>;
+    cellRightElems: QueryList<ElementRef>;
     headerElem: ElementRef;
     headerRowElem: ElementRef;
     footerElem: ElementRef;
@@ -109,9 +106,9 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     protected updateScrollLeftRowList(flag?: boolean): void;
     protected updateScrollRightRowList(flag?: boolean): void;
     private isRowGroup;
-    protected createScrollObjFromRow(row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
-    protected createScrollLeftObjFromRow(row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
-    protected createScrollRightObjFromRow(row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
+    protected createScrollObjFromRow(columnList: Array<any>, row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
+    protected createScrollLeftObjFromRow(columnList: Array<any>, row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
+    protected createScrollRightObjFromRow(columnList: Array<any>, row: any, rowObj?: any, scrollIndex?: number, fixed?: string): any;
     protected updateScrollRowListDragOver(row: any): void;
     private addColumnToCurrentList;
     protected updateCurrentColumnList(): void;
@@ -144,7 +141,7 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     protected processDataDropAtTargetRow(row: any, targetRow: any, pos: number): void;
     private getFirstGroupChildRow;
     protected updateDragHandlePos(e: any): void;
-    openDropDown(e: any, obj: any, i: number, j: number): void;
+    openDropDown(e: any, obj: any, i: number, j: number, fixed?: string): void;
     collapse(row?: any): void;
     expand(row?: any): void;
     toggle(row?: any, value?: boolean): void;
@@ -155,7 +152,8 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     private getColumnFromCell;
     protected getCellAlignment(column: any): string;
     getColumnAlignment(column: any, flag?: boolean): string;
-    private getRowElems;
+    private getCellElems;
+    protected getRowElems(fixed?: string): QueryList<ElementRef>;
     private isGroupExpandedFromRow;
     isGroupExpanded(group: any): boolean;
     isRowExpanded(row: any): boolean;
@@ -195,8 +193,6 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     gridMouseEnter(e: any): void;
     gridMouseLeave(e: any): void;
     rowMouseEnter(e: any, obj: any): void;
-    hoverBlockMouseMove(e: any): void;
-    hoverBlockMouseLeave(e: any): void;
     rowMouseLeave(e: any, obj: any): void;
     clearHoverRow(row?: any): void;
     rowMouseMove(e: any, obj: any, index: number): void;
@@ -213,7 +209,7 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     updateLayout(): void;
     private updateVisibleRange;
     private updateScrollSize;
-    private getRowScrollIndex;
+    protected updateSelectPos(): void;
     onWindowMouseMove(e: any): void;
     onWindowMouseUp(e: any): void;
     onWindowTouchEnd(e: any): void;
@@ -226,7 +222,7 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     beginLoad(row?: any): void;
     endLoad(row?: any): void;
     private isRowLoading;
-    getColumnOpacity(obj: any): 1 | 0;
+    getColumnOpacity(obj: any): number;
     protected getHeaderRect(): any;
     scrollTo(row: any): void;
     rowMouseDown(e: any, obj: any, index: number): void;

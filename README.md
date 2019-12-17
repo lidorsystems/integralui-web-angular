@@ -1,8 +1,8 @@
-# IntegralUI Web for Angular, v19.3
+# IntegralUI Web for Angular, v19.4
 
 IntegralUI Web is a library built on top of Angular 8 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 
-![IntegralUI Web 19.3 - 35+ UI Components for Angular](https://www.lidorsystems.com/about/newsletter/images/integralui-web-18100.png)
+![IntegralUI Web 19.4 - 35+ UI Components for Angular](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
 
@@ -19,6 +19,8 @@ Here is a brief overview of what is included:
 [Calendar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/calendar/overview/) - Enables the user to select a date using a visual monthly calendar display
 
 [CheckBox](https://www.lidorsystems.com/products/web/studio/samples/angular/#/checkbox/overview/) - Represents a check box
+
+[ColorPicker](https://www.lidorsystems.com/products/web/studio/samples/angular/#/colorpicker/overview/) - Allows the user to select a color by using a drop-down panel with color palette and slider
 
 [ComboBox](https://www.lidorsystems.com/support/articles/angular/combobox/combobox-component.aspx) - Advanced version of standard ComboBox element
 
@@ -51,6 +53,8 @@ Here is a brief overview of what is included:
 [RadioButton](https://www.lidorsystems.com/products/web/studio/samples/angular/#/radiobutton/overview/) - Represents a radio button
 
 [Rating](https://www.lidorsystems.com/products/web/studio/samples/angular/#/rating/overview/) - Visualizes ratings
+
+[SideBar](https://www.lidorsystems.com/products/web/studio/samples/angular/#/sidebar/overview/) - Allows you to add a custom content panel that appears by sliding from page side over main content
 
 [SlideBar](https://www.lidorsystems.com/support/articles/angular/slidebar/slidebar-component.aspx) - Animates slides composed of custom content
 

@@ -38,6 +38,11 @@ export declare enum IntegralUICheckState {
     Indeterminate = 1,
     Checked = 2
 }
+export declare enum IntegralUIColorFormat {
+    HEX = 0,
+    HSL = 1,
+    RGB = 2
+}
 export declare enum IntegralUIDateFormat {
     Short = 0,
     Long = 1,
@@ -58,16 +63,17 @@ export declare enum IntegralUIEditorType {
     None = 0,
     Button = 1,
     CheckBox = 2,
-    Date = 3,
-    DropList = 4,
-    Image = 5,
-    Label = 6,
-    ListScroller = 7,
-    Numeric = 8,
-    Progress = 9,
-    Rating = 10,
-    Slider = 11,
-    TextBox = 12
+    Color = 3,
+    Date = 4,
+    DropList = 5,
+    Image = 6,
+    Label = 7,
+    ListScroller = 8,
+    Numeric = 9,
+    Progress = 10,
+    Rating = 11,
+    Slider = 12,
+    TextBox = 13
 }
 export declare enum IntegralUINumericDisplayMode {
     InBound = 0,
@@ -120,6 +126,12 @@ export declare enum IntegralUISelectionMode {
     One = 1,
     MultiSimple = 2,
     MultiExtended = 3
+}
+export declare enum IntegralUIContentVisiblity {
+    None = 0,
+    Hover = 1,
+    Select = 2,
+    Both = 3
 }
 export declare enum IntegralUISortOrder {
     None = 0,
@@ -360,6 +372,7 @@ export declare class IntegralUIList extends IntegralUIBaseComponent {
     ctrlMouseDown(e: any): void;
     ctrlMouseUp(e: any): void;
     itemMouseDown(e: any, item: any): void;
+    itemTouchStart(e: any, item: any): void;
     private contentSize;
     private avgItemHeight;
     updateLayout(): void;
@@ -405,8 +418,11 @@ export declare class IntegralUIHeaderItem extends IntegralUIItem {
 }
 export declare class IntegralUIPopup {
     protected elemRef: ElementRef;
+    protected commonService?: IntegralUICommonService;
     private ctrlState;
+    protected isVisible: boolean;
     protected options: any;
+    protected ctrlMaxSize: any;
     protected ctrlSize: any;
     protected generalClassName: string;
     protected defaultStyle: any;
@@ -417,12 +433,17 @@ export declare class IntegralUIPopup {
     opacity: number;
     position: any;
     controlStyle: any;
+    maxSize: any;
     size: any;
     state: IntegralUIObjectState;
     stateChanged: EventEmitter<any>;
-    constructor(elemRef: ElementRef);
+    constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected initStyle(): void;
+    processClose(): void;
+    onWindowMouseDown(e: any): void;
+    onWindowTouchStart(e: any): void;
+    protected isClickOut(pos: any): boolean;
     focus(): void;
     protected isFieldAvailable(field: any, value: any): any;
     getControlStyle(): any;
@@ -473,6 +494,7 @@ export declare class IntegralUIPopup {
 }
 export declare class IntegralUIListPopup extends IntegralUIPopup {
     protected elemRef: ElementRef;
+    protected commonService?: IntegralUICommonService;
     private closeTimer;
     private openTimer;
     private dataItems;
@@ -492,7 +514,7 @@ export declare class IntegralUIListPopup extends IntegralUIPopup {
     size: any;
     closed: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
-    constructor(elemRef: ElementRef);
+    constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     ngAfterContentInit(): void;
     ngAfterViewInit(): void;
