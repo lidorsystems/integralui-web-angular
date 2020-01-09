@@ -127,7 +127,7 @@ export declare enum IntegralUISelectionMode {
     MultiSimple = 2,
     MultiExtended = 3
 }
-export declare enum IntegralUIContentVisiblity {
+export declare enum IntegralUIContentVisibility {
     None = 0,
     Hover = 1,
     Select = 2,

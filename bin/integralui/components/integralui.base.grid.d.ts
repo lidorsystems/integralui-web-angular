@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, ComponentFactoryResolver, ElementRef, EventEmitter, Renderer } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIContentVisiblity, IntegralUIDragDropDisplayMode, IntegralUIEditorType, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIContentVisibility, IntegralUIDragDropDisplayMode, IntegralUIEditorType, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -213,7 +213,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     headerHeight: number;
     mouseWheelSpeed: IntegralUISpeedMode;
     paging: any;
-    rowContentVisibility: IntegralUIContentVisiblity;
+    rowContentVisibility: IntegralUIContentVisibility;
     rowHeight: number;
     rows: Array<any>;
     selectedColumn: any;

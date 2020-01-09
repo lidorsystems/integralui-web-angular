@@ -10,7 +10,7 @@ Here is a brief overview of what is included:
 
 [Accordion](https://www.lidorsystems.com/support/articles/angular/accordion/accordion-component.aspx) - Displays a list of expandable groups in vertical layout
 
-[AutoComplete](https://www.lidorsystems.com/products/web/studio/samples/angular/#/autocomplete/overview/) - Represents a text box with a dropdown list where you can choose among suggested options<
+[AutoComplete](https://www.lidorsystems.com/products/web/studio/samples/angular/#/autocomplete/overview/) - Represents a text box with a dropdown list where you can choose among suggested options
 
 [Breadcrumb](https://www.lidorsystems.com/products/web/studio/samples/angular/#/breadcrumb/overview/) - Used for navigation, where each item can have a link that is automatically separated
 

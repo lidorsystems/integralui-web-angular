@@ -1,5 +1,5 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, Renderer } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIContentVisiblity, IntegralUIOrientation, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIContentVisibility, IntegralUIOrientation, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
@@ -104,7 +104,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     allowFocus: boolean;
     dataFields: any;
     focusedItem: any;
-    contentVisibility: IntegralUIContentVisiblity;
+    contentVisibility: IntegralUIContentVisibility;
     items: Array<any>;
     itemSpacing: number;
     mouseWheelSpeed: IntegralUISpeedMode;

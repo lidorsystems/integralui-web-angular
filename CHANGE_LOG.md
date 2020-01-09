@@ -1,3 +1,6 @@
+v19.4.115  
+- Fixed the type error with IntegralUIContentVisibility enumeration
+
 v19.4.0  
 - New components: ColorPicker and SideBar
 - Option to use a Color Picker as Editor in Grid and TreeGrid
