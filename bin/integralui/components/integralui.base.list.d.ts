@@ -278,7 +278,8 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected updateCurrentLayout(full?: boolean): void;
     updateLayout(): void;
     protected updateScrollSize(): void;
-    protected updateSelectPos(): void;
+    protected updateHoverContentPos(): void;
+    protected updateSelectContentPos(): void;
     protected updateVisibleRange(): void;
     updateView(): void;
     private updateCloneElemPos;

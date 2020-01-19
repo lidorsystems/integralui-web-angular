@@ -1,3 +1,7 @@
+v19.4.211 
+- iurResize directive change detection on attached element is improved
+- Fixed the issue in Breadcrumb that caused flickering during resize
+
 v19.4.115  
 - Fixed the type error with IntegralUIContentVisibility enumeration
 

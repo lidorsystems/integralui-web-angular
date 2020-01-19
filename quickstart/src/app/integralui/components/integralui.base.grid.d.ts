@@ -628,7 +628,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     onHorizontalScrollEnd(e: any): void;
     onHorizontalScrollChanged(e: any): void;
     scrollMouseDown(e: any): void;
-    protected updateSelectPos(): void;
+    protected updateSelectContentPos(): void;
     updateView(flag?: boolean): void;
     protected processScroll(e: any, extraTopSpace?: number, extraBottomSpace?: number): void;
     private startScrollTimer;

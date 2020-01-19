@@ -209,7 +209,7 @@ export declare class IntegralUIGrid extends IntegralUIBaseGrid {
     updateLayout(): void;
     private updateVisibleRange;
     private updateScrollSize;
-    protected updateSelectPos(): void;
+    protected updateSelectContentPos(): void;
     onWindowMouseMove(e: any): void;
     onWindowMouseUp(e: any): void;
     onWindowTouchEnd(e: any): void;
