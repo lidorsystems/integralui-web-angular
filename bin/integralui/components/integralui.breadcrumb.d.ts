@@ -17,6 +17,7 @@ export declare class IntegralUIBreadCrumb extends IntegralUIBaseComponent {
     private prevActiveObj;
     private isRootActive;
     private isRootHovered;
+    blockOpacity: number;
     protected isPopupDelayed: boolean;
     itemSize: any;
     private listSize;

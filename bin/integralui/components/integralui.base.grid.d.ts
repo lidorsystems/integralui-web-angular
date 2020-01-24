@@ -426,6 +426,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected hideDropList(): void;
     isCellEditorEnabled(column: any, cell: any): boolean;
     protected isEditorPresent(type: IntegralUIEditorType): boolean;
+    private isEditorPresentInList;
     openEditor(e: any, obj: any, type?: string): void;
     protected removeCalendar(): void;
     protected removeColorPopup(): void;

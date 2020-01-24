@@ -21,6 +21,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     private expandItem;
     protected currentItemDisplay: IntegralUIItemDisplayMode;
     private isExpandBoxVisible;
+    private isLongestInProcess;
     contentList: QueryList<IntegralUITreeItem>;
     contentRef: ViewContainerRef;
     contentElem: ElementRef;
@@ -110,6 +111,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     getComponentFromItem(item: any): any;
     protected updateBlockSize(): void;
     private isItemInCurrentList;
+    getFullItemWidth(): string;
     private updateLongestItem;
     private calcLongestItem;
     protected updateCurrentLayout(full?: boolean): void;
@@ -117,7 +119,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     beginLoad(item?: any): void;
     endLoad(item?: any): void;
     private isItemLoading;
-    isVerScrollVisible(): boolean;
+    isVerScrollVisible2(): boolean;
     scrollTo(item: any): void;
     protected callAfterSelectEvent(item: any): void;
     protected clearComponentSelection(): void;

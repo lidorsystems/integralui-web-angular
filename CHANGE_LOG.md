@@ -1,3 +1,7 @@
+v19.4.278
+─	Fixed the issue with horizontal scrollbar appearance during expand/collapse of TreeView items when hover and/or select templates are in use
+─	The horizontal scrolling in TreeView now correctly shows the longest item in full
+
 v19.4.211 
 - iurResize directive change detection on attached element is improved
 - Fixed the issue in Breadcrumb that caused flickering during resize
