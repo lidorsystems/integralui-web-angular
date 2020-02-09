@@ -154,18 +154,6 @@ To apply a theme, also add code line for corresonding theme file:
 
 <b>Note</b>   You can choose a theme from available themes located at '~ ... /integralui/themes' folder.
 
-
-To include resources that are used by IntegralUI components in your project during build, you need to:
-1. Under assets folder create a subfolder named integralui
-2. Copy/Paste the node_modules/integralui-web/bin/integralui/resources folder to it
-3. Add the following code under <b>assets</b> section in angular.json file:
-
-```bash
-"src/integralui/resources"
-```
-
-<b>Note</b>   This is required because Angular compiler cannot detect resources that are outside the /src section of your app. It is needed if you are using resources that are part of IntegralUI Web, in your application.
-
 ### How to Reduce Bundle Size
 
 If you are using only few components from the InetgralUI Web package, you can reduce the bundle size during compilation by modifying the <b>integralui.module.css</b> file. This file imports CSS files for each component that is part of the package. Inside this file import only CSS for components that you are using.
