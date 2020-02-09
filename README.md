@@ -168,7 +168,7 @@ To include resources that are used by IntegralUI components in your project duri
 
 ### How to Reduce Bundle Size
 
-If you are using only few components from the InetgralUI Web package, you can reduce the bundle size during compilation by modifying the integralui.module.css file. This file imports CSS files for each component that is part of the package. Inside this file import only CSS for components that you are using.
+If you are using only few components from the InetgralUI Web package, you can reduce the bundle size during compilation by modifying the <b>integralui.module.css</b> file. This file imports CSS files for each component that is part of the package. Inside this file import only CSS for components that you are using.
 
 For example, if you are using only the TreeView component in your app, comment out all other imports for individual components, except for the TreeView component. The result should look like this:
 
