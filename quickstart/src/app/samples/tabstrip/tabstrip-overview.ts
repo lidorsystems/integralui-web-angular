@@ -35,7 +35,7 @@ import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../inte
             }
             .tab-icon
             {
-                background: url(app/integralui/resources/icons-x24.png) no-repeat 0 0;
+                background: url(app/resources/icons-x24.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0 !important;
                 margin: 0 1px 0 5px;

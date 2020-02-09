@@ -88,9 +88,7 @@
 }
 .iui-toolitem-datepicker-button span
 {
-    background-image: url(../resources/icons.png);
-    background-position: -144px -80px;
-    background-repeat: no-repeat;
+    background-image: url(../icons/down.ico);
     display: block;
     padding: 0;
     margin: 0 0 0 0;
@@ -127,9 +125,7 @@
 }
 .iui-toolitem-dropdown-button span
 {
-    background-image: url(../resources/icons.png);
-    background-position: -144px -80px;
-    background-repeat: no-repeat;
+    background-image: url(../icons/down.ico);
     display: block;
     padding: 0;
     margin: 2px 0 0 0;

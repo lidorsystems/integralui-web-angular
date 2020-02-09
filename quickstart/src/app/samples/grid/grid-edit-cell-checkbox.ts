@@ -34,10 +34,10 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
                 padding: 7px 0;
             }
             .grid-cellchbox-checked {
-                background-image: url(integralui/resources/checkbox/checkbox-checked-4.png);
+                background-image: url(app/resources/checkbox/checkbox-checked-4.png);
             }
             .grid-cellchbox-unchecked {
-                background-image: url(integralui/resources/checkbox/checkbox-unchecked-4.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked-4.png);
             }
        </style>
         <h2 class="feature-title">Grid / Edit Cell with CheckBox</h2>

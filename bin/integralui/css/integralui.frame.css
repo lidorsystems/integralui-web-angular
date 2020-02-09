@@ -1,7 +1,7 @@
 .iui-frame
 {
 	background: transparent;
-	background: url(../resources/edge.png) no-repeat 0 0;
+	background: url(../icons/edge.ico) no-repeat 0 0;
 	border: 0;
 	cursor: nw-resize;
 	pointer-events: none;

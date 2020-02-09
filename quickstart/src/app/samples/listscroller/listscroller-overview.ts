@@ -33,7 +33,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
 
             .lscrl-ovw-icons
             {
-                background: url(app/integralui/resources/movie-genres.png) no-repeat 0 0;
+                background: url(app/resources/movie-genres.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0;
                 margin: 3px 0;

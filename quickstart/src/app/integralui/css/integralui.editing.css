@@ -1,0 +1,64 @@
+.iui-label-editor
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.iui-label-editor-test textarea:focus, .iui-label-editor input:focus
+{
+    outline: 0;
+}
+.iui-incell-editor
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 1;
+}
+.iui-dropdown-editor
+{
+	background: #efefef;
+	border: thin solid gray;
+	box-shadow: 1px 1px 2px #888888;
+	padding: 0;
+	position: absolute;
+	top: -9999px;
+	z-index: 999;
+}
+.iui-dropdown-mark
+{
+	background: white;
+	position: absolute;
+	top: 0;
+	border: thin solid transparent;
+	height: 16px;
+}
+.iui-dropdown-mark > span
+{
+    background-image: url(../icons/dropdown.ico);
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 1px 2px 0 3px;
+	vertical-align: middle;
+}
+.iui-edit-mark
+{
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+	position: absolute;
+    padding: 0;
+	top: 0;
+    width: 16px;
+    height: 16px;
+}
+.iui-edit-mark-incell
+{
+    background-image: url(../icons/edit.ico);
+}
+.iui-edit-mark-dropdown
+{
+    background-image: url(../icons/down.ico);
+}

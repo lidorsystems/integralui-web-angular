@@ -1,0 +1,159 @@
+.iui-dragwin
+{
+	background: -webkit-linear-gradient(white, #F1EFEC);
+	background:    -moz-linear-gradient(white, #F1EFEC);
+	background:     -ms-linear-gradient(white, #F1EFEC);
+	background:      -o-linear-gradient(white, #F1EFEC);
+    background :         linear-gradient(white, #F1EFEC);
+
+    background-color: #F1EFEC;
+	border: thin solid black;
+	border-radius: 3px;
+	margin:0;
+	padding: 2px;
+	position: absolute;
+	box-shadow: 0 0 3px #888888;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 200px;
+	z-index: 9999999;
+}
+.iui-dragwin-title
+{
+	border-left: thin solid #c5c5c5;
+	padding: 3px 3px 3px 5px;
+	margin: 0 2px 0 0;
+	vertical-align: middle;
+}
+.iui-dragwin-icon
+{
+	display: inline-block;
+	padding: 0;
+	margin: 2px 0 3px 2px;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+.iui-dragwin-move-left
+{
+    background-image: url(../icons/move-left.ico);
+}
+.iui-dragwin-move-up
+{
+    background-image: url(../icons/move-up.ico);
+}
+.iui-dragwin-move-in
+{
+    background-image: url(../icons/move-in.ico);
+}
+.iui-dragwin-move-right
+{
+    background-image: url(../icons/move-right.ico);
+}
+.iui-dragwin-move-down
+{
+    background-image: url(../icons/move-down.ico);
+}
+.iui-dragwin-move-end
+{
+    background-image: url(../icons/move-end.ico);
+}
+.iui-dragwin-move-left-copy
+{
+    background-image: url(../icons/move-left-copy.ico);
+}
+.iui-dragwin-move-up-copy
+{
+    background-image: url(../icons/move-up-copy.ico);
+}
+.iui-dragwin-move-in-copy
+{
+    background-image: url(../icons/move-in-copy.ico);
+}
+.iui-dragwin-move-right-copy
+{
+    background-image: url(../icons/move-right-copy.ico);
+}
+.iui-dragwin-move-down-copy
+{
+    background-image: url(../icons/move-down-copy.ico);
+}
+.iui-dragwin-move-end-copy
+{
+    background-image: url(../icons/move-end-copy.ico);
+}
+
+.iui-drag-handle
+{
+	border: thin solid gray;
+	position: absolute;
+	left: 0;
+	opacity: 0.75;
+	pointer-events: none;
+	z-index: 999;
+}
+.iui-drag-handle-popup
+{
+	position: absolute;
+	left: 0;
+	opacity: 0.75;
+	pointer-events: none;
+	z-index: 999;
+}
+
+.empty-bottom
+{
+	background: #f5f5f5;
+	margin: 3px;
+	min-height: 24px;
+	pointer-events:none;
+}
+.open-empty-bottom
+{
+	background: #f5f5f5;
+	margin: 3px;
+	pointer-events:none;
+
+	animation-name: openEmpty;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes openEmpty
+{
+	0% { min-height: 0; margin: 0; }
+	100% { min-height: 24px; margin: 3px; }
+}
+
+.close-empty-bottom
+{
+	background: #f5f5f5;
+	margin: 3px;
+	pointer-events:none;
+
+	animation-name: closeEmpty;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes closeEmpty
+{
+	0% { min-height: 24px; margin: 3px; }
+	100% { min-height: 0; margin: 0; }
+}
+
+.hidden-drag-ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}

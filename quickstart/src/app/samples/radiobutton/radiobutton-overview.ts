@@ -21,21 +21,21 @@ import { IntegralUIIncrementMode } from '../../integralui/components/integralui.
             /* RadioButton 2 */
             .rbtn2-ovw-btn-checked span
             {
-                background-image: url(app/integralui/resources/radiobutton/radio-checked-1.png);
+                background-image: url(app/resources/radiobutton/radio-checked-1.png);
             }
             .rbtn2-ovw-btn-unchecked span
             {
-                background-image: url(app/integralui/resources/radiobutton/radio-unchecked-1.png);
+                background-image: url(app/resources/radiobutton/radio-unchecked-1.png);
             }
 
             /* RadioButton 3 */
             .rbtn3-ovw-btn-checked span
             {
-                background-image: url(app/integralui/resources/radiobutton/radio-checked-2.png);
+                background-image: url(app/resources/radiobutton/radio-checked-2.png);
             }
             .rbtn3-ovw-btn-unchecked span
             {
-                background-image: url(app/integralui/resources/radiobutton/radio-unchecked-2.png);
+                background-image: url(app/resources/radiobutton/radio-unchecked-2.png);
             }
         </style>
         <h2 class="feature-title">RadioButton / Overview</h2>

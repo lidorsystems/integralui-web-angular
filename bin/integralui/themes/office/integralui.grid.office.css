@@ -155,19 +155,19 @@
 }
 .iui-grid-expand-box-open
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -80px 0;
+	background: url(../../icons/expandbox-icons.png) no-repeat -80px 0;
 }
 .iui-grid-expand-box-open:hover
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -64px 0;
+	background: url(../../icons/expandbox-icons.png) no-repeat -64px 0;
 }
 .iui-grid-expand-box-close
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -80px -16px;
+	background: url(../../icons/expandbox-icons.png) no-repeat -80px -16px;
 }
 .iui-grid-expand-box-close:hover
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -64px -16px;
+	background: url(../../icons/expandbox-icons.png) no-repeat -64px -16px;
 }
 
 /* Grouping */

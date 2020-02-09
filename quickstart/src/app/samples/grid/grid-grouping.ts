@@ -21,7 +21,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-grp-icons
             {
-                background: url(app/integralui/resources/movie-genres.png) no-repeat 0 0;
+                background: url(app/resources/movie-genres.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0;
                 margin: 3px;
@@ -81,7 +81,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             /* CheckBox Cell */
             .grid-grp-cell-checkbox
             {
-                background: url(app/integralui/resources/checkbox/checkbox-unchecked-1.png) no-repeat 0 0;
+                background: url(app/resources/checkbox/checkbox-unchecked-1.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0;
                 margin: 5px 7px 0 7px;
@@ -91,7 +91,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-grp-cell-checkbox-true
             {
-                background: url(app/integralui/resources/checkbox/checkbox-checked-1.png) no-repeat 0 0;
+                background: url(app/resources/checkbox/checkbox-checked-1.png) no-repeat 0 0;
             }
 
             /* Rating Cell */
@@ -110,7 +110,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-grp-cell-rating-content
             {
-                background-image: url(app/integralui/resources/rating/star-empty-white.png);
+                background-image: url(app/resources/rating/star-empty-white.png);
             }
 
             /* Label Cell */
@@ -433,11 +433,11 @@ export class GridGroupingSample {
     }
 
     private getCellRating(cell: any): string {
-        let retValue: string = 'app/integralui/resources/stars-small.png';
+        let retValue: string = 'app/resources/stars-small.png';
 
         if (cell.value){
             let rating = this.getRatingValue(cell.value).toString();
-            retValue = rating == '0' ? 'app/integralui/resources/stars-small.png' : 'app/integralui/resources/stars-small-' + rating + '.png';
+            retValue = rating == '0' ? 'app/resources/stars-small.png' : 'app/resources/stars-small-' + rating + '.png';
         }
 
         return retValue;

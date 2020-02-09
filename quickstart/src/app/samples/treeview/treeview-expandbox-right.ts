@@ -41,7 +41,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .computer-icons
             {
-                background-image: url(app/integralui/resources/computer.png);
+                background-image: url(app/resources/computer.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;
@@ -113,7 +113,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .trw-expbox-item-button
             {
-                background: url(app/integralui/resources/expandbox-icons.png) no-repeat;
+                background: url(app/resources/expandbox-icons.png) no-repeat;
                 display: inline-block;
                 float: right;
                 opacity: 0.5;

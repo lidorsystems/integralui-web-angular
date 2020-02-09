@@ -55,7 +55,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .trw-combo-icons-medium
             {
-                background-image: url(app/integralui/resources/icons-x24.png);
+                background-image: url(app/resources/icons-x24.png);
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 display: inline-block;

@@ -93,8 +93,8 @@ export class TreeGridHighlightRowsSample {
 
     public gridLines: IntegralUIGridLines = IntegralUIGridLines.Horizontal;
 
-    private imageChecked: string = 'url(app/integralui/resources/checkbox/checkbox-checked-9.png)';
-    private imageUnchecked: string = 'url(app/integralui/resources/checkbox/checkbox-unchecked-9.png)';
+    private imageChecked: string = 'url(app/resources/checkbox/checkbox-checked-9.png)';
+    private imageUnchecked: string = 'url(app/resources/checkbox/checkbox-unchecked-9.png)';
 
     public gridStyle: any = {
         general: {

@@ -71,7 +71,7 @@ import { IntegralUIScrollMode } from './integralui/components/integralui.core';
             }
             .icon
             {
-                background: url(app/integralui/resources/component-icons.png) no-repeat;
+                background: url(app/resources/component-icons.png) no-repeat;
                 display: inline-block;
                 padding: 0;
                 margin: 3px;

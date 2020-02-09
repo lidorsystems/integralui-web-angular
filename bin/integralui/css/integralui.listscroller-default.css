@@ -48,8 +48,6 @@
 }
 .iui-listscroller-leftright-buttons span
 {
-    background-image: url(../resources/icons.png);
-    background-repeat: no-repeat;
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -59,11 +57,11 @@
 }
 .iui-listscroller-leftright-decrease
 {
-	background-position: -112px -96px;
+    background-image: url(../icons/prev.ico);
 }
 .iui-listscroller-leftright-increase
 {
-	background-position: -128px -96px;
+    background-image: url(../icons/next.ico);
 }
 .iui-listscroller-leftright-value
 {
@@ -87,8 +85,6 @@
 }
 .iui-listscroller-updown-buttons span
 {
-    background-image: url(../resources/icons.png);
-    background-repeat: no-repeat;
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -98,11 +94,11 @@
 }
 .iui-listscroller-updown-decrease
 {
-	background-position: -144px -80px;
+    background-image: url(../icons/down.ico);
 }
 .iui-listscroller-updown-increase
 {
-	background-position: -160px -80px;
+    background-image: url(../icons/up.ico);
 }
 
 /* Item */

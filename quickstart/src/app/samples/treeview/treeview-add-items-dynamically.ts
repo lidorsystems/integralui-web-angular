@@ -41,7 +41,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .trw-add-dynamic-item-button
             {
-                background-image: url(app/integralui/resources/icons.png);
+                background-image: url(app/resources/icons.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;

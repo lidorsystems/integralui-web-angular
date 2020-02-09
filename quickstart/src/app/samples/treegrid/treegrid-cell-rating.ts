@@ -69,17 +69,17 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             }
             .trg-rtng-rating-stars-content
             {
-                background-image: url(app/integralui/resources/rating/star-empty-white.png);
+                background-image: url(app/resources/rating/star-empty-white.png);
             }
 
             /* Rating Showing Bricks */
             .trg-rtng-rating-bricks-content
             {
-                background-image: url(app/integralui/resources/rating/brick-empty.png);
+                background-image: url(app/resources/rating/brick-empty.png);
             }
             .trg-rtng-rating-bricks-value
             {
-                background-image: url(app/integralui/resources/rating/brick-full.png);
+                background-image: url(app/resources/rating/brick-full.png);
             }
         </style>
         <h2 class="feature-title">TreeGrid / Cell with Rating</h2>
@@ -138,8 +138,8 @@ export class TreeGridCellRatingSample {
     public columns: Array<any>;
     public rows: Array<any>;
 
-    private imageChecked: string = 'url(app/integralui/resources/checkbox/checkbox-checked-1.png)';
-    private imageUnchecked: string = 'url(app/integralui/resources/checkbox/checkbox-unchecked-1.png)';
+    private imageChecked: string = 'url(app/resources/checkbox/checkbox-checked-1.png)';
+    private imageUnchecked: string = 'url(app/resources/checkbox/checkbox-unchecked-1.png)';
 
     public gridStyle: any = {
         general: {

@@ -65,7 +65,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-shf-item-drop-mark span
             {
-                background: url(app/integralui/resources/icons.png) -144px -80px no-repeat;
+                background: url(app/resources/icons.png) -144px -80px no-repeat;
                 display: inline-block;
                 opacity: 0.5;
                 overflow: hidden;
@@ -84,7 +84,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-shf-icons
             {
-                background-image: url(app/integralui/resources/icons.png);
+                background-image: url(app/resources/icons.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 float: left;
@@ -175,8 +175,8 @@ export class GridShowHideHeaderFooterSample {
     public columns: Array<any>;
     public rows: Array<any>;
 
-    private imageChecked: string = 'url(app/integralui/resources/checkbox/checkbox-checked-3.png)';
-    private imageUnchecked: string = 'url(app/integralui/resources/checkbox/checkbox-unchecked-3.png)';
+    private imageChecked: string = 'url(app/resources/checkbox/checkbox-checked-3.png)';
+    private imageUnchecked: string = 'url(app/resources/checkbox/checkbox-unchecked-3.png)';
 
     public gridStyle: any = {
         general: {

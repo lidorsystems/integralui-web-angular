@@ -41,7 +41,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             }
             .treegrid-fxcol-project-icons
             {
-                background-image: url(app/integralui/resources/project.png);
+                background-image: url(app/resources/project.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;

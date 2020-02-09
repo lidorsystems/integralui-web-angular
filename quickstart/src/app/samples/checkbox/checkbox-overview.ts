@@ -21,15 +21,15 @@ import { IntegralUICheckState } from '../../integralui/components/integralui.cor
             /* CheckBox 2 */
             .chb2-ovw-btn-checked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-checked.png);
+                background-image: url(app/resources/checkbox/checkbox-checked.png);
             }
             .chb2-ovw-btn-indeterminate span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-indeterminate.png);
+                background-image: url(app/resources/checkbox/checkbox-indeterminate.png);
             }
             .chb2-ovw-btn-unchecked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-unchecked.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked.png);
             }
 
             /* CheckBox 3 */
@@ -40,21 +40,21 @@ import { IntegralUICheckState } from '../../integralui/components/integralui.cor
             }
             .chb3-ovw-btn-checked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-checked-5.png);
+                background-image: url(app/resources/checkbox/checkbox-checked-5.png);
             }
             .chb3-ovw-btn-unchecked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-unchecked-5.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked-5.png);
             }
 
             /* CheckBox 4 */
             .chb4-ovw-btn-checked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-checked-4.png);
+                background-image: url(app/resources/checkbox/checkbox-checked-4.png);
             }
             .chb4-ovw-btn-unchecked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-unchecked-4.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked-4.png);
             }
 
             /* CheckBox 5 */
@@ -65,11 +65,11 @@ import { IntegralUICheckState } from '../../integralui/components/integralui.cor
             }
             .chb5-ovw-btn-checked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-checked-3.png);
+                background-image: url(app/resources/checkbox/checkbox-checked-3.png);
             }
             .chb5-ovw-btn-unchecked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-unchecked-3.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked-3.png);
             }
         </style>
         <h2 class="feature-title">CheckBox / Overview</h2>

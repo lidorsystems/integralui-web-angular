@@ -46,7 +46,7 @@ enableProdMode();
             }
             .treegrid-ardyn-icon-add-root
             {
-                background: url("app/integralui/resources/icons-x24.png") no-repeat -48px -120px;
+                background: url("app/resources/icons-x24.png") no-repeat -48px -120px;
                 display: inline-block;
                 width: 24px;
                 height: 24px;
@@ -54,7 +54,7 @@ enableProdMode();
             }
             .treegrid-ardyn-icon-add-child
             {
-                background: url("app/integralui/resources/icons-x24.png") no-repeat -120px -168px;
+                background: url("app/resources/icons-x24.png") no-repeat -120px -168px;
                 display: inline-block;
                 width: 24px;
                 height: 24px;
@@ -106,7 +106,7 @@ enableProdMode();
             }
             .treegrid-ardyn-icons
             {
-                background-image: url(app/integralui/resources/icons.png);
+                background-image: url(app/resources/icons.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;

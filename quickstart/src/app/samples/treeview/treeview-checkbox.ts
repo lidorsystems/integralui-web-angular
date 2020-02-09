@@ -35,7 +35,7 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
             }
             .trw-cbox-icons-medium
             {
-                background-image: url(app/integralui/resources/icons-x24.png);
+                background-image: url(app/resources/icons-x24.png);
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 display: inline-block;
@@ -91,7 +91,7 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
             }
             .trw-item-cbox
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-unchecked.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;
@@ -103,11 +103,11 @@ import { IntegralUIListBox } from '../../integralui/components/integralui.listbo
             }
             .trw-item-cbox-checked
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-checked.png);
+                background-image: url(app/resources/checkbox/checkbox-checked.png);
             }
             .trw-item-cbox-indeterminate
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-indeterminate.png);
+                background-image: url(app/resources/checkbox/checkbox-indeterminate.png);
             }
             .trw-cbox-item-label
             {
@@ -327,11 +327,17 @@ export class TreeViewCheckBoxSample {
     }
 
     ngAfterViewInit(){
-        let list = this.treeview.getFullList();
-        for (let i = 0; i < list.length; i++)
-            this.updateParentItemCheckValue(list[i]);
+        let self = this;
 
-        this.showCheckList();
+        let initTimeout = setTimeout(function(){
+            let list = self.treeview.getFullList();
+            for (let i = 0; i < list.length; i++)
+                self.updateParentItemCheckValue(list[i]);
+
+            self.showCheckList();
+
+            clearTimeout(initTimeout);
+        }, 150);
     }
 
     checkItem(e: any, item: any){

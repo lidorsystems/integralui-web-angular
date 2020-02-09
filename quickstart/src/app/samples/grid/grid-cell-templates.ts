@@ -54,7 +54,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .icons
             {
-                background-image: url(app/integralui/resources/icons.png);
+                background-image: url(app/resources/icons.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 float: left;
@@ -180,8 +180,8 @@ export class GridCellTemplatesSample {
         }
     }
 
-    private imageChecked: string = 'url(app/integralui/resources/checkbox/checkbox-checked.png)';
-    private imageUnchecked: string = 'url(app/integralui/resources/checkbox/checkbox-unchecked.png)';
+    private imageChecked: string = 'url(app/resources/checkbox/checkbox-checked.png)';
+    private imageUnchecked: string = 'url(app/resources/checkbox/checkbox-unchecked.png)';
 
     constructor(){
         // Add columns and rows for the Grid

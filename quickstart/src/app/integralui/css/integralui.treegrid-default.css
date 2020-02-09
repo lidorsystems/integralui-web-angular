@@ -239,7 +239,6 @@
 }
 .iui-treegrid-expand-box
 {
-	/*background: url(../resources/empty.png) no-repeat 0 0;*/
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -276,23 +275,23 @@
 } 
 .iui-treegrid-expand-box-load
 {
-	background: url(../resources/load.gif) no-repeat 0 0;
+	background: url(../icons/load.gif) no-repeat 0 0;
 }
 .iui-treegrid-expand-box-open
 {
-	background: url(../resources/expand.png) no-repeat 0 0;
+	background: url(../icons/expand.ico) no-repeat 0 0;
 }
 .iui-treegrid-expand-box-open-disabled
 {
-	background: url(../resources/expand-disabled.png) no-repeat 0 0;
+	background: url(../icons/expand-disabled.ico) no-repeat 0 0;
 }
 .iui-treegrid-expand-box-close
 {
-	background: url(../resources/collapse.png) no-repeat 0 0;
+	background: url(../icons/collapse.ico) no-repeat 0 0;
 }
 .iui-treegrid-expand-box-close-disabled
 {
-	background: url(../resources/collapse-disabled.png) no-repeat 0 0;
+	background: url(../icons/collapse-disabled.ico) no-repeat 0 0;
 }
 .iui-treegrid-column-reorder-mark
 {
@@ -309,11 +308,11 @@
 }
 .iui-treegrid-column-reorder-mark-left
 {
-    background-image: url(../resources/move-left.png);
+    background-image: url(../icons/move-left.ico);
 }
 .iui-treegrid-column-reorder-mark-right
 {
-    background-image: url(../resources/move-right.png);
+    background-image: url(../icons/move-right.ico);
 }
 .iui-treegrid-column-reorder-tooltip
 {

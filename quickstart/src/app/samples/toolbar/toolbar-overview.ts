@@ -25,6 +25,10 @@ import { IntegralUICheckState, IntegralUIDateFormat, IntegralUIIncrementMode, In
                 margin: 10px 0;
             }
 
+            .tlbr-ovw .iui-toolitem-dropdown-button {
+                margin-top: 3px;
+            }
+
             /* Buttons */
             .tlbr-ovw .iui-toolitem-button {
                 background: transparent;
@@ -47,7 +51,7 @@ import { IntegralUICheckState, IntegralUIDateFormat, IntegralUIIncrementMode, In
                 100% { background: transparent; }
             }
             .tlbr-ovw-tool-icons {
-                background-image: url(app/integralui/resources/icons-x24.png);
+                background-image: url(app/resources/icons-x24.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;
@@ -76,15 +80,15 @@ import { IntegralUICheckState, IntegralUIDateFormat, IntegralUIIncrementMode, In
             /* CheckBox */
             .tlbr-ovw-tool-checked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-checked.png);
+                background-image: url(app/resources/checkbox/checkbox-checked.png);
             }
             .tlbr-ovw-tool-indeterminate span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-indeterminate.png);
+                background-image: url(app/resources/checkbox/checkbox-indeterminate.png);
             }
             .tlbr-ovw-tool-unchecked span
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-unchecked.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked.png);
             }
 
             /* Slider */
@@ -100,11 +104,11 @@ import { IntegralUICheckState, IntegralUIDateFormat, IntegralUIIncrementMode, In
                 height: 22px;
             }
             .tlbr-ovw-tool-rating-content {
-                background-image: url(app/integralui/resources/rating/star-2-empty.png);
+                background-image: url(app/resources/rating/star-2-empty.png);
                 height: 22px;
             }
             .tlbr-ovw-tool-rating-value {
-                background-image: url(app/integralui/resources/rating/star-2-full.png);
+                background-image: url(app/resources/rating/star-2-full.png);
                 height: 22px;
             }
         </style>

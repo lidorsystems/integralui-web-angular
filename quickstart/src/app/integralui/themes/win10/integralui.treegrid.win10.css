@@ -80,21 +80,21 @@
 }
 .iui-treegrid-expand-box-open
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px 0;
 	opacity: 0.5;
 }
 .iui-treegrid-expand-box-open:hover
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px 0;
 	opacity: 0.5;
 }
 .iui-treegrid-expand-box-close
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px -16px;
 }
 .iui-treegrid-expand-box-close:hover
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px -16px;
 }
 .iui-treegrid-row, .iui-treegrid-row-fixed {
 	color: black;
@@ -172,12 +172,12 @@
 }
 .iui-treegrid-expand-box-open
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px 0;
 	opacity: 0.5;
 }
 .iui-treegrid-expand-box-close
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px -16px;
 }
 
 .iui-treegrid .iui-sort-ascending

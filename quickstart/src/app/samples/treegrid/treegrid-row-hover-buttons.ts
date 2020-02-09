@@ -51,7 +51,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             }
 
             .treegrid-rwhov-cell-favorite {
-                background-image: url(app/integralui/resources/icons-x24.png);
+                background-image: url(app/resources/icons-x24.png);
                 background-repeat: no-repeat;
                 background-position: -216px -72px;
                 display: inline-block;
@@ -93,7 +93,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
                 100% { background: #d5d5d5; }
             }
             .treegrid-rwhov-button-icons {
-                background-image: url(app/integralui/resources/icons-x24.png);
+                background-image: url(app/resources/icons-x24.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;

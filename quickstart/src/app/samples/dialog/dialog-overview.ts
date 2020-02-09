@@ -12,7 +12,6 @@
 */
 
 import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { IntegralUIScrollMode } from '../../integralui/components/integralui.core';
 
 @Component({
     selector: '',

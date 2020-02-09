@@ -24,7 +24,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             }
             .expand-icons-right
             {
-                background: url(app/integralui/resources/expandbox-icons.png) no-repeat 0 0;
+                background: url(app/resources/expandbox-icons.png) no-repeat 0 0;
                 display: inline-block;
                 float: right;
                 overflow: hidden;
@@ -45,7 +45,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             }
             .icons-medium
             {
-                background: url(app/integralui/resources/icons-x24.png) no-repeat 0 0;
+                background: url(app/resources/icons-x24.png) no-repeat 0 0;
                 display: inline-block;
                 overflow: hidden;
                 padding: 0;

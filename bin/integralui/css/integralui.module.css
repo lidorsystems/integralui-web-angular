@@ -1,4 +1,18 @@
+/* 
+* 
+* CSS files for each component
+* To reduce bundle size, include files only for component in use
+* 
+*/
+
+/* General settings */
 @import 'integralui.css';
+@import 'integralui.dragdrop.css';
+@import 'integralui.editing.css';
+@import 'integralui.filter.css';
+@import 'integralui.sorting.css';
+
+/* Component settings */
 @import 'integralui.accordion.css';
 @import 'integralui.autocomplete.css';
 @import 'integralui.breadcrumb.css';
@@ -16,8 +30,6 @@
 @import 'integralui.frame.css';
 @import 'integralui.grid.css';
 @import 'integralui.groupbox.css';
-@import 'integralui.header.css';
-@import 'integralui.item.css';
 @import 'integralui.listbar.css';
 @import 'integralui.listbox.css';
 @import 'integralui.listgroup.css';

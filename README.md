@@ -166,6 +166,41 @@ To include resources that are used by IntegralUI components in your project duri
 
 <b>Note</b>   This is required because Angular compiler cannot detect resources that are outside the /src section of your app. It is needed if you are using resources that are part of IntegralUI Web, in your application.
 
+## How to Reduce Bundle Size
+
+If you are using only few components from the InetgralUI Web package, you can reduce the bundle size during compilation by modifying the integralui.module.css file. This file imports CSS files for each component that is part of the package. Inside this file import only CSS for components that you are using.
+
+For example, if you are using only the TreeView component in your app, comment out all other imports for individual components, except for the TreeView component. The result should look like this:
+
+```
+/* General settings */
+@import 'integralui.css';
+@import 'integralui.dragdrop.css';
+@import 'integralui.editing.css';
+@import 'integralui.filter.css';
+@import 'integralui.sorting.css';
+
+/* Component settings */
+@import 'integralui.treeview.css';
+
+
+/*
+ * Comment out all other CSS files
+ *
+
+@import 'integralui.accordion.css';
+@import 'integralui.autocomplete.css';
+@import 'integralui.breadcrumb.css';
+
+. . .
+
+*/
+```
+
+You should keep the General Settings section in CSS, it is used by all components.
+
+As a final result, after compilation the build size will be greatly reduced.
+
 ### Creating Custom Styles for IntegralUI Components
 
 When you create custom styles or changes to built-in CSS classes of IntegralUI components, placed for example within app.component.css file, make sure ViewEncapsulation is set to None. This allows to override default settings from corresponding component css file. For example:

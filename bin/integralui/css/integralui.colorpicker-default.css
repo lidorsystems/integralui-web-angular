@@ -38,8 +38,6 @@
 }
 .iui-colorpicker-header-button span
 {
-    background-image: url(../resources/icons-x24.png);
-    background-repeat: no-repeat;
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -53,7 +51,7 @@
 }
 .iui-colorpicker-header-button-down span
 {
-	background-position: -192px -192px;
+    background-image: url(../icons/down-24.png);
 }
 
 .iui-colorpicker-block {
@@ -112,9 +110,6 @@
     vertical-align: top;
 }
 .iui-colorpicker-block-button span {
-    background-image: url(../resources/icons.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
     display: inline-block;
     margin: 0;
     overflow: hidden;
@@ -123,16 +118,16 @@
     height: 16px;
 }
 .iui-colorpicker-block-button-ok {
-    background-position: -160px -128px !important;
+    background-image: url(../icons/check-mark-gray.ico);
 }
 .iui-colorpicker-block-button-ok:hover {
-    background-position: -128px -128px !important;
+    background-image: url(../icons/check-mark.ico);
 }
 .iui-colorpicker-block-button-cancel {
-    background-position: -176px -128px !important;
+    background-image: url(../icons/close-gray.ico);
 }
 .iui-colorpicker-block-button-cancel:hover {
-    background-position: -144px -128px !important;
+    background-image: url(../icons/close.ico);
 }
 
 /* Color Slider and Palette */

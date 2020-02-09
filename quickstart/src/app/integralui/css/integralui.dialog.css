@@ -42,8 +42,6 @@
 }
 .iui-dialog-icon
 {
-    background-image: url(../resources/icons-x24.png);
-    background-repeat: no-repeat;
 	display: inline-block;
 	padding: 0;
 	margin: 0;
@@ -60,7 +58,7 @@
 }
 .iui-dialog-button-close
 {
-	background-position: -192px -168px;
+    background-image: url(../icons/close-24.png);
 	opacity: 0.4;
 }
 .iui-dialog-button-close:hover

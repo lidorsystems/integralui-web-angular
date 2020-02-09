@@ -48,7 +48,7 @@ import { IntegralUIAccordion } from '../../integralui/components/integralui.acco
             }
             .acc-checkbox
             {
-                background: url("app/integralui/resources/checkbox/checkbox-checked-5.png");
+                background: url("app/resources/checkbox/checkbox-checked-5.png");
                 border: thin solid red;
                 display: inline-block;
                 margin: 2px 1px 0 2px;

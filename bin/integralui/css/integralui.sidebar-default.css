@@ -41,7 +41,7 @@
 }
 .iui-sidebar-header-button span
 {
-    background: url(../resources/icons.png) no-repeat -176px -80px;
+    background: url(../icons/menu-button.ico);
     display: inline-block;
     margin: 1px 0 0 1px;
     overflow: hidden;

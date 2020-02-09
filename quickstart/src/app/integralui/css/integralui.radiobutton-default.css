@@ -25,7 +25,7 @@
 }
 .iui-radio-button-btn span
 {
-    background-image: url(../resources/radiobutton/radio-unchecked.png);
+    background-image: url(../icons/radio-unchecked.ico);
     background-repeat: no-repeat;
 	display: block;
 	padding: 0;
@@ -36,11 +36,11 @@
 }
 .iui-radio-button-btn-checked span
 {
-    background-image: url(../resources/radiobutton/radio-checked.png);
+    background-image: url(../icons/radio-checked.ico);
 }
 .iui-radio-button-btn-unchecked span
 {
-    background-image: url(../resources/radiobutton/radio-unchecked.png);
+    background-image: url(../icons/radio-unchecked.ico);
 }
 
 /* Content */

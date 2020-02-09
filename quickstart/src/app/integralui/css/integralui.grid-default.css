@@ -237,7 +237,7 @@
 }
 .iui-grid-expand-box
 {
-	/*background: url(../resources/empty.png) no-repeat 0 0;*/
+	/*background: url(../icons/empty.png) no-repeat 0 0;*/
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -246,23 +246,23 @@
 }
 .iui-grid-expand-box-load
 {
-	background: url(../resources/load.gif) no-repeat 0 0;
+	background: url(../icons/load.gif) no-repeat 0 0;
 }
 .iui-grid-expand-box-open
 {
-	background: url(../resources/expand.png) no-repeat 0 0;
+	background: url(../icons/expand.ico) no-repeat 0 0;
 }
 .iui-grid-expand-box-open-disabled
 {
-	background: url(../resources/expand-disabled.png) no-repeat 0 0;
+	background: url(../icons/expand-disabled.ico) no-repeat 0 0;
 }
 .iui-grid-expand-box-close
 {
-	background: url(../resources/collapse.png) no-repeat 0 0;
+	background: url(../icons/collapse.ico) no-repeat 0 0;
 }
 .iui-grid-expand-box-close-disabled
 {
-	background: url(../resources/collapse-disabled.png) no-repeat 0 0;
+	background: url(../icons/collapse-disabled.ico) no-repeat 0 0;
 }
 .iui-grid-column-reorder-mark
 {
@@ -279,11 +279,11 @@
 }
 .iui-grid-column-reorder-mark-left
 {
-    background-image: url(../resources/move-left.png);
+    background-image: url(../icons/move-left.ico);
 }
 .iui-grid-column-reorder-mark-right
 {
-    background-image: url(../resources/move-right.png);
+    background-image: url(../icons/move-right.ico);
 }
 .iui-grid-column-reorder-tooltip
 {
@@ -453,9 +453,7 @@
 }
 .iui-grid-grouping-panel-toolbar-button-add > span
 {
-    background-image: url(../resources/icons-x24.png);
-    background-position: 0 -120px;
-    background-repeat: no-repeat;
+    background-image: url(../icons/plus-24.png);
     display: inline-block;
     overflow: hidden;
     padding: 0;
@@ -466,9 +464,7 @@
 }
 .iui-grid-grouping-panel-item-button
 {
-    background-image: url(../resources/icons.png);
-    background-position: -64px -96px;
-    background-repeat: no-repeat;
+    background-image: url(../icons/close-dark.ico);
     display: inline-block;
     overflow: hidden;
     padding: 0 !important;
@@ -530,7 +526,7 @@
 }
 .iui-grid-grouping-panel-dropdown-list-checkbox-true
 {
-	background-image: url(../resources/checkbox/checkbox-checked-2.png);
+	background-image: url(../icons/check-mark-dark.ico);
 }
 
 /* Disabled State */

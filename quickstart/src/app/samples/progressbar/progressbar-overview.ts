@@ -59,15 +59,15 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
             }
             .prb-ovw-block-content-red
             {
-                background: url('app/integralui/resources/progressbar/progress-block-red.png');
+                background: url('app/resources/progressbar/progress-block-red.png');
             }
             .prb-ovw-block-content-green
             {
-                background: url('app/integralui/resources/progressbar/progress-block-green.png');
+                background: url('app/resources/progressbar/progress-block-green.png');
             }
             .prb-ovw-block-content-blue
             {
-                background: url('app/integralui/resources/progressbar/progress-block-blue.png');
+                background: url('app/resources/progressbar/progress-block-blue.png');
             }
 
             /* Vertical Orientation */
@@ -97,15 +97,15 @@ import { IntegralUIOrientation } from '../../integralui/components/integralui.co
             }
             .prb-ovw-block-vertical .prb-ovw-block-content-red
             {
-                background: url('app/integralui/resources/progressbar/progress-block-vertical-red.png');
+                background: url('app/resources/progressbar/progress-block-vertical-red.png');
             }
             .prb-ovw-block-vertical .prb-ovw-block-content-green
             {
-                background: url('app/integralui/resources/progressbar/progress-block-vertical-green.png');
+                background: url('app/resources/progressbar/progress-block-vertical-green.png');
             }
             .prb-ovw-block-vertical .prb-ovw-block-content-blue
             {
-                background: url('app/integralui/resources/progressbar/progress-block-vertical-blue.png');
+                background: url('app/resources/progressbar/progress-block-vertical-blue.png');
             }
 
             /* Control Panel */

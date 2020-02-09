@@ -21,11 +21,11 @@ import { IntegralUIIncrementMode } from '../../integralui/components/integralui.
             /* Rating Showing Bricks */
             .rtg-ovw-content
             {
-                background-image: url(app/integralui/resources/rating/brick-empty.png);
+                background-image: url(app/resources/rating/brick-empty.png);
             }
             .rtg-ovw-value
             {
-                background-image: url(app/integralui/resources/rating/brick-full.png);
+                background-image: url(app/resources/rating/brick-full.png);
             }
         </style>
         <h2 class="feature-title">Rating / Overview</h2>

@@ -18,8 +18,6 @@
 .iui-paginator-button
 {
 	background-color: #dedede;
-    background-image: url(../resources/icons-x24.png);
-    background-repeat: no-repeat;
 	display: inline-block;
 	border: thin solid #bebebe;
 	border-radius: 3px;
@@ -35,19 +33,19 @@
 }
 .iui-paginator-first
 {
-    background-position: -96px -120px;
+    background-image: url(../icons/page-first-24.png);
 }
 .iui-paginator-prev
 {
-    background-position: -120px -120px;
+    background-image: url(../icons/page-prev-24.png);
 }
 .iui-paginator-next
 {
-    background-position: -144px -120px;
+    background-image: url(../icons/page-next-24.png);
 }
 .iui-paginator-last
 {
-    background-position: -168px -120px;
+    background-image: url(../icons/page-last-24.png);
 }
 .iui-paginator-input
 {

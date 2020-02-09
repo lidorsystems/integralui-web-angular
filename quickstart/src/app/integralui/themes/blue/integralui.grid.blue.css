@@ -73,19 +73,19 @@
 }
 .iui-grid-expand-box-open
 {
-	background: url(../../resources/expand.png) no-repeat 0 0;
+	background: url(../../icons/expand.ico) no-repeat 0 0;
 }
 .iui-grid-expand-box-open:hover
 {
-	background: url(../../resources/expand.png) no-repeat 0 0;
+	background: url(../../icons/expand.ico) no-repeat 0 0;
 }
 .iui-grid-expand-box-close
 {
-	background: url(../../resources/collapse.png) no-repeat 0 0;
+	background: url(../../icons/collapse.ico) no-repeat 0 0;
 }
 .iui-grid-expand-box-close:hover
 {
-	background: url(../../resources/collapse.png) no-repeat 0 0;
+	background: url(../../icons/collapse.ico) no-repeat 0 0;
 }
 .iui-grid-row, .iui-grid-row-fixed {
 	color: black;

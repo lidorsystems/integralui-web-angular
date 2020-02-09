@@ -41,11 +41,11 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
                 height: 22px;
             }
             .grid-cellrtg-rating-content {
-                background-image: url(app/integralui/resources/rating/star-2-empty.png);
+                background-image: url(app/resources/rating/star-2-empty.png);
                 height: 22px;
             }
             .grid-cellrtg-rating-value {
-                background-image: url(app/integralui/resources/rating/star-2-full.png);
+                background-image: url(app/resources/rating/star-2-full.png);
                 height: 22px;
             }
        </style>

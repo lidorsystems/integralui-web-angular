@@ -22,7 +22,7 @@ enableProdMode();
             }
             .grid-atsc-icons
             {
-                background: url(app/integralui/resources/movie-genres.png) no-repeat 0 0;
+                background: url(app/resources/movie-genres.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0;
                 margin: 3px;
@@ -82,7 +82,7 @@ enableProdMode();
             /* CheckBox Cell */
             .grid-atsc-cell-checkbox
             {
-                background: url(app/integralui/resources/checkbox/checkbox-unchecked-1.png) no-repeat 0 0;
+                background: url(app/resources/checkbox/checkbox-unchecked-1.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0;
                 margin: 5px 7px 0 7px;
@@ -92,7 +92,7 @@ enableProdMode();
             }
             .grid-atsc-cell-checkbox-true
             {
-                background: url(app/integralui/resources/checkbox/checkbox-checked-1.png) no-repeat 0 0;
+                background: url(app/resources/checkbox/checkbox-checked-1.png) no-repeat 0 0;
             }
 
             /* Rating Cell */
@@ -374,11 +374,11 @@ export class GridAutoSizeColumnsSample {
     }
 
     private getCellRating(cell: any): string {
-        let retValue: string = 'app/integralui/resources/stars-small.png';
+        let retValue: string = 'app/resources/stars-small.png';
 
         if (cell.value){
             let rating = this.getRatingValue(cell.value);
-            retValue = 'app/integralui/resources/stars-small-' + rating + '.png';
+            retValue = 'app/resources/stars-small-' + rating + '.png';
         }
 
         return retValue;

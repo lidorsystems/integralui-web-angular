@@ -1,3 +1,6 @@
+v19.4.325
+─	Reduced overall bundle size
+
 v19.4.278
 ─	Fixed the issue with horizontal scrollbar appearance during expand/collapse of TreeView items when hover and/or select templates are in use
 ─	The horizontal scrolling in TreeView now correctly shows the longest item in full

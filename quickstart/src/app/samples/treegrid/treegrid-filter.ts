@@ -38,7 +38,7 @@ import { IntegralUIFilterService } from '../../integralui/services/integralui.fi
             }
             .treegrid-ftr-column-filter-mark
             {
-                background-image: url(app/integralui/resources/icons.png);
+                background-image: url(app/resources/icons.png);
                 background-position: -96px -128px;
                 background-repeat: no-repeat;
                 margin: 1px 0 0 0;

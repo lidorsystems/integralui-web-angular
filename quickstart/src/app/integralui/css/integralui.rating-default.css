@@ -13,13 +13,13 @@
 }
 .iui-rating-content
 {
-    background-image: url(../resources/rating/star-empty.png);
+    background-image: url(../icons/star-empty.ico);
     background-repeat: repeat-x;
     height: 16px;
 }
 .iui-rating-value
 {
-    background-image: url(../resources/rating/star-full.png);
+    background-image: url(../icons/star-full.ico);
     background-repeat: repeat-x;
     height: 16px;
 }

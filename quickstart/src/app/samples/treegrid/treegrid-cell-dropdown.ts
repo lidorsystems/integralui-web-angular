@@ -72,7 +72,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             }
             .treegrid-ccmb-item-drop-mark span
             {
-                background: url(app/integralui/resources/icons.png) -144px -80px no-repeat;
+                background: url(app/resources/icons.png) -144px -80px no-repeat;
                 display: inline-block;
                 opacity: 0.5;
                 overflow: hidden;
@@ -148,8 +148,8 @@ export class TreeGridCellDropDownSample {
         }
     }
 
-    private imageChecked: string = 'url(app/integralui/resources/checkbox/checkbox-checked-1.png)';
-    private imageUnchecked: string = 'url(app/integralui/resources/checkbox/checkbox-unchecked-1.png)';
+    private imageChecked: string = 'url(app/resources/checkbox/checkbox-checked-1.png)';
+    private imageUnchecked: string = 'url(app/resources/checkbox/checkbox-unchecked-1.png)';
 
     constructor(){
         // Options to choose from

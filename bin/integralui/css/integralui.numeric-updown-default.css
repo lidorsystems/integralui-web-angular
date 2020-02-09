@@ -42,8 +42,6 @@
 }
 .iui-numeric-inbound-buttons span
 {
-    background-image: url(../resources/icons.png);
-    background-repeat: no-repeat;
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -53,11 +51,11 @@
 }
 .iui-numeric-inbound-button-up
 {
-	background-position: -160px -84px;
+    background-image: url(../icons/up.ico);
 }
 .iui-numeric-inbound-button-down
 {
-	background-position: -144px -84px;
+    background-image: url(../icons/down.ico);
 }
 .iui-numeric-inbound-button-up:hover, .iui-numeric-inbound-button-down:hover
 {
@@ -77,8 +75,6 @@
 }
 .iui-numeric-leftright-buttons span
 {
-    background-image: url(../resources/icons.png);
-    background-repeat: no-repeat;
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -88,11 +84,11 @@
 }
 .iui-numeric-leftright-decrease
 {
-	background-position: -112px -96px;
+    background-image: url(../icons/prev.ico);
 }
 .iui-numeric-leftright-increase
 {
-	background-position: -128px -96px;
+    background-image: url(../icons/next.ico);
 }
 .iui-numeric-leftright-value
 {
@@ -116,8 +112,6 @@
 }
 .iui-numeric-updown-buttons span
 {
-    background-image: url(../resources/icons.png);
-    background-repeat: no-repeat;
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -127,11 +121,11 @@
 }
 .iui-numeric-updown-decrease
 {
-	background-position: -144px -80px;
+    background-image: url(../icons/down.ico);
 }
 .iui-numeric-updown-increase
 {
-	background-position: -160px -80px;
+    background-image: url(../icons/up.ico);
 }
 .iui-numeric-updown-value
 {

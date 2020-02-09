@@ -140,7 +140,7 @@
 
 .iui-breadcrumb-item-expand-box
 {
-    background: url(../../resources/expandbox-icons.png) no-repeat 0 -48px;
+    background: url(../../icons/expandbox-icons.png) no-repeat 0 -48px;
     border: thin solid transparent;
     display: inline-block;
     overflow: hidden;
@@ -211,7 +211,7 @@
 }
 .iui-breadcrumb-item-expand-box-load
 {
-    background: url(../../resources/load.gif) no-repeat 0 0;
+    background: url(../../icons/load.gif) no-repeat 0 0;
 }
 
 /* Disabled State */

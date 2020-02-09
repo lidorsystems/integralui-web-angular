@@ -27,8 +27,6 @@
 }
 .iui-calendar-header-button span
 {
-    background-image: url(../resources/icons-x24.png);
-    background-repeat: no-repeat;
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -42,7 +40,7 @@
 }
 .iui-calendar-header-button-prev span
 {
-	background-position: -120px -192px;
+    background-image: url(../icons/prev-24.png);
 }
 .iui-calendar-header-button-next
 {
@@ -50,7 +48,7 @@
 }
 .iui-calendar-header-button-next span
 {
-	background-position: -144px -192px;
+    background-image: url(../icons/next-24.png);
 }
 .iui-calendar-header-title
 {

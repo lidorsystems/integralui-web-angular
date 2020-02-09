@@ -14,7 +14,7 @@
 }
 .iui-treeitem-expand-box
 {
-    background: url(../../resources/expandbox-icons.png) no-repeat -32px -48px;
+    background: url(../../icons/expandbox-icons.png) no-repeat -32px -48px;
     opacity: 1;
 }
 .iui-treeitem-expand-box-open

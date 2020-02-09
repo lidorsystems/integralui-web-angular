@@ -64,7 +64,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             }     
             .lbox-ovw-icons
             {
-                background: url(app/integralui/resources/movie-genres.png) no-repeat 0 0;
+                background: url(app/resources/movie-genres.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0;
                 margin: 3px;
@@ -127,7 +127,7 @@ import { IntegralUISelectionMode } from '../../integralui/components/integralui.
             }
             .lbox-ovw-rating-stars-content
             {
-                background-image: url(app/integralui/resources/rating/star-empty-white.png);
+                background-image: url(app/resources/rating/star-empty-white.png);
             }
         </style>
         <h2 class="feature-title">ListBox / Overview</h2>

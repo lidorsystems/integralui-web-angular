@@ -73,21 +73,21 @@
 }
 .iui-grid-expand-box-open
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px 0;
 	opacity: 0.5;
 }
 .iui-grid-expand-box-open:hover
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px 0;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px 0;
 	opacity: 0.5;
 }
 .iui-grid-expand-box-close
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px -16px;
 }
 .iui-grid-expand-box-close:hover
 {
-	background: url(../../resources/expandbox-icons.png) no-repeat -16px -16px;
+	background: url(../../icons/expandbox-icons.png) no-repeat -16px -16px;
 }
 .iui-grid-row, .iui-grid-row-fixed {
 	color: #b5b5b5;
@@ -165,11 +165,11 @@
 
 .iui-grid-expand-box-open
 {
-	background: url(../../resources/expand-white.png) no-repeat 0 0;
+	background: url(../../icons/expand-white.ico) no-repeat 0 0;
 }
 .iui-grid-expand-box-close
 {
-	background: url(../../resources/collapse-white.png) no-repeat 0 0;
+	background: url(../../icons/collapse-white.ico) no-repeat 0 0;
 }
 
 /* Animation */

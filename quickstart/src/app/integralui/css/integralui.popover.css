@@ -127,9 +127,7 @@
 }
 .iui-popover-close-button span
 {
-    background-image: url(../resources/icons.png);
-    background-position: -160px -96px;
-    background-repeat: no-repeat;
+    background-image: url(../icons/close-dark.ico);
     display: inline-block;
     overflow: hidden;
     padding: 0;

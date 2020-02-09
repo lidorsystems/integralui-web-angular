@@ -99,7 +99,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             }
             .lbox-dd-lblv-rating-stars-content
             {
-                background-image: url(app/integralui/resources/rating/star-empty-white.png);
+                background-image: url(app/resources/rating/star-empty-white.png);
             }
 
             /* ListView */
@@ -155,7 +155,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             /* Icons */
             .lbox-dd-lblv-icons, .lview-dd-lblv-icons
             {
-                background: url(app/integralui/resources/movie-genres.png) no-repeat 0 0;
+                background: url(app/resources/movie-genres.png) no-repeat 0 0;
                 display: inline-block;
                 padding: 0;
                 margin: 3px;
@@ -323,7 +323,7 @@ export class ListBoxDragDropListViewSample {
     }   
 
     getRating(value: any){
-        return "app/integralui/resources/star.png";
+        return "app/resources/star.png";
     }
 
     getRatingValue(value: any){

@@ -29,7 +29,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .trw-ftr-cbox
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-unchecked-7.png);
+                background-image: url(app/resources/checkbox/checkbox-unchecked-7.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;
@@ -41,7 +41,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
             }
             .trw-ftr-cbox-checked
             {
-                background-image: url(app/integralui/resources/checkbox/checkbox-checked-7.png);
+                background-image: url(app/resources/checkbox/checkbox-checked-7.png);
             }
             .trw-ftr-control-panel
             {

@@ -100,8 +100,8 @@ export class TreeGridShowHideHeaderFooterSample {
     public columns: Array<any>;
     public rows: Array<any>;
 
-    private imageChecked: string = 'url(app/integralui/resources/checkbox/checkbox-checked-1.png)';
-    private imageUnchecked: string = 'url(app/integralui/resources/checkbox/checkbox-unchecked-1.png)';
+    private imageChecked: string = 'url(app/resources/checkbox/checkbox-checked-1.png)';
+    private imageUnchecked: string = 'url(app/resources/checkbox/checkbox-unchecked-1.png)';
 
     public gridStyle: any = {
         general: {
@@ -377,7 +377,7 @@ export class TreeGridShowHideHeaderFooterSample {
     }
 
     private getCellRating(cell: any): string {
-        return cell.value ? 'app/integralui/resources/stars-small-' + cell.value.toString() + '.png' : '';
+        return cell.value ? 'app/resources/stars-small-' + cell.value.toString() + '.png' : '';
     }
 
     checkGridLines(){

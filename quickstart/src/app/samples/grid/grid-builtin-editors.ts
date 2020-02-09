@@ -257,17 +257,17 @@ export class GridBuiltinEditorsSample {
 
                         switch (i % 4){
                             case 1:
-                                cell.value.push({ src: 'app/integralui/resources/checkbox/checkbox-checked-5.png' });
-                                cell.value.push({ src: 'app/integralui/resources/checkbox/checkbox-checked-4.png' });
+                                cell.value.push({ src: 'app/resources/checkbox/checkbox-checked-5.png' });
+                                cell.value.push({ src: 'app/resources/checkbox/checkbox-checked-4.png' });
                                 break;
                             case 2:
-                                cell.value.push({ src: 'app/integralui/resources/radiobutton/radio-checked.png' });
-                                cell.value.push({ src: 'app/integralui/resources/checkbox/checkbox-indeterminate-7.png' });
-                                cell.value.push({ src: 'app/integralui/resources/expandbox/expand-red.png' });
+                                cell.value.push({ src: 'app/resources/radiobutton/radio-checked.png' });
+                                cell.value.push({ src: 'app/resources/checkbox/checkbox-indeterminate-7.png' });
+                                cell.value.push({ src: 'app/resources/expandbox/expand-red.png' });
                                 break;
                             case 3:
-                                cell.value.push({ src: 'app/integralui/resources/expandbox/expand-green.png' });
-                                cell.value.push({ src: 'app/integralui/resources/radiobutton/radio-checked-2.png' });
+                                cell.value.push({ src: 'app/resources/expandbox/expand-green.png' });
+                                cell.value.push({ src: 'app/resources/radiobutton/radio-checked-2.png' });
                                 break;
                             default:
                                 cell.value.push({ src: 'http://www.lidorsystems.com/favicon.ico' });

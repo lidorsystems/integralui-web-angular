@@ -61,7 +61,7 @@ import { IntegralUITreeGrid } from '../../integralui/components/integralui.treeg
             }
             .trg-ovw-rating-stars-content
             {
-                background-image: url(app/integralui/resources/rating/star-empty-white.png);
+                background-image: url(app/resources/rating/star-empty-white.png);
             }
         </style>
         <h2 class="feature-title">TreeGrid / Overview</h2>
@@ -111,8 +111,8 @@ export class TreeGridOverviewSample {
     public columns: Array<any>;
     public rows: Array<any>;
 
-    private imageChecked: string = 'url(app/integralui/resources/checkbox/checkbox-checked-1.png)';
-    private imageUnchecked: string = 'url(app/integralui/resources/checkbox/checkbox-unchecked-1.png)';
+    private imageChecked: string = 'url(app/resources/checkbox/checkbox-checked-1.png)';
+    private imageUnchecked: string = 'url(app/resources/checkbox/checkbox-unchecked-1.png)';
 
     public gridStyle: any = {
         general: {
@@ -389,7 +389,7 @@ export class TreeGridOverviewSample {
     }
 
     private getCellRating(cell: any): string {
-        return cell.value ? 'app/integralui/resources/stars-small-' + cell.value.toString() + '.png' : '';
+        return cell.value ? 'app/resources/stars-small-' + cell.value.toString() + '.png' : '';
     }
 
     treegridDragOver(e: any){

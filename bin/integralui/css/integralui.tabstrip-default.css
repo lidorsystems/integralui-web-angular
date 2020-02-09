@@ -54,9 +54,6 @@
 }
 .iui-tabstrip-scroll-button span
 {
-    background-image: url(../resources/icons-x24.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -69,11 +66,11 @@
 }
 .iui-tabstrip-scroll-button-left span
 {
-    background-position: -120px -192px;
+    background-image: url(../icons/prev-24.png);
 }
 .iui-tabstrip-scroll-button-right span
 {
-    background-position: -144px -192px;
+    background-image: url(../icons/next-24.png);
 }
 .iui-tabstrip-scroll-button-up
 {

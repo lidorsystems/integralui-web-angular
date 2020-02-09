@@ -45,7 +45,7 @@ import { IntegralUITreeView } from '../../integralui/components/integralui.treev
 
             .project-icons
             {
-                background-image: url(app/integralui/resources/project.png);
+                background-image: url(app/resources/project.png);
                 background-repeat: no-repeat;
                 display: inline-block;
                 overflow: hidden;

@@ -16,7 +16,7 @@
 }
 .iui-sidebar-header-button span
 {
-    background: url(../../resources/icons.png) no-repeat -192px -80px;
+    background: url(../icons/menu-button-white.ico);
 }
 .iui-sidebar-content {
     color: white;

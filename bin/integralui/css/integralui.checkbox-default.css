@@ -25,7 +25,7 @@
 }
 .iui-checkbox-btn span
 {
-    background-image: url(../resources/checkbox/checkbox-unchecked-1.png);
+    background-image: url(../icons/checkbox-unchecked-1.ico);
     background-repeat: no-repeat;
 	display: block;
 	padding: 0;
@@ -36,15 +36,15 @@
 }
 .iui-checkbox-btn-checked span
 {
-    background-image: url(../resources/checkbox/checkbox-checked-1.png);
+    background-image: url(../icons/checkbox-checked-1.ico);
 }
 .iui-checkbox-btn-indeterminate span
 {
-    background-image: url(../resources/checkbox/checkbox-indeterminate-1.png);
+    background-image: url(../icons/checkbox-indeterminate-1.ico);
 }
 .iui-checkbox-btn-unchecked span
 {
-    background-image: url(../resources/checkbox/checkbox-unchecked-1.png);
+    background-image: url(../icons/checkbox-unchecked-1.ico);
 }
 
 /* Content */

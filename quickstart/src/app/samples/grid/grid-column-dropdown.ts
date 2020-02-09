@@ -84,7 +84,7 @@ import { IntegralUIGrid } from '../../integralui/components/integralui.grid';
             }
             .grid-col-dropdown-icons
             {
-                background: url(app/integralui/resources/icons.png) no-repeat 0 0;
+                background: url(app/resources/icons.png) no-repeat 0 0;
                 display: inline-block;
                 overflow: hidden;
                 padding: 0;

@@ -32,7 +32,7 @@ import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation
             }
             .menu-tpl-icons-medium
             {
-                background: url(app/integralui/resources/icons-x24.png) no-repeat 0 0;
+                background: url(app/resources/icons-x24.png) no-repeat 0 0;
                 display: inline-block;
                 overflow: hidden;
                 padding: 0;

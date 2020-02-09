@@ -41,9 +41,7 @@
 }
 .iui-dropdown-button-btn span
 {
-    background-image: url(../resources/icons.png);
-    background-repeat: no-repeat;
-	background-position: -48px -16px;
+    background-image: url(../icons/down-small.ico);
 	display: block;
 	padding: 0;
 	width: 16px;
@@ -61,15 +59,15 @@
 }
 .iui-dropdown-button-open-above span
 {
-	background-position: -32px -16px;
+    background-image: url(../icons/up-small.ico);
 }
 .iui-dropdown-button-open-left span
 {
-	background-position: -16px -16px;
+    background-image: url(../icons/prev-small.ico);
 }
 .iui-dropdown-button-open-right span
 {
-	background-position: 0 -16px;
+    background-image: url(../icons/next-small.ico);
 }
 
 .iui-dropdown-button-list, .iui-dropdown-button-list .iui-menuitem-block

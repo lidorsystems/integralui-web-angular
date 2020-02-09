@@ -39,7 +39,7 @@
 }
 .iui-treeitem-expand-box
 {
-    background: url(../resources/expandbox-icons.png) no-repeat 0 -48px;
+    background: url(../icons/expandbox-icons.png) no-repeat 0 -48px;
     display: inline-block;
     float: left;
     overflow: hidden;
@@ -139,7 +139,7 @@
 }
 .iui-treeitem-expand-box-load
 {
-    background: url(../resources/load.gif) no-repeat 0 0 !important;
+    background: url(../icons/load.gif) no-repeat 0 0 !important;
 }
 .iui-treeitem-list
 {
