@@ -166,7 +166,7 @@ To include resources that are used by IntegralUI components in your project duri
 
 <b>Note</b>   This is required because Angular compiler cannot detect resources that are outside the /src section of your app. It is needed if you are using resources that are part of IntegralUI Web, in your application.
 
-## How to Reduce Bundle Size
+### How to Reduce Bundle Size
 
 If you are using only few components from the InetgralUI Web package, you can reduce the bundle size during compilation by modifying the integralui.module.css file. This file imports CSS files for each component that is part of the package. Inside this file import only CSS for components that you are using.
 
