@@ -1,3 +1,6 @@
+v19.4.347
+─	TreeView item is now correctly rendered in full width when horizontal scrollbar is present
+
 v19.4.325
 ─	Reduced overall bundle size
 
