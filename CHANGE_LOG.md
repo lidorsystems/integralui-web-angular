@@ -1,22 +1,22 @@
 v19.4.368
-─	Fixed the issue that causes flickering of toolbar in TreeView 
-─	Other small improvements
+- Fixed the issue that causes flickering of toolbar in TreeView 
+- Other small improvements
 
 v19.4.352
-─	Breadcrumb is now optimized. Flickering no longer appears
-─	Breadcrumb now clears the path when there is no selected item
-─	Frame directive fires a new event sizeChanging before the element size is changed
-─	Option to choose whether Frame directive resizes only width, height or both
+- Breadcrumb is now optimized. Flickering no longer appears
+- Breadcrumb now clears the path when there is no selected item
+- Frame directive fires a new event sizeChanging before the element size is changed
+- Option to choose whether Frame directive resizes only width, height or both
 
 v19.4.347
-─	TreeView item is now correctly rendered in full width when horizontal scrollbar is present
+- TreeView item is now correctly rendered in full width when horizontal scrollbar is present
 
 v19.4.325
-─	Reduced overall bundle size
+- Reduced overall bundle size
 
 v19.4.278
-─	Fixed the issue with horizontal scrollbar appearance during expand/collapse of TreeView items when hover and/or select templates are in use
-─	The horizontal scrolling in TreeView now correctly shows the longest item in full
+- Fixed the issue with horizontal scrollbar appearance during expand/collapse of TreeView items when hover and/or select templates are in use
+- The horizontal scrolling in TreeView now correctly shows the longest item in full
 
 v19.4.211 
 - iurResize directive change detection on attached element is improved
