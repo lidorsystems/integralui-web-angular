@@ -1,3 +1,13 @@
+v19.4.368
+─	Fixed the issue that causes flickering of toolbar in TreeView 
+─	Other small improvements
+
+v19.4.352
+─	Breadcrumb is now optimized. Flickering no longer appears
+─	Breadcrumb now clears the path when there is no selected item
+─	Frame directive fires a new event sizeChanging before the element size is changed
+─	Option to choose whether Frame directive resizes only width, height or both
+
 v19.4.347
 ─	TreeView item is now correctly rendered in full width when horizontal scrollbar is present
 

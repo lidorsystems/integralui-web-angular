@@ -12,6 +12,7 @@ export declare class IntegralUIFrame {
     private resizerElem;
     private _elRend;
     settings: any;
+    sizeChanging: EventEmitter<any>;
     sizeChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService);
     ngAfterViewInit(): void;

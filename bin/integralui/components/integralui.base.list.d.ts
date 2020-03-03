@@ -58,7 +58,9 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     isHoverTemplatePresent: boolean;
     isSelectedTemplatePresent: boolean;
     isUpdateActive: boolean;
-    longestItemWidth: number;
+    protected prevLongestItemWidth: number;
+    protected longestItemWidth: number;
+    longestItemWidthValue: string;
     private virtualization;
     protected visibleRange: number;
     protected updateTimer: any;
@@ -311,7 +313,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     findItemByText(text: string): any;
     clearSelection(): void;
     protected clearComponentSelection(): void;
-    private clearPrevSelection;
+    protected clearPrevSelection(item?: any): void;
     private isItemInSelectionList;
     protected processSelection(e: any, item: any, value?: any): boolean;
     selectItems(items: Array<any>): void;

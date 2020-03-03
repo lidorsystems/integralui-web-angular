@@ -38,7 +38,7 @@
 }
 .iui-breadcrumb-root-button-box
 {
-    background: url(../icons/menu-button.ico) no-repeat -176px -80px;
+    background: url(../icons/menu-button.ico);
     display: inline-block;
     margin: 4px 0 0 0;
     overflow: hidden;
