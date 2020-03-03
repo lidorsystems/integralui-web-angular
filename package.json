@@ -1,6 +1,6 @@
 {
   "name": "integralui-web",
-  "version": "19.4.352",
+  "version": "19.4.368",
   "description": "IntegralUI Web - Advanced UI Components for Angular",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
