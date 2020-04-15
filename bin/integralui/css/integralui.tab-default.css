@@ -8,6 +8,7 @@
 	overflow: hidden;
 	padding: 5px;
 	position: absolute;
+	white-space: nowrap;
 	z-index: 0;
 	top: 1px;
 }
@@ -76,30 +77,12 @@
 .iui-tab-content
 {
 	background: white;
-	border: thin solid #bcbcbc;
+	border: 0;
 	padding: 5px;
 	position: absolute;
 	vertical-align: middle;
 	overflow: hidden;
 }
-.iui-tab-content-selected > div
-{
-	/*animation: tab-content-selected 1s 0s 1 forwards;*/
-	animation-name: tab-content-selected;
-	animation-delay: 0s;
-	animation-direction: normal;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-iteration-count: 1;
-	animation-play-state: running;
-	animation-timing-function: linear; 
-}
-@keyframes tab-content-selected
-{
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
 
 /* Disabled State */
 .iui-tab-disabled div

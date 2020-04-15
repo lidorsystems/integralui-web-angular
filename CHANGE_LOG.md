@@ -1,3 +1,26 @@
+v20.1.0  
+- Compatible with Angular 9
+- Reduced overall bundle size
+- Option to add a Toolbar on left and right side of the TabStrip
+- New TabStrip animations: Fade and Slide
+- TabStrip display modes for tabs: AutoSized, Compressed and Justified
+- Scroll buttons in TabStrip components now can appear on demand
+- Improved animations in Grid and TreeGrid for dropdown editors: Date and List
+- In Resize directive change detection on attached element is improved
+- Option to set animation speed in editors: DatePicker and DropList
+- TreeList component now shows a scrollbar on demand
+- Option to add items in groups in TreeList and customize the group appearance
+- TreeList items with children can expand horizontally or vertically
+- New Theme: Midnight
+- Content from Hover and Select templates now remains visible when TreeView layout is updated manually from code
+- Fixed the issue in Breadcrumb that caused flickering during resize
+- Fixed the issue that caused popup editors like DropList and DatePicker to not appear when multi-level headers are in use
+- Fixed the issue with horizontal scrollbar appearance during expand/collapse of TreeView items when hover and/or select templates are in use
+- The horizontal scrolling in TreeView now correctly shows the longest item in full
+- On Initialization of ColorPicker if click is made outside the component, with pre-selected color and without opening the dropdown panel, the selected color becomes empty
+- Fixed the issue of showing content in TreeView items in multiple lines not aligned with expand box, when display mode is set to Full
+- Interference of tab selection and drag start in TabStrip when scroll mode is set OutBound
+
 v19.4.368
 - Fixed the issue that causes flickering of toolbar in TreeView 
 - Other small improvements

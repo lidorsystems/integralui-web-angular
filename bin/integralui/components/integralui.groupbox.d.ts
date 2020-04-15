@@ -1,7 +1,10 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIBaseService, IntegralUIHeaderItem } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIGroupBoxTags {
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIGroupBoxTags, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUIGroupBoxTags, "iui-group-header", never, {}, {}, never>;
 }
 export declare class IntegralUIGroupBox extends IntegralUIBaseComponent {
     protected commonService?: IntegralUICommonService;
@@ -32,8 +35,10 @@ export declare class IntegralUIGroupBox extends IntegralUIBaseComponent {
     text: string;
     icon: string;
     expandBoxType: string;
-    expanded: boolean;
-    selected: boolean;
+    set expanded(value: boolean);
+    get expanded(): boolean;
+    set selected(value: boolean);
+    get selected(): boolean;
     afterCollapse: EventEmitter<any>;
     afterExpand: EventEmitter<any>;
     afterSelect: EventEmitter<any>;
@@ -69,4 +74,6 @@ export declare class IntegralUIGroupBox extends IntegralUIBaseComponent {
     getCurrentHeaderStyle(): any;
     setOpacity(value: any): void;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIGroupBox, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIGroupBox, "iui-groupbox", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "text": "text"; "icon": "icon"; "expandBoxType": "expandBoxType"; "expanded": "expanded"; "selected": "selected"; }, { "afterCollapse": "afterCollapse"; "afterExpand": "afterExpand"; "afterSelect": "afterSelect"; "beforeCollapse": "beforeCollapse"; "beforeExpand": "beforeExpand"; "beforeSelect": "beforeSelect"; "selectedChanged": "selectedChanged"; }, never, ["iui-group-header", "*"]>;
 }

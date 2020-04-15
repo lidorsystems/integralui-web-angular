@@ -334,7 +334,7 @@ export class TreeGridOverviewSample {
         ];
     } 
 
-    private columnCheckClicked(column: any){
+    public columnCheckClicked(column: any){
         if (column){
             let currentValue = column.value == true ? true : false;
             column.value = !currentValue;
@@ -372,7 +372,7 @@ export class TreeGridOverviewSample {
         }
     }
 
-    private checkBoxClicked(cell: any){
+    public checkBoxClicked(cell: any){
         if (cell){
             let currentValue = cell.value == true ? true : false;
             cell.value = !currentValue;
@@ -384,11 +384,11 @@ export class TreeGridOverviewSample {
         }
     }
 
-    private getCheckValue(obj: any){
+    public getCheckValue(obj: any){
         return obj && obj.value == true ? this.imageChecked : this.imageUnchecked;
     }
 
-    private getCellRating(cell: any): string {
+    public getCellRating(cell: any): string {
         return cell.value ? 'app/resources/stars-small-' + cell.value.toString() + '.png' : '';
     }
 

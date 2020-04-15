@@ -1,0 +1,16 @@
+.iui-autocomplete
+{
+    background: #252526;
+	border: thin solid #151515;
+    color: #cccccc;
+}
+.iui-autocomplete input {
+    background: #252526;
+    border-color: #0c293d;
+    color: #cccccc;
+}
+.iui-autocomplete input:focus
+{
+    outline: none !important;
+}
+

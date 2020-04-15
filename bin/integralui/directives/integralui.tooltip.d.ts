@@ -1,9 +1,12 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseComponent } from '../components/integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
+    private animationTimer;
+    currentOpacity: number;
     tooltipOptions: any;
     protected showTimer: any;
     protected popupTimer: any;
@@ -11,16 +14,31 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
         x: number;
         y: number;
     };
+    currentPos: {
+        x: number;
+        y: number;
+    };
+    currentSize: {
+        width: number;
+        height: number;
+    };
     tooltipDisplay: string;
-    tooltipPos: {
-        top: number;
-        left: number;
+    startPos: {
+        x: number;
+        y: number;
     };
     private tooltipSize;
-    options: any;
+    contentElem: ElementRef;
+    set options(value: any);
+    get options(): any;
     closed: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
+    ngOnDestroy(): void;
+    animateHide(): void;
+    animateShow(): void;
+    protected getAnimationFactor(): number;
+    private removeAnimationTimer;
     protected updateOptions(value?: any): void;
     protected removeTimers(): void;
     close(): void;
@@ -29,6 +47,8 @@ export declare class IntegralUITooltipComponent extends IntegralUIBaseComponent 
     getSize(): any;
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITooltipComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUITooltipComponent, "iui-tooltip", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "options": "options"; }, { "closed": "closed"; }, never, never>;
 }
 export declare class IntegralUITooltip {
     protected elemRef: ElementRef;
@@ -42,6 +62,7 @@ export declare class IntegralUITooltip {
     constructor(elemRef: ElementRef, cmpResolver: ComponentFactoryResolver, commonService?: IntegralUICommonService);
     ngOnDestroy(): void;
     closeTooltip(): void;
+    removeTooltip(): void;
     getSize(): {
         width: any;
         height: any;
@@ -49,4 +70,6 @@ export declare class IntegralUITooltip {
     onMouseEnter(e: any): void;
     onMouseLeave(e: any): void;
     onMouseMove(e: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITooltip, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUITooltip, "[iuiTooltip]", never, { "settings": "iuiTooltip"; "tooltipRef": "tooltipRef"; }, {}, never>;
 }

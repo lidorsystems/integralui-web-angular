@@ -1,0 +1,23 @@
+.iui-listview
+{
+    background-color: #252526;
+    border-color: #151515;
+    color: #cccccc;
+}
+@keyframes listviewitem-animate-enter
+{
+    0% {       
+        border: thin solid transparent;
+	    box-shadow: none;
+        overflow: hidden;
+        padding-bottom: 2px;
+        z-index: 9;
+    }
+    100% { 
+	    border: thin solid #151515;
+	    box-shadow: 2px 3px 3px #252526;
+        overflow: hidden;
+        padding-bottom: 2px;
+        z-index: 9;
+    }
+}

@@ -1,6 +1,7 @@
 import { ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseService, IntegralUIItem } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIListItem extends IntegralUIItem {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -31,4 +32,6 @@ export declare class IntegralUIListItem extends IntegralUIItem {
     selectItem(): void;
     onTouchStart(e: any): void;
     getControlStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIListItem, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIListItem, "iui-listitem", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "icon": "icon"; "name": "name"; "size": "size"; "state": "state"; "text": "text"; "spacing": "spacing"; }, { "click": "click"; "mouseDown": "mouseDown"; "mouseEnter": "mouseEnter"; "mouseLeave": "mouseLeave"; "mouseMove": "mouseMove"; "mouseUp": "mouseUp"; "itemClick": "itemClick"; "itemDblClick": "itemDblClick"; "itemRightClick": "itemRightClick"; }, never, ["*"]>;
 }

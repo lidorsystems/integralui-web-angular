@@ -1,6 +1,7 @@
 import { ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseValueComponent, IntegralUINumericDisplayMode, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -22,13 +23,19 @@ export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponen
     leftrightButtonsElem: ElementRef;
     topBottomButtonsElem: ElementRef;
     topBottomButtonsChildElem: ElementRef;
-    accelerator: number;
-    displayMode: IntegralUINumericDisplayMode;
-    max: number;
-    min: number;
+    set accelerator(val: number);
+    get accelerator(): number;
+    set displayMode(value: IntegralUINumericDisplayMode);
+    get displayMode(): IntegralUINumericDisplayMode;
+    set max(val: number);
+    get max(): number;
+    set min(val: number);
+    get min(): number;
     mouseWheelSpeed: IntegralUISpeedMode;
-    step: number;
-    value: number;
+    set step(val: number);
+    get step(): number;
+    get value(): number;
+    set value(val: number);
     displayModeChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
@@ -47,4 +54,6 @@ export declare class IntegralUINumericUpDown extends IntegralUIBaseValueComponen
     onMouseDown(e: any, flag?: boolean): void;
     onMouseUp(e: any): void;
     getControlStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUINumericUpDown, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUINumericUpDown, "iui-numeric-updown", never, { "autoUpdate": "autoUpdate"; "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "value": "value"; "accelerator": "accelerator"; "displayMode": "displayMode"; "max": "max"; "min": "min"; "mouseWheelSpeed": "mouseWheelSpeed"; "step": "step"; }, { "valueChanged": "valueChanged"; "displayModeChanged": "displayModeChanged"; }, never, never>;
 }

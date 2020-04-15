@@ -1,0 +1,16 @@
+.iui-listbar {
+	background-color: #252526;
+	border-color: #151515;
+	color: #cccccc;
+}
+.iui-listbar-button-up, .iui-listbar-button-down {
+	background: #191919;
+	border-color: #171717;
+}
+.iui-listbar-button-up:hover, .iui-listbar-button-down:hover {
+    background: #212121;
+    border-color: #191919;
+}
+.iui-listbar-button-up-icon, .iui-listbar-button-down-icon {
+    background-position: -48px 0;
+}

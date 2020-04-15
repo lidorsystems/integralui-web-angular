@@ -1,0 +1,37 @@
+.iui-treelist
+{
+	background-color: #252526;
+	border-color: #252526;
+	color: #cccccc;
+}
+.iui-treelist-header
+{
+	background-color: #0c293d;
+	border-color: #0c293d;
+	color: white;
+}
+.iui-treelist-header-animate-select
+{
+	background: #124263;
+}
+.iui-treelistitem-hovered
+{
+	background-color: #2a2d2e;
+}
+.iui-treelistitem-selected
+{
+	background-color: #37373d;
+	color: white;
+}
+.iui-treelistitem-animate-select
+{
+	background: #2d2d33;
+}
+.next
+{
+    background-position: -48px 0 !important;
+}
+.back
+{
+    background-position: -48px -32px !important;
+}

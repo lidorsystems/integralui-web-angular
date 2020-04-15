@@ -1,9 +1,8 @@
 @import 'app/integralui/css/integralui.module.css';
-@import 'app/integralui/themes/integralui.themes.office.css';
 
 html, body
 {
-    background-color: #f5f5f5;
+    background-color: white;
     color: #565656;
     font-family: Arial, Calibri, Helvetica, Tahoma, sans-serif;
 	font-weight: lighter;
@@ -78,18 +77,28 @@ h1, h2, h3
 {
     margin-top: 20px;
 }
+.feature-help ul {
+    margin: 0;
+    padding: 0;
+}
 .feature-help p
 {
     text-align:justify;
+    margin: 0;
+    padding: 0;
 }
 .feature-help span.initial-space
 {
     display: inline-block;
     width: 20px
 }
+.feature-help p.note
+{
+    margin: 1em 2em;
+}
 .feature-points li
 {
-    margin: 5px 0;
+    margin: 10px 5px 10px 40px;
 }
 .control-panel
 {
@@ -134,4 +143,186 @@ h1, h2, h3
 }
 .sidebar li:focus {
     outline: none !important;
+}
+
+.app-edit
+{
+    margin-top: 3px;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+}
+.app-edit:hover .app-edit-icon
+{
+    opacity: 1;
+}
+.app-edit a
+{
+    text-decoration: none;
+}
+.app-edit-title
+{
+    display: inline-block;
+    margin-top: 5px;
+    vertical-align: top;
+}
+.app-edit-icon
+{
+    background-image: url(app/resources/icons.png);
+    background-position: -128px -80px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    margin: 5px 4px 0 4px;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+}
+
+
+pre
+{
+    font-size: 0.875em;
+    overflow: visible;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* Help Content */
+.help-content
+{
+    position: relative;
+}
+.help-tabstrip
+{
+    background: white !important;
+    border: thin solid transparent;
+    position: relative;
+    color: black;
+    cursor: default;
+    overflow: hidden;
+
+    margin: 50px 0 20px 0;
+    width: 100%;
+    height: 450px;
+}
+.help-tabstrip .iui-tabstrip-content {
+    border: 0;
+    border-top: thin solid #d9d9d9;
+}
+.help-tabstrip .iui-tabstrip-line {
+    background: #c60d0d;
+    display: block;
+}
+.help-tabstrip > ul
+{
+    position: absolute;
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.help-tabstrip .iui-tab-header
+{
+    padding: 7px 10px !important;
+    background-color: transparent;
+    border: 0;
+    color: #000000;
+    top: 1px;
+}
+.help-tabstrip .iui-tab-header-hovered
+{
+    background-color: transparent;
+    border: 0;
+    color: #000000;
+
+    animation-name: help-tabstrip-tab-header-hovered-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes help-tabstrip-tab-header-hovered-animate-enter {
+    0% { color: black; }
+    100% { color: #c60d0d; }
+}
+.help-tabstrip .iui-tab-header-selected
+{
+    background-color: transparent;
+    border: 0;
+    color: black;
+    font-weight: bold;
+}
+.help-tabstrip .iui-tab-content
+{
+    background: #ffffff;
+    border-color: #d9d9d9;
+    color: black;
+    padding: 5px;
+    position: absolute;
+    vertical-align: middle;
+    overflow: auto;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+.help-tabstrip code
+{
+    cursor: text;
+    
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+
+.feature-title span {
+    background: white;
+    display: inline-block;
+    vertical-align: top;
+}
+.feature-subtitle-open {
+    animation-name: feature-subtitle-open;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.5s; /*.4s;*/
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes feature-subtitle-open {
+    0% { margin-left: -800px; opacity: 0; }
+    70% { margin-left: -50px; opacity: 0.5 }
+    90% { margin-left: -20px; opacity: 0.9 }
+    100% { margin-left: 0; opacity: 1; }
+}
+@keyframes feature-subtitle-open-vertical {
+    0% { margin-top: -40px; }
+    70% { margin-top: -30px; }
+    90% { margin-top: -20px; }
+    100% { margin-top: 0; }
+}
+
+.code-lang {
+    color: #0000ff;
+}
+.code-highlight {
+    color:#c60d0d;
+}
+.code-api {
+    color: #0000ff;
 }

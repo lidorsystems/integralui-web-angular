@@ -1,0 +1,32 @@
+.iui-listitem
+{
+    color: #cccccc;
+}
+.iui-listitem-hovered
+{
+    animation-name: none;
+    background-color: #2a2d2e;
+    border-color: #2a2d2e;
+}
+.iui-listitem-selected
+{
+    animation-name: none;
+    background-color: #0a4369;
+    border-color: #0a4369;
+    color: white;
+}
+@keyframes listitem-animate-enter
+{
+	0% { 	   
+        border: thin solid transparent;
+	    box-shadow: none;
+	}
+	100% { 
+	    border: thin solid #151515;
+	    box-shadow: 2px 3px 3px #252526;
+	}
+}
+.iui-listitem-animate-select
+{
+	background: #2d2d33;
+}

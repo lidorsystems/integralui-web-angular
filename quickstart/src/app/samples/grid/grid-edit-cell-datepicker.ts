@@ -153,7 +153,7 @@ export class GridEditCellDatePickerSample {
                 headerAlignment: "center", 
                 editorType: IntegralUIEditorType.Date,
                 editorSettings: {
-                    calendarSize: { width: 300, height: 250 },
+                    calendarSize: { width: 250, height: 200 },
                     locales: 'en-GB',
                     firstDayOfWeek: IntegralUIWeekDays.Monday,
                     format: IntegralUIDateFormat.Custom,

@@ -2,6 +2,7 @@ import { ComponentFactoryResolver, ElementRef, EventEmitter } from '@angular/cor
 import { IntegralUIBaseComponent, IntegralUIScrollMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
@@ -29,7 +30,7 @@ export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
     protected updateTimer: any;
     protected clientSpace: any;
     contentPos: any;
-    protected currentItemSize: any;
+    currentItemSize: any;
     leftRightMarginTop: number;
     topBotomMarginLeft: number;
     itemTemplate: any;
@@ -55,12 +56,16 @@ export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
     protected itemClassName: string;
     protected itemContentClassName: string;
     protected refreshTimer: any;
-    items: Array<any>;
-    itemSize: any;
+    set items(value: Array<any>);
+    get items(): Array<any>;
+    set itemSize(value: any);
+    get itemSize(): any;
     mouseWheelSpeed: IntegralUISpeedMode;
-    scrollMode: IntegralUIScrollMode;
-    selectedItem: any;
-    sorting: IntegralUISortOrder;
+    set scrollMode(value: IntegralUIScrollMode);
+    get scrollMode(): IntegralUIScrollMode;
+    set selectedItem(value: any);
+    get selectedItem(): any;
+    set sorting(value: IntegralUISortOrder);
     afterSelect: EventEmitter<any>;
     beforeSelect: EventEmitter<any>;
     change: EventEmitter<any>;
@@ -208,4 +213,6 @@ export declare class IntegralUIListScroller extends IntegralUIBaseComponent {
         selected: any;
     };
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIListScroller, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIListScroller, "iui-listscroller", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "items": "items"; "itemSize": "itemSize"; "mouseWheelSpeed": "mouseWheelSpeed"; "scrollMode": "scrollMode"; "selectedItem": "selectedItem"; "sorting": "sorting"; }, { "afterSelect": "afterSelect"; "beforeSelect": "beforeSelect"; "change": "change"; "clear": "clear"; "itemAdding": "itemAdding"; "itemAdded": "itemAdded"; "itemRemoving": "itemRemoving"; "itemRemoved": "itemRemoved"; "scrollModeChanged": "scrollModeChanged"; "scrollPosChanged": "scrollPosChanged"; "selectionChanged": "selectionChanged"; "updateComplete": "updateComplete"; }, ["itemTemplate"], never>;
 }

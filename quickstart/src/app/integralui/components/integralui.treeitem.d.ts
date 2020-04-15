@@ -3,6 +3,7 @@ import { IntegralUIBaseService } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIListItem } from './integralui.listitem';
+import * as i0 from "@angular/core";
 export declare class IntegralUITreeItem extends IntegralUIListItem {
     protected elemRef: ElementRef;
     private dataService;
@@ -29,7 +30,8 @@ export declare class IntegralUITreeItem extends IntegralUIListItem {
     protected isExpandBoxTouched: boolean;
     items: Array<any>;
     templateRef: any;
-    expanded: boolean;
+    set expanded(value: boolean);
+    get expanded(): boolean;
     itemClick: EventEmitter<any>;
     itemDblClick: EventEmitter<any>;
     itemRightClick: EventEmitter<any>;
@@ -72,4 +74,6 @@ export declare class IntegralUITreeItem extends IntegralUIListItem {
     protected updateControlClass(): void;
     protected updateContentClass(): void;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITreeItem, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUITreeItem, "iui-treeitem", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "icon": "icon"; "name": "name"; "size": "size"; "state": "state"; "text": "text"; "items": "items"; "templateRef": "templateRef"; "expanded": "expanded"; }, { "click": "click"; "mouseDown": "mouseDown"; "mouseEnter": "mouseEnter"; "mouseLeave": "mouseLeave"; "mouseMove": "mouseMove"; "mouseUp": "mouseUp"; "itemClick": "itemClick"; "itemDblClick": "itemDblClick"; "itemRightClick": "itemRightClick"; }, never, never>;
 }

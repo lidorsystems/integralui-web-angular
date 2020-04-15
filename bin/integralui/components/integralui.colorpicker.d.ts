@@ -1,6 +1,7 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIColorFormat, IntegralUIPopup, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIColorSlider {
     protected commonService?: IntegralUICommonService;
     private isSliderActive;
@@ -11,7 +12,8 @@ export declare class IntegralUIColorSlider {
     private buttonPos;
     slider: ElementRef<HTMLCanvasElement>;
     sliderButton: ElementRef<HTMLCanvasElement>;
-    value: string;
+    set value(val: string);
+    get value(): string;
     valueChanged: EventEmitter<any>;
     constructor(commonService?: IntegralUICommonService);
     ngAfterViewInit(): void;
@@ -23,6 +25,8 @@ export declare class IntegralUIColorSlider {
     onMouseUp(e: MouseEvent): void;
     refresh(): void;
     private updateLayout;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIColorSlider, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIColorSlider, "iui-colorslider", never, { "value": "value"; }, { "valueChanged": "valueChanged"; }, never, never>;
 }
 export declare class IntegralUIColorPalette {
     protected commonService?: IntegralUICommonService;
@@ -39,8 +43,10 @@ export declare class IntegralUIColorPalette {
     private buttonPos;
     palette: ElementRef<HTMLCanvasElement>;
     paletteButton: ElementRef<HTMLCanvasElement>;
-    color: string;
-    value: string;
+    set color(value: string);
+    get color(): string;
+    set value(val: string);
+    get value(): string;
     valueChanged: EventEmitter<any>;
     constructor(commonService?: IntegralUICommonService);
     ngAfterViewInit(): void;
@@ -55,6 +61,8 @@ export declare class IntegralUIColorPalette {
     updateColorList(): void;
     updateLayout(): void;
     private updatePaletteButtonPos;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIColorPalette, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIColorPalette, "iui-colorpalette", never, { "color": "color"; "value": "value"; }, { "valueChanged": "valueChanged"; }, never, never>;
 }
 export declare class IntegralUIColorPickerPopup extends IntegralUIPopup {
     protected elemRef: ElementRef;
@@ -78,7 +86,8 @@ export declare class IntegralUIColorPickerPopup extends IntegralUIPopup {
     colorFormat: IntegralUIColorFormat;
     opacity: number;
     originalColorFormat: IntegralUIColorFormat;
-    value: string;
+    set value(val: string);
+    get value(): string;
     updateCurrentValue(): void;
     closed: EventEmitter<any>;
     valueChanged: EventEmitter<any>;
@@ -106,6 +115,8 @@ export declare class IntegralUIColorPickerPopup extends IntegralUIPopup {
     inputKeyDown(e: any): void;
     updateLayout(): void;
     getContentStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIColorPickerPopup, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIColorPickerPopup, "iui-colorpicker-popup", never, { "colorFormat": "colorFormat"; "opacity": "opacity"; "originalColorFormat": "originalColorFormat"; "value": "value"; }, { "closed": "closed"; "valueChanged": "valueChanged"; }, never, never>;
 }
 export declare class IntegralUIColorPicker extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
@@ -144,8 +155,10 @@ export declare class IntegralUIColorPicker extends IntegralUIBaseComponent {
     animationSpeed: IntegralUISpeedMode;
     appRef: any;
     colorFormat: IntegralUIColorFormat;
-    panelSize: any;
-    selectedValue: string;
+    set panelSize(value: any);
+    get panelSize(): any;
+    set selectedValue(value: string);
+    get selectedValue(): string;
     getSelectedColorBackground(): string;
     valueChanged: EventEmitter<any>;
     private addPopup;
@@ -171,4 +184,6 @@ export declare class IntegralUIColorPicker extends IntegralUIBaseComponent {
     protected getColorPopupCellStyle(value?: any): any;
     protected updateStyle(value: any): void;
     refresh(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIColorPicker, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIColorPicker, "iui-colorpicker", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "animationSpeed": "animationSpeed"; "appRef": "appRef"; "colorFormat": "colorFormat"; "panelSize": "panelSize"; "selectedValue": "selectedValue"; }, { "valueChanged": "valueChanged"; }, never, never>;
 }

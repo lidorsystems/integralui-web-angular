@@ -1,16 +1,27 @@
-import { ChangeDetectorRef, ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIBaseService, IntegralUIMoveDirection, IntegralUITabScrollMode, IntegralUITabStripPlacement } from './integralui.core';
+import { ChangeDetectorRef, ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer2, ViewContainerRef } from '@angular/core';
+import { IntegralUIAnimationType, IntegralUIBaseComponent, IntegralUIBaseService, IntegralUIMoveDirection, IntegralUISpeedMode, IntegralUITabDisplayMode, IntegralUITabScrollMode, IntegralUITabStripPlacement } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUITab } from './integralui.tab';
+import * as i0 from "@angular/core";
+export declare class IntegralUITabStripToolbarLeft {
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITabStripToolbarLeft, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUITabStripToolbarLeft, "iui-tabstrip-toolbar-left", never, {}, {}, never>;
+}
+export declare class IntegralUITabStripToolbarRight {
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITabStripToolbarRight, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUITabStripToolbarRight, "iui-tabstrip-toolbar-right", never, {}, {}, never>;
+}
 export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     private changeRef;
     protected commonService?: IntegralUICommonService;
     protected cmpResolver?: ComponentFactoryResolver;
     protected baseService?: IntegralUIBaseService;
+    private animationTimer;
+    private currentAnimation;
     private dataTabs;
     private eventList;
     private numTabs;
@@ -27,30 +38,41 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     private orgReorderTabIndex;
     ctrlCursor: string;
     protected autoSizeValue: boolean;
-    blockPos: {
-        top: string;
-        right: string;
-        bottom: string;
-        left: string;
-    };
-    protected clientRect: {
+    blockPos: any;
+    contentBlockPos: any;
+    contentBlockSize: any;
+    protected clientRect: any;
+    protected currentTabPlacement: IntegralUITabStripPlacement;
+    private currentDisplayMode;
+    private emptyTabSpace;
+    private orgTabHeaderSpace;
+    private scrollBlockSize;
+    private scrollButtonSize;
+    selTabLinePos: any;
+    selTabLineSize: any;
+    private tabHeaderRect;
+    private tabPos;
+    private tabSize;
+    tabstripPos: any;
+    tabStripSize: {
         width: number;
         height: number;
     };
-    protected currentTabPlacement: IntegralUITabStripPlacement;
-    private scrollBlockSize;
-    private scrollButtonSize;
-    private tabSize;
-    private tabStripSize;
+    toolbarPos: any;
     private updateTimer;
     contentList: QueryList<IntegralUITab>;
+    contentElem: ElementRef;
     scrollInBoundElem: ElementRef;
     scrollButtonElem: ElementRef;
     tabBlock: ElementRef;
     tabBlockRef: ViewContainerRef;
     tabHeaders: QueryList<ElementRef>;
+    tabIconElem: ElementRef;
+    toolbarLeftElem: ElementRef;
+    toolbarRightElem: ElementRef;
     private currentScrollMode;
     private isScrollActive;
+    private isScrollAllowed;
     private scrollCount;
     private currentScrollPos;
     private scrollTimer;
@@ -65,13 +87,24 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     private tRef;
     allowDrag: boolean;
     allowDrop: boolean;
-    autoSize: boolean;
-    scrollMode: IntegralUITabScrollMode;
-    selectedIndex: number;
-    selectedTab: any;
-    tabs: Array<any>;
+    set animation(value: IntegralUIAnimationType);
+    get animation(): IntegralUIAnimationType;
+    animationSpeed: IntegralUISpeedMode;
+    set autoSize(value: boolean);
+    get autoSize(): boolean;
+    set displayMode(value: IntegralUITabDisplayMode);
+    get displayMode(): IntegralUITabDisplayMode;
+    set scrollMode(value: IntegralUITabScrollMode);
+    get scrollMode(): IntegralUITabScrollMode;
+    set selectedIndex(value: number);
+    get selectedIndex(): number;
+    set selectedTab(value: any);
+    get selectedTab(): any;
+    set tabs(value: Array<any>);
+    get tabs(): Array<any>;
     tabSpacing: number;
-    tabStripPlacement: IntegralUITabStripPlacement;
+    set tabStripPlacement(value: IntegralUITabStripPlacement);
+    get tabStripPlacement(): IntegralUITabStripPlacement;
     afterSelect: EventEmitter<any>;
     beforeSelect: EventEmitter<any>;
     change: EventEmitter<any>;
@@ -83,7 +116,7 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     tabRemoved: EventEmitter<any>;
     scrollPosChanged: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer, changeRef: ChangeDetectorRef, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer2, changeRef: ChangeDetectorRef, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected updateData(): void;
     ngAfterViewInit(): void;
@@ -99,6 +132,12 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     removeTabAt(index: number): boolean;
     private callEventAdd;
     private callEventRemove;
+    protected animate(): void;
+    protected fadeTabContent(): void;
+    protected getAnimationFactor(): number;
+    private removeAnimationTimer;
+    protected slideTabContentHorizontal(): void;
+    protected slideTabContentVertical(): void;
     private attachTabEvents;
     private getTabCurrentIndex;
     private getTabDataIndex;
@@ -106,8 +145,10 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     private getTabIndex;
     private getComponentData;
     private isIndexInRange;
+    private calcEmptyTabSpace;
     private resetLayout;
     updateLayout(): void;
+    private updateTabLine;
     private updateTabLayout;
     private updateTabHeaders;
     tabMouseDown(e: any, cmp: IntegralUITab): void;
@@ -139,6 +180,7 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     private selectComponent;
     private selectComponentByIndex;
     selectTab(tab: any, skip?: boolean): void;
+    getScrollBlockClass(): string;
     getScrollInBoundStyle(): {
         top: string;
         right: string;
@@ -149,11 +191,11 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
         width: string;
         height: string;
     };
-    getScrollInBoundButtonStyle(type: number): {
+    getScrollInBoundButtonStyle(): {
         'margin-left': string;
         'margin-top': string;
     };
-    getScrollOutBoundStyle(type: number): {
+    getScrollOutBoundStyle(type?: number): {
         top: string;
         right: string;
         bottom: string;
@@ -167,4 +209,6 @@ export declare class IntegralUITabStrip extends IntegralUIBaseComponent {
     getTabHeaderClass(cmp: IntegralUITab, flag?: boolean): any;
     getReorderTabStyle(): any;
     tabTouchStart(e: any, cmp: IntegralUITab): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITabStrip, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUITabStrip, "iui-tabstrip", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "allowDrag": "allowDrag"; "allowDrop": "allowDrop"; "animation": "animation"; "animationSpeed": "animationSpeed"; "autoSize": "autoSize"; "displayMode": "displayMode"; "scrollMode": "scrollMode"; "selectedIndex": "selectedIndex"; "selectedTab": "selectedTab"; "tabs": "tabs"; "tabSpacing": "tabSpacing"; "tabStripPlacement": "tabStripPlacement"; }, { "afterSelect": "afterSelect"; "beforeSelect": "beforeSelect"; "change": "change"; "tabAdding": "tabAdding"; "tabAdded": "tabAdded"; "tabOrderChanged": "tabOrderChanged"; "clear": "clear"; "tabRemoving": "tabRemoving"; "tabRemoved": "tabRemoved"; "scrollPosChanged": "scrollPosChanged"; "selectionChanged": "selectionChanged"; }, ["contentList"], ["iui-tabstrip-toolbar-left", "*", "iui-tabstrip-toolbar-right"]>;
 }

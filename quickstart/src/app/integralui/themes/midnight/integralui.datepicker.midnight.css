@@ -1,0 +1,10 @@
+.iui-datepicker
+{
+    background-color: #252526;
+    border-color: #151515;
+    color: #cccccc;
+}
+.iui-datepicker-header-button-down span
+{
+    background-image: url(../../icons/down-white-24.png);
+}

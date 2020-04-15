@@ -1,16 +1,17 @@
-import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseService, IntegralUIMoveDirection, IntegralUITemplate } from './integralui.core';
+import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer2, ViewContainerRef } from '@angular/core';
+import { IntegralUIBaseService, IntegralUIMoveDirection, IntegralUIOrientation, IntegralUITemplate } from './integralui.core';
 import { IntegralUIBaseGrid } from './integralui.base.grid';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
 import { IntegralUIFilterService } from '../services/integralui.filter.service';
 import { IntegralUIScrollBar } from './integralui.scrollbar';
+import * as i0 from "@angular/core";
 export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     protected filterService?: IntegralUIFilterService;
     protected cmpResolver?: ComponentFactoryResolver;
@@ -18,7 +19,7 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     private fullList;
     private expandTimeout;
     private expandRow;
-    private horScrollOrientation;
+    horScrollOrientation: IntegralUIOrientation;
     private isThereChildRows;
     private updateTimer;
     templates: QueryList<IntegralUITemplate>;
@@ -58,16 +59,21 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     private refreshTimer;
     private tRef;
     autoExpand: boolean;
-    expandColumnIndex: number;
-    expandColumnID: number;
-    indent: number;
-    showHeader: boolean;
-    showFooter: boolean;
+    set expandColumnIndex(value: number);
+    get expandColumnIndex(): number;
+    set expandColumnID(value: number);
+    get expandColumnID(): number;
+    set indent(value: number);
+    get indent(): number;
+    set showHeader(value: boolean);
+    get showHeader(): boolean;
+    set showFooter(value: boolean);
+    get showFooter(): boolean;
     afterCollapse: EventEmitter<any>;
     afterExpand: EventEmitter<any>;
     beforeCollapse: EventEmitter<any>;
     beforeExpand: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected updateData(): void;
     protected initStyle(): void;
@@ -383,4 +389,6 @@ export declare class IntegralUITreeGrid extends IntegralUIBaseGrid {
     protected updateStyle(value: any): void;
     private resetRefresh;
     refresh(obj?: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITreeGrid, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUITreeGrid, "iui-treegrid", never, { "allowDrag": "allowDrag"; "allowDrop": "allowDrop"; "allowFilter": "allowFilter"; "allowFocus": "allowFocus"; "appRef": "appRef"; "autoSizeColumns": "autoSizeColumns"; "autoUpdate": "autoUpdate"; "columns": "columns"; "controlStyle": "controlStyle"; "data": "data"; "dataFields": "dataFields"; "enabled": "enabled"; "focusedCell": "focusedCell"; "gridLines": "gridLines"; "name": "name"; "rowHeight": "rowHeight"; "rows": "rows"; "paging": "paging"; "selectedColumn": "selectedColumn"; "selectedRow": "selectedRow"; "selectionMode": "selectionMode"; "showScroll": "showScroll"; "size": "size"; "sorting": "sorting"; "state": "state"; "autoExpand": "autoExpand"; "expandColumnIndex": "expandColumnIndex"; "expandColumnID": "expandColumnID"; "indent": "indent"; "showHeader": "showHeader"; "showFooter": "showFooter"; }, { "afterSelect": "afterSelect"; "beforeEdit": "beforeEdit"; "beforeSelect": "beforeSelect"; "beforeUpdate": "beforeUpdate"; "change": "change"; "columnAdding": "columnAdding"; "columnAdded": "columnAdded"; "columnClick": "columnClick"; "columnRemoving": "columnRemoving"; "columnRemoved": "columnRemoved"; "columnsCleared": "columnsCleared"; "columnOrderChanged": "columnOrderChanged"; "columnSizeChanged": "columnSizeChanged"; "dragEnd": "dragEnd"; "dragEnter": "dragEnter"; "dragDrop": "dragDrop"; "dragDropComplete": "dragDropComplete"; "dragLeave": "dragLeave"; "dragOver": "dragOver"; "keyDown": "keyDown"; "keyPress": "keyPress"; "keyUp": "keyUp"; "loadComplete": "loadComplete"; "rowAdding": "rowAdding"; "rowAdded": "rowAdded"; "rowClick": "rowClick"; "rowDblClick": "rowDblClick"; "rowRemoving": "rowRemoving"; "rowRemoved": "rowRemoved"; "rowsCleared": "rowsCleared"; "scrollPosChanged": "scrollPosChanged"; "selectionChanged": "selectionChanged"; "updateComplete": "updateComplete"; "afterCollapse": "afterCollapse"; "afterExpand": "afterExpand"; "beforeCollapse": "beforeCollapse"; "beforeExpand": "beforeExpand"; }, ["templates"], never>;
 }

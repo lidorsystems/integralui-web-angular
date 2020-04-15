@@ -12,7 +12,7 @@
 */
 
 import { Component, ViewContainerRef, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
-import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../integralui/components/integralui.core';
+import { IntegralUIAnimationType, IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../integralui/components/integralui.core';
 
 @Component({
     selector: '',
@@ -67,7 +67,7 @@ import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../inte
         <h2 class="feature-title">TabStrip / Overview</h2>
         <div class="feature-content">
             <div style="float:left;width:400px;" #application>
-                <iui-tabstrip [controlStyle]="ctrlStyle" [tabs]="data" [tabSpacing]="2" [tabStripPlacement]="tabPlacement" [allowDrag]="true" [scrollMode]="tabScrollMode" (scrollPosChanged)="tabScrollPosChanged($event)">
+                <iui-tabstrip [controlStyle]="ctrlStyle" [tabs]="data" [tabSpacing]="2" [tabStripPlacement]="tabPlacement" [allowDrag]="true" [allowAnimation]="true" [animation]="tabAnimation" [scrollMode]="tabScrollMode" (scrollPosChanged)="tabScrollPosChanged($event)">
                    <iui-tab *ngFor="let tab of data" text="{{tab.text}}" icon="{{tab.icon}}" [allowDrag]="true">
                         <div class="tbs-ovw-tab-content">{{tab.body}}</div>
                     </iui-tab>
@@ -90,7 +90,7 @@ import { IntegralUITabScrollMode, IntegralUITabStripPlacement } from '../../inte
                 <p><span class="initial-space"></span><strong><span style="color:#c60d0d">IntegralUI</span> TabStrip</strong> is a native Angular component that allows you to create tabbed content using tabs placed in different orientations.</p>
                 <p><span class="initial-space"></span>The demo above shows few tabs each with a header and a content panel. You can choose where tabs are placed: top, right, bottom or left side</p>
                 <p><span class="initial-space"></span>You can also choose whether scrolling is enabled or not. There are three modes:</p>
-                <ul>
+                <ul class="feature-points">
                     <li><span style="color:#0064aa">None</span> - scrolling disabled, scroll buttons will not appear</li>
                     <li><span style="color:#0064aa">InBound</span> - scrolling enabled, scroll buttons appear next to each other</li>
                     <li><span style="color:#0064aa">OutBound</span> - scrolling enabled, scroll buttons appear on left/right or up/down side</li>
@@ -109,6 +109,7 @@ export class TabStripOverviewSample {
 
     public data: Array<any>;
 
+    public tabAnimation: IntegralUIAnimationType = IntegralUIAnimationType.Slide;
     public tabPlacement: IntegralUITabStripPlacement = IntegralUITabStripPlacement.Top;
     public tabScrollMode: IntegralUITabScrollMode = IntegralUITabScrollMode.InBound;
 

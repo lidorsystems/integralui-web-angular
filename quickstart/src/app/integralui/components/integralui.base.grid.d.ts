@@ -1,9 +1,10 @@
-import { ChangeDetectorRef, ComponentFactoryResolver, ElementRef, EventEmitter, Renderer } from '@angular/core';
+import { ChangeDetectorRef, ComponentFactoryResolver, ElementRef, EventEmitter, Renderer2 } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIContentVisibility, IntegralUIDragDropDisplayMode, IntegralUIEditorType, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
 import { IntegralUIFilterService } from '../services/integralui.filter.service';
+import * as i0 from "@angular/core";
 export declare enum IntegralUIGridLines {
     None = 0,
     Horizontal = 1,
@@ -14,7 +15,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     protected filterService?: IntegralUIFilterService;
     protected changeRef?: ChangeDetectorRef;
@@ -44,7 +45,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected flatCurrentLeftColumnList: Array<any>;
     protected flatCurrentRightColumnList: Array<any>;
     protected maxColumnLevels: number;
-    protected options: any;
+    options: any;
     scrollColumnList: Array<any>;
     scrollLeftColumnList: Array<any>;
     scrollRightColumnList: Array<any>;
@@ -84,14 +85,14 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     private colorPopup;
     private colorPopupRef;
     protected colorPanelSize: any;
-    private currentEditorCell;
+    currentEditorCell: any;
     protected isPopupDelayed: boolean;
     isEditorFocused: boolean;
     protected originalEditorText: string;
     protected originalEditorValue: any;
     protected currentExpandColumnID: any;
     protected expandColIndex: number;
-    protected hoverCell: any;
+    hoverCell: any;
     protected hoverColumn: any;
     hoverRow: any;
     protected isGridHovered: boolean;
@@ -146,7 +147,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     horScrollElemPos: any;
     cornerScrollElemPos: any;
     paginatorPos: any;
-    protected currentPageNumber: number;
+    currentPageNumber: number;
     protected onlyCurrentPage: boolean;
     protected currentPageList: Array<any>;
     protected pageNumber: number;
@@ -199,30 +200,40 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected touchEndPos: any;
     appRef: any;
     autoUpdate: boolean;
-    allowColumnReorder: boolean;
-    allowDrag: boolean;
-    allowDrop: boolean;
-    allowFilter: boolean;
-    allowFocus: boolean;
-    autoSizeColumns: boolean;
-    columns: Array<any>;
-    dataFields: any;
-    focusedCell: any;
+    set allowColumnReorder(value: boolean);
+    set allowDrag(value: boolean);
+    set allowDrop(value: boolean);
+    set allowFilter(value: boolean);
+    set allowFocus(value: boolean);
+    set autoSizeColumns(value: boolean);
+    get autoSizeColumns(): boolean;
+    set columns(value: Array<any>);
+    get columns(): Array<any>;
+    set dataFields(value: any);
+    set focusedCell(value: any);
+    get focusedCell(): any;
     footerHeight: number;
-    gridLines: IntegralUIGridLines;
+    set gridLines(value: IntegralUIGridLines);
+    get gridLines(): IntegralUIGridLines;
     headerHeight: number;
     mouseWheelSpeed: IntegralUISpeedMode;
-    paging: any;
+    set paging(value: any);
     rowContentVisibility: IntegralUIContentVisibility;
     rowHeight: number;
-    rows: Array<any>;
-    selectedColumn: any;
-    selectedRow: any;
-    selectionMode: IntegralUISelectionMode;
-    showExpandBox: boolean;
+    set rows(value: Array<any>);
+    get rows(): Array<any>;
+    set selectedColumn(value: any);
+    get selectedColumn(): any;
+    set selectedRow(value: any);
+    get selectedRow(): any;
+    set selectionMode(value: IntegralUISelectionMode);
+    get selectionMode(): IntegralUISelectionMode;
+    set showExpandBox(value: boolean);
+    get showExpandBox(): boolean;
     showHoverRow: boolean;
-    showScroll: any;
-    sorting: IntegralUISortOrder;
+    set showScroll(value: any);
+    get showScroll(): any;
+    set sorting(value: IntegralUISortOrder);
     afterSelect: EventEmitter<any>;
     beforeEdit: EventEmitter<any>;
     beforeSelect: EventEmitter<any>;
@@ -269,7 +280,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     scrollPosChanged: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
     updateComplete: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, changeRef?: ChangeDetectorRef, cmpResolver?: ComponentFactoryResolver);
+    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, changeRef?: ChangeDetectorRef, cmpResolver?: ComponentFactoryResolver);
     ngOnInit(): void;
     addColumn(column: any): void;
     clearColumns(): void;
@@ -403,7 +414,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     editorLostFocus(type?: string): void;
     editorMouseDown(e: any, obj: any): void;
     editorMouseWheel(e: any): void;
-    editorMouseTouch(e: any): void;
+    editorMouseTouch(e: any, obj: any): void;
     editorNumericValueChange(obj: any, value: any): void;
     editorPreventDragStart(e: any): void;
     editorValueChanged(e: any, obj: any): void;
@@ -434,7 +445,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected showPopup(e: any, obj: any, rowElem: any, colElem: any): void;
     selectTextBoxContent(e: any): void;
     expandBoxMouseDown(e: any, row: any): void;
-    expandBoxMouseUp(e: any): void;
+    expandBoxMouseUp(e: any, row: any): void;
     expandBoxTouchStart(e: any, row: any): void;
     toggle(row?: any, value?: boolean): void;
     protected updateExpandingCell(row: any, value: boolean): void;
@@ -659,4 +670,6 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     rowTouchStart(e: any, obj: any): void;
     ctrlTouchStart(e: any): void;
     ctrlTouchEnd(e: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIBaseGrid, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIBaseGrid, "iui-basegrid", never, { "appRef": "appRef"; "autoUpdate": "autoUpdate"; "allowColumnReorder": "allowColumnReorder"; "allowDrag": "allowDrag"; "allowDrop": "allowDrop"; "allowFilter": "allowFilter"; "allowFocus": "allowFocus"; "autoSizeColumns": "autoSizeColumns"; "columns": "columns"; "dataFields": "dataFields"; "focusedCell": "focusedCell"; "footerHeight": "footerHeight"; "gridLines": "gridLines"; "headerHeight": "headerHeight"; "mouseWheelSpeed": "mouseWheelSpeed"; "paging": "paging"; "rowContentVisibility": "rowContentVisibility"; "rowHeight": "rowHeight"; "rows": "rows"; "selectedColumn": "selectedColumn"; "selectedRow": "selectedRow"; "selectionMode": "selectionMode"; "showExpandBox": "showExpandBox"; "showHoverRow": "showHoverRow"; "showScroll": "showScroll"; "sorting": "sorting"; "dragMode": "dragMode"; }, { "afterSelect": "afterSelect"; "beforeEdit": "beforeEdit"; "beforeSelect": "beforeSelect"; "beforeUpdate": "beforeUpdate"; "cellClick": "cellClick"; "cellDblClick": "cellDblClick"; "cellHover": "cellHover"; "cellRightClick": "cellRightClick"; "cellValueChanging": "cellValueChanging"; "cellValueChanged": "cellValueChanged"; "change": "change"; "columnAdding": "columnAdding"; "columnAdded": "columnAdded"; "columnClick": "columnClick"; "columnDblClick": "columnDblClick"; "columnHover": "columnHover"; "columnRightClick": "columnRightClick"; "columnOrderChanged": "columnOrderChanged"; "columnRemoving": "columnRemoving"; "columnRemoved": "columnRemoved"; "columnsCleared": "columnsCleared"; "columnSizeChanged": "columnSizeChanged"; "dragEnd": "dragEnd"; "dragEnter": "dragEnter"; "dragDrop": "dragDrop"; "dragDropComplete": "dragDropComplete"; "dragLeave": "dragLeave"; "dragOver": "dragOver"; "dragStart": "dragStart"; "keyDown": "keyDown"; "keyPress": "keyPress"; "keyUp": "keyUp"; "pageChanged": "pageChanged"; "rowAdding": "rowAdding"; "rowAdded": "rowAdded"; "rowClick": "rowClick"; "rowDblClick": "rowDblClick"; "rowHover": "rowHover"; "rowRemoving": "rowRemoving"; "rowRemoved": "rowRemoved"; "rowRightClick": "rowRightClick"; "rowsCleared": "rowsCleared"; "loadComplete": "loadComplete"; "scrollPosChanged": "scrollPosChanged"; "selectionChanged": "selectionChanged"; "updateComplete": "updateComplete"; }, never, never>;
 }

@@ -3,6 +3,7 @@ import { IntegralUIBaseComponent, IntegralUIBaseService, IntegralUISpeedMode } f
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIListGroup } from './integralui.listgroup';
+import * as i0 from "@angular/core";
 export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected dataService: IntegralUIDataService;
@@ -13,7 +14,6 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     private blockMarginTop;
     scrollPos: any;
     maxScrollPos: any;
-    buttonWidth: number;
     buttonUpElem: ElementRef;
     buttonDownElem: ElementRef;
     contentRef: ViewContainerRef;
@@ -35,8 +35,10 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     private tRef;
     groups: Array<any>;
     mouseWheelSpeed: IntegralUISpeedMode;
-    selectedIndex: number;
-    selectedGroup: any;
+    set selectedIndex(value: number);
+    get selectedIndex(): number;
+    set selectedGroup(value: any);
+    get selectedGroup(): any;
     afterCollapse: EventEmitter<any>;
     afterExpand: EventEmitter<any>;
     afterSelect: EventEmitter<any>;
@@ -91,4 +93,6 @@ export declare class IntegralUIListBar extends IntegralUIBaseComponent {
     private selectComponentByIndex;
     selectGroup(group: any): void;
     getControlStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIListBar, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIListBar, "iui-listbar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "groups": "groups"; "mouseWheelSpeed": "mouseWheelSpeed"; "selectedIndex": "selectedIndex"; "selectedGroup": "selectedGroup"; }, { "afterCollapse": "afterCollapse"; "afterExpand": "afterExpand"; "afterSelect": "afterSelect"; "beforeCollapse": "beforeCollapse"; "beforeExpand": "beforeExpand"; "beforeSelect": "beforeSelect"; "groupAdding": "groupAdding"; "groupAdded": "groupAdded"; "clear": "clear"; "groupRemoving": "groupRemoving"; "groupRemoved": "groupRemoved"; "selectionChanged": "selectionChanged"; }, ["contentList"], ["*"]>;
 }

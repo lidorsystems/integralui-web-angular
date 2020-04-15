@@ -1,8 +1,9 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewContainerRef } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.core';
+import { IntegralUIBaseComponent, IntegralUIBaseService, IntegralUIExpandMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIGroupBox } from './integralui.groupbox';
+import * as i0 from "@angular/core";
 export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
@@ -20,9 +21,12 @@ export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     private removeIndex;
     private toggleTimer;
     private tRef;
+    expandMode: IntegralUIExpandMode;
     groups: Array<any>;
-    selectedIndex: number;
-    selectedGroup: any;
+    set selectedIndex(value: number);
+    get selectedIndex(): number;
+    set selectedGroup(value: any);
+    get selectedGroup(): any;
     afterCollapse: EventEmitter<any>;
     afterExpand: EventEmitter<any>;
     afterSelect: EventEmitter<any>;
@@ -73,4 +77,6 @@ export declare class IntegralUIAccordion extends IntegralUIBaseComponent {
     selectGroup(group: any): void;
     getControlStyle(): any;
     refresh(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIAccordion, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIAccordion, "iui-accordion", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "expandMode": "expandMode"; "groups": "groups"; "selectedIndex": "selectedIndex"; "selectedGroup": "selectedGroup"; }, { "afterCollapse": "afterCollapse"; "afterExpand": "afterExpand"; "afterSelect": "afterSelect"; "beforeCollapse": "beforeCollapse"; "beforeExpand": "beforeExpand"; "beforeSelect": "beforeSelect"; "groupAdding": "groupAdding"; "groupAdded": "groupAdded"; "clear": "clear"; "groupRemoving": "groupRemoving"; "groupRemoved": "groupRemoved"; "selectionChanged": "selectionChanged"; }, ["contentList"], ["*"]>;
 }

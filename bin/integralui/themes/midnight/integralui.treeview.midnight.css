@@ -1,0 +1,13 @@
+.iui-treeview
+{
+	background-color: #252526;
+	border-color: #252526;
+	color: #cccccc;
+}
+.iui-treeview-block-hover, .iui-treeview-block-select {
+    border: thin solid #151515;
+	box-shadow: 2px 2px 3px #151515;
+}
+.iui-treeview-block-hover > div, .iui-treeview-block-select > div {
+    background: #2a2d2e;
+}

@@ -1,0 +1,10 @@
+.iui-editor-dropdown-button span {
+    background: url(../../icons/expandbox-icons.png) no-repeat -48px -16px;
+}
+.iui-editor-progress {
+	background: #272a2b;
+	border: thin solid #151515;
+}
+.iui-editor-progress-content {
+	background: #0e639c;
+}

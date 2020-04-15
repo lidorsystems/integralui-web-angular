@@ -1,6 +1,7 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIBaseService, IntegralUIPlacement, IntegralUIPopup, IntegralUISpeedMode, IntegralUITemplate } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUISideContentPopup extends IntegralUIPopup {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -19,6 +20,8 @@ export declare class IntegralUISideContentPopup extends IntegralUIPopup {
     processClose(): void;
     getContentStyle(): any;
     getHeaderStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUISideContentPopup, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISideContentPopup, "iui-side-content-popup", never, { "headerHeight": "headerHeight"; "headerOffsetHeight": "headerOffsetHeight"; "placement": "placement"; "title": "title"; }, { "closed": "closed"; }, never, never>;
 }
 export declare class IntegralUISideBar extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
@@ -64,9 +67,12 @@ export declare class IntegralUISideBar extends IntegralUIBaseComponent {
     ngOnDestroy(): void;
     animationSpeed: IntegralUISpeedMode;
     appRef: any;
-    expanded: boolean;
-    placement: IntegralUIPlacement;
-    popup: boolean;
+    set expanded(value: boolean);
+    get expanded(): boolean;
+    set placement(value: IntegralUIPlacement);
+    get placement(): IntegralUIPlacement;
+    set popup(value: boolean);
+    get popup(): boolean;
     title: string;
     protected addPopup(): void;
     protected removePopup(): void;
@@ -108,4 +114,6 @@ export declare class IntegralUISideBar extends IntegralUIBaseComponent {
     getControlStyle(): any;
     getContentStyle(): any;
     getHeaderStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUISideBar, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISideBar, "iui-sidebar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "animationSpeed": "animationSpeed"; "appRef": "appRef"; "expanded": "expanded"; "placement": "placement"; "popup": "popup"; "title": "title"; }, {}, ["templates"], never>;
 }

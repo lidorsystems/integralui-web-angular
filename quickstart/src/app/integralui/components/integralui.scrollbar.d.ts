@@ -1,9 +1,10 @@
-import { ElementRef, EventEmitter, Renderer } from '@angular/core';
+import { ElementRef, EventEmitter, Renderer2 } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIOrientation } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     private currentMaxValue;
     private currentMinValue;
@@ -23,19 +24,22 @@ export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     };
     private smallChange;
     private largeChangeValue;
-    height: number;
-    largeChange: number;
-    max: number;
-    min: number;
+    set height(value: number);
+    set largeChange(value: number);
+    set max(value: number);
+    get max(): number;
+    set min(value: number);
+    get min(): number;
     orientation: IntegralUIOrientation;
-    position: any;
-    value: number;
-    width: number;
+    set position(value: any);
+    set value(value: number);
+    get value(): number;
+    set width(value: number);
     scrollMouseDown: EventEmitter<any>;
     scrollStart: EventEmitter<any>;
     scrollEnd: EventEmitter<any>;
     valueChanged: EventEmitter<any>;
-    constructor(elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService);
+    constructor(elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
@@ -59,4 +63,6 @@ export declare class IntegralUIScrollBar extends IntegralUIBaseComponent {
     private processLargeChange;
     private clearScrolling;
     getScrollBarStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIScrollBar, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIScrollBar, "iui-scrollbar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "state": "state"; "height": "height"; "largeChange": "largeChange"; "max": "max"; "min": "min"; "orientation": "orientation"; "position": "position"; "value": "value"; "width": "width"; }, { "scrollMouseDown": "scrollMouseDown"; "scrollStart": "scrollStart"; "scrollEnd": "scrollEnd"; "valueChanged": "valueChanged"; }, never, never>;
 }

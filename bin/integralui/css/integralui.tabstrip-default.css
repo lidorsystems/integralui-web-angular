@@ -13,7 +13,14 @@
     -ms-user-select: none;
 	user-select: none;
 }
-.iui-tabstrip > ul
+.iui-tabstrip-block
+{
+	display: inline-block;
+	overflow: hidden;
+	position: absolute;
+	vertical-align: top;
+}
+.iui-tabstrip-block > ul
 {
 	position: absolute;
 	list-style: none;
@@ -22,6 +29,23 @@
 	padding: 0;
 	white-space: nowrap;
 }
+.iui-tabstrip-content {
+	background: white;
+	border: thin solid #bcbcbc;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.iui-tabstrip-line {
+	background: #808080;
+	display: none;
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: 5;
+}
+
 .iui-tabstrip-scroll-inbound, .iui-tabstrip-scroll-outbound
 {
 	background: #ffffff;
@@ -31,7 +55,19 @@
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
-	z-index: 3;
+	z-index: 9;
+}
+.iui-tabstrip-scroll-border-bottom {
+	border-bottom: thin solid #bcbcbc;
+}
+.iui-tabstrip-scroll-border-left {
+	border-left: thin solid #bcbcbc;
+}
+.iui-tabstrip-scroll-border-right {
+	border-right: thin solid #bcbcbc;
+}
+.iui-tabstrip-scroll-border-top {
+	border-top: thin solid #bcbcbc;
 }
 .iui-tabstrip-scroll-button
 {
@@ -84,11 +120,11 @@
 }
 .iui-tabstrip-scroll-button-up span
 {
-    background-position: -168px -192px;
+    background-image: url(../icons/up-24.png);
 }
 .iui-tabstrip-scroll-button-down span
 {
-    background-position: -192px -192px;
+    background-image: url(../icons/down-24.png);
 }
 
 /* Disabled State */

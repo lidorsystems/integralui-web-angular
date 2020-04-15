@@ -1,0 +1,36 @@
+.iui-splitcontainer-splitter {
+	background-color: #3c3c3c;
+	border: thin solid #151515;
+}
+.iui-splitcontainer-tab {
+	background-color: transparent;
+    border: 0;
+	color: #cccccc;
+}
+.iui-splitcontainer-tab-selected {
+	background: transparent;
+}
+.iui-splitcontainer-panel {
+	background: #252526;
+	border: thin solid #151515;
+	color: #cccccc;
+}
+.iui-splitcontainer-swap-button:hover {
+	background: transparent;
+	border-color: transparent;
+}
+.iui-splitcontainer-swap-button span {
+    background-image: url(../../icons/swap-white.ico);
+}
+.iui-splitcontainer-button {
+	background: #5e5e5e;
+	border-color: #5e5e5e;
+}
+.iui-splitcontainer-button:hover {
+	background: #1177bb;
+	border-color: #1177bb;
+}
+.iui-splitcontainer-button-selected {
+	background: #0e639c;
+	border-color: #0e639c;
+}

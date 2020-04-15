@@ -217,7 +217,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                 <iui-listview [name]="'ListView'" [items]="items" [appRef]="applicationRef" [controlStyle]="ctrlStyle" [scrollMode]="scrollType" [allowDrag]="true" (selectionChanged)="itemSelectionChanged($event)" #listview>
                     <div *ngIf="isScrollHorizontal()">
                         <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="horItemStyle" [allowAnimation]="true">
-                            <div class="lview-ovw-custom-item" (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
+                            <div class="lview-ovw-custom-item">
                                 <img class="lview-ovw-star" src="{{getRating(item.rating)}}" />
                                 <span class="lview-ovw-rating">{{getRatingValue(item.rating)}}</span>
                                 <span class="lview-ovw-num">{{i+1}}.</span>
@@ -228,7 +228,7 @@ import { IntegralUIScrollMode } from '../../integralui/components/integralui.cor
                     </div>
                     <div *ngIf="isScrollVertical()">
                         <iui-listitem *ngFor="let item of items; let i = index" [controlStyle]="verItemStyle" [allowAnimation]="true" [spacing]="2" [size]="{ width: 143, height: 151 }">
-                            <div class="lview-ovw-custom-item-large" (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
+                            <div class="lview-ovw-custom-item-large">
                                 <span *ngIf="item == currentSelection" class="lview-ovw-corner"></span>
                                 <span class="lview-ovw-num-corner">{{i+1}}</span><br />
                                 <div class="lview-ovw-icon-large">

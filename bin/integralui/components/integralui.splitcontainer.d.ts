@@ -1,7 +1,10 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIBaseService, IntegralUIOrientation } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUISplitContainerTags {
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUISplitContainerTags, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUISplitContainerTags, "iui-panel1, iui-panel2", never, {}, {}, never>;
 }
 export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
@@ -83,11 +86,16 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     protected tabClass: Array<any>;
     protected tabClassName: string;
     private tRef;
-    orientation: IntegralUIOrientation;
-    panel1: any;
-    panel2: any;
-    showButtons: boolean;
-    splitterDistance: number;
+    set orientation(value: IntegralUIOrientation);
+    get orientation(): IntegralUIOrientation;
+    set panel1(value: any);
+    get panel1(): any;
+    set panel2(value: any);
+    get panel2(): any;
+    set showButtons(value: boolean);
+    get showButtons(): boolean;
+    set splitterDistance(value: number);
+    get splitterDistance(): number;
     orientationChanged: EventEmitter<any>;
     panelsSwapped: EventEmitter<any>;
     splitterMoved: EventEmitter<any>;
@@ -106,7 +114,7 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     ctrlMouseMove(e: any): void;
     splitterMouseDown(e: any): void;
     onWindowMouseUp(e: any): void;
-    changeOrientation(vertical: boolean): void;
+    changeOrientation(vertical?: boolean): void;
     getControlStyle(): any;
     getInlinePanel1Style(): {
         top: string;
@@ -262,4 +270,6 @@ export declare class IntegralUISplitContainer extends IntegralUIBaseComponent {
     };
     protected updateStyle(value: any): void;
     refresh(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUISplitContainer, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISplitContainer, "iui-splitcontainer", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "orientation": "orientation"; "panel1": "panel1"; "panel2": "panel2"; "showButtons": "showButtons"; "splitterDistance": "splitterDistance"; }, { "orientationChanged": "orientationChanged"; "panelsSwapped": "panelsSwapped"; "splitterMoved": "splitterMoved"; "splitterMoving": "splitterMoving"; }, never, ["iui-panel1", "iui-panel2"]>;
 }

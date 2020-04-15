@@ -1,14 +1,15 @@
-import { ComponentFactoryResolver, ElementRef, EventEmitter, Renderer } from '@angular/core';
+import { ComponentFactoryResolver, ElementRef, EventEmitter, Renderer2 } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIContentVisibility, IntegralUIOrientation, IntegralUIMoveDirection, IntegralUISelectionMode, IntegralUISortOrder, IntegralUISpeedMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIDragDropService } from '../services/integralui.dragdrop.service';
 import { IntegralUIFilterService } from '../services/integralui.filter.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     protected filterService?: IntegralUIFilterService;
     protected cmpResolver?: ComponentFactoryResolver;
@@ -41,7 +42,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     blockSelectRect: Array<any>;
     blockSelectHeight: number;
     hoverItemObj: any;
-    protected currentFocusItem: any;
+    currentFocusItem: any;
     protected isKeyboardActive: boolean;
     protected allowUpdate: boolean;
     protected avgItemHeight: number;
@@ -73,7 +74,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
         x: number;
         y: number;
     };
-    protected scrollBarSize: {
+    scrollBarSize: {
         width: number;
         height: number;
     };
@@ -100,21 +101,27 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     protected touchStartPos: any;
     protected touchEndPos: any;
     appRef: any;
-    allowDrag: boolean;
-    allowDrop: boolean;
-    allowFilter: boolean;
-    allowFocus: boolean;
-    dataFields: any;
-    focusedItem: any;
+    set allowDrag(value: boolean);
+    set allowDrop(value: boolean);
+    set allowFilter(value: boolean);
+    set allowFocus(value: boolean);
+    set dataFields(value: any);
+    set focusedItem(value: any);
+    get focusedItem(): any;
     contentVisibility: IntegralUIContentVisibility;
-    items: Array<any>;
+    set items(value: Array<any>);
+    get items(): Array<any>;
     itemSpacing: number;
     mouseWheelSpeed: IntegralUISpeedMode;
-    showScroll: any;
-    selectedItem: any;
-    selectionMode: IntegralUISelectionMode;
-    sorting: IntegralUISortOrder;
-    virtualMode: boolean;
+    set showScroll(value: any);
+    get showScroll(): any;
+    set selectedItem(value: any);
+    get selectedItem(): any;
+    set selectionMode(value: IntegralUISelectionMode);
+    get selectionMode(): IntegralUISelectionMode;
+    set sorting(value: IntegralUISortOrder);
+    set virtualMode(value: boolean);
+    get virtualMode(): boolean;
     afterSelect: EventEmitter<any>;
     beforeEdit: EventEmitter<any>;
     beforeSelect: EventEmitter<any>;
@@ -142,7 +149,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     scrollPosChanged: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
     updateComplete: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver);
+    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver);
     ngOnInit(): void;
     protected initStyle(): void;
     addItem(item: any, parent?: any): void;
@@ -396,4 +403,6 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     itemTouchEnd(e: any, obj: any): void;
     ctrlTouchStart(e: any): void;
     ctrlTouchEnd(e: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIBaseList, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIBaseList, "iui-baselist", never, { "appRef": "appRef"; "allowDrag": "allowDrag"; "allowDrop": "allowDrop"; "allowFilter": "allowFilter"; "allowFocus": "allowFocus"; "dataFields": "dataFields"; "focusedItem": "focusedItem"; "contentVisibility": "contentVisibility"; "items": "items"; "itemSpacing": "itemSpacing"; "mouseWheelSpeed": "mouseWheelSpeed"; "showScroll": "showScroll"; "selectedItem": "selectedItem"; "selectionMode": "selectionMode"; "sorting": "sorting"; "virtualMode": "virtualMode"; }, { "afterSelect": "afterSelect"; "beforeEdit": "beforeEdit"; "beforeSelect": "beforeSelect"; "change": "change"; "clear": "clear"; "dragEnd": "dragEnd"; "dragEnter": "dragEnter"; "dragDrop": "dragDrop"; "dragDropComplete": "dragDropComplete"; "dragLeave": "dragLeave"; "dragOver": "dragOver"; "dragStart": "dragStart"; "itemAdding": "itemAdding"; "itemAdded": "itemAdded"; "itemClick": "itemClick"; "itemDblClick": "itemDblClick"; "itemHover": "itemHover"; "itemRemoving": "itemRemoving"; "itemRemoved": "itemRemoved"; "itemRightClick": "itemRightClick"; "keyDown": "keyDown"; "keyPress": "keyPress"; "keyUp": "keyUp"; "loadComplete": "loadComplete"; "scrollPosChanged": "scrollPosChanged"; "selectionChanged": "selectionChanged"; "updateComplete": "updateComplete"; }, never, never>;
 }

@@ -1,12 +1,13 @@
-import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
+import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer2, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIMenuItem } from '../components/integralui.menuitem';
+import * as i0 from "@angular/core";
 export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     protected cmpResolver?: ComponentFactoryResolver;
     protected baseService?: IntegralUIBaseService;
@@ -19,9 +20,10 @@ export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     appRef: any;
     items: Array<any>;
     showAnimation: boolean;
-    virtualMode: boolean;
+    set virtualMode(value: boolean);
+    get virtualMode(): boolean;
     itemClick: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     ngAfterViewInit(): void;
     ngAfterContentInit(): void;
@@ -31,4 +33,6 @@ export declare class IntegralUIMenu extends IntegralUIBaseComponent {
     invokeMethod(name: string, value: any): void;
     updateLayout(): void;
     getControlStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIMenu, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIMenu, "iui-menu", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "appRef": "appRef"; "items": "items"; "showAnimation": "showAnimation"; "virtualMode": "virtualMode"; }, { "itemClick": "itemClick"; }, ["itemTemplate", "contentList"], ["*"]>;
 }

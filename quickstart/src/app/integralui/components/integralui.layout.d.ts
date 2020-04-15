@@ -2,6 +2,7 @@ import { ElementRef } from '@angular/core';
 import { IntegralUIBaseComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUILayout extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
@@ -14,7 +15,8 @@ export declare class IntegralUILayout extends IntegralUIBaseComponent {
     protected updateTimer: any;
     panelTemplate: any;
     autoUpdate: boolean;
-    data: any;
+    set data(value: any);
+    get data(): any;
     constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected updateData(): void;
@@ -30,4 +32,6 @@ export declare class IntegralUILayout extends IntegralUIBaseComponent {
     private updatePanelLayout;
     private getCurrentPanelObj;
     getControlStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUILayout, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUILayout, "iui-layout", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "autoUpdate": "autoUpdate"; }, {}, ["panelTemplate"], never>;
 }

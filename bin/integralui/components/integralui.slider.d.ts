@@ -1,6 +1,7 @@
 import { ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseValueComponent, IntegralUIOrientation } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -20,10 +21,14 @@ export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     protected sliderBackgroundClassName: string;
     protected sliderButtonClass: Array<any>;
     protected sliderButtonClassName: string;
-    value: number;
-    orientation: IntegralUIOrientation;
-    min: number;
-    max: number;
+    get value(): number;
+    set value(val: number);
+    set orientation(value: IntegralUIOrientation);
+    get orientation(): IntegralUIOrientation;
+    set min(val: number);
+    get min(): number;
+    set max(val: number);
+    get max(): number;
     orientationChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
@@ -56,4 +61,6 @@ export declare class IntegralUISlider extends IntegralUIBaseValueComponent {
     protected getSliderButtonStyle(value: any): any;
     protected getSliderStyle(value?: any): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUISlider, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISlider, "iui-slider", never, { "autoUpdate": "autoUpdate"; "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "value": "value"; "orientation": "orientation"; "min": "min"; "max": "max"; }, { "valueChanged": "valueChanged"; "orientationChanged": "orientationChanged"; }, never, never>;
 }

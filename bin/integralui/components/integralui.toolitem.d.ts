@@ -1,6 +1,7 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseService, IntegralUIItem, IntegralUIToolItemType } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIToolItem extends IntegralUIItem {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -22,7 +23,8 @@ export declare class IntegralUIToolItem extends IntegralUIItem {
     toolItemHeight: string;
     toolItemStyleOpacity: number;
     type: IntegralUIToolItemType;
-    settings: any;
+    set settings(value: any);
+    get settings(): any;
     itemClick: EventEmitter<any>;
     valueChanging: EventEmitter<any>;
     valueChanged: EventEmitter<any>;
@@ -35,8 +37,8 @@ export declare class IntegralUIToolItem extends IntegralUIItem {
     protected getItemClass(): string;
     getValue(): any;
     protected findItemByValue(value: any, list: Array<any>): string;
-    protected callValueChanging(value?: any): boolean;
-    protected callValueChanged(): void;
+    callValueChanging(value?: any): boolean;
+    callValueChanged(): void;
     itemCheckedChanged(e: any): void;
     itemCheckStateChanged(e: any): void;
     itemTextChanged(e: any): void;
@@ -64,4 +66,6 @@ export declare class IntegralUIToolItem extends IntegralUIItem {
     getProgressStyle(): any;
     getListScrollItemIcon(item: any): any;
     getToolItemStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIToolItem, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIToolItem, "iui-toolitem", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "icon": "icon"; "name": "name"; "size": "size"; "state": "state"; "text": "text"; "type": "type"; "settings": "settings"; }, { "click": "click"; "mouseDown": "mouseDown"; "mouseEnter": "mouseEnter"; "mouseLeave": "mouseLeave"; "mouseMove": "mouseMove"; "mouseUp": "mouseUp"; "itemClick": "itemClick"; "valueChanging": "valueChanging"; "valueChanged": "valueChanged"; }, never, ["*"]>;
 }

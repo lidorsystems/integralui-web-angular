@@ -1,4 +1,4 @@
-import { ComponentFactoryResolver, ElementRef, QueryList, Renderer, ViewContainerRef } from '@angular/core';
+import { ComponentFactoryResolver, ElementRef, QueryList, Renderer2, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseService, IntegralUIScrollMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
@@ -6,11 +6,12 @@ import { IntegralUIDragDropService } from '../services/integralui.dragdrop.servi
 import { IntegralUIFilterService } from '../services/integralui.filter.service';
 import { IntegralUIBaseList } from './integralui.base.list';
 import { IntegralUIListItem } from './integralui.listitem';
+import * as i0 from "@angular/core";
 export declare class IntegralUIListView extends IntegralUIBaseList {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     protected filterService?: IntegralUIFilterService;
     protected cmpResolver?: ComponentFactoryResolver;
@@ -30,10 +31,12 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     private currentScrollMode;
     overflowSettings: any;
     private tRef;
-    itemSize: any;
-    scrollMode: IntegralUIScrollMode;
+    set itemSize(value: any);
+    get itemSize(): any;
+    set scrollMode(value: IntegralUIScrollMode);
+    get scrollMode(): IntegralUIScrollMode;
     protected updateOverflowSettings(): void;
-    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected updateData(): void;
     ngAfterViewInit(): void;
@@ -93,4 +96,6 @@ export declare class IntegralUIListView extends IntegralUIBaseList {
     protected getItemInlineStyle(itemObj: any): any;
     private resetRefresh;
     refresh(obj?: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIListView, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIListView, "iui-listview", never, { "allowDrag": "allowDrag"; "allowDrop": "allowDrop"; "allowFilter": "allowFilter"; "allowFocus": "allowFocus"; "appRef": "appRef"; "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "items": "items"; "name": "name"; "selectedItem": "selectedItem"; "sorting": "sorting"; "state": "state"; "virtualMode": "virtualMode"; "itemSize": "itemSize"; "scrollMode": "scrollMode"; }, { "afterSelect": "afterSelect"; "beforeEdit": "beforeEdit"; "beforeSelect": "beforeSelect"; "change": "change"; "clear": "clear"; "dragEnter": "dragEnter"; "dragDrop": "dragDrop"; "dragDropComplete": "dragDropComplete"; "dragLeave": "dragLeave"; "dragOver": "dragOver"; "itemAdding": "itemAdding"; "itemAdded": "itemAdded"; "itemHover": "itemHover"; "itemRemoving": "itemRemoving"; "itemRemoved": "itemRemoved"; "keyDown": "keyDown"; "keyPress": "keyPress"; "keyUp": "keyUp"; "loadComplete": "loadComplete"; "scrollPosChanged": "scrollPosChanged"; "selectionChanged": "selectionChanged"; "updateComplete": "updateComplete"; }, ["itemTemplate", "contentList"], ["*"]>;
 }

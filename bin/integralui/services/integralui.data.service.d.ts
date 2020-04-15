@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export declare class IntegralUIDataService {
     private data;
     constructor();
@@ -23,4 +24,6 @@ export declare class IntegralUIDataService {
     getList(obj?: any, key?: any): any;
     getParent(obj: any, key?: any): any;
     getUniqueId(separator?: string): string;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIDataService, never>;
+    static ɵprov: i0.ɵɵInjectableDef<IntegralUIDataService>;
 }

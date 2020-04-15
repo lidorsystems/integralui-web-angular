@@ -1,6 +1,7 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUITemplate } from '../components/integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -18,7 +19,8 @@ export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent
         width: number;
         height: number;
     };
-    options: any;
+    set options(value: any);
+    get options(): any;
     closed: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngAfterContentInit(): void;
@@ -39,6 +41,8 @@ export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent
     getSize(): any;
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIDropDownComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIDropDownComponent, "iui-dropdown", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "options": "options"; }, { "closed": "closed"; }, never, never>;
 }
 export declare class IntegralUIDropDown {
     protected elemRef: ElementRef;
@@ -53,9 +57,11 @@ export declare class IntegralUIDropDown {
     templates: QueryList<IntegralUITemplate>;
     private cmpRef;
     private templateList;
-    settings: any;
+    set settings(value: any);
+    get settings(): any;
     dropDownRef: any;
-    showDropDown: boolean;
+    set showDropDown(value: boolean);
+    get showDropDown(): boolean;
     dropDownOpen: EventEmitter<any>;
     dropDownOpening: EventEmitter<any>;
     dropDownClose: EventEmitter<any>;
@@ -73,4 +79,6 @@ export declare class IntegralUIDropDown {
     onTouchStart(e: any): void;
     onTouchEnd(e: any): void;
     private processOpen;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIDropDown, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUIDropDown, "[iuiDropDown]", never, { "settings": "iuiDropDown"; "dropDownRef": "dropDownRef"; "showDropDown": "showDropDown"; }, { "dropDownOpen": "dropDownOpen"; "dropDownOpening": "dropDownOpening"; "dropDownClose": "dropDownClose"; }, ["templates"]>;
 }

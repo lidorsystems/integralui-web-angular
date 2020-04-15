@@ -1,4 +1,25 @@
-.iui-tabstrip ul
-{
+.iui-tabstrip {
+	background: white;
+}
+.iui-tabstrip ul {
 	padding: 4px;
+}
+.iui-tabstrip-content {
+	border: thin solid #d9d9d9;
+}
+.iui-tabstrip-line {
+	background: #3e8ccf;
+	display: block;
+}
+.iui-tabstrip-scroll-border-bottom {
+	border-bottom: thin solid #d9d9d9;
+}
+.iui-tabstrip-scroll-border-left {
+	border-left: thin solid #d9d9d9;
+}
+.iui-tabstrip-scroll-border-right {
+	border-right: thin solid #d9d9d9;
+}
+.iui-tabstrip-scroll-border-top {
+	border-top: thin solid #d9d9d9;
 }

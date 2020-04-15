@@ -2,6 +2,7 @@ import { ElementRef, QueryList } from '@angular/core';
 import { IntegralUIBaseService, IntegralUIItem } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIMenuItem extends IntegralUIItem {
     private dataService;
     protected elemRef: ElementRef;
@@ -13,7 +14,10 @@ export declare class IntegralUIMenuItem extends IntegralUIItem {
     private expandState;
     private isExpanded;
     private isItemHovered;
-    private blockPos;
+    blockPos: {
+        top: number;
+        left: number;
+    };
     private popupOrder;
     blockDisplay: string;
     blockElemWidth: string;
@@ -37,7 +41,8 @@ export declare class IntegralUIMenuItem extends IntegralUIItem {
     pause: number;
     showAnimation: boolean;
     templateRef: any;
-    expanded: boolean;
+    set expanded(value: boolean);
+    get expanded(): boolean;
     constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected initStyle(): void;
@@ -69,4 +74,6 @@ export declare class IntegralUIMenuItem extends IntegralUIItem {
     protected getExpandBoxClass(): string;
     protected getExpandBoxStyle(value: any): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIMenuItem, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIMenuItem, "iui-menuitem", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "icon": "icon"; "name": "name"; "state": "state"; "text": "text"; "iconUrl": "iconUrl"; "items": "items"; "level": "level"; "orientation": "orientation"; "pause": "pause"; "showAnimation": "showAnimation"; "templateRef": "templateRef"; "expanded": "expanded"; }, { "click": "click"; "mouseDown": "mouseDown"; "mouseEnter": "mouseEnter"; "mouseLeave": "mouseLeave"; "mouseMove": "mouseMove"; "mouseUp": "mouseUp"; }, ["contentList"], never>;
 }

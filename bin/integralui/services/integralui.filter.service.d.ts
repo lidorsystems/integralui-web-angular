@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export declare class IntegralUIFilterService {
     constructor();
     private isString;
@@ -13,4 +14,6 @@ export declare class IntegralUIFilterService {
     createTree(conditionList: Array<any>, formula: Array<any>): any;
     match(value: any, conditions: any, formula?: Array<any>, tree?: any, caseSensitive?: boolean): any;
     filter(list: Array<any>, field: any, conditions: any, formula: Array<any>, tree: any, caseSensitive: boolean): any[];
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIFilterService, never>;
+    static ɵprov: i0.ɵɵInjectableDef<IntegralUIFilterService>;
 }

@@ -2,6 +2,7 @@ import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList } from '@
 import { IntegralUIBaseComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIBreadCrumb extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
@@ -41,10 +42,13 @@ export declare class IntegralUIBreadCrumb extends IntegralUIBaseComponent {
     protected isExpandBoxTouched: boolean;
     appRef: any;
     autoUpdate: boolean;
-    dataFields: any;
-    dropDownWidth: number;
-    items: Array<any>;
-    selectedItem: any;
+    set dataFields(value: any);
+    set dropDownWidth(value: number);
+    get dropDownWidth(): number;
+    set items(value: Array<any>);
+    get items(): Array<any>;
+    set selectedItem(item: any);
+    get selectedItem(): any;
     selectionChanged: EventEmitter<any>;
     constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService, cmpResolver?: ComponentFactoryResolver);
     ngOnInit(): void;
@@ -185,4 +189,6 @@ export declare class IntegralUIBreadCrumb extends IntegralUIBaseComponent {
         selected: any;
     };
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIBreadCrumb, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIBreadCrumb, "iui-breadcrumb", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "appRef": "appRef"; "autoUpdate": "autoUpdate"; "dataFields": "dataFields"; "dropDownWidth": "dropDownWidth"; "items": "items"; "selectedItem": "selectedItem"; }, { "selectionChanged": "selectionChanged"; }, ["itemTemplate"], never>;
 }

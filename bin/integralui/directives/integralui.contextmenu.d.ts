@@ -4,6 +4,7 @@ import { IntegralUIDirection } from '../components/integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIMenuItem } from '../components/integralui.menuitem';
+import * as i0 from "@angular/core";
 export declare class IntegralUIContextMenuComponent extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
@@ -51,6 +52,8 @@ export declare class IntegralUIContextMenuComponent extends IntegralUIBaseCompon
     };
     adjustPosition(e: any, openMode: string, pos: any, appSize?: any, elemPageRect?: any): void;
     open(e: any, openMode: string, pos: any, appSize?: any, elemPageRect?: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIContextMenuComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIContextMenuComponent, "iui-contextmenu", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "adjustment": "adjustment"; "autoClose": "autoClose"; "direction": "direction"; "inverse": "inverse"; "items": "items"; "itemTemplate": "itemTemplate"; "mode": "mode"; "position": "position"; }, { "itemClick": "itemClick"; "menuOpened": "menuOpened"; "menuClosed": "menuClosed"; }, ["contentList"], never>;
 }
 export declare class IntegralUIContextMenu {
     protected elemRef: ElementRef;
@@ -64,7 +67,8 @@ export declare class IntegralUIContextMenu {
     private cmpRef;
     private templateList;
     itemTemplate: any;
-    settings: any;
+    set settings(value: any);
+    get settings(): any;
     contextMenuRef: any;
     itemClick: EventEmitter<any>;
     menuClick: EventEmitter<any>;
@@ -84,4 +88,6 @@ export declare class IntegralUIContextMenu {
     onMouseDown(e: any): void;
     processMenuOpen(e: any, position?: string): void;
     private createMenuList;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIContextMenu, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUIContextMenu, "[iuiContextMenu]", never, { "settings": "iuiContextMenu"; "contextMenuRef": "contextMenuRef"; }, { "itemClick": "itemClick"; "menuClick": "menuClick"; "menuOpening": "menuOpening"; "menuOpened": "menuOpened"; "menuClosed": "menuClosed"; }, ["templates"]>;
 }

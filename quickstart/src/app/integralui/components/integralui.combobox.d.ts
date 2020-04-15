@@ -1,6 +1,7 @@
 import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIHeaderItem, IntegralUIItem } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     protected commonService?: IntegralUICommonService;
     protected cmpResolver?: ComponentFactoryResolver;
@@ -39,10 +40,14 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     integralHeight: boolean;
     items: Array<any>;
     maxDropDownItems: number;
-    dropDownWidth: number;
-    expanded: boolean;
-    selectedIndex: number;
-    selectedItem: any;
+    set dropDownWidth(value: number);
+    get dropDownWidth(): number;
+    set expanded(value: boolean);
+    get expanded(): boolean;
+    set selectedIndex(value: number);
+    get selectedIndex(): number;
+    set selectedItem(value: any);
+    get selectedItem(): any;
     click: EventEmitter<any>;
     dropDownClosed: EventEmitter<any>;
     dropDownClosing: EventEmitter<any>;
@@ -92,4 +97,6 @@ export declare class IntegralUIComboBox extends IntegralUIBaseComponent {
     protected getItemGeneralStyle(value?: any): any;
     protected getItemContentStyle(value?: any): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIComboBox, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIComboBox, "iui-combobox", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "dropDownHeight": "dropDownHeight"; "integralHeight": "integralHeight"; "items": "items"; "maxDropDownItems": "maxDropDownItems"; "dropDownWidth": "dropDownWidth"; "expanded": "expanded"; "selectedIndex": "selectedIndex"; "selectedItem": "selectedItem"; }, { "click": "click"; "dropDownClosed": "dropDownClosed"; "dropDownClosing": "dropDownClosing"; "dropDownOpened": "dropDownOpened"; "dropDownOpening": "dropDownOpening"; "selectedItemChanged": "selectedItemChanged"; "selectedIndexChanged": "selectedIndexChanged"; }, ["contentList"], ["*"]>;
 }

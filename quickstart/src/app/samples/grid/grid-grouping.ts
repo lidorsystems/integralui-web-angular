@@ -386,14 +386,14 @@ export class GridGroupingSample {
 
     // CheckBox Cell ---------------------------------------------------------------------
 
-    private checkBoxClicked(cell: any){
+    public checkBoxClicked(cell: any){
         if (cell){
             let currentValue = cell.value == true ? true : false;
             cell.value = !currentValue;
         }
     }
 
-    private columnCheckClicked(e: any, column: any){
+    public columnCheckClicked(e: any, column: any){
         if (column){
             let currentValue = column.value == true ? true : false;
             column.value = !currentValue;
@@ -432,7 +432,7 @@ export class GridGroupingSample {
         return Math.floor((value + 1) / 2);
     }
 
-    private getCellRating(cell: any): string {
+    public getCellRating(cell: any): string {
         let retValue: string = 'app/resources/stars-small.png';
 
         if (cell.value){

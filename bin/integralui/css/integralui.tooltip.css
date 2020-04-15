@@ -1,6 +1,5 @@
 .iui-tooltip
 {
-	animation: tooltip-open 1.0s 0s 1 forwards;
 	background: -webkit-linear-gradient(#fefefe, #e5e5e5);
 	background:    -moz-linear-gradient(#fefefe, #e5e5e5);
 	background:     -ms-linear-gradient(#fefefe, #e5e5e5);
@@ -11,7 +10,8 @@
 	border: thin solid #888888;
     color: #323232;
 	cursor: default;
-	padding: 5px;
+	overflow: hidden;
+	padding: 0;
 	position: absolute;
 	top: -999999px;
 	z-index: 999;
@@ -22,20 +22,18 @@
 	-o-user-select: none;
 	user-select: none;
 }
-@keyframes tooltip-open
-{
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-.iui-tooltip-animation-none {
-	animation: none;
-	opacity: 1;
-}
 .iui-tooltip div /*Compatibility with Bootstrap */
 {
 	-webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: content-box;    /* Firefox, other Gecko */
 	box-sizing: content-box; 
+}
+.iui-tooltip > div {
+	padding: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
 }
 .iui-tooltip-marker-top::before
 {

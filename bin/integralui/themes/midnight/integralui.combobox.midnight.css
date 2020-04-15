@@ -1,0 +1,45 @@
+.iui-combobox
+{
+    background-color: #252526;
+    border-color: #151515;
+	color: #cccccc;
+}
+
+/* ComboBox Header */
+.iui-combobox-header
+{
+	border: thin solid #151515;
+}
+.iui-combobox-header-hovered, .iui-combobox-header-selected
+{
+	background: transparent;
+	border: thin solid #151515;
+	color: white;
+}
+.iui-combobox-header-expand-box
+{
+	background: #484848 !important;
+}
+
+/* ComboBox DropDown Window */
+.iui-combobox-dropdown
+{
+	background: #252526;
+	border: thin solid #151515;
+	color: #cccccc;
+}
+.iui-combobox-dropdown .iui-item-hovered
+{
+	background-color: #2a2d2e;
+	border: thin solid #2a2d2e;
+}
+.iui-combobox-dropdown .iui-item-selected
+{
+	background-color: #37373d;
+	border: thin solid #37373d;
+}
+
+.iui-combobox-header-expand-box
+{
+	background: #cccccc !important;
+}

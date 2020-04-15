@@ -1,34 +1,45 @@
 import { ElementRef, EventEmitter } from '@angular/core';
-import { IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.core';
+import { IntegralUIAnimationType, IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUITab extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
     protected baseService?: IntegralUIBaseService;
     contentElem: ElementRef;
     protected parentCtrl: any;
+    contentOverflow: string;
+    private elemOrder;
+    isContentHidden: boolean;
+    contentPos: any;
+    elemHeight: string;
+    elemWidth: string;
+    leftPos: number;
+    topPos: number;
+    private isSelected;
+    contentOpacity: number;
+    elemBorderColor: string;
+    protected contentClass: Array<any>;
     protected contentClassName: string;
     protected headerClassName: string;
-    protected contentClass: Array<any>;
-    private isSelected;
-    topPos: number;
-    leftPos: number;
-    elemWidth: string;
-    elemHeight: string;
-    elemOrder: number;
-    elemBorderColor: string;
     allowDrag: boolean;
     allowDrop: boolean;
+    animation: IntegralUIAnimationType;
     icon: string;
     text: string;
-    selected: boolean;
+    set selected(value: boolean);
+    get selected(): boolean;
     selectedChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected initStyle(): void;
     protected processStateChanged(): void;
     private getSize;
-    updateLayout(pos: any, size: any): void;
+    updateLayout(pos: any, size: any, visible: boolean): void;
+    updateOpacity(value: number): void;
+    updatePos(pos: any): void;
+    updateVisibility(value: boolean): void;
+    updateContentOverflow(value?: string): void;
     getLayoutParams(): {
         size: {
             width: number;
@@ -44,9 +55,9 @@ export declare class IntegralUITab extends IntegralUIBaseComponent {
     protected updateContentClass(): void;
     getContentClass(): any[];
     protected getContentStyle(value: any): any;
-    protected getHeaderClass(): string;
     protected getHeaderStyle(value: any): any;
     protected updateStyle(value: any): void;
     getCurrentTabStyle(): any;
-    getTabContentClass(): string;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITab, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUITab, "iui-tab", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "state": "state"; "allowDrag": "allowDrag"; "allowDrop": "allowDrop"; "animation": "animation"; "icon": "icon"; "text": "text"; "selected": "selected"; }, { "selectedChanged": "selectedChanged"; }, never, ["*"]>;
 }

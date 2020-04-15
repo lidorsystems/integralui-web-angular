@@ -1,14 +1,13 @@
 .iui-tab-header
 {
-	background-color: #f2f2f2;
-	border: solid thin #d9d9d9;
-	border-bottom-color: #d9d9d9;
+	background-color: transparent;
+    border: 0;
 	color: #000000;
 }
 .iui-tab-header-hovered
 {
-	background-color: #f2f2f2;
-	border: solid thin #d9d9d9;
+	background-color: transparent;
+    border: 0;
 	color: #000000;
 
     animation-name: iui-tab-header-hovered-animate-enter;
@@ -21,34 +20,23 @@
     animation-timing-function: linear; 
 }
 @keyframes iui-tab-header-hovered-animate-enter {
-    0% { background: #f2f2f2;; border-color: #d9d9d9; }
-    100% { background: #d9edfd; border-color: #a5d3fa; }
+    0% { color: black; }
+    100% { color: #3376b0; }
 }
 .iui-tab-header-selected
 {
-	background-color: #ffffff;
-	border: solid thin #d9d9d9;
-	color: #000000;
+	background-color: transparent;
+    border: 0;
+	color: #266499;
+	font-weight: bold;
 }
 .iui-tab-content
 {
 	background: #ffffff;
 	border-color: #d9d9d9;
 }
-.iui-tab-selected-top
-{
-	border-bottom-color: white;
-}
-.iui-tab-selected-right
-{
-	border-left-color: white;
-}
-.iui-tab-selected-bottom
-{
-	border-top-color: white;
-}
-.iui-tab-selected-left
-{
-	border-right-color: white;
-}
+
+
+
+
 

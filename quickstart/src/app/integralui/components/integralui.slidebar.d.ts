@@ -2,6 +2,7 @@ import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, ViewCont
 import { IntegralUISpeedMode, IntegralUIBaseComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUISlide {
     private elemRef;
     constructor(elemRef: ElementRef);
@@ -10,6 +11,8 @@ export declare class IntegralUISlide {
         height: number;
     };
     cloneElem(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUISlide, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISlide, "iui-slide", never, {}, {}, never, ["*"]>;
 }
 export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
@@ -44,8 +47,10 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     animationSpeed: IntegralUISpeedMode;
     navigationButtons: boolean;
     slides: Array<any>;
-    selectedIndex: number;
-    selectedSlide: any;
+    set selectedIndex(value: number);
+    get selectedIndex(): number;
+    set selectedSlide(value: any);
+    get selectedSlide(): any;
     clear: EventEmitter<any>;
     slideAdding: EventEmitter<any>;
     slideAdded: EventEmitter<any>;
@@ -86,4 +91,6 @@ export declare class IntegralUISlideBar extends IntegralUIBaseComponent {
     private selectSlide;
     selectSlideByIndex(index: number): void;
     getControlStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUISlideBar, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISlideBar, "iui-slidebar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "allowAnimation": "allowAnimation"; "animationPause": "animationPause"; "animationSpeed": "animationSpeed"; "navigationButtons": "navigationButtons"; "slides": "slides"; "selectedIndex": "selectedIndex"; "selectedSlide": "selectedSlide"; }, { "clear": "clear"; "slideAdding": "slideAdding"; "slideAdded": "slideAdded"; "slideChanged": "slideChanged"; "slideRemoving": "slideRemoving"; "slideRemoved": "slideRemoved"; }, ["contentSlideList"], ["*"]>;
 }

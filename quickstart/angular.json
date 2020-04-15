@@ -18,7 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/app/resources",
               "src/app/sidebar.png",
@@ -26,9 +26,9 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.css",
               "src/app/integralui/css/integralui.module.css",
-              "src/app/integralui/themes/integralui.themes.office.css",
-              "src/styles.css"
+              "src/app/integralui/themes/integralui.themes.office.css"
             ],
             "scripts": []
           },
@@ -45,15 +45,19 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }

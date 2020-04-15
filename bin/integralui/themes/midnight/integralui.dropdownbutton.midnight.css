@@ -1,0 +1,28 @@
+.iui-dropdown-button
+{
+	background: #0e639c;
+	border-color: #0e639c;
+	color: white;
+}
+.iui-dropdown-button:hover
+{
+	background: #1177bb;
+	border-color: #1177bb;
+	color: white;
+}
+.iui-dropdown-button-btn-right
+{
+	border-color: #113d5c;
+}
+.iui-dropdown-button-btn-left
+{
+	border-color: #113d5c;
+}
+
+.iui-dropdown-button-list, .iui-dropdown-button-list .iui-menuitem-block
+{
+    background-color: #252526;
+	border: solid thin #151515;
+	color: #cccccc;
+}
+

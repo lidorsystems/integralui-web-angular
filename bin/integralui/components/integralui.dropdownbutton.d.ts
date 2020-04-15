@@ -2,6 +2,7 @@ import { ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIButton } from './integralui.button';
 import { IntegralUIDirection, IntegralUIPlacement } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIDropDownButton extends IntegralUIButton {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -16,9 +17,12 @@ export declare class IntegralUIDropDownButton extends IntegralUIButton {
     ngOnInit(): void;
     protected initStyle(): void;
     ngAfterViewInit(): void;
-    placement: IntegralUIPlacement;
-    direction: IntegralUIDirection;
-    settings: any;
+    set placement(value: IntegralUIPlacement);
+    get placement(): IntegralUIPlacement;
+    set direction(value: IntegralUIDirection);
+    get direction(): IntegralUIDirection;
+    set settings(value: any);
+    get settings(): any;
     itemClick: EventEmitter<any>;
     dropDownOpening: EventEmitter<any>;
     dropDownOpened: EventEmitter<any>;
@@ -42,4 +46,6 @@ export declare class IntegralUIDropDownButton extends IntegralUIButton {
     protected getButtonStyle(value: any): any;
     protected updateStyle(value: any): void;
     refresh(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIDropDownButton, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIDropDownButton, "iui-dropdown-button", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "placement": "placement"; "direction": "direction"; "settings": "settings"; }, { "itemClick": "itemClick"; "dropDownOpening": "dropDownOpening"; "dropDownOpened": "dropDownOpened"; "dropDownClosed": "dropDownClosed"; }, never, ["*"]>;
 }

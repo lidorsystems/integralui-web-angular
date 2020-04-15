@@ -1,6 +1,7 @@
 import { ElementRef } from '@angular/core';
 import { IntegralUIBaseValueComponent, IntegralUIIncrementMode } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -13,11 +14,16 @@ export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     protected ratingSize: any;
     protected ratingClass: Array<any>;
     protected ratingClassName: string;
-    division: number;
-    value: number;
-    increment: IntegralUIIncrementMode;
-    max: number;
-    stepSize: number;
+    set division(val: number);
+    get division(): number;
+    get value(): number;
+    set value(val: number);
+    set increment(val: IntegralUIIncrementMode);
+    get increment(): IntegralUIIncrementMode;
+    set max(val: number);
+    get max(): number;
+    set stepSize(val: number);
+    get stepSize(): number;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     ngAfterViewInit(): void;
@@ -38,4 +44,6 @@ export declare class IntegralUIRating extends IntegralUIBaseValueComponent {
     protected updateRatingClass(): void;
     protected getRatingStyle(value: any): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIRating, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIRating, "iui-rating", never, { "autoUpdate": "autoUpdate"; "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "value": "value"; "division": "division"; "increment": "increment"; "max": "max"; "stepSize": "stepSize"; }, { "valueChanged": "valueChanged"; }, never, never>;
 }

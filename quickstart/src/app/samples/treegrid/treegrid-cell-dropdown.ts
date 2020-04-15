@@ -259,18 +259,18 @@ export class TreeGridCellDropDownSample {
 
     // CheckBox Cell ---------------------------------------------------------------------
 
-    private getCheckValue(obj: any){
+    public getCheckValue(obj: any){
         return obj && obj.value == true ? this.imageChecked : this.imageUnchecked;
     }
 
-    private checkBoxClicked(cell: any){
+    public checkBoxClicked(cell: any){
         if (cell){
             let currentValue = cell.value == true ? true : false;
             cell.value = !currentValue;
         }
     }
 
-    private columnCheckClicked(column: any){
+    public columnCheckClicked(column: any){
         if (column){
             let currentValue = column.value == true ? true : false;
             column.value = !currentValue;

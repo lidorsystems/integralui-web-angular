@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export declare class IntegralUICommonService {
     constructor();
     calcMargin(elem: any): {
@@ -62,4 +63,6 @@ export declare class IntegralUICommonService {
     moveObject(from: number, to: number, list: Array<any>): void;
     pointToView(pos: any): any;
     setNumInRange(value: number, min: number, max: number): number;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUICommonService, never>;
+    static ɵprov: i0.ɵɵInjectableDef<IntegralUICommonService>;
 }

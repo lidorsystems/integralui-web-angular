@@ -434,24 +434,24 @@ export class GridOverviewSample {
         this.columns[3].footerText = this.numberWithCommas(volumeTotal);
     }
 
-    private numberWithCommas(value: number): string {
+    public numberWithCommas(value: number): string {
         return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
     // CheckBox Cell ---------------------------------------------------------------------
 
-    private getCheckValue(obj: any){
+    public getCheckValue(obj: any){
         return obj && obj.value == true ? this.imageChecked : this.imageUnchecked;
     }
 
-    private checkBoxClicked(cell: any){
+    public checkBoxClicked(cell: any){
         if (cell){
             let currentValue = cell.value == true ? true : false;
             cell.value = !currentValue;
         }
     }
 
-    private columnCheckClicked(column: any){
+    public columnCheckClicked(column: any){
         if (column){
             let currentValue = column.value == true ? true : false;
             column.value = !currentValue;

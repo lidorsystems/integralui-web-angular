@@ -3,6 +3,7 @@ import { IntegralUIBaseService, IntegralUIHeaderItem, IntegralUIItem } from './i
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIGroupBox } from './integralui.groupbox';
+import * as i0 from "@angular/core";
 export declare class IntegralUIListGroup extends IntegralUIGroupBox {
     protected dataService: IntegralUIDataService;
     protected commonService?: IntegralUICommonService;
@@ -39,4 +40,6 @@ export declare class IntegralUIListGroup extends IntegralUIGroupBox {
         general: any;
     };
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIListGroup, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIListGroup, "iui-listgroup", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "expandBoxType": "expandBoxType"; "icon": "icon"; "name": "name"; "size": "size"; "state": "state"; "text": "text"; "items": "items"; }, { "afterCollapse": "afterCollapse"; "afterExpand": "afterExpand"; "afterSelect": "afterSelect"; "beforeCollapse": "beforeCollapse"; "beforeExpand": "beforeExpand"; "beforeSelect": "beforeSelect"; "selectedChanged": "selectedChanged"; }, ["contentList"], ["[header]", "*"]>;
 }

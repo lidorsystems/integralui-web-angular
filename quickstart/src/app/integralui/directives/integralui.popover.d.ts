@@ -2,6 +2,7 @@ import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList } from '@
 import { IntegralUITemplate } from '../components/integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUITooltip, IntegralUITooltipComponent } from './integralui.tooltip';
+import * as i0 from "@angular/core";
 export declare class IntegralUIPopOverComponent extends IntegralUITooltipComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -13,7 +14,8 @@ export declare class IntegralUIPopOverComponent extends IntegralUITooltipCompone
         left: number;
     };
     private popoverSize;
-    options: any;
+    set options(value: any);
+    get options(): any;
     closed: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     protected updateOptions(value?: any): void;
@@ -24,6 +26,8 @@ export declare class IntegralUIPopOverComponent extends IntegralUITooltipCompone
     getSize(): any;
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIPopOverComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIPopOverComponent, "iui-popover", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "options": "options"; }, { "closed": "closed"; }, never, never>;
 }
 export declare class IntegralUIPopOver extends IntegralUITooltip {
     protected elemRef: ElementRef;
@@ -35,9 +39,11 @@ export declare class IntegralUIPopOver extends IntegralUITooltip {
     private isVisible;
     templates: QueryList<IntegralUITemplate>;
     private templateList;
-    settings: any;
+    set settings(value: any);
+    get settings(): any;
     popoverRef: any;
-    popOverShow: boolean;
+    set popOverShow(value: boolean);
+    get popOverShow(): boolean;
     popOverClosed: EventEmitter<any>;
     constructor(elemRef: ElementRef, cmpResolver: ComponentFactoryResolver, commonService?: IntegralUICommonService);
     ngAfterContentInit(): void;
@@ -48,4 +54,6 @@ export declare class IntegralUIPopOver extends IntegralUITooltip {
     onMouseEnter(e: any): void;
     onMouseLeave(e: any): void;
     onMouseMove(e: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIPopOver, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUIPopOver, "[iuiPopOver]", never, { "settings": "iuiPopOver"; "popoverRef": "popoverRef"; "popOverShow": "popOverShow"; }, { "popOverClosed": "popOverClosed"; }, ["templates"]>;
 }

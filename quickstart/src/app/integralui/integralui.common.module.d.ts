@@ -1,2 +1,33 @@
+import * as i0 from "@angular/core";
+import * as i1 from "./components/integralui.autocomplete";
+import * as i2 from "./components/integralui.breadcrumb";
+import * as i3 from "./components/integralui.button";
+import * as i4 from "./components/integralui.calendar";
+import * as i5 from "./components/integralui.datepicker";
+import * as i6 from "./components/integralui.checkbox";
+import * as i7 from "./components/integralui.colorpicker";
+import * as i8 from "./components/integralui.combobox";
+import * as i9 from "./components/integralui.dialog";
+import * as i10 from "./directives/integralui.dropdown";
+import * as i11 from "./directives/integralui.frame";
+import * as i12 from "./components/integralui.listscroller";
+import * as i13 from "./components/integralui.numeric-updown";
+import * as i14 from "./components/integralui.paginator";
+import * as i15 from "./directives/integralui.popover";
+import * as i16 from "./components/integralui.progressbar";
+import * as i17 from "./components/integralui.radiobutton";
+import * as i18 from "./components/integralui.radiogroup";
+import * as i19 from "./directives/integralui.range";
+import * as i20 from "./components/integralui.rating";
+import * as i21 from "./directives/integralui.resize";
+import * as i22 from "./components/integralui.slider";
+import * as i23 from "./components/integralui.splitter";
+import * as i24 from "./components/integralui.toolbar";
+import * as i25 from "./components/integralui.toolitem";
+import * as i26 from "@angular/common";
+import * as i27 from "@angular/forms";
+import * as i28 from "./integralui.core.module";
 export declare class IntegralUICommonModule {
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<IntegralUICommonModule, [typeof i1.IntegralUIAutoComplete, typeof i2.IntegralUIBreadCrumb, typeof i3.IntegralUIButton, typeof i4.IntegralUICalendar, typeof i5.IntegralUICalendarPopup, typeof i6.IntegralUICheckBox, typeof i7.IntegralUIColorPalette, typeof i7.IntegralUIColorPicker, typeof i7.IntegralUIColorPickerPopup, typeof i7.IntegralUIColorSlider, typeof i8.IntegralUIComboBox, typeof i5.IntegralUIDatePicker, typeof i9.IntegralUIDialog, typeof i10.IntegralUIDropDown, typeof i10.IntegralUIDropDownComponent, typeof i11.IntegralUIFrame, typeof i12.IntegralUIListScroller, typeof i13.IntegralUINumericUpDown, typeof i14.IntegralUIPaginator, typeof i15.IntegralUIPopOver, typeof i15.IntegralUIPopOverComponent, typeof i16.IntegralUIProgressBar, typeof i17.IntegralUIRadioButton, typeof i18.IntegralUIRadioGroup, typeof i19.IntegralUIRange, typeof i20.IntegralUIRating, typeof i21.IntegralUIResize, typeof i22.IntegralUISlider, typeof i23.IntegralUISplitter, typeof i24.IntegralUIToolBar, typeof i25.IntegralUIToolItem], [typeof i26.CommonModule, typeof i27.FormsModule, typeof i28.IntegralUICoreModule], [typeof i1.IntegralUIAutoComplete, typeof i2.IntegralUIBreadCrumb, typeof i3.IntegralUIButton, typeof i4.IntegralUICalendar, typeof i6.IntegralUICheckBox, typeof i7.IntegralUIColorPalette, typeof i7.IntegralUIColorPicker, typeof i7.IntegralUIColorPickerPopup, typeof i7.IntegralUIColorSlider, typeof i8.IntegralUIComboBox, typeof i5.IntegralUIDatePicker, typeof i9.IntegralUIDialog, typeof i10.IntegralUIDropDown, typeof i11.IntegralUIFrame, typeof i12.IntegralUIListScroller, typeof i13.IntegralUINumericUpDown, typeof i14.IntegralUIPaginator, typeof i15.IntegralUIPopOver, typeof i15.IntegralUIPopOverComponent, typeof i16.IntegralUIProgressBar, typeof i17.IntegralUIRadioButton, typeof i18.IntegralUIRadioGroup, typeof i19.IntegralUIRange, typeof i20.IntegralUIRating, typeof i21.IntegralUIResize, typeof i22.IntegralUISlider, typeof i23.IntegralUISplitter, typeof i24.IntegralUIToolBar, typeof i25.IntegralUIToolItem]>;
+    static ɵinj: i0.ɵɵInjectorDef<IntegralUICommonModule>;
 }

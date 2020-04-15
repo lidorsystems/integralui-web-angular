@@ -1,6 +1,7 @@
 import { ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseComponent } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIButton extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -12,7 +13,8 @@ export declare class IntegralUIButton extends IntegralUIBaseComponent {
         width: number;
         height: number;
     };
-    pressed: boolean;
+    set pressed(value: boolean);
+    get pressed(): boolean;
     pressedChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
@@ -25,4 +27,6 @@ export declare class IntegralUIButton extends IntegralUIBaseComponent {
     getContentClass(): any[];
     protected getContentStyle(value: any): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIButton, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIButton, "iui-button", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "pressed": "pressed"; }, { "pressedChanged": "pressedChanged"; }, never, ["*"]>;
 }

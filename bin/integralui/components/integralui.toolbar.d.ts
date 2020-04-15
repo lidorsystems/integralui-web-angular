@@ -3,6 +3,7 @@ import { IntegralUIBaseComponent, IntegralUIBaseService } from './integralui.cor
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIToolItem } from './integralui.toolitem';
+import * as i0 from "@angular/core";
 export declare class IntegralUIToolBar extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
@@ -14,7 +15,8 @@ export declare class IntegralUIToolBar extends IntegralUIBaseComponent {
     contentList: QueryList<IntegralUIToolItem>;
     appRef: any;
     dataFields: any;
-    items: Array<any>;
+    set items(value: Array<any>);
+    get items(): Array<any>;
     constructor(dataService: IntegralUIDataService, elemRef: ElementRef, commonService?: IntegralUICommonService, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected updateData(): void;
@@ -28,4 +30,6 @@ export declare class IntegralUIToolBar extends IntegralUIBaseComponent {
     protected updateItemList(): void;
     updateLayout(): void;
     refresh(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIToolBar, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIToolBar, "iui-toolbar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "appRef": "appRef"; "dataFields": "dataFields"; "items": "items"; }, {}, ["contentList"], ["*"]>;
 }

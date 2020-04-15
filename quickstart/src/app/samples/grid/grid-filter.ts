@@ -207,15 +207,15 @@ export class GridFilterSample {
         }
     }
 
-    private authorCombinator: string = 'And';
-    private authorValues: Array<any> = [ '', '' ];
+    public authorCombinator: string = 'And';
+    public authorValues: Array<any> = [ '', '' ];
     public filterAuthors: Array<any> = [];
-    private selAuthor: Array<any> = [];
+    public selAuthor: Array<any> = [];
 
     public filterPrices: Array<any> = [];
-    private priceCombinator: string = 'And';
-    private priceValues: Array<any> = [ '', '' ];
-    private selPrice: Array<any> = [];
+    public priceCombinator: string = 'And';
+    public priceValues: Array<any> = [ '', '' ];
+    public selPrice: Array<any> = [];
 
     constructor(){
         this.columns = [

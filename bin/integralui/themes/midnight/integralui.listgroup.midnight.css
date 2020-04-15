@@ -1,0 +1,79 @@
+@import 'integralui.groupbox.midnight.css';
+
+.iui-listgroup {
+	background-color: #252526;
+	color: #cccccc;
+}
+/* Header Normal State */
+.iui-listgroup-header {
+	background-color: #323233;
+	border: thin solid #323233;
+	color: #cccccc;
+}
+/* Header Hover State */
+.iui-listgroup-header-hovered {
+    animation-name: none;
+	background-color: #113d5c;
+	border: thin solid #113d5c;
+	color: white;
+}
+/* Header Selected State */
+.iui-listgroup-header-selected {
+    animation-name: none;
+	background-color: #0c293d;
+	border-color: #0c293d;
+	color: white;
+}
+.iui-listgroup-content {
+	background-color: #252526;
+	border: solid thin #151515;
+	color: #cccccc;
+}
+
+.iui-listgroup-header .iui-listgroup-header-expand-box {
+	background: #cccccc !important;
+	opacity: 0.5;
+}
+.iui-listgroup-header-hovered .iui-listgroup-header-expand-box {
+	opacity: 0.75;
+}
+.iui-listgroup-header-selected .iui-listgroup-header-expand-box {
+	background: #ffffff !important;
+	opacity: 0.75;
+}
+.iui-listgroup-header-marker-down::before {
+	border: 7px solid #151515;
+	border-color:  transparent transparent #151515 transparent;
+	left: 3px;
+
+	animation-name: marker3;
+}
+.iui-listgroup-header-marker-down::after {
+	content: "";
+	border: 5px solid #252526;
+	border-color:  transparent transparent #252526 transparent;
+	position: absolute;
+	bottom: -1px;
+	left: 5px;
+	width: 0;
+	height: 0;
+	z-index: 2;
+
+	animation-name: marker;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-play-state: running;
+	animation-timing-function: linear; 
+}
+@keyframes marker3 {
+	0% { opacity: 0; }
+	80% { opacity: 0.75; }
+	100% { opacity: 1; }
+}
+
+.iui-listgroup-header-animate-select {
+	background: #113d5c;
+}

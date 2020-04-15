@@ -67,7 +67,7 @@ export class TreeViewContextMenuSample {
     public editorFocused: boolean = false; 
 
     // Cut
-    private moveItem: any = null;
+    public moveItem: any = null;
 
     // Copy/Paste
     private clone: any = null;

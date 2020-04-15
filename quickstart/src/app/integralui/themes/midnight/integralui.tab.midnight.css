@@ -1,0 +1,42 @@
+.iui-tab-header
+{
+	background-color: transparent;
+    border: 0;
+	color: #cccccc;
+}
+.iui-tab-header-hovered
+{
+	background-color: transparent;
+    border: 0;
+	color: white;
+
+    animation-name: iui-tab-header-hovered-animate-enter;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: linear; 
+}
+@keyframes iui-tab-header-hovered-animate-enter {
+    0% { color: #cccccc; }
+    100% { color: #3376b0; }
+}
+.iui-tab-header-selected
+{
+	background-color: transparent;
+    border: 0;
+	color: #266499;
+	font-weight: bold;
+}
+.iui-tab-content
+{
+	background: #252526;
+	border-color: #151515;
+	color: #cccccc;
+}
+
+
+
+

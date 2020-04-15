@@ -3,6 +3,7 @@ import { IntegralUIBaseComponent, IntegralUISortOrder } from './integralui.core'
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
 import { IntegralUIFilterService } from '../services/integralui.filter.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUIAutoComplete extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
@@ -23,9 +24,11 @@ export declare class IntegralUIAutoComplete extends IntegralUIBaseComponent {
     private dropList;
     protected sortComparer: any;
     appRef: any;
-    dataFields: any;
-    dropDownWidth: number;
-    list: Array<any>;
+    set dataFields(value: any);
+    set dropDownWidth(value: number);
+    get dropDownWidth(): number;
+    set list(value: Array<any>);
+    get list(): Array<any>;
     maxVisibleItems: number;
     placeHolder: string;
     text: string;
@@ -58,4 +61,6 @@ export declare class IntegralUIAutoComplete extends IntegralUIBaseComponent {
     protected isSortingAllowed(): boolean;
     sort(order: IntegralUISortOrder, comparer?: any): void;
     getControlStyle(): any;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIAutoComplete, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIAutoComplete, "iui-autocomplete", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "appRef": "appRef"; "dataFields": "dataFields"; "dropDownWidth": "dropDownWidth"; "list": "list"; "maxVisibleItems": "maxVisibleItems"; "placeHolder": "placeHolder"; "text": "text"; }, { "valueChanged": "valueChanged"; }, never, never>;
 }

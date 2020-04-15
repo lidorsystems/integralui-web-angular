@@ -1,0 +1,18 @@
+.iui-paginator
+{
+	background-color: transparent;
+}
+.iui-paginator-button
+{
+	background-color: #0e639c;
+	border: thin solid #0e639c;
+}
+.iui-paginator-button:hover
+{
+	background-color: #1177bb;
+}
+.iui-paginator-input
+{
+	background-color: #3c3c3c;
+	border: thin solid #151515;
+}

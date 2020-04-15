@@ -1,6 +1,7 @@
 import { ElementRef, EventEmitter } from '@angular/core';
 import { IntegralUIBaseComponent, IntegralUIWeekDays } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
+import * as i0 from "@angular/core";
 export declare class IntegralUICalendar extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
@@ -48,12 +49,15 @@ export declare class IntegralUICalendar extends IntegralUIBaseComponent {
     protected contentCellClass: Array<any>;
     ctrlClassObj: string;
     protected currentControlStyle: any;
-    controlStyle: any;
+    set controlStyle(value: any);
+    get controlStyle(): any;
     firstDayOfWeek: IntegralUIWeekDays;
     locales: string;
-    selectedDate: Date;
+    set selectedDate(value: Date);
+    get selectedDate(): Date;
     showToday: boolean;
-    todayDate: Date;
+    set todayDate(value: Date);
+    get todayDate(): Date;
     dateChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
@@ -121,4 +125,6 @@ export declare class IntegralUICalendar extends IntegralUIBaseComponent {
     protected getCellStyle(value: any): any;
     protected updateControlClass(): void;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUICalendar, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUICalendar, "iui-calendar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "firstDayOfWeek": "firstDayOfWeek"; "locales": "locales"; "selectedDate": "selectedDate"; "showToday": "showToday"; "todayDate": "todayDate"; }, { "dateChanged": "dateChanged"; }, never, never>;
 }

@@ -172,7 +172,7 @@ export class TreeGridHighlightRowsSample {
 
     // CheckBox Cell ---------------------------------------------------------------------
 
-    private getCheckValue(obj: any){
+    public getCheckValue(obj: any){
         return obj && obj.value == true ? this.imageChecked : this.imageUnchecked;
     }
 
@@ -196,7 +196,7 @@ export class TreeGridHighlightRowsSample {
         e.stopPropagation();
     }
 
-    private columnCheckClicked(column: any){
+    public columnCheckClicked(column: any){
         if (column){
             let currentValue = column.value == true ? true : false;
             column.value = !currentValue;

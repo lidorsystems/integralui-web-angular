@@ -1,4 +1,4 @@
-import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer, ViewContainerRef } from '@angular/core';
+import { ComponentFactoryResolver, ElementRef, EventEmitter, QueryList, Renderer2, ViewContainerRef } from '@angular/core';
 import { IntegralUIBaseService, IntegralUIItemDisplayMode, IntegralUIMoveDirection, IntegralUITemplate } from './integralui.core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
@@ -7,11 +7,12 @@ import { IntegralUIFilterService } from '../services/integralui.filter.service';
 import { IntegralUIBaseList } from './integralui.base.list';
 import { IntegralUIScrollBar } from './integralui.scrollbar';
 import { IntegralUITreeItem } from './integralui.treeitem';
+import * as i0 from "@angular/core";
 export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected dataService: IntegralUIDataService;
     protected dragDropService: IntegralUIDragDropService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     protected filterService?: IntegralUIFilterService;
     protected cmpResolver?: ComponentFactoryResolver;
@@ -19,7 +20,7 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected isThereChildItems: boolean;
     private expandTimeout;
     private expandItem;
-    protected currentItemDisplay: IntegralUIItemDisplayMode;
+    currentItemDisplay: IntegralUIItemDisplayMode;
     private isExpandBoxVisible;
     private isLongestInProcess;
     contentList: QueryList<IntegralUITreeItem>;
@@ -36,15 +37,19 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     protected isExpandBoxTouched: boolean;
     private tRef;
     autoExpand: boolean;
-    compactMode: boolean;
-    indent: number;
-    itemDisplay: IntegralUIItemDisplayMode;
-    showExpandBox: boolean;
+    set compactMode(value: boolean);
+    get compactMode(): boolean;
+    set indent(value: number);
+    get indent(): number;
+    set itemDisplay(value: IntegralUIItemDisplayMode);
+    get itemDisplay(): IntegralUIItemDisplayMode;
+    set showExpandBox(value: boolean);
+    get showExpandBox(): boolean;
     afterCollapse: EventEmitter<any>;
     afterExpand: EventEmitter<any>;
     beforeCollapse: EventEmitter<any>;
     beforeExpand: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
+    constructor(dataService: IntegralUIDataService, dragDropService: IntegralUIDragDropService, elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService, filterService?: IntegralUIFilterService, cmpResolver?: ComponentFactoryResolver, baseService?: IntegralUIBaseService);
     ngOnInit(): void;
     protected updateData(): void;
     protected initStyle(): void;
@@ -164,4 +169,6 @@ export declare class IntegralUITreeView extends IntegralUIBaseList {
     };
     private resetRefresh;
     refresh(obj?: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITreeView, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUITreeView, "iui-treeview", never, { "allowDrag": "allowDrag"; "allowDrop": "allowDrop"; "allowFilter": "allowFilter"; "allowFocus": "allowFocus"; "appRef": "appRef"; "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "items": "items"; "name": "name"; "selectedItem": "selectedItem"; "selectionMode": "selectionMode"; "size": "size"; "sorting": "sorting"; "state": "state"; "virtualMode": "virtualMode"; "autoExpand": "autoExpand"; "compactMode": "compactMode"; "indent": "indent"; "itemDisplay": "itemDisplay"; "showExpandBox": "showExpandBox"; }, { "afterSelect": "afterSelect"; "beforeEdit": "beforeEdit"; "beforeSelect": "beforeSelect"; "change": "change"; "clear": "clear"; "dragEnter": "dragEnter"; "dragDrop": "dragDrop"; "dragDropComplete": "dragDropComplete"; "dragLeave": "dragLeave"; "dragOver": "dragOver"; "itemAdding": "itemAdding"; "itemAdded": "itemAdded"; "itemHover": "itemHover"; "itemRemoving": "itemRemoving"; "itemRemoved": "itemRemoved"; "keyDown": "keyDown"; "keyPress": "keyPress"; "keyUp": "keyUp"; "loadComplete": "loadComplete"; "scrollPosChanged": "scrollPosChanged"; "selectionChanged": "selectionChanged"; "updateComplete": "updateComplete"; "afterCollapse": "afterCollapse"; "afterExpand": "afterExpand"; "beforeCollapse": "beforeCollapse"; "beforeExpand": "beforeExpand"; }, ["itemTemplate", "templates"], never>;
 }

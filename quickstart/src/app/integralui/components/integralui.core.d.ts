@@ -1,19 +1,26 @@
-import { ElementRef, EventEmitter, OnChanges, Renderer, SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ElementRef, EventEmitter, OnChanges, Renderer2, SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 import { IntegralUICommonService } from '../services/integralui.common.service';
 import { IntegralUIDataService } from '../services/integralui.data.service';
+import { ControlValueAccessor } from '@angular/forms';
+import * as i0 from "@angular/core";
 export declare class IntegralUIDraggable {
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     private currentSettings;
-    settings: boolean;
-    constructor(elemRef: ElementRef, elemRenderer: Renderer);
+    set settings(value: boolean);
+    get settings(): boolean;
+    constructor(elemRef: ElementRef, elemRenderer: Renderer2);
     ngAfterViewInit(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIDraggable, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUIDraggable, "[iuiDraggable]", never, { "settings": "iuiDraggable"; }, {}, never>;
 }
 export declare class IntegralUITemplate {
+    readonly template: TemplateRef<any>;
     settings: any;
-    template: TemplateRef<any>;
-    constructor();
+    constructor(template: TemplateRef<any>);
     getTemplate(): TemplateRef<any>;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITemplate, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUITemplate, "[iuiTemplate]", never, { "settings": "iuiTemplate"; }, {}, never>;
 }
 export declare class IntegralUITemplateOutlet implements OnChanges {
     private containerRef;
@@ -25,6 +32,8 @@ export declare class IntegralUITemplateOutlet implements OnChanges {
     ngOnDestroy(): void;
     private createView;
     private removeView;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITemplateOutlet, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUITemplateOutlet, "[iuiTemplateOutlet]", never, { "iuiTemplateOutletContext": "iuiTemplateOutletContext"; "iuiTemplateOutlet": "iuiTemplateOutlet"; }, {}, never>;
 }
 export declare enum IntegralUIAnchorStyle {
     None = 0,
@@ -32,6 +41,11 @@ export declare enum IntegralUIAnchorStyle {
     Right = 2,
     Bottom = 4,
     Left = 8
+}
+export declare enum IntegralUIAnimationType {
+    None = 0,
+    Fade = 1,
+    Slide = 2
 }
 export declare enum IntegralUICheckState {
     Unchecked = 0,
@@ -74,6 +88,10 @@ export declare enum IntegralUIEditorType {
     Rating = 11,
     Slider = 12,
     TextBox = 13
+}
+export declare enum IntegralUIExpandMode {
+    Single = 0,
+    Multiple = 1
 }
 export declare enum IntegralUINumericDisplayMode {
     InBound = 0,
@@ -145,6 +163,11 @@ export declare enum IntegralUISpeedMode {
     Fast = 3,
     VeryFast = 4
 }
+export declare enum IntegralUITabDisplayMode {
+    AutoSized = 0,
+    Compressed = 1,
+    Justified = 2
+}
 export declare enum IntegralUITabScrollMode {
     None = 0,
     InBound = 1,
@@ -208,9 +231,12 @@ export declare class IntegralUIBaseComponent {
     controlStyle: any;
     data: any;
     name: string;
-    enabled: boolean;
-    size: any;
-    state: IntegralUIObjectState;
+    set enabled(value: boolean);
+    get enabled(): boolean;
+    set size(value: any);
+    get size(): any;
+    set state(value: IntegralUIObjectState);
+    get state(): IntegralUIObjectState;
     enabledChanged: EventEmitter<any>;
     sizeChanged: EventEmitter<any>;
     styleChanged: EventEmitter<any>;
@@ -251,12 +277,16 @@ export declare class IntegralUIBaseComponent {
     };
     protected getGeneralStyle(value: any): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIBaseComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIBaseComponent, "iui-base", never, { "allowAnimation": "allowAnimation"; "controlStyle": "controlStyle"; "data": "data"; "name": "name"; "enabled": "enabled"; "size": "size"; "state": "state"; }, { "enabledChanged": "enabledChanged"; "sizeChanged": "sizeChanged"; "styleChanged": "styleChanged"; "stateChanged": "stateChanged"; }, never, never>;
 }
 export declare class IntegralUIBaseService {
     private componentRef;
     constructor();
     getComponent(): any;
     setComponent(ref: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIBaseService, never>;
+    static ɵprov: i0.ɵɵInjectableDef<IntegralUIBaseService>;
 }
 export declare class IntegralUIDragWindow {
     iconClass: string;
@@ -265,12 +295,14 @@ export declare class IntegralUIDragWindow {
     title: string;
     display: string;
     updatePos(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIDragWindow, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIDragWindow, "iui-dragwin", never, { "iconClass": "iconClass"; "position": "position"; "size": "size"; "title": "title"; "display": "display"; }, {}, never, never>;
 }
-import { ControlValueAccessor } from '@angular/forms';
 export declare class IntegralUIBaseValueComponent extends IntegralUIBaseComponent implements ControlValueAccessor {
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
-    value: any;
+    get value(): any;
+    set value(val: any);
     writeValue(val: any): void;
     onChange: (_: any) => void;
     onTouched: () => void;
@@ -291,6 +323,8 @@ export declare class IntegralUIBaseValueComponent extends IntegralUIBaseComponen
     getContentClass(): any[];
     protected getContentStyle(value: any): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIBaseValueComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIBaseValueComponent, "iui-common", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "autoUpdate": "autoUpdate"; }, { "valueChanged": "valueChanged"; }, never, never>;
 }
 export declare class IntegralUIItem extends IntegralUIBaseComponent {
     protected elemRef: ElementRef;
@@ -343,11 +377,13 @@ export declare class IntegralUIItem extends IntegralUIBaseComponent {
     private resetPos;
     updateLayout(ref: any, pos: any): void;
     updatePos(pos: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIItem, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIItem, "iui-item", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "icon": "icon"; "iconUrl": "iconUrl"; "iconSize": "iconSize"; "text": "text"; "visible": "visible"; }, { "click": "click"; "mouseDown": "mouseDown"; "mouseUp": "mouseUp"; "mouseEnter": "mouseEnter"; "mouseMove": "mouseMove"; "mouseLeave": "mouseLeave"; }, never, ["*"]>;
 }
 export declare class IntegralUIList extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
-    protected elemRenderer: Renderer;
+    protected elemRenderer: Renderer2;
     protected commonService?: IntegralUICommonService;
     private dataItems;
     protected options: any;
@@ -355,14 +391,16 @@ export declare class IntegralUIList extends IntegralUIBaseComponent {
     scrollPos: number;
     protected currentControlStyle: any;
     ctrlClassObj: string;
-    controlStyle: any;
-    dataFields: any;
-    items: Array<any>;
+    set controlStyle(value: any);
+    get controlStyle(): any;
+    set dataFields(value: any);
+    set items(value: Array<any>);
+    get items(): Array<any>;
     maxVisibleItems: number;
     selectedItem: any;
     contentSizeChanged: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
-    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer, commonService?: IntegralUICommonService);
+    constructor(dataService: IntegralUIDataService, elemRef: ElementRef, elemRenderer: Renderer2, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     ngAfterViewInit(): void;
     protected updateData(): void;
@@ -381,12 +419,17 @@ export declare class IntegralUIList extends IntegralUIBaseComponent {
     refresh(): void;
     getControlStyle(): any;
     protected updateControlClass(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIList, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIList, "iui-list", never, { "controlStyle": "controlStyle"; "dataFields": "dataFields"; "items": "items"; "maxVisibleItems": "maxVisibleItems"; "selectedItem": "selectedItem"; }, { "contentSizeChanged": "contentSizeChanged"; "selectionChanged": "selectionChanged"; }, never, never>;
 }
 export declare class IntegralUIFocus {
     private elemRef;
     private isFocused;
-    settings: boolean;
+    set settings(value: boolean);
+    get settings(): boolean;
     constructor(elemRef: ElementRef);
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIFocus, never>;
+    static ɵdir: i0.ɵɵDirectiveDefWithMeta<IntegralUIFocus, "[iuiFocus]", never, { "settings": "iuiFocus"; }, {}, never>;
 }
 export declare class IntegralUIHeaderItem extends IntegralUIItem {
     protected elemRef: ElementRef;
@@ -415,6 +458,8 @@ export declare class IntegralUIHeaderItem extends IntegralUIItem {
     expandBoxClicked(e: any): void;
     getControlStyle(): any;
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIHeaderItem, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIHeaderItem, "iui-header", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "icon": "icon"; "iconUrl": "iconUrl"; "iconSize": "iconSize"; "name": "name"; "size": "size"; "state": "state"; "text": "text"; "animationType": "animationType"; "animationState": "animationState"; }, { "click": "click"; "mouseDown": "mouseDown"; "mouseEnter": "mouseEnter"; "mouseLeave": "mouseLeave"; "mouseMove": "mouseMove"; "mouseUp": "mouseUp"; "expandClicked": "expandClicked"; }, never, ["*"]>;
 }
 export declare class IntegralUIPopup {
     protected elemRef: ElementRef;
@@ -429,17 +474,23 @@ export declare class IntegralUIPopup {
     protected ctrlClass: Array<any>;
     private currentControlStyle;
     allowAnimation: boolean;
+    animationSpeed: IntegralUISpeedMode;
     display: string;
     opacity: number;
     position: any;
-    controlStyle: any;
-    maxSize: any;
-    size: any;
-    state: IntegralUIObjectState;
+    set controlStyle(value: any);
+    get controlStyle(): any;
+    set maxSize(value: any);
+    get maxSize(): any;
+    set size(value: any);
+    get size(): any;
+    set state(value: IntegralUIObjectState);
+    get state(): IntegralUIObjectState;
     stateChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     protected initStyle(): void;
+    getAnimationFactor(isClosing?: boolean): number;
     processClose(): void;
     onWindowMouseDown(e: any): void;
     onWindowTouchStart(e: any): void;
@@ -491,6 +542,8 @@ export declare class IntegralUIPopup {
         selected?: undefined;
     };
     protected updateStyle(value: any): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIPopup, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIPopup, "iui-popup", never, { "allowAnimation": "allowAnimation"; "animationSpeed": "animationSpeed"; "display": "display"; "opacity": "opacity"; "position": "position"; "controlStyle": "controlStyle"; "maxSize": "maxSize"; "size": "size"; "state": "state"; }, { "stateChanged": "stateChanged"; }, never, ["*"]>;
 }
 export declare class IntegralUIListPopup extends IntegralUIPopup {
     protected elemRef: ElementRef;
@@ -511,7 +564,8 @@ export declare class IntegralUIListPopup extends IntegralUIPopup {
     maxVisibleItems: number;
     minWidth: number;
     selectedItem: any;
-    size: any;
+    set size(value: any);
+    get size(): any;
     closed: EventEmitter<any>;
     selectionChanged: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
@@ -522,7 +576,7 @@ export declare class IntegralUIListPopup extends IntegralUIPopup {
     removeOpenTimer(): void;
     ngOnDestroy(): void;
     open(): void;
-    close(value: any): void;
+    close(value: any, isItemChanged?: boolean): void;
     isListActive(): boolean;
     ctrlMouseDown(e: any): void;
     listContentSizeChanged(e: any): void;
@@ -535,6 +589,8 @@ export declare class IntegralUIListPopup extends IntegralUIPopup {
     private scrollList;
     refresh(): void;
     updateLayout(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUIListPopup, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIListPopup, "iui-list-popup", never, { "dataFields": "dataFields"; "items": "items"; "listStyle": "listStyle"; "maxVisibleItems": "maxVisibleItems"; "minWidth": "minWidth"; "selectedItem": "selectedItem"; "size": "size"; }, { "closed": "closed"; "selectionChanged": "selectionChanged"; }, never, never>;
 }
 export declare class IntegralUITComponent {
     tvStyle: string;
@@ -547,4 +603,6 @@ export declare class IntegralUITComponent {
     private tvDefault;
     ngOnInit(): void;
     ngOnDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDef<IntegralUITComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUITComponent, "iui-tc", never, { "tvStyle": "tvStyle"; }, {}, never, never>;
 }

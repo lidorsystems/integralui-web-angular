@@ -1,0 +1,55 @@
+.iui-toolitem {
+    color: #cccccc;
+}
+.iui-toolitem-button {
+    background: transparent;
+    border: 0;
+}
+@keyframes animate-toolitem-button-enter {
+    0% { background: transparent; }
+    100% { background: #3c3c3c; }
+}
+@keyframes animate-toolitem-button-leave {
+    0% { background: #3c3c3c; }
+    100% { background: transparent; }
+}
+
+.iui-toolitem-datepicker {
+    background-color: #252526;
+    border-color: #151515;
+    color: #cccccc;
+}
+.iui-toolitem-datepicker:hover {
+    border-color: #0a4369;
+}
+.iui-toolitem-datepicker-button span {
+    background: url(../../icons/expandbox-icons.png) no-repeat -48px -16px;
+}
+.iui-toolitem-droplist {
+    background: #252526;
+    border: thin solid #151515;
+    color: #cccccc;
+}
+.iui-toolitem-droplist:hover {
+    border-color: #0a4369;
+}
+.iui-toolitem-dropdown-button span {
+    background: url(../../icons/expandbox-icons.png) no-repeat -48px -16px;
+}
+.iui-toolitem-numeric {
+    background-color: #3c3c3c;
+    border: thin solid #151515;
+}
+.iui-toolitem-numeric:hover {
+    border-color: #0a4369;
+}
+.iui-toolitem-progress-content {
+    background: #0e639c;
+}
+.iui-toolitem-separator {
+    background: #151515;
+}
+.iui-toolitem-textbox {
+    background-color: #3c3c3c;
+    border: thin solid #151515;
+}
