@@ -124,6 +124,12 @@ Install the repository by running
 npm install https://github.com/lidorsystems/integralui-web.git
 ```
 
+or directly from NPM
+
+```bash
+npm i @lidorsystems/integralui-web
+```
+
 Open your application module and add a reference to IntegralUI module
 
 ```bash
