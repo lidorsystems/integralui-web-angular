@@ -1,7 +1,4 @@
 v20.2.0
-- Cross-framework support
-- 20 Native Web Components that you can use in Angular, React, Vue or any other JavaScript framework
-- Quick start samples available in Angular, React and Vanilla JavaScript
 - Improved performance for all components
 - New events during expand/collapse of SideBar component
 - Option to show/hide the splitter on demand
