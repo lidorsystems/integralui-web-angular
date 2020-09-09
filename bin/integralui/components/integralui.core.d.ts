@@ -571,7 +571,6 @@ export declare class IntegralUIListPopup extends IntegralUIPopup {
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngOnInit(): void;
     ngAfterContentInit(): void;
-    ngAfterViewInit(): void;
     removeCloseTimer(): void;
     removeOpenTimer(): void;
     ngOnDestroy(): void;

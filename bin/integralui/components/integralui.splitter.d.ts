@@ -19,6 +19,7 @@ export declare class IntegralUISplitter extends IntegralUIBaseComponent {
         x: number;
         y: number;
     };
+    isVisible: boolean;
     protected panel1Size: {
         width: number;
         height: number;
@@ -47,6 +48,8 @@ export declare class IntegralUISplitter extends IntegralUIBaseComponent {
     private currentPanel2;
     set panel2(value: any);
     get panel2(): any;
+    set visible(value: boolean);
+    get visible(): boolean;
     orientationChanged: EventEmitter<any>;
     splitterMoved: EventEmitter<any>;
     splitterMoving: EventEmitter<any>;
@@ -77,5 +80,5 @@ export declare class IntegralUISplitter extends IntegralUIBaseComponent {
     protected getHandleStyle(value: any): any;
     protected updateStyle(value: any): void;
     static ɵfac: i0.ɵɵFactoryDef<IntegralUISplitter, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISplitter, "iui-splitter", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "orientation": "orientation"; "panel1": "panel1"; "panel3": "panel3"; "splitterDistance": "splitterDistance"; "panel2": "panel2"; }, { "orientationChanged": "orientationChanged"; "splitterMoved": "splitterMoved"; "splitterMoving": "splitterMoving"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISplitter, "iui-splitter", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "orientation": "orientation"; "panel1": "panel1"; "panel3": "panel3"; "splitterDistance": "splitterDistance"; "panel2": "panel2"; "visible": "visible"; }, { "orientationChanged": "orientationChanged"; "splitterMoved": "splitterMoved"; "splitterMoving": "splitterMoving"; }, never, never>;
 }

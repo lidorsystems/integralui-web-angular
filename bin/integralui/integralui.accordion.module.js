@@ -1,6 +1,6 @@
 /*
   filename: integralui.accordion.module.js
-  version : 4.0.0
+  version : 20.2.0
   Copyright © 2016-2020 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
@@ -12,8 +12,4 @@
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
-Object.defineProperty(exports,"__esModule",{value:!0});
-var core_1=require("@angular/core"),common_1=require("@angular/common"),forms_1=require("@angular/forms"),integralui_core_module_1=require("./integralui.core.module"),integralui_accordion_1=require("./components/integralui.accordion"),integralui_groupbox_1=require("./components/integralui.groupbox"),i0=require("@angular/core"),IntegralUIAccordionModule=function(){function a(){}a.\u0275mod=i0.\u0275\u0275defineNgModule({type:a});a.\u0275inj=i0.\u0275\u0275defineInjector({factory:function(b){return new (b||a)},
-imports:[[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule]]});return a}();exports.IntegralUIAccordionModule=IntegralUIAccordionModule;
-(function(){("undefined"===typeof ngJitMode||ngJitMode)&&i0.\u0275\u0275setNgModuleScope(IntegralUIAccordionModule,{declarations:[integralui_accordion_1.IntegralUIAccordion,integralui_groupbox_1.IntegralUIGroupBox,integralui_groupbox_1.IntegralUIGroupBoxTags],imports:[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule],exports:[integralui_accordion_1.IntegralUIAccordion,integralui_groupbox_1.IntegralUIGroupBox,integralui_groupbox_1.IntegralUIGroupBoxTags]})})();
-(function(){i0.\u0275setClassMetadata(IntegralUIAccordionModule,[{type:core_1.NgModule,args:[{imports:[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule],declarations:[integralui_accordion_1.IntegralUIAccordion,integralui_groupbox_1.IntegralUIGroupBox,integralui_groupbox_1.IntegralUIGroupBoxTags],exports:[integralui_accordion_1.IntegralUIAccordion,integralui_groupbox_1.IntegralUIGroupBox,integralui_groupbox_1.IntegralUIGroupBoxTags]}]}],null,null)})();
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var core_1=require("@angular/core"),common_1=require("@angular/common"),forms_1=require("@angular/forms"),integralui_core_module_1=require("./integralui.core.module"),integralui_accordion_1=require("./components/integralui.accordion"),integralui_groupbox_1=require("./components/integralui.groupbox"),i0=require("@angular/core"),IntegralUIAccordionModule=function(){function o(){}o.ɵmod=i0.ɵɵdefineNgModule({type:o});o.ɵinj=i0.ɵɵdefineInjector({factory:function(e){return new(e||o)},imports:[[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule]]});return o}();exports.IntegralUIAccordionModule=IntegralUIAccordionModule;("undefined"===typeof ngJitMode||ngJitMode)&&i0.ɵɵsetNgModuleScope(IntegralUIAccordionModule,{declarations:[integralui_accordion_1.IntegralUIAccordion,integralui_groupbox_1.IntegralUIGroupBox,integralui_groupbox_1.IntegralUIGroupBoxTags],imports:[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule],exports:[integralui_accordion_1.IntegralUIAccordion,integralui_groupbox_1.IntegralUIGroupBox,integralui_groupbox_1.IntegralUIGroupBoxTags]});

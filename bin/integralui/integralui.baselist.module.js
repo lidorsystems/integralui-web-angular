@@ -1,6 +1,6 @@
 /*
   filename: integralui.baselist.module.js
-  version : 4.0.0
+  version : 20.2.0
   Copyright © 2016-2020 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
@@ -12,5 +12,4 @@
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
-Object.defineProperty(exports,"__esModule",{value:!0});var core_1=require("@angular/core"),integralui_base_list_1=require("./components/integralui.base.list"),i0=require("@angular/core"),IntegralUIBaseListModule=function(){function a(){}a.\u0275mod=i0.\u0275\u0275defineNgModule({type:a});a.\u0275inj=i0.\u0275\u0275defineInjector({factory:function(b){return new (b||a)},imports:[[]]});return a}();exports.IntegralUIBaseListModule=IntegralUIBaseListModule;
-(function(){("undefined"===typeof ngJitMode||ngJitMode)&&i0.\u0275\u0275setNgModuleScope(IntegralUIBaseListModule,{declarations:[integralui_base_list_1.IntegralUIBaseList],exports:[integralui_base_list_1.IntegralUIBaseList]})})();(function(){i0.\u0275setClassMetadata(IntegralUIBaseListModule,[{type:core_1.NgModule,args:[{imports:[],declarations:[integralui_base_list_1.IntegralUIBaseList],exports:[integralui_base_list_1.IntegralUIBaseList]}]}],null,null)})();
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var core_1=require("@angular/core"),integralui_base_list_1=require("./components/integralui.base.list"),i0=require("@angular/core"),IntegralUIBaseListModule=function(){function e(){}e.ɵmod=i0.ɵɵdefineNgModule({type:e});e.ɵinj=i0.ɵɵdefineInjector({factory:function(t){return new(t||e)},imports:[[]]});return e}();exports.IntegralUIBaseListModule=IntegralUIBaseListModule;("undefined"===typeof ngJitMode||ngJitMode)&&i0.ɵɵsetNgModuleScope(IntegralUIBaseListModule,{declarations:[integralui_base_list_1.IntegralUIBaseList],exports:[integralui_base_list_1.IntegralUIBaseList]});

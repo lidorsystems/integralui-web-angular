@@ -20,6 +20,12 @@
 	left: 0;
 	z-index: 3;
 }
+.iui-sidebar-horizontal {
+	height: 100%;
+}
+.iui-sidebar-vertical {
+	width: 100%;
+}
 
 .iui-sidebar-header {
 	background: #e5e5e5;

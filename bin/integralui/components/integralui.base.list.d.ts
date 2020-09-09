@@ -91,6 +91,7 @@ export declare class IntegralUIBaseList extends IntegralUIBaseComponent {
     horScrollOrientation: IntegralUIOrientation;
     protected currentSelection: any;
     protected currentSelectionMode: IntegralUISelectionMode;
+    protected isItemClicked: boolean;
     private shiftFirstSelectedItem;
     private removeIndex;
     currentSelectedItems: Array<any>;

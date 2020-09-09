@@ -1,3 +1,19 @@
+v20.2.0
+- Cross-framework support
+- 20 Native Web Components that you can use in Angular, React, Vue or any other JavaScript framework
+- Quick start samples available in Angular, React and Vanilla JavaScript
+- Improved performance for all components
+- New events during expand/collapse of SideBar component
+- Option to show/hide the splitter on demand
+- Vertical Scroll for TreeList
+- Fixed the CSS issue that caused clicks below expand button in SideBar to not pass to the side bar content
+- Fixed the Issue that fires the splitterMoved event on mouse up when splitter is not moved
+- If SideBar size is not specified, it is now determined by CSS settings
+- Fixed the issue that caused throwing of ExpressionChanged... error from Breadcrumb on initialization
+- Fixed change of values in Slider component using Touch
+- When selectedItem property is set in TreeList, moving back to the parent list is now fixed
+- Mouseup changes to selection when mousedown is clicked outside of the TreeView is now fixed
+
 v20.1.0  
 - Compatible with Angular 9
 - Reduced overall bundle size

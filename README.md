@@ -1,4 +1,4 @@
-# IntegralUI Web for Angular, v20.1
+# IntegralUI Web for Angular, v20.2
 
 IntegralUI Web is a library built on top of Angular 9 framework. It consists of user interface components, directives and services that can help you create modern web applications. 
 

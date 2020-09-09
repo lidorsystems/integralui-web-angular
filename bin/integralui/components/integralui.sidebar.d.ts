@@ -67,13 +67,17 @@ export declare class IntegralUISideBar extends IntegralUIBaseComponent {
     ngOnDestroy(): void;
     animationSpeed: IntegralUISpeedMode;
     appRef: any;
-    set expanded(value: boolean);
-    get expanded(): boolean;
+    set isExpanded(value: boolean);
+    get isExpanded(): boolean;
     set placement(value: IntegralUIPlacement);
     get placement(): IntegralUIPlacement;
     set popup(value: boolean);
     get popup(): boolean;
     title: string;
+    collapsed: EventEmitter<any>;
+    collapsing: EventEmitter<any>;
+    expanded: EventEmitter<any>;
+    expanding: EventEmitter<any>;
     protected addPopup(): void;
     protected removePopup(): void;
     protected hidePopup(): void;
@@ -114,6 +118,7 @@ export declare class IntegralUISideBar extends IntegralUIBaseComponent {
     getControlStyle(): any;
     getContentStyle(): any;
     getHeaderStyle(): any;
+    protected updateControlClass(): void;
     static ɵfac: i0.ɵɵFactoryDef<IntegralUISideBar, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISideBar, "iui-sidebar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "animationSpeed": "animationSpeed"; "appRef": "appRef"; "expanded": "expanded"; "placement": "placement"; "popup": "popup"; "title": "title"; }, {}, ["templates"], never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUISideBar, "iui-sidebar", never, { "controlStyle": "controlStyle"; "data": "data"; "enabled": "enabled"; "name": "name"; "size": "size"; "state": "state"; "animationSpeed": "animationSpeed"; "appRef": "appRef"; "isExpanded": "isExpanded"; "placement": "placement"; "popup": "popup"; "title": "title"; }, { "collapsed": "collapsed"; "collapsing": "collapsing"; "expanded": "expanded"; "expanding": "expanding"; }, ["templates"], never>;
 }

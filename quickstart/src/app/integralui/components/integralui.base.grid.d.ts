@@ -192,6 +192,7 @@ export declare class IntegralUIBaseGrid extends IntegralUIBaseComponent {
     protected currentSelectedColumn: any;
     protected currentSelectedRow: any;
     protected currentSelectionMode: IntegralUISelectionMode;
+    protected isRowClicked: boolean;
     private shiftFirstSelectedRow;
     private removeIndex;
     currentSelectedRows: Array<any>;

@@ -36,6 +36,7 @@ export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     protected prevClickedObj: any;
     private currentDataFields;
     currentList: Array<any>;
+    currentTitle: string;
     nextList: Array<any>;
     prevList: Array<any>;
     clickPos: any;
@@ -109,7 +110,8 @@ export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     get selectedItem(): any;
     set showScroll(value: boolean);
     get showScroll(): boolean;
-    title: string;
+    set title(value: string);
+    get title(): string;
     afterSelect: EventEmitter<any>;
     beforeSelect: EventEmitter<any>;
     clear: EventEmitter<any>;
@@ -136,7 +138,9 @@ export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     onItemMouseLeave(e: any, item: any): void;
     onItemMouseDown(e: any, item: any): void;
     onHeaderMouseDown(e: any): void;
+    getHeaderText(): any;
     protected getItemElemList(): ElementRef<any>[];
+    getItemParent(item: any): any;
     getItemState(item: any): IntegralUIObjectState;
     isGroupItem(item: any): boolean;
     protected isItemAllowed(item: any): boolean;
@@ -145,6 +149,7 @@ export declare class IntegralUITreeList extends IntegralUIBaseComponent {
     protected updateBlockSize(): void;
     updateLayout(): void;
     protected updateScrollSize(): void;
+    protected updateSelList(): void;
     updateView(): void;
     scrollPos(value?: any): any;
     protected changeVerticalScrollPos(value: number): void;

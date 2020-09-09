@@ -1,6 +1,6 @@
 /*
   filename: integralui.listbar.module.js
-  version : 4.0.0
+  version : 20.2.0
   Copyright © 2016-2020 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 
@@ -12,8 +12,4 @@
   This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
   governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
 */
-Object.defineProperty(exports,"__esModule",{value:!0});
-var core_1=require("@angular/core"),common_1=require("@angular/common"),forms_1=require("@angular/forms"),integralui_core_module_1=require("./integralui.core.module"),integralui_core_1=require("./components/integralui.core"),integralui_listbar_1=require("./components/integralui.listbar"),integralui_listgroup_1=require("./components/integralui.listgroup"),i0=require("@angular/core"),IntegralUIListBarModule=function(){function a(){}a.\u0275mod=i0.\u0275\u0275defineNgModule({type:a});a.\u0275inj=i0.\u0275\u0275defineInjector({factory:function(b){return new (b||
-a)},imports:[[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule]]});return a}();exports.IntegralUIListBarModule=IntegralUIListBarModule;
-(function(){("undefined"===typeof ngJitMode||ngJitMode)&&i0.\u0275\u0275setNgModuleScope(IntegralUIListBarModule,{declarations:[integralui_listbar_1.IntegralUIListBar,integralui_listgroup_1.IntegralUIListGroup],imports:[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule],exports:[integralui_core_1.IntegralUIFocus,integralui_core_1.IntegralUIItem,integralui_listbar_1.IntegralUIListBar,integralui_listgroup_1.IntegralUIListGroup,integralui_core_1.IntegralUITemplate]})})();
-(function(){i0.\u0275setClassMetadata(IntegralUIListBarModule,[{type:core_1.NgModule,args:[{imports:[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule],declarations:[integralui_listbar_1.IntegralUIListBar,integralui_listgroup_1.IntegralUIListGroup],exports:[integralui_core_1.IntegralUIFocus,integralui_core_1.IntegralUIItem,integralui_listbar_1.IntegralUIListBar,integralui_listgroup_1.IntegralUIListGroup,integralui_core_1.IntegralUITemplate]}]}],null,null)})();
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var core_1=require("@angular/core"),common_1=require("@angular/common"),forms_1=require("@angular/forms"),integralui_core_module_1=require("./integralui.core.module"),integralui_core_1=require("./components/integralui.core"),integralui_listbar_1=require("./components/integralui.listbar"),integralui_listgroup_1=require("./components/integralui.listgroup"),i0=require("@angular/core"),IntegralUIListBarModule=function(){function e(){}e.ɵmod=i0.ɵɵdefineNgModule({type:e});e.ɵinj=i0.ɵɵdefineInjector({factory:function(r){return new(r||e)},imports:[[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule]]});return e}();exports.IntegralUIListBarModule=IntegralUIListBarModule;("undefined"===typeof ngJitMode||ngJitMode)&&i0.ɵɵsetNgModuleScope(IntegralUIListBarModule,{declarations:[integralui_listbar_1.IntegralUIListBar,integralui_listgroup_1.IntegralUIListGroup],imports:[common_1.CommonModule,forms_1.FormsModule,integralui_core_module_1.IntegralUICoreModule],exports:[integralui_core_1.IntegralUIFocus,integralui_core_1.IntegralUIItem,integralui_listbar_1.IntegralUIListBar,integralui_listgroup_1.IntegralUIListGroup,integralui_core_1.IntegralUITemplate]});
