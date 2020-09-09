@@ -130,10 +130,10 @@ or directly from NPM
 npm i @lidorsystems/integralui-web
 ```
 
-Open your application module and add a reference to IntegralUI module
+Open your application module and add a reference to IntegralUI module. Use a relative path to the module location:
 
 ```bash
-import { IntegralUIModule } from 'integralui-web/bin/integralui/integralui.module';
+import { IntegralUIModule } from '../../node_modules/@lidorsystems/integralui-web/bin/integralui/integralui.module';
 
 @NgModule({
   imports:      [ IntegralUIModule ],
@@ -150,12 +150,12 @@ export class AppModule { }
 After installation, in angular.json under styles section add this code line:
 
 ```bash
-"node_modules/integralui-web/bin/integralui/css/integralui.module.css"
+"node_modules/@lidorsystems/integralui-web/bin/integralui/css/integralui.module.css"
 ```
 
 To apply a theme, also add code line for corresonding theme file:
 ```bash
-"node_modules/integralui-web/bin/integralui/themes/integralui.themes.office.css"
+"node_modules/@lidorsystems/integralui-web/bin/integralui/themes/integralui.themes.office.css"
 ```
 
 <b>Note</b>   You can choose a theme from available themes located at '~ ... /integralui/themes' folder.
