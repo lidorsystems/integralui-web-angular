@@ -19,8 +19,8 @@ export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent
         width: number;
         height: number;
     };
-    set options(value: any);
-    get options(): any;
+    set settings(value: any);
+    get settings(): any;
     closed: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     ngAfterContentInit(): void;
@@ -42,7 +42,7 @@ export declare class IntegralUIDropDownComponent extends IntegralUIBaseComponent
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
     static ɵfac: i0.ɵɵFactoryDef<IntegralUIDropDownComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIDropDownComponent, "iui-dropdown", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "options": "options"; }, { "closed": "closed"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIDropDownComponent, "iui-dropdown", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "settings": "settings"; }, { "closed": "closed"; }, never, never>;
 }
 export declare class IntegralUIDropDown {
     protected elemRef: ElementRef;

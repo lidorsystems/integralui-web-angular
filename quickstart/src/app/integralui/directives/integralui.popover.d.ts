@@ -14,8 +14,8 @@ export declare class IntegralUIPopOverComponent extends IntegralUITooltipCompone
         left: number;
     };
     private popoverSize;
-    set options(value: any);
-    get options(): any;
+    set settings(value: any);
+    get settings(): any;
     closed: EventEmitter<any>;
     constructor(elemRef: ElementRef, commonService?: IntegralUICommonService);
     protected updateOptions(value?: any): void;
@@ -27,13 +27,12 @@ export declare class IntegralUIPopOverComponent extends IntegralUITooltipCompone
     updateMousePos(value: any): void;
     protected updateControlClass(): void;
     static ɵfac: i0.ɵɵFactoryDef<IntegralUIPopOverComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIPopOverComponent, "iui-popover", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "options": "options"; }, { "closed": "closed"; }, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<IntegralUIPopOverComponent, "iui-popover", never, { "controlStyle": "controlStyle"; "data": "data"; "state": "state"; "settings": "settings"; }, { "closed": "closed"; }, never, never>;
 }
 export declare class IntegralUIPopOver extends IntegralUITooltip {
     protected elemRef: ElementRef;
     protected cmpResolver: ComponentFactoryResolver;
     protected commonService?: IntegralUICommonService;
-    private currentSettings;
     private templateData;
     private currentMousePos;
     private isVisible;

@@ -7,7 +7,6 @@ export declare class IntegralUILayout extends IntegralUIBaseComponent {
     protected dataService: IntegralUIDataService;
     protected elemRef: ElementRef;
     protected commonService?: IntegralUICommonService;
-    private ctrlData;
     currentList: Array<any>;
     private dataPanels;
     private fullList;

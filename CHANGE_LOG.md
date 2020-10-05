@@ -1,3 +1,6 @@
+v20.2.1
+- Compatible with Angular 10
+
 v20.2.0
 - Improved performance for all components
 - New events during expand/collapse of SideBar component

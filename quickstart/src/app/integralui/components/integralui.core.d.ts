@@ -212,6 +212,7 @@ export declare enum IntegralUIWeekDays {
 }
 export declare class IntegralUIBaseComponent {
     protected commonService?: IntegralUICommonService;
+    protected ctrlData: any;
     private ctrlState;
     protected isEnabled: boolean;
     protected options: any;
@@ -227,9 +228,12 @@ export declare class IntegralUIBaseComponent {
     protected generalClassName: string;
     protected defaultStyle: any;
     protected ctrlClass: Array<any>;
+    protected currentControlStyle: any;
     allowAnimation: boolean;
-    controlStyle: any;
-    data: any;
+    set controlStyle(value: any);
+    get controlStyle(): any;
+    set data(value: any);
+    get data(): any;
     name: string;
     set enabled(value: boolean);
     get enabled(): boolean;
