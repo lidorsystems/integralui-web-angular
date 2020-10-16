@@ -250,6 +250,9 @@ The application will start displaying the main window with links to all componen
 
 This is Trial version of the product. All features are fully functional, except that each component displays a pop-up trial window.
 
+
+<b>Note</b> A light version of this library is available here [IntegralUI Web Lite](https://github.com/lidorsystems/integralui-web-lite.git). You can use the Lite version for FREE, to develop Internet and Intranet web sites, web applications and other products, with no-charge.
+
 ## License Information
 
 You may use this version for the limited purposes of demonstrations, trials or design-time evaluations.
