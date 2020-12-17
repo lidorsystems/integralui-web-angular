@@ -1,6 +1,6 @@
 /*
   filename: integralui.sidebar.module.js
-  version : 20.2.0
+  version : 20.3.0
   Copyright © 2016-2020 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

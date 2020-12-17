@@ -1,7 +1,10 @@
-v20.2.1
+v20.3
+- Minor bug fixes
+
+v20.3.1
 - Compatible with Angular 10
 
-v20.2.0
+v20.3.0
 - Improved performance for all components
 - New events during expand/collapse of SideBar component
 - Option to show/hide the splitter on demand

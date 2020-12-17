@@ -1,6 +1,6 @@
 /*
   filename: integralui.popover.js
-  version : 20.2.1
+  version : 20.3.1
   Copyright © 2016-2020 Lidor Systems. All rights reserved.
 
   This file is part of the "IntegralUI Web" Library. 

@@ -1,6 +1,6 @@
 {
   "name": "@lidorsystems/integralui-web",
-  "version": "20.2.1",
+  "version": "20.3.0",
   "description": "IntegralUI Web - Advanced UI Components for Angular",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
