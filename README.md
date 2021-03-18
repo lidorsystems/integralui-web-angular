@@ -4,6 +4,8 @@ IntegralUI Web is a library built on top of Angular 9 framework. It consists of 
 
 <b>Note</b>   This version is now in MAINTENANCE mode. For newest releases check this repositiry: [IntegralUI Web](https://github.com/lidorsystems/integralui-web).
 
+
+
 ![IntegralUI Web 19.4 - 35+ UI Components for Angular](https://www.lidorsystems.com/about/newsletter/images/integralui-web-components.png)
 
 Here is a brief overview of what is included:
